@@ -13,7 +13,7 @@ import net.minecraft.Entity;
 import net.minecraft.EntityPlayer;
 import net.minecraft.TileEntity;
 import net.minecraft.AxisAlignedBB;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.MovingObjectPosition;
 import net.minecraft.Vec3;
 import net.minecraft.IBlockAccess;
@@ -23,8 +23,8 @@ import net.minecraftforge.common.util.ForgeDirection;
 import buildcraft.core.BCCreativeTab;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.lib.render.ICustomHighlight;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BlockLaser extends BlockBuildCraft implements ICustomHighlight {
 
@@ -114,14 +114,14 @@ public class BlockLaser extends BlockBuildCraft implements ICustomHighlight {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(IBlockAccess access, int x, int y, int z, int side) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIcon(IBlockAccess access, int x, int y, int z, int side) {
         return getIcon(side, access.getBlockMetadata(x, y, z));
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int i, int j) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIcon(int i, int j) {
         if (i == (j ^ 1)) {
             return icons[0][0];
         } else if (i == j) {

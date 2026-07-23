@@ -6,31 +6,31 @@
  */
 package buildcraft.core;
 
-import net.minecraft.IIconRegister;
-import net.minecraft.IIcon;
+import net.minecraft.IconRegister;
+import net.minecraft.Icon;
 
-import buildcraft.api.core.IIconProvider;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import buildcraft.api.core.IconProvider;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
-public class CoreIconProvider implements IIconProvider {
+public class CoreIconProvider implements IconProvider {
 
     public static int ENERGY = 0;
 
     public static int MAX = 1;
 
-    private IIcon[] icons;
+    private Icon[] icons;
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int iconIndex) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIcon(int iconIndex) {
         return icons[iconIndex];
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
-        icons = new IIcon[MAX];
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
+        icons = new Icon[MAX];
 
         icons[ENERGY] = iconRegister.registerIcon("buildcraftcore:icons/energy");
     }

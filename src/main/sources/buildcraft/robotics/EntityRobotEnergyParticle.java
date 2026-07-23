@@ -10,10 +10,10 @@ import net.minecraft.EntityFX;
 import net.minecraft.Tessellator;
 import net.minecraft.World;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
-@SideOnly(Side.CLIENT)
+@Environment(EnvType.CLIENT)
 public class EntityRobotEnergyParticle extends EntityFX {
 
     private final float smokeParticleScale;

@@ -10,7 +10,7 @@ import net.minecraft.Block;
 import net.minecraft.RenderBlocks;
 import net.minecraft.Tessellator;
 import net.minecraft.ItemStack;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
@@ -25,7 +25,7 @@ public class PlugItemRenderer implements IItemRenderer {
         // Render StructurePipe
         Block block = BuildCraftTransport.genericPipeBlock;
         Tessellator tessellator = Tessellator.instance;
-        IIcon textureID = BuildCraftTransport.instance.pipeIconProvider
+        Icon textureID = BuildCraftTransport.instance.pipeIconProvider
                 .getIcon(PipeIconProvider.TYPE.PipeStructureCobblestone.ordinal()); // Structure pipe
 
         block.setBlockBounds(0.25F, 0.25F, 0.25F, 0.75F, 0.375F, 0.75F);

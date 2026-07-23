@@ -28,7 +28,7 @@ import buildcraft.core.lib.utils.ThreadSafeUtils;
 import cpw.mods.fml.common.network.FMLEmbeddedChannel;
 import cpw.mods.fml.common.network.FMLOutboundHandler;
 import cpw.mods.fml.common.network.FMLOutboundHandler.OutboundTarget;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 
 public class BuildCraftMod {
 

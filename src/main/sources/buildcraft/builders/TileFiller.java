@@ -33,7 +33,7 @@ import buildcraft.core.lib.network.command.ICommandReceiver;
 import buildcraft.core.lib.network.command.PacketCommand;
 import buildcraft.core.lib.utils.NetworkUtils;
 import buildcraft.core.lib.utils.Utils;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 
 public class TileFiller extends TileAbstractBuilder
@@ -350,7 +350,7 @@ public class TileFiller extends TileAbstractBuilder
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         super.receiveCommand(command, side, sender, stream);
         if (side.isServer()) {
             if ("setPattern".equals(command)) {

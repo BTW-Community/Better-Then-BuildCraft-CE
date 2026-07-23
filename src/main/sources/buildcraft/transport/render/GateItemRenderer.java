@@ -14,7 +14,7 @@ import net.minecraft.RenderItem;
 import net.minecraft.RenderManager;
 import net.minecraft.EntityItem;
 import net.minecraft.ItemStack;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
@@ -67,7 +67,7 @@ public class GateItemRenderer implements IItemRenderer {
         GL11.glPopMatrix();
     }
 
-    private void renderLayerIn3D(IIcon icon) {
+    private void renderLayerIn3D(Icon icon) {
         if (icon == null) {
             return;
         }
@@ -159,7 +159,7 @@ public class GateItemRenderer implements IItemRenderer {
         GL11.glPushMatrix();
         GL11.glDisable(GL11.GL_LIGHTING);
         GL11.glEnable(GL11.GL_ALPHA_TEST); // In certain cases gets disabled by this point
-        IIcon icon = ItemGate.getLogic(stack).getIconItem();
+        Icon icon = ItemGate.getLogic(stack).getIconItem();
         renderItem.renderIcon(0, 0, icon, 16, 16);
 
         if (type == ItemRenderType.ENTITY) {

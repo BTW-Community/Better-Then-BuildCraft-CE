@@ -8,7 +8,7 @@ package buildcraft.core.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidContainerRegistry;
@@ -119,7 +119,7 @@ public class TriggerFluidContainer extends BCStatement implements ITriggerExtern
     }
 
     @Override
-    public void registerIcons(IIconRegister register) {
+    public void registerIcons(IconRegister register) {
         icon = register.registerIcon("buildcraftcore:triggers/trigger_liquidcontainer_" + state.name().toLowerCase());
     }
 

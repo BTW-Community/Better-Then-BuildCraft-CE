@@ -7,11 +7,11 @@
 package buildcraft.factory;
 
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.EntityPlayer;
 import net.minecraft.ItemStack;
 import net.minecraft.TileEntity;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.World;
 
 import buildcraft.BuildCraftCore;
@@ -20,12 +20,12 @@ import buildcraft.api.transport.IItemPipe;
 import buildcraft.core.GuiIds;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.lib.block.IComparatorInventory;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BlockHopper extends BlockBuildCraft implements IComparatorInventory {
 
-    private static IIcon icon;
+    private static Icon icon;
 
     public BlockHopper() {
         super(Material.iron);
@@ -76,14 +76,14 @@ public class BlockHopper extends BlockBuildCraft implements IComparatorInventory
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister par1IconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerBlockIcons(IconRegister par1IconRegister) {
         icon = par1IconRegister.registerIcon("buildcraftfactory:hopperBlock/bottom");
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIconAbsolute(int par1, int par2) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIconAbsolute(int par1, int par2) {
         return icon;
     }
 

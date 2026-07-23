@@ -10,9 +10,9 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import net.minecraft.Block;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.TextureMap;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.World;
 
 import buildcraft.api.blueprints.SchematicMask;
@@ -32,7 +32,7 @@ public abstract class FillerPattern implements IFillerPattern {
 
     public static final Map<String, FillerPattern> patterns = new TreeMap<>();
     private final String tag;
-    private IIcon icon, blockIcon;
+    private Icon icon, blockIcon;
 
     public FillerPattern(String tag) {
         this.tag = tag;
@@ -60,7 +60,7 @@ public abstract class FillerPattern implements IFillerPattern {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         if (!(iconRegister instanceof TextureMap) || ((TextureMap) iconRegister).getTextureType() == 1) {
             icon = iconRegister.registerIcon("buildcraftcore:fillerPatterns/" + tag);
         }
@@ -73,12 +73,12 @@ public abstract class FillerPattern implements IFillerPattern {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return icon;
     }
 
     @Override
-    public IIcon getBlockOverlay() {
+    public Icon getBlockOverlay() {
         return blockIcon;
     }
 

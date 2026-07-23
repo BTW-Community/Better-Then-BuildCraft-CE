@@ -30,7 +30,7 @@ import buildcraft.BuildCraftCore;
 import buildcraft.BuildCraftTransport;
 import buildcraft.api.core.BCLog;
 import buildcraft.api.core.EnumColor;
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.api.core.ISerializable;
 import buildcraft.api.core.Position;
 import buildcraft.api.gates.IGateExpansion;
@@ -57,8 +57,8 @@ import buildcraft.transport.gates.GateFactory;
 import buildcraft.transport.gates.GatePluggable;
 import buildcraft.transport.pluggable.PlugPluggable;
 import cofh.api.energy.IEnergyHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import io.netty.buffer.ByteBuf;
 
 public class TileGenericPipe extends TileEntity
@@ -980,8 +980,8 @@ public class TileGenericPipe extends TileEntity
         }
     }
 
-    @SideOnly(Side.CLIENT)
-    public IIconProvider getPipeIcons() {
+    @Environment(EnvType.CLIENT)
+    public IconProvider getPipeIcons() {
         if (pipe == null) {
             return null;
         }
@@ -1102,7 +1102,7 @@ public class TileGenericPipe extends TileEntity
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public double getMaxRenderDistanceSquared() {
         return DefaultProps.PIPE_CONTENTS_RENDER_DIST * DefaultProps.PIPE_CONTENTS_RENDER_DIST;
     }

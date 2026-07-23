@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 import net.minecraft.Block;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.TextureMap;
 import net.minecraft.TileEntitySpecialRenderer;
 import net.minecraft.TileEntity;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 
 import org.lwjgl.opengl.GL11;
 
@@ -22,7 +22,7 @@ import buildcraft.core.lib.utils.ResourceUtils;
 
 public class RenderLEDTile extends TileEntitySpecialRenderer {
 
-    private static final Map<Block, IIcon[]> iconMap = new HashMap<>();
+    private static final Map<Block, Icon[]> iconMap = new HashMap<>();
     private static final float Z_OFFSET = 2049 / 2048.0F;
     private final Block block;
 
@@ -31,11 +31,11 @@ public class RenderLEDTile extends TileEntitySpecialRenderer {
         this.block = block;
     }
 
-    public static void registerBlockIcons(IIconRegister register) {
+    public static void registerBlockIcons(IconRegister register) {
         for (Block b : iconMap.keySet().toArray(new Block[iconMap.keySet().size()])) {
             String base = ResourceUtils.getObjectPrefix(Block.blockRegistry.getNameForObject(b));
             if (base != null) {
-                List<IIcon> icons = new ArrayList<>();
+                List<Icon> icons = new ArrayList<>();
                 if (b instanceof ICustomLEDBlock) {
                     for (String s : ((ICustomLEDBlock) b).getLEDSuffixes()) {
                         icons.add(register.registerIcon(base + "/" + s));
@@ -45,7 +45,7 @@ public class RenderLEDTile extends TileEntitySpecialRenderer {
                     icons.add(register.registerIcon(base + "/led_green"));
                 }
 
-                iconMap.put(b, icons.toArray(new IIcon[icons.size()]));
+                iconMap.put(b, icons.toArray(new Icon[icons.size()]));
             }
         }
     }
@@ -70,7 +70,7 @@ public class RenderLEDTile extends TileEntitySpecialRenderer {
         GL11.glScalef(Z_OFFSET, Z_OFFSET, Z_OFFSET);
         GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
 
-        IIcon[] icons = iconMap.get(block);
+        Icon[] icons = iconMap.get(block);
 
         for (int i = 0; i < icons.length; i++) {
             renderBox.light = provider.getLEDLevel(i);

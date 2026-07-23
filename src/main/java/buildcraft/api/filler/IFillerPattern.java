@@ -7,9 +7,9 @@
 package buildcraft.api.filler;
 
 import buildcraft.api.statements.IStatement;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public interface IFillerPattern extends IStatement {
 
-    IIcon getBlockOverlay();
+    Icon getBlockOverlay();
 }

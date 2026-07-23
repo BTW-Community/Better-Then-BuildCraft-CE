@@ -20,7 +20,7 @@ import buildcraft.core.lib.network.command.CommandWriter;
 import buildcraft.core.lib.network.command.ICommandReceiver;
 import buildcraft.core.lib.network.command.PacketCommand;
 import buildcraft.core.lib.utils.NetworkUtils;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 
 public class TileRequester extends TileBuildCraft implements IInventory, IRequestProvider, ICommandReceiver {
@@ -47,7 +47,7 @@ public class TileRequester extends TileBuildCraft implements IInventory, IReques
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         if (side.isServer() && "setRequest".equals(command)) {
             setRequest(stream.readUnsignedByte(), NetworkUtils.readStack(stream));
         }

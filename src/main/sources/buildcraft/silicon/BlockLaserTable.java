@@ -20,8 +20,8 @@ import buildcraft.BuildCraftSilicon;
 import buildcraft.api.power.ILaserTargetBlock;
 import buildcraft.core.BCCreativeTab;
 import buildcraft.core.lib.block.BlockBuildCraft;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BlockLaserTable extends BlockBuildCraft implements ILaserTargetBlock {
 
@@ -102,7 +102,7 @@ public class BlockLaserTable extends BlockBuildCraft implements ILaserTargetBloc
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs par2CreativeTabs, List par3List) {
         for (int i = 0; i < TABLE_MAX; i++) {
             par3List.add(new ItemStack(this, 1, i));
@@ -110,7 +110,7 @@ public class BlockLaserTable extends BlockBuildCraft implements ILaserTargetBloc
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public String[] getIconBlockNames() {
         return new String[] { "BuildCraft|Silicon:assemblyTable", "BuildCraft|Silicon:advancedCraftingTable",
                 "BuildCraft|Silicon:integrationTable", "BuildCraft|Silicon:chargingTable",

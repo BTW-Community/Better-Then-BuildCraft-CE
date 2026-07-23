@@ -18,7 +18,7 @@ import net.minecraft.Item;
 import net.minecraft.ItemFood;
 import net.minecraft.ItemStack;
 import net.minecraft.Achievement;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,7 +32,7 @@ import buildcraft.api.blueprints.BuilderAPI;
 import buildcraft.api.core.BCLog;
 import buildcraft.api.core.BuildCraftAPI;
 import buildcraft.api.core.EnumColor;
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.api.core.IWorldProperty;
 import buildcraft.api.crops.CropManager;
 import buildcraft.api.filler.FillerManager;
@@ -168,8 +168,8 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 @Mod(
         name = "BuildCraft",
@@ -227,20 +227,20 @@ public class BuildCraftCore extends BuildCraftMod {
     public static ItemList listItem;
     public static ItemTablet tabletItem;
 
-    @SideOnly(Side.CLIENT)
-    public static IIcon redLaserTexture;
+    @Environment(EnvType.CLIENT)
+    public static Icon redLaserTexture;
 
-    @SideOnly(Side.CLIENT)
-    public static IIcon blueLaserTexture;
+    @Environment(EnvType.CLIENT)
+    public static Icon blueLaserTexture;
 
-    @SideOnly(Side.CLIENT)
-    public static IIcon stripesLaserTexture;
+    @Environment(EnvType.CLIENT)
+    public static Icon stripesLaserTexture;
 
-    @SideOnly(Side.CLIENT)
-    public static IIcon transparentTexture;
+    @Environment(EnvType.CLIENT)
+    public static Icon transparentTexture;
 
-    @SideOnly(Side.CLIENT)
-    public static IIconProvider iconProvider;
+    @Environment(EnvType.CLIENT)
+    public static IconProvider iconProvider;
 
     public static int blockByEntityModel;
     public static int complexBlockModel;
@@ -740,7 +740,7 @@ public class BuildCraftCore extends BuildCraftMod {
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void textureHook(TextureStitchEvent.Pre event) {
         for (FillerPattern pattern : FillerPattern.patterns.values()) {
             pattern.registerIcons(event.map);
@@ -761,7 +761,7 @@ public class BuildCraftCore extends BuildCraftMod {
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void textureHook(TextureStitchEvent.Post event) {
         FluidRenderer.onTextureReload();
         RenderLaser.onTextureReload();

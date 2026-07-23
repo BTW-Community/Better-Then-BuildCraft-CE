@@ -4,7 +4,7 @@ import net.minecraft.NBTTagCompound;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.api.tablet.TabletBitmap;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 
 public class TabletClient extends TabletBase {
 
@@ -29,7 +29,7 @@ public class TabletClient extends TabletBase {
     }
 
     @Override
-    public Side getSide() {
+    public EnvType getSide() {
         return Side.CLIENT;
     }
 

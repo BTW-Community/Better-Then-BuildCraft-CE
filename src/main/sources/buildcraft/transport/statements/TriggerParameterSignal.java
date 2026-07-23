@@ -8,10 +8,10 @@ package buildcraft.transport.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 
 import buildcraft.api.statements.IStatement;
 import buildcraft.api.statements.IStatementContainer;
@@ -23,7 +23,7 @@ import buildcraft.transport.Gate;
 
 public class TriggerParameterSignal implements IStatementParameter {
 
-    private static IIcon[] icons;
+    private static Icon[] icons;
 
     public boolean active = false;
     public PipeWire color = null;
@@ -36,7 +36,7 @@ public class TriggerParameterSignal implements IStatementParameter {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         if (color == null) {
             return null;
         }
@@ -116,8 +116,8 @@ public class TriggerParameterSignal implements IStatementParameter {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
-        icons = new IIcon[] { iconRegister.registerIcon("buildcrafttransport:triggers/trigger_pipesignal_red_inactive"),
+    public void registerIcons(IconRegister iconRegister) {
+        icons = new Icon[] { iconRegister.registerIcon("buildcrafttransport:triggers/trigger_pipesignal_red_inactive"),
                 iconRegister.registerIcon("buildcrafttransport:triggers/trigger_pipesignal_blue_inactive"),
                 iconRegister.registerIcon("buildcrafttransport:triggers/trigger_pipesignal_green_inactive"),
                 iconRegister.registerIcon("buildcrafttransport:triggers/trigger_pipesignal_yellow_inactive"),

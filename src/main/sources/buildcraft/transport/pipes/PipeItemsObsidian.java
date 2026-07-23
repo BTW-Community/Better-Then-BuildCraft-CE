@@ -21,7 +21,7 @@ import net.minecraft.AxisAlignedBB;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftTransport;
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.api.core.Position;
 import buildcraft.core.lib.RFBattery;
 import buildcraft.core.lib.inventory.ITransactor;
@@ -36,8 +36,8 @@ import buildcraft.transport.TravelingItem;
 import buildcraft.transport.pipes.events.PipeEventItem;
 import buildcraft.transport.utils.TransportUtils;
 import cofh.api.energy.IEnergyHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class PipeItemsObsidian extends Pipe<PipeTransportItems> implements IEnergyHandler {
 
@@ -49,8 +49,8 @@ public class PipeItemsObsidian extends Pipe<PipeTransportItems> implements IEner
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIconProvider getIconProvider() {
+    @Environment(EnvType.CLIENT)
+    public IconProvider getIconProvider() {
         return BuildCraftTransport.instance.pipeIconProvider;
     }
 

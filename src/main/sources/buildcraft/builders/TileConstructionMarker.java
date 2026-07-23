@@ -34,7 +34,7 @@ import buildcraft.core.lib.network.command.CommandWriter;
 import buildcraft.core.lib.network.command.ICommandReceiver;
 import buildcraft.core.lib.network.command.PacketCommand;
 import buildcraft.core.lib.utils.NetworkUtils;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 
 public class TileConstructionMarker extends TileBuildCraft
@@ -208,7 +208,7 @@ public class TileConstructionMarker extends TileBuildCraft
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         if (side.isServer() && "uploadBuildersInAction".equals(command)) {
             for (BuildingItem i : buildersInAction) {
                 BuildCraftCore.instance.sendToPlayer((EntityPlayer) sender, createLaunchItemPacket(i));

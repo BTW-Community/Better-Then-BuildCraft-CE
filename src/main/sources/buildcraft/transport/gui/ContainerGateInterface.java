@@ -34,7 +34,7 @@ import buildcraft.core.lib.utils.NetworkUtils;
 import buildcraft.transport.ActionActiveState;
 import buildcraft.transport.Gate;
 import buildcraft.transport.gates.GateDefinition;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 
 public class ContainerGateInterface extends BuildCraftContainer implements ICommandReceiver {
@@ -331,7 +331,7 @@ public class ContainerGateInterface extends BuildCraftContainer implements IComm
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         if (side.isServer()) {
             EntityPlayer player = (EntityPlayer) sender;
             if ("initRequest".equals(command)) {

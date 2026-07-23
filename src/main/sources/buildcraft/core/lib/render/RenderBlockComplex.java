@@ -3,7 +3,7 @@ package buildcraft.core.lib.render;
 import net.minecraft.Block;
 import net.minecraft.RenderBlocks;
 import net.minecraft.Tessellator;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.IBlockAccess;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -75,10 +75,10 @@ public class RenderBlockComplex extends BCSimpleBlockRenderingHandler {
 
     private void renderOverlayPass(int pass, BlockBuildCraft block, RenderBlocks renderer, IBlockAccess world, int x,
             int y, int z) {
-        IIcon[] icons = fakeBlock.getTextureState().popArray();
+        Icon[] icons = fakeBlock.getTextureState().popArray();
         int mask = 0;
         for (int side = 0; side < 6; side++) {
-            IIcon icon = block.getIconForPass(world, x, y, z, side, pass);
+            Icon icon = block.getIconForPass(world, x, y, z, side, pass);
             icons[side] = icon;
             ForgeDirection dir = ForgeDirection.getOrientation(side);
             if (icon != null

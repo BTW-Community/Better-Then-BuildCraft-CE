@@ -8,7 +8,7 @@ package buildcraft.robotics.statements;
 
 import java.util.List;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 
 import buildcraft.api.robots.DockingStation;
 import buildcraft.api.statements.IStatementContainer;
@@ -33,7 +33,7 @@ public class TriggerRobotLinked extends BCStatement implements ITriggerInternal 
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister
                 .registerIcon("buildcraftrobotics:triggers/trigger_robot_" + (reserved ? "reserved" : "linked"));
     }

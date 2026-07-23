@@ -148,8 +148,8 @@ import cpw.mods.fml.common.event.FMLServerStoppedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 @Mod(
         name = "BuildCraft Robotics",
@@ -586,7 +586,7 @@ public class BuildCraftRobotics extends BuildCraftMod {
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void textureHook(TextureStitchEvent.Pre event) {
         if (event.map.getTextureType() == 1) {
             RedstoneBoardRegistry.instance.registerIcons(event.map);

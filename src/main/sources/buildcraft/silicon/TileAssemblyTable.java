@@ -31,7 +31,7 @@ import buildcraft.core.lib.utils.NetworkUtils;
 import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.core.recipes.AssemblyRecipeManager;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 
 public class TileAssemblyTable extends TileLaserTableBase implements IInventory, IFlexibleCrafter, ICommandReceiver {
@@ -327,7 +327,7 @@ public class TileAssemblyTable extends TileLaserTableBase implements IInventory,
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         if (side.isServer() && "select".equals(command)) {
             String id = NetworkUtils.readUTF(stream);
             boolean select = stream.readBoolean();

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.Block;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Blocks;
@@ -44,8 +44,8 @@ import buildcraft.core.proxy.CoreProxy;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemFacade extends ItemBuildCraft implements IFacadeItem, IPipePluggableItem {
 
@@ -225,7 +225,7 @@ public class ItemFacade extends ItemBuildCraft implements IFacadeItem, IPipePlug
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs par2CreativeTabs, List itemList) {
         if (BuildCraftTransport.showAllFacadesCreative) {
             for (ItemStack stack : allFacades) {
@@ -627,13 +627,13 @@ public class ItemFacade extends ItemBuildCraft implements IFacadeItem, IPipePlug
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister) {
         // NOOP
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public int getSpriteNumber() {
         return 0;
     }

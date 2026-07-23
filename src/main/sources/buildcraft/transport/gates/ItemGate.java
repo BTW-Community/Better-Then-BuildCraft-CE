@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Item;
@@ -19,7 +19,7 @@ import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
 import net.minecraft.NBTTagList;
 import net.minecraft.NBTTagString;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.StatCollector;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -37,8 +37,8 @@ import buildcraft.transport.Gate;
 import buildcraft.transport.Pipe;
 import buildcraft.transport.gates.GateDefinition.GateLogic;
 import buildcraft.transport.gates.GateDefinition.GateMaterial;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemGate extends ItemBuildCraft implements IPipePluggableItem {
 
@@ -182,7 +182,7 @@ public class ItemGate extends ItemBuildCraft implements IPipePluggableItem {
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List itemList) {
         for (GateMaterial material : GateMaterial.VALUES) {
             for (GateLogic logic : GateLogic.VALUES) {
@@ -219,13 +219,13 @@ public class ItemGate extends ItemBuildCraft implements IPipePluggableItem {
     }
 
     @Override
-    public IIcon getIconIndex(ItemStack stack) {
+    public Icon getIconIndex(ItemStack stack) {
         return getLogic(stack).getIconItem();
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
         for (GateDefinition.GateMaterial material : GateDefinition.GateMaterial.VALUES) {
             material.registerItemIcon(iconRegister);
         }

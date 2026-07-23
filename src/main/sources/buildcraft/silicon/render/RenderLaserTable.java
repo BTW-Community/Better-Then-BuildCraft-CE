@@ -3,7 +3,7 @@ package buildcraft.silicon.render;
 import net.minecraft.Block;
 import net.minecraft.RenderBlocks;
 import net.minecraft.Tessellator;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.IBlockAccess;
 import net.minecraftforge.client.ForgeHooksClient;
 
@@ -83,7 +83,7 @@ public class RenderLaserTable extends BCSimpleBlockRenderingHandler {
     }
 
     private void renderCube(RenderBlocks renderer, boolean isInventory, int xPos, int yPos, int zPos, float xB,
-            float yB, float zB, int w, int h, int d, int topX, int topY, IIcon base, int mask) {
+            float yB, float zB, int w, int h, int d, int topX, int topY, Icon base, int mask) {
         int xI = (int) (xB * 16.0F);
         int yI = 16 - (int) (yB * 16.0F) - h;
         int zI = (int) (zB * 16.0F);
@@ -92,7 +92,7 @@ public class RenderLaserTable extends BCSimpleBlockRenderingHandler {
         block.setRenderMask(mask);
         block.setColor(0xFFFFFF);
 
-        IIcon[] icons = block.getTextureState().popArray();
+        Icon[] icons = block.getTextureState().popArray();
         icons[0] = new SubIcon(base, topX + w - xI, topY - zI, 16, 16, 64);
         icons[1] = new SubIcon(base, topX - xI, topY - zI, 16, 16, 64);
         icons[2] = new SubIcon(base, topX - xI, topY + d - yI, 16, 16, 64);
@@ -116,7 +116,7 @@ public class RenderLaserTable extends BCSimpleBlockRenderingHandler {
             fixEmptyAlphaPass(x, y, z);
             return;
         }
-        IIcon base = block.getIcon(0, 0);
+        Icon base = block.getIcon(0, 0);
         renderCube(renderer, isInv, x, y, z, 0, 0, 0, 16, 2, 16, 16, 21, base, 0x3f); // bottom
         renderCube(renderer, isInv, x, y, z, 0.0625F, 0.125F, 0.0625F, 14, 1, 14, 18, 39, base, 0x3c); // middle (no
                                                                                                        // top/bottom
@@ -130,7 +130,7 @@ public class RenderLaserTable extends BCSimpleBlockRenderingHandler {
             fixEmptyAlphaPass(x, y, z);
             return;
         }
-        IIcon base = block.getIcon(0, 3);
+        Icon base = block.getIcon(0, 3);
         renderCube(renderer, isInv, x, y, z, 0.0625F, 0, 0.0625F, 14, 5, 14, 14, 19, base, 0x3d); // bottom (no top)
 
         // sides (no top)
@@ -144,7 +144,7 @@ public class RenderLaserTable extends BCSimpleBlockRenderingHandler {
 
     private void renderProgrammingTable(RenderBlocks renderer, boolean isInv, int x, int y, int z,
             BlockBuildCraft block, int pass) {
-        IIcon base = block.getIcon(0, 4);
+        Icon base = block.getIcon(0, 4);
         if (pass != 0) {
             renderCube(renderer, isInv, x, y, z, 0.25F, 0.375F, 0.25F, 8, 2, 8, 8, 48, base, 0x02); // semitransparent
                                                                                                     // view
@@ -172,7 +172,7 @@ public class RenderLaserTable extends BCSimpleBlockRenderingHandler {
 
     private void renderIntegrationTable(RenderBlocks renderer, boolean isInv, int x, int y, int z,
             BlockBuildCraft block, int pass) {
-        IIcon base = block.getIcon(0, 2);
+        Icon base = block.getIcon(0, 2);
         if (!isInv && pass != 0) {
             fixEmptyAlphaPass(x, y, z);
             return;
@@ -201,7 +201,7 @@ public class RenderLaserTable extends BCSimpleBlockRenderingHandler {
             fixEmptyAlphaPass(x, y, z);
             return;
         }
-        IIcon base = block.getIcon(0, 1);
+        Icon base = block.getIcon(0, 1);
         renderCube(renderer, isInv, x, y, z, 0.125F, 0, 0.125F, 12, 3, 12, 12, 21, base, 0x3d); // bottom (no top)
 
         // sides (no top)
@@ -219,7 +219,7 @@ public class RenderLaserTable extends BCSimpleBlockRenderingHandler {
             fixEmptyAlphaPass(x, y, z);
             return;
         }
-        IIcon base = block.getIcon(0, 5);
+        Icon base = block.getIcon(0, 5);
         renderCube(renderer, isInv, x, y, z, 0.125F, 0, 0.125F, 12, 3, 12, 12, 21, base, 0x3d); // bottom (no top)
 
         // sides (no top)

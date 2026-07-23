@@ -6,7 +6,7 @@
  */
 package buildcraft.transport.statements;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 
 import buildcraft.api.gates.IGate;
 import buildcraft.api.statements.IStatementContainer;
@@ -16,8 +16,8 @@ import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.core.statements.BCStatement;
 import buildcraft.core.statements.StatementParameterRedstoneGateSideOnly;
 import buildcraft.transport.TileGenericPipe;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class TriggerRedstoneFaderInput extends BCStatement implements ITriggerInternal {
 
@@ -52,8 +52,8 @@ public class TriggerRedstoneFaderInput extends BCStatement implements ITriggerIn
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon(String.format("buildcrafttransport:triggers/redstone_%02d", level));
     }
 

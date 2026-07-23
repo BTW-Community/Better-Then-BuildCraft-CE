@@ -9,7 +9,7 @@ package buildcraft.robotics.render;
 import net.minecraft.RenderBlocks;
 import net.minecraft.Tessellator;
 import net.minecraft.ItemStack;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
@@ -25,7 +25,7 @@ public class RobotStationItemRenderer implements IItemRenderer {
             float translateZ) {
         FakeBlock block = FakeBlock.INSTANCE;
         Tessellator tessellator = Tessellator.instance;
-        IIcon textureID = BuildCraftTransport.instance.pipeIconProvider
+        Icon textureID = BuildCraftTransport.instance.pipeIconProvider
                 .getIcon(PipeIconProvider.TYPE.PipeRobotStation.ordinal()); // Structure pipe
 
         GL11.glTranslatef(translateX, translateY, translateZ + 0.25F);

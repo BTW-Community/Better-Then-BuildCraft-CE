@@ -1,7 +1,7 @@
 package buildcraft.api.items;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.ItemStack;
 
 public interface IItemCustomPipeRender {
@@ -12,6 +12,6 @@ public interface IItemCustomPipeRender {
      *
      * @return False to use the default renderer, true otherwise.
      */
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     boolean renderItemInPipe(ItemStack stack, double x, double y, double z);
 }

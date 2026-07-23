@@ -6,9 +6,9 @@
  */
 package buildcraft.api.gates;
 
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.TileEntity;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public interface IGateExpansion {
 
@@ -18,11 +18,11 @@ public interface IGateExpansion {
 
     GateExpansionController makeController(TileEntity pipeTile);
 
-    void registerBlockOverlay(IIconRegister iconRegister);
+    void registerBlockOverlay(IconRegister iconRegister);
 
-    void registerItemOverlay(IIconRegister iconRegister);
+    void registerItemOverlay(IconRegister iconRegister);
 
-    IIcon getOverlayBlock();
+    Icon getOverlayBlock();
 
-    IIcon getOverlayItem();
+    Icon getOverlayItem();
 }

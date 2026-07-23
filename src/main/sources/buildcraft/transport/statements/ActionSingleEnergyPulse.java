@@ -6,7 +6,7 @@
  */
 package buildcraft.transport.statements;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 
 import buildcraft.api.statements.IActionInternal;
 import buildcraft.api.statements.IStatementContainer;
@@ -26,7 +26,7 @@ public class ActionSingleEnergyPulse extends BCStatement implements IActionInter
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcrafttransport:triggers/action_single_pulsar");
     }
 

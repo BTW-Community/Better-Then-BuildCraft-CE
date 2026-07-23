@@ -1,6 +1,6 @@
 package buildcraft.transport.statements;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.TileEntity;
 
 import buildcraft.api.core.Position;
@@ -10,8 +10,8 @@ import buildcraft.api.statements.ITriggerInternal;
 import buildcraft.api.statements.containers.ISidedStatementContainer;
 import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.core.statements.BCStatement;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class TriggerLightSensor extends BCStatement implements ITriggerInternal {
 
@@ -40,8 +40,8 @@ public class TriggerLightSensor extends BCStatement implements ITriggerInternal 
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcrafttransport:triggers/trigger_light_" + (bright ? "bright" : "dark"));
     }
 }

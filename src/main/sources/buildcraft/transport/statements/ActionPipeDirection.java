@@ -8,7 +8,7 @@ package buildcraft.transport.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftTransport;
@@ -37,7 +37,7 @@ public class ActionPipeDirection extends BCStatement implements IActionInternal 
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister
                 .registerIcon("buildcraftcore:triggers/trigger_dir_" + direction.name().toLowerCase(Locale.ENGLISH));
     }

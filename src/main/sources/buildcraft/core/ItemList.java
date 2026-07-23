@@ -14,7 +14,7 @@ import net.minecraft.Item;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
 import net.minecraft.EnumChatFormatting;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.StatCollector;
 import net.minecraft.World;
 
@@ -24,8 +24,8 @@ import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;
 import buildcraft.core.list.ListHandlerNew;
 import buildcraft.core.list.ListHandlerOld;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemList extends ItemBuildCraft implements IList {
 
@@ -36,7 +36,7 @@ public class ItemList extends ItemBuildCraft implements IList {
     }
 
     @Override
-    public IIcon getIconIndex(ItemStack stack) {
+    public Icon getIconIndex(ItemStack stack) {
         itemIcon = icons[NBTUtils.getItemData(stack).hasKey("written") ? 1 : 0];
         return itemIcon;
     }
@@ -105,7 +105,7 @@ public class ItemList extends ItemBuildCraft implements IList {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List itemList) {
         itemList.add(new ItemStack(this, 1, 0)); // TODO: remove
         itemList.add(new ItemStack(this, 1, 1));

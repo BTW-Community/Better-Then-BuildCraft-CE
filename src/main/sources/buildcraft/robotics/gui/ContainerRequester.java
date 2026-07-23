@@ -18,7 +18,7 @@ import buildcraft.core.lib.network.command.ICommandReceiver;
 import buildcraft.core.lib.network.command.PacketCommand;
 import buildcraft.core.lib.utils.NetworkUtils;
 import buildcraft.robotics.TileRequester;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 
 public class ContainerRequester extends BuildCraftContainer implements ICommandReceiver {
@@ -62,7 +62,7 @@ public class ContainerRequester extends BuildCraftContainer implements ICommandR
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         if (side.isServer() && "getRequestList".equals(command)) {
             final ItemStack[] stacks = new ItemStack[TileRequester.NB_ITEMS];
 

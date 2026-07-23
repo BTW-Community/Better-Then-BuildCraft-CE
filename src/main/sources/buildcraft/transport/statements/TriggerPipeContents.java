@@ -8,7 +8,7 @@ package buildcraft.transport.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
@@ -25,8 +25,8 @@ import buildcraft.transport.PipeTransportFluids;
 import buildcraft.transport.PipeTransportItems;
 import buildcraft.transport.PipeTransportPower;
 import buildcraft.transport.TravelingItem;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class TriggerPipeContents extends BCStatement implements ITriggerInternal {
 
@@ -146,8 +146,8 @@ public class TriggerPipeContents extends BCStatement implements ITriggerInternal
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon(
                 "buildcrafttransport:triggers/trigger_pipecontents_" + kind.name().toLowerCase(Locale.ENGLISH));
     }

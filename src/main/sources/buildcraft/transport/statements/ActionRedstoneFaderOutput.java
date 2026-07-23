@@ -6,14 +6,14 @@
  */
 package buildcraft.transport.statements;
 
-import net.minecraft.IIconRegister;
-import net.minecraft.IIcon;
+import net.minecraft.IconRegister;
+import net.minecraft.Icon;
 
 import buildcraft.api.statements.IActionInternal;
 import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.core.statements.ActionRedstoneOutput;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ActionRedstoneFaderOutput extends ActionRedstoneOutput implements IActionInternal {
 
@@ -31,14 +31,14 @@ public class ActionRedstoneFaderOutput extends ActionRedstoneOutput implements I
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon() {
+    @Environment(EnvType.CLIENT)
+    public Icon getIcon() {
         return icon;
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon(String.format("buildcrafttransport:triggers/redstone_%02d", level));
     }
 

@@ -6,7 +6,7 @@
  */
 package buildcraft.factory;
 
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.World;
 
 import buildcraft.BuildCraftFactory;
@@ -21,7 +21,7 @@ import cpw.mods.fml.client.registry.ClientRegistry;
 
 public class FactoryProxyClient extends FactoryProxy {
 
-    public static IIcon pumpTexture;
+    public static Icon pumpTexture;
 
     @Override
     public void initializeTileEntities() {

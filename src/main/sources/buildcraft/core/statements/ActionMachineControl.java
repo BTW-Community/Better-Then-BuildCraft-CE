@@ -8,7 +8,7 @@ package buildcraft.core.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -18,8 +18,8 @@ import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.tiles.IControllable;
 import buildcraft.api.tiles.IControllable.Mode;
 import buildcraft.core.lib.utils.StringUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ActionMachineControl extends BCStatement implements IActionExternal {
 
@@ -47,8 +47,8 @@ public class ActionMachineControl extends BCStatement implements IActionExternal
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister register) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister register) {
         icon = register.registerIcon("buildcraftcore:triggers/action_machinecontrol_" + mode.name().toLowerCase());
     }
 }

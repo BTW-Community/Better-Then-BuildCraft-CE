@@ -23,7 +23,7 @@ import buildcraft.core.lib.utils.NetworkUtils;
 import buildcraft.robotics.TileZonePlan;
 import buildcraft.robotics.ZonePlan;
 import buildcraft.robotics.map.MapWorld;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 
 public class ContainerZonePlan extends BuildCraftContainer implements ICommandReceiver {
@@ -86,7 +86,7 @@ public class ContainerZonePlan extends BuildCraftContainer implements ICommandRe
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         if (side.isClient()) {
             if ("areaLoaded".equals(command)) {
                 currentAreaSelection = new ZonePlan();

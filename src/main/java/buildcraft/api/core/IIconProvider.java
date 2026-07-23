@@ -6,18 +6,18 @@
  */
 package buildcraft.api.core;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.src.IIconRegister;
-import net.minecraft.src.IIcon;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.src.IconRegister;
+import net.minecraft.src.Icon;
 
-public interface IIconProvider {
+public interface IconProvider {
 
     /**
      * @param iconIndex
      */
-    @SideOnly(Side.CLIENT)
-    IIcon getIcon(int iconIndex);
+    @Environment(EnvType.CLIENT)
+    Icon getIcon(int iconIndex);
 
     /**
      * A call for the provider to register its Icons. This may be called multiple times but should only be executed once
@@ -25,6 +25,6 @@ public interface IIconProvider {
      * 
      * @param iconRegister
      */
-    @SideOnly(Side.CLIENT)
-    void registerIcons(IIconRegister iconRegister);
+    @Environment(EnvType.CLIENT)
+    void registerIcons(IconRegister iconRegister);
 }

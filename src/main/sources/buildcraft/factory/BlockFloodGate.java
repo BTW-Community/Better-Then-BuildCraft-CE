@@ -8,23 +8,23 @@ package buildcraft.factory;
 
 import net.minecraft.Block;
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Item;
 import net.minecraft.TileEntity;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.IBlockAccess;
 import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.tools.IToolWrench;
 import buildcraft.core.lib.block.BlockBuildCraft;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BlockFloodGate extends BlockBuildCraft {
 
-    private IIcon valve, transparent;
+    private Icon valve, transparent;
 
     public BlockFloodGate() {
         super(Material.iron);
@@ -81,16 +81,16 @@ public class BlockFloodGate extends BlockBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister register) {
+    @Environment(EnvType.CLIENT)
+    public void registerBlockIcons(IconRegister register) {
         super.registerBlockIcons(register);
         valve = register.registerIcon("buildcraftfactory:floodGateBlock/valve");
         transparent = register.registerIcon("buildcraftcore:misc/transparent");
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIconForPass(IBlockAccess world, int x, int y, int z, int side, int pass) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIconForPass(IBlockAccess world, int x, int y, int z, int side, int pass) {
         if (pass == 1) {
             if (side != 1) {
                 TileEntity tile = world.getTileEntity(x, y, z);
@@ -104,8 +104,8 @@ public class BlockFloodGate extends BlockBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIconForPass(int side, int meta, int pass) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIconForPass(int side, int meta, int pass) {
         if (pass == 1) {
             return side == 1 ? null : valve;
         }

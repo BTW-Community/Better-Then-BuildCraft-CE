@@ -15,8 +15,8 @@ import buildcraft.builders.TileFiller;
 import buildcraft.core.lib.gui.BuildCraftContainer;
 import buildcraft.core.lib.gui.GuiBuildCraft;
 import buildcraft.core.lib.gui.widgets.Widget;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ContainerFiller extends BuildCraftContainer {
 
@@ -29,7 +29,7 @@ public class ContainerFiller extends BuildCraftContainer {
             super(38, 30, 0, 0, 16, 16);
         }
 
-        @SideOnly(Side.CLIENT)
+        @Environment(EnvType.CLIENT)
         @Override
         public void draw(GuiBuildCraft gui, int guiX, int guiY, int mouseX, int mouseY) {
             gui.bindTexture(TextureMap.locationItemsTexture);

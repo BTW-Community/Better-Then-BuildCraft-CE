@@ -24,7 +24,7 @@ import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftTransport;
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.api.gates.IGate;
 import buildcraft.api.statements.ActionState;
 import buildcraft.api.statements.IActionInternal;
@@ -37,8 +37,8 @@ import buildcraft.core.lib.inventory.InvUtils;
 import buildcraft.core.lib.utils.Utils;
 import buildcraft.transport.gates.GateFactory;
 import buildcraft.transport.statements.ActionValve.ValveState;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public abstract class Pipe<T extends PipeTransport> implements IDropControlInventory, IPipe {
 
@@ -118,12 +118,12 @@ public abstract class Pipe<T extends PipeTransport> implements IDropControlInven
     }
 
     /**
-     * Should return the IIconProvider that provides icons for this pipe
+     * Should return the IconProvider that provides icons for this pipe
      *
      * @return An array of icons
      */
-    @SideOnly(Side.CLIENT)
-    public abstract IIconProvider getIconProvider();
+    @Environment(EnvType.CLIENT)
+    public abstract IconProvider getIconProvider();
 
     /**
      * Should return the index in the array returned by GetTextureIcons() for a specified direction

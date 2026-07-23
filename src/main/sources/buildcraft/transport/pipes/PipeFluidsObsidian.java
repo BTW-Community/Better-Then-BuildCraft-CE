@@ -7,15 +7,15 @@ import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidStack;
 
 import buildcraft.BuildCraftTransport;
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.core.lib.RFBattery;
 import buildcraft.core.lib.utils.BlockUtils;
 import buildcraft.transport.Pipe;
 import buildcraft.transport.PipeIconProvider;
 import buildcraft.transport.PipeTransportFluids;
 import cofh.api.energy.IEnergyHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class PipeFluidsObsidian extends Pipe<PipeTransportFluids> implements IEnergyHandler {
 
@@ -73,8 +73,8 @@ public class PipeFluidsObsidian extends Pipe<PipeTransportFluids> implements IEn
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIconProvider getIconProvider() {
+    @Environment(EnvType.CLIENT)
+    public IconProvider getIconProvider() {
         return BuildCraftTransport.instance.pipeIconProvider;
     }
 

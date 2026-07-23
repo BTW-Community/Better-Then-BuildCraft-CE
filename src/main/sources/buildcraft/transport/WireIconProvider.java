@@ -6,14 +6,14 @@
  */
 package buildcraft.transport;
 
-import net.minecraft.IIconRegister;
-import net.minecraft.IIcon;
+import net.minecraft.IconRegister;
+import net.minecraft.Icon;
 
-import buildcraft.api.core.IIconProvider;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import buildcraft.api.core.IconProvider;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
-public class WireIconProvider implements IIconProvider {
+public class WireIconProvider implements IconProvider {
 
     public static final int Texture_Red_Dark = 0;
     public static final int Texture_Red_Lit = 1;
@@ -26,19 +26,19 @@ public class WireIconProvider implements IIconProvider {
 
     public static final int MAX = 8;
 
-    @SideOnly(Side.CLIENT)
-    private IIcon[] icons;
+    @Environment(EnvType.CLIENT)
+    private Icon[] icons;
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int pipeIconIndex) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIcon(int pipeIconIndex) {
         return icons[pipeIconIndex];
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
-        icons = new IIcon[MAX];
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
+        icons = new Icon[MAX];
 
         icons[WireIconProvider.Texture_Red_Dark] = iconRegister.registerIcon("buildcraftcore:misc/texture_red_dark");
         icons[WireIconProvider.Texture_Red_Lit] = iconRegister.registerIcon("buildcraftcore:misc/texture_red_lit");

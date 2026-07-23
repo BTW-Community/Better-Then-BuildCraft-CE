@@ -8,8 +8,8 @@ import net.minecraft.ResourceLocation;
 
 import buildcraft.transport.Pipe;
 import buildcraft.transport.PipeTransport;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public abstract class PipeTransportRenderer<T extends PipeTransport> {
 
@@ -19,7 +19,7 @@ public abstract class PipeTransportRenderer<T extends PipeTransport> {
         return false;
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void bindTexture(ResourceLocation location) {
         Minecraft.getMinecraft().renderEngine.bindTexture(location);
     }

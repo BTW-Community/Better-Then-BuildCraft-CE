@@ -78,8 +78,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 @Mod(
         name = "BuildCraft Energy",
@@ -489,7 +489,7 @@ public class BuildCraftEnergy extends BuildCraftMod {
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void textureHook(TextureStitchEvent.Post event) {
         if (event.map.getTextureType() == 0) {
             if (buildcraftFluidOil != null) {

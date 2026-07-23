@@ -2,8 +2,8 @@ package buildcraft.core;
 
 import net.minecraft.Block;
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
-import net.minecraft.IIcon;
+import net.minecraft.IconRegister;
+import net.minecraft.Icon;
 import net.minecraft.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -15,7 +15,7 @@ import buildcraft.core.lib.utils.Utils;
 
 public abstract class BlockHatched extends BlockBuildCraft {
 
-    private IIcon itemHatch;
+    private Icon itemHatch;
 
     protected BlockHatched(Material material) {
         super(material);
@@ -30,14 +30,14 @@ public abstract class BlockHatched extends BlockBuildCraft {
     }
 
     @Override
-    public void registerBlockIcons(IIconRegister register) {
+    public void registerBlockIcons(IconRegister register) {
         super.registerBlockIcons(register);
         String base = ResourceUtils.getObjectPrefix(Block.blockRegistry.getNameForObject(this));
         itemHatch = register.registerIcon(base + "/item_hatch");
     }
 
     @Override
-    public IIcon getIconForPass(IBlockAccess access, int x, int y, int z, int side, int pass) {
+    public Icon getIconForPass(IBlockAccess access, int x, int y, int z, int side, int pass) {
         // The quarry's pipe connection method has no idea about "sides".
         if (pass == 1) {
             return Utils.isPipeConnected(access, x, y, z, ForgeDirection.getOrientation(side), IPipeTile.PipeType.ITEM)
@@ -48,7 +48,7 @@ public abstract class BlockHatched extends BlockBuildCraft {
     }
 
     @Override
-    public IIcon getIconForPass(int side, int meta, int pass) {
+    public Icon getIconForPass(int side, int meta, int pass) {
         if (pass == 1) {
             return side == 1 ? itemHatch : null;
         }

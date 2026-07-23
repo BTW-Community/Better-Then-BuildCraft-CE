@@ -8,7 +8,7 @@ package buildcraft.core.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.IInventory;
 import net.minecraft.ItemStack;
 import net.minecraft.TileEntity;
@@ -104,7 +104,7 @@ public class TriggerInventory extends BCStatement implements ITriggerExternal {
     }
 
     @Override
-    public void registerIcons(IIconRegister register) {
+    public void registerIcons(IconRegister register) {
         icon = register.registerIcon("buildcraftcore:triggers/trigger_inventory_" + state.name().toLowerCase());
     }
 

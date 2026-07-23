@@ -20,7 +20,7 @@ import net.minecraft.Material;
 import net.minecraft.Minecraft;
 import net.minecraft.EffectRenderer;
 import net.minecraft.EntityDiggingFX;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.Entity;
 import net.minecraft.EntityLivingBase;
 import net.minecraft.EntityPlayer;
@@ -30,7 +30,7 @@ import net.minecraft.Item;
 import net.minecraft.ItemStack;
 import net.minecraft.TileEntity;
 import net.minecraft.AxisAlignedBB;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.MovingObjectPosition;
 import net.minecraft.Vec3;
 import net.minecraft.IBlockAccess;
@@ -59,8 +59,8 @@ import buildcraft.core.lib.utils.Utils;
 import buildcraft.core.proxy.CoreProxy;
 import buildcraft.transport.gates.GatePluggable;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BlockGenericPipe extends BlockBuildCraft implements IColorRemovable {
 
@@ -267,7 +267,7 @@ public class BlockGenericPipe extends BlockBuildCraft implements IColorRemovable
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     @Override
     public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z) {
         RaytraceResult rayTraceResult = doRayTrace(world, x, y, z, Minecraft.getMinecraft().thePlayer);
@@ -1031,8 +1031,8 @@ public class BlockGenericPipe extends BlockBuildCraft implements IColorRemovable
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister) {}
+    @Environment(EnvType.CLIENT)
+    public void registerBlockIcons(IconRegister iconRegister) {}
 
     /**
      * Spawn a digging particle effect in the world, this is a wrapper around EffectRenderer.addBlockHitEffects to allow
@@ -1044,7 +1044,7 @@ public class BlockGenericPipe extends BlockBuildCraft implements IColorRemovable
      * @param effectRenderer A reference to the current effect renderer.
      * @return True to prevent vanilla digging particles form spawning.
      */
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     @Override
     public boolean addHitEffects(World worldObj, MovingObjectPosition target, EffectRenderer effectRenderer) {
         int x = target.blockX;
@@ -1056,7 +1056,7 @@ public class BlockGenericPipe extends BlockBuildCraft implements IColorRemovable
             return false;
         }
 
-        IIcon icon = pipe.getIconProvider().getIcon(pipe.getIconIndexForItem());
+        Icon icon = pipe.getIconProvider().getIcon(pipe.getIconIndexForItem());
 
         int sideHit = target.sideHit;
 
@@ -1126,7 +1126,7 @@ public class BlockGenericPipe extends BlockBuildCraft implements IColorRemovable
      * @param effectRenderer A reference to the current effect renderer.
      * @return True to prevent vanilla break particles from spawning.
      */
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     @Override
     public boolean addDestroyEffects(World worldObj, int x, int y, int z, int meta, EffectRenderer effectRenderer) {
         Pipe<?> pipe = getPipe(worldObj, x, y, z);
@@ -1134,7 +1134,7 @@ public class BlockGenericPipe extends BlockBuildCraft implements IColorRemovable
             return false;
         }
 
-        IIcon icon = pipe.getIconProvider().getIcon(pipe.getIconIndexForItem());
+        Icon icon = pipe.getIconProvider().getIcon(pipe.getIconIndexForItem());
 
         byte its = 4;
         for (int i = 0; i < its; ++i) {
@@ -1184,7 +1184,7 @@ public class BlockGenericPipe extends BlockBuildCraft implements IColorRemovable
     }
 
     @Override
-    public IIcon getIcon(IBlockAccess world, int i, int j, int k, int side) {
+    public Icon getIcon(IBlockAccess world, int i, int j, int k, int side) {
         Pipe<?> pipe = getPipe(world, i, j, k);
         if (pipe != null) {
             return pipe.getIconProvider().getIcon(pipe.getIconIndexForItem());
@@ -1194,7 +1194,7 @@ public class BlockGenericPipe extends BlockBuildCraft implements IColorRemovable
     }
 
     @Override
-    public IIcon getIcon(int side, int meta) {
+    public Icon getIcon(int side, int meta) {
         return PipeIconProvider.TYPE.PipeItemsStone.getIcon();
     }
 }

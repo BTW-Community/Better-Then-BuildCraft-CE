@@ -32,7 +32,7 @@ import buildcraft.api.blueprints.BuilderAPI;
 import buildcraft.api.blueprints.SchematicTile;
 import buildcraft.api.core.BCLog;
 import buildcraft.api.core.EnumColor;
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.api.facades.FacadeAPI;
 import buildcraft.api.gates.GateExpansions;
 import buildcraft.api.gates.IGateExpansion;
@@ -187,8 +187,8 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 @Mod(
         version = Version.VERSION,
@@ -289,8 +289,8 @@ public class BuildCraftTransport extends BuildCraftMod {
     private static ArrayList<PipeRecipe> pipeRecipes = new ArrayList<>(500);
     private static ChannelHandler transportChannelHandler;
 
-    public IIconProvider pipeIconProvider = new PipeIconProvider();
-    public IIconProvider wireIconProvider = new WireIconProvider();
+    public IconProvider pipeIconProvider = new PipeIconProvider();
+    public IconProvider wireIconProvider = new WireIconProvider();
 
     private static class PipeRecipe {
 
@@ -680,7 +680,7 @@ public class BuildCraftTransport extends BuildCraftMod {
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void textureHook(TextureStitchEvent.Pre event) {
         if (event.map.getTextureType() == 0) {
             for (Item i : BlockGenericPipe.pipes.keySet()) {

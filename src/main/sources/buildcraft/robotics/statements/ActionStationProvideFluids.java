@@ -6,7 +6,7 @@
  */
 package buildcraft.robotics.statements;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 
 import buildcraft.api.statements.IActionInternal;
 import buildcraft.api.statements.IStatementContainer;
@@ -27,7 +27,7 @@ public class ActionStationProvideFluids extends BCStatement implements IActionIn
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcraftrobotics:triggers/action_station_provide_fluids");
     }
 

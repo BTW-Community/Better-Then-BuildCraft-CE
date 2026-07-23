@@ -17,8 +17,8 @@ import net.minecraft.World;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;
 import buildcraft.silicon.render.PackageFontRenderer;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemPackage extends ItemBuildCraft {
 
@@ -55,7 +55,7 @@ public class ItemPackage extends ItemBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List list) {}
 
     public static void update(ItemStack stack) {}
@@ -85,13 +85,13 @@ public class ItemPackage extends ItemBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public FontRenderer getFontRenderer(ItemStack stack) {
         return new PackageFontRenderer(stack);
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List strings, boolean adv) {
         NBTTagCompound tag = NBTUtils.getItemData(stack);
         if (!tag.hasNoTags()) {

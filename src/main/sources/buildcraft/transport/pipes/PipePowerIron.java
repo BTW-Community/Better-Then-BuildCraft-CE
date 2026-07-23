@@ -17,7 +17,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.BuildCraftTransport;
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.api.statements.IActionInternal;
 import buildcraft.api.statements.StatementSlot;
 import buildcraft.api.tools.IToolWrench;
@@ -27,8 +27,8 @@ import buildcraft.transport.Pipe;
 import buildcraft.transport.PipeIconProvider;
 import buildcraft.transport.PipeTransportPower;
 import buildcraft.transport.statements.ActionPowerLimiter;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class PipePowerIron extends Pipe<PipeTransportPower> {
 
@@ -97,8 +97,8 @@ public class PipePowerIron extends Pipe<PipeTransportPower> {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIconProvider getIconProvider() {
+    @Environment(EnvType.CLIENT)
+    public IconProvider getIconProvider() {
         return BuildCraftTransport.instance.pipeIconProvider;
     }
 

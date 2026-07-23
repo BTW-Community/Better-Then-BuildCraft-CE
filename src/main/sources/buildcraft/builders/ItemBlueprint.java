@@ -11,7 +11,7 @@ import java.util.List;
 import net.minecraft.EntityPlayer;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 
 import buildcraft.BuildCraftBuilders;
 import buildcraft.api.blueprints.BuildingPermission;
@@ -92,7 +92,7 @@ public abstract class ItemBlueprint extends ItemBuildCraft implements IBlueprint
     }
 
     @Override
-    public IIcon getIconIndex(ItemStack stack) {
+    public Icon getIconIndex(ItemStack stack) {
         if (!NBTUtils.getItemData(stack).hasKey("name")) {
             itemIcon = icons[0];
         } else {

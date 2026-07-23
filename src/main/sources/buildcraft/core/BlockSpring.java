@@ -11,7 +11,7 @@ import java.util.Random;
 
 import net.minecraft.Block;
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.Blocks;
 import net.minecraft.Item;
@@ -19,8 +19,8 @@ import net.minecraft.ItemStack;
 import net.minecraft.World;
 
 import buildcraft.core.lib.utils.XorShift128Random;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BlockSpring extends Block {
 
@@ -112,8 +112,8 @@ public class BlockSpring extends Block {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister par1IconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerBlockIcons(IconRegister par1IconRegister) {
         blockIcon = par1IconRegister.registerIcon("bedrock");
     }
 }

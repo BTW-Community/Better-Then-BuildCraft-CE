@@ -4,7 +4,7 @@ import net.minecraft.RenderBlocks;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
 import net.minecraft.AxisAlignedBB;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftTransport;
@@ -37,7 +37,7 @@ public class PowerAdapterPluggable extends PipePluggable implements IEnergyHandl
 
             float[][] zeroState = new float[3][2];
 
-            IIcon[] icons = ((TextureStateManager) blockStateMachine.getTextureState()).popArray();
+            Icon[] icons = ((TextureStateManager) blockStateMachine.getTextureState()).popArray();
             int bottom = side.ordinal();
 
             for (int i = 0; i < 6; i++) {

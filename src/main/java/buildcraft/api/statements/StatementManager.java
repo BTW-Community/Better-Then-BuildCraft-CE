@@ -7,9 +7,9 @@
 package buildcraft.api.statements;
 
 import buildcraft.api.core.BCLog;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.src.IIconRegister;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -165,8 +165,8 @@ public final class StatementManager {
      * Generally, this function should be called by every mod implementing the Statements API ***as a container*** (that
      * is, adding its own gates) on the client side from a given Item of choice.
      */
-    @SideOnly(Side.CLIENT)
-    public static void registerIcons(IIconRegister register) {
+    @Environment(EnvType.CLIENT)
+    public static void registerIcons(IconRegister register) {
         for (IStatement statement : statements.values()) {
             statement.registerIcons(register);
         }

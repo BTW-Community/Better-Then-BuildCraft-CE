@@ -7,11 +7,11 @@
 package buildcraft.builders;
 
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Item;
 import net.minecraft.TileEntity;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.IBlockAccess;
 import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -21,13 +21,13 @@ import buildcraft.core.BCCreativeTab;
 import buildcraft.core.GuiIds;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.lib.fluids.TankUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BlockBuilder extends BlockBuildCraft {
 
-    @SideOnly(Side.CLIENT)
-    public IIcon blockTopOn;
+    @Environment(EnvType.CLIENT)
+    public Icon blockTopOn;
 
     public BlockBuilder() {
         super(Material.iron, BCCreativeTab.get("main"));
@@ -36,8 +36,8 @@ public class BlockBuilder extends BlockBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister register) {
+    @Environment(EnvType.CLIENT)
+    public void registerBlockIcons(IconRegister register) {
         super.registerBlockIcons(register);
         blockTopOn = register.registerIcon("buildcraftbuilders:builderBlock/top_on");
     }

@@ -17,7 +17,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.gtnewhorizons.angelica.api.ThreadSafeISBRH;
 
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.api.transport.pluggable.IPipePluggableRenderer;
 import buildcraft.api.transport.pluggable.PipePluggable;
 import buildcraft.core.CoreConstants;
@@ -42,7 +42,7 @@ public class PipeRendererWorld extends BCSimpleBlockRenderingHandler {
     public boolean renderPipe(RenderBlocks renderblocks, IBlockAccess iblockaccess, TileGenericPipe tile, int x, int y,
             int z) {
         PipeRenderState state = tile.renderState;
-        IIconProvider icons = tile.getPipeIcons();
+        IconProvider icons = tile.getPipeIcons();
         int glassColor = tile.getPipeColor();
         int renderPass = ForgeHooksClient.getWorldRenderPass();
 

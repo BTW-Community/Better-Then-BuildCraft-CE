@@ -65,8 +65,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 @Mod(
         name = "BuildCraft Factory",
@@ -349,7 +349,7 @@ public class BuildCraftFactory extends BuildCraftMod {
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void loadTextures(TextureStitchEvent.Pre evt) {
         if (evt.map.getTextureType() == 0) {
             TextureMap terrainTextures = evt.map;

@@ -21,7 +21,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.IFluidBlock;
 
 import buildcraft.BuildCraftTransport;
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.api.core.Position;
 import buildcraft.api.statements.IActionInternal;
 import buildcraft.api.statements.StatementSlot;
@@ -220,7 +220,7 @@ public class PipeItemsStripes extends Pipe<PipeTransportItems> implements IEnerg
     }
 
     @Override
-    public IIconProvider getIconProvider() {
+    public IconProvider getIconProvider() {
         return BuildCraftTransport.instance.pipeIconProvider;
     }
 

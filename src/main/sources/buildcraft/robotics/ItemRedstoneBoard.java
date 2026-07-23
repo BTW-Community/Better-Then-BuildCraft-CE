@@ -13,7 +13,7 @@ import net.minecraft.EntityPlayer;
 import net.minecraft.Item;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 
 import buildcraft.BuildCraftRobotics;
 import buildcraft.api.boards.RedstoneBoardNBT;
@@ -21,8 +21,8 @@ import buildcraft.api.boards.RedstoneBoardRegistry;
 import buildcraft.core.BCCreativeTab;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemRedstoneBoard extends ItemBuildCraft {
 
@@ -42,20 +42,20 @@ public class ItemRedstoneBoard extends ItemBuildCraft {
     }
 
     @Override
-    public IIcon getIconIndex(ItemStack stack) {
+    public Icon getIconIndex(ItemStack stack) {
         NBTTagCompound cpt = getNBT(stack);
         return getBoardNBT(cpt).getIcon(cpt);
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public String[] getIconNames() {
         return new String[] { "board/clean" };
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs par2CreativeTabs, List itemList) {
         itemList.add(createStack(RedstoneBoardRegistry.instance.getEmptyRobotBoard()));
         for (RedstoneBoardNBT boardNBT : RedstoneBoardRegistry.instance.getAllBoardNBTs()) {

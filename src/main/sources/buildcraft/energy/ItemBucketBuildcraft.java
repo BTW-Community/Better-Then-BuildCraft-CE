@@ -7,15 +7,15 @@
 package buildcraft.energy;
 
 import net.minecraft.Block;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.Items;
 import net.minecraft.Item;
 import net.minecraft.ItemBucket;
 
 import buildcraft.core.BCCreativeTab;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemBucketBuildcraft extends ItemBucket {
 
@@ -38,8 +38,8 @@ public class ItemBucketBuildcraft extends ItemBucket {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister) {
         this.itemIcon = par1IconRegister.registerIcon("buildcraftenergy:" + iconName);
     }
 }

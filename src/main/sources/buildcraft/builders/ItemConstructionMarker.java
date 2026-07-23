@@ -7,27 +7,27 @@
 package buildcraft.builders;
 
 import net.minecraft.Block;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.EntityPlayer;
 import net.minecraft.ItemBlock;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
 import net.minecraft.TileEntity;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.World;
 
 import buildcraft.api.core.Position;
 import buildcraft.core.lib.utils.NBTUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemConstructionMarker extends ItemBlock {
 
-    @SideOnly(Side.CLIENT)
-    public IIcon iconBase;
+    @Environment(EnvType.CLIENT)
+    public Icon iconBase;
 
-    @SideOnly(Side.CLIENT)
-    public IIcon iconRecording;
+    @Environment(EnvType.CLIENT)
+    public Icon iconRecording;
 
     public ItemConstructionMarker(Block block) {
         super(block);
@@ -76,7 +76,7 @@ public class ItemConstructionMarker extends ItemBlock {
     }
 
     @Override
-    public IIcon getIconIndex(ItemStack marker) {
+    public Icon getIconIndex(ItemStack marker) {
         NBTTagCompound nbt = NBTUtils.getItemData(marker);
 
         if (nbt.hasKey("x")) {
@@ -89,8 +89,8 @@ public class ItemConstructionMarker extends ItemBlock {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister) {
         super.registerIcons(par1IconRegister);
 
         iconBase = par1IconRegister.registerIcon("buildcraftbuilders:constructionMarkerBlock/default");

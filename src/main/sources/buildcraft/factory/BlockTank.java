@@ -8,12 +8,12 @@ package buildcraft.factory;
 
 import net.minecraft.Block;
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.EntityPlayer;
 import net.minecraft.ItemStack;
 import net.minecraft.TileEntity;
 import net.minecraft.ChatComponentText;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.IBlockAccess;
 import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -25,13 +25,13 @@ import buildcraft.BuildCraftCore;
 import buildcraft.core.BCCreativeTab;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.lib.inventory.InvUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BlockTank extends BlockBuildCraft {
 
     private static final boolean DEBUG_MODE = false; // Change to true for readouts
-    private IIcon textureStackedSide;
+    private Icon textureStackedSide;
 
     public BlockTank() {
         super(Material.glass);
@@ -79,7 +79,7 @@ public class BlockTank extends BlockBuildCraft {
 
     @SuppressWarnings({ "all" })
     @Override
-    public IIcon getIconAbsolute(IBlockAccess iblockaccess, int i, int j, int k, int side, int metadata) {
+    public Icon getIconAbsolute(IBlockAccess iblockaccess, int i, int j, int k, int side, int metadata) {
         if (side >= 2 && iblockaccess.getBlock(i, j - 1, k) instanceof BlockTank) {
             return textureStackedSide;
         } else {
@@ -293,8 +293,8 @@ public class BlockTank extends BlockBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister par1IconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerBlockIcons(IconRegister par1IconRegister) {
         super.registerBlockIcons(par1IconRegister);
         textureStackedSide = par1IconRegister.registerIcon("buildcraftfactory:tankBlock/side_stacked");
     }

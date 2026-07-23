@@ -60,7 +60,7 @@ import buildcraft.core.lib.network.Packet;
 import buildcraft.core.lib.network.command.CommandWriter;
 import buildcraft.core.lib.network.command.PacketCommand;
 import buildcraft.core.lib.utils.NetworkUtils;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 
 public class TileBuilder extends TileAbstractBuilder
@@ -622,7 +622,7 @@ public class TileBuilder extends TileAbstractBuilder
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         super.receiveCommand(command, side, sender, stream);
         if (side.isClient()) {
             if ("clearItemRequirements".equals(command)) {

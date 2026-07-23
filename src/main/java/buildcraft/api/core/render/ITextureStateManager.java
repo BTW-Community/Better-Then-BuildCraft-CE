@@ -1,8 +1,8 @@
 package buildcraft.api.core.render;
 
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public interface ITextureStateManager {
 
-    void set(IIcon icon);
+    void set(Icon icon);
 }

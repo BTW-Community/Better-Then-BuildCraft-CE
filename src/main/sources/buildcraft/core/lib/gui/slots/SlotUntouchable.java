@@ -10,8 +10,8 @@ import net.minecraft.EntityPlayer;
 import net.minecraft.IInventory;
 import net.minecraft.ItemStack;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class SlotUntouchable extends SlotBase implements IPhantomSlot {
 
@@ -40,7 +40,7 @@ public class SlotUntouchable extends SlotBase implements IPhantomSlot {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public boolean func_111238_b() {
         return false;
     }

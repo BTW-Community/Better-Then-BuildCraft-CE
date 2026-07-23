@@ -12,7 +12,7 @@ import net.minecraft.CreativeTabs;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Item;
 import net.minecraft.ItemStack;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -23,8 +23,8 @@ import buildcraft.api.transport.pluggable.PipePluggable;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.ColorUtils;
 import buildcraft.core.lib.utils.StringUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemLens extends ItemBuildCraft implements IPipePluggableItem {
 
@@ -34,8 +34,8 @@ public class ItemLens extends ItemBuildCraft implements IPipePluggableItem {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIconFromDamageForRenderPass(int meta, int pass) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIconFromDamageForRenderPass(int meta, int pass) {
         switch (meta) {
             case 32:
                 return pass == 0 ? icons[3] : icons[0];
@@ -47,7 +47,7 @@ public class ItemLens extends ItemBuildCraft implements IPipePluggableItem {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public boolean requiresMultipleRenderPasses() {
         return true;
     }
@@ -57,7 +57,7 @@ public class ItemLens extends ItemBuildCraft implements IPipePluggableItem {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public int getColorFromItemStack(ItemStack stack, int pass) {
         if (stack.getItemDamage() >= 32) {
             return 16777215;
@@ -90,7 +90,7 @@ public class ItemLens extends ItemBuildCraft implements IPipePluggableItem {
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List itemList) {
         for (int i = 0; i < 34; i++) {
             itemList.add(new ItemStack(item, 1, i));

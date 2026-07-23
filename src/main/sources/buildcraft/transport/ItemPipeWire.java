@@ -8,21 +8,21 @@ package buildcraft.transport;
 
 import java.util.List;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.Item;
 import net.minecraft.ItemStack;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 
 import buildcraft.api.transport.PipeWire;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemPipeWire extends ItemBuildCraft {
 
-    private IIcon[] icons;
+    private Icon[] icons;
 
     public ItemPipeWire() {
         super();
@@ -33,7 +33,7 @@ public class ItemPipeWire extends ItemBuildCraft {
     }
 
     @Override
-    public IIcon getIconFromDamage(int damage) {
+    public Icon getIconFromDamage(int damage) {
         return icons[damage % icons.length];
     }
 
@@ -44,7 +44,7 @@ public class ItemPipeWire extends ItemBuildCraft {
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List itemList) {
         for (PipeWire pipeWire : PipeWire.VALUES) {
             itemList.add(pipeWire.getStack());
@@ -52,9 +52,9 @@ public class ItemPipeWire extends ItemBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
-        icons = new IIcon[PipeWire.VALUES.length];
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister) {
+        icons = new Icon[PipeWire.VALUES.length];
         for (PipeWire pipeWire : PipeWire.VALUES) {
             icons[pipeWire.ordinal()] = par1IconRegister
                     .registerIcon("buildcrafttransport:pipeWire/" + pipeWire.getColor().toLowerCase());

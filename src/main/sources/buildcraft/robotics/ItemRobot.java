@@ -9,7 +9,7 @@ package buildcraft.robotics;
 import java.util.List;
 
 import net.minecraft.Block;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Item;
@@ -34,8 +34,8 @@ import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.transport.BlockGenericPipe;
 import buildcraft.transport.Pipe;
 import cofh.api.energy.IEnergyContainerItem;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemRobot extends ItemBuildCraft implements IEnergyContainerItem {
 
@@ -113,7 +113,7 @@ public class ItemRobot extends ItemBuildCraft implements IEnergyContainerItem {
     }
 
     @Override
-    public void registerIcons(IIconRegister par1IconRegister) {
+    public void registerIcons(IconRegister par1IconRegister) {
         // cancels default BC icon registering
     }
 
@@ -128,7 +128,7 @@ public class ItemRobot extends ItemBuildCraft implements IEnergyContainerItem {
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs par2CreativeTabs, List itemList) {
         itemList.add(createRobotStack(RedstoneBoardRegistry.instance.getEmptyRobotBoard(), 0));
 

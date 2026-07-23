@@ -18,12 +18,12 @@ import org.lwjgl.opengl.GL11;
 
 import buildcraft.core.lib.render.ICustomHighlight;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BlockHighlightHandler {
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     @SubscribeEvent
     public void handleBlockHighlight(DrawBlockHighlightEvent e) {
         if (e.target.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK) {

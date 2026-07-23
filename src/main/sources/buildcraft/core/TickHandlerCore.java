@@ -12,14 +12,14 @@ import net.minecraft.ChatComponentTranslation;
 import buildcraft.core.proxy.CoreProxy;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class TickHandlerCore {
 
     private boolean nagged;
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     @SubscribeEvent
     public void checkUpToDate(PlayerTickEvent evt) {
         if (nagged) {

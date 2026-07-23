@@ -13,7 +13,7 @@ import net.minecraft.GuiButton;
 import net.minecraft.GuiTextField;
 import net.minecraft.IInventory;
 import net.minecraft.Slot;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.ResourceLocation;
 
 import org.lwjgl.input.Keyboard;
@@ -89,7 +89,7 @@ public class GuiZonePlan extends GuiAdvancedInterface {
         }
 
         @Override
-        public IIcon getIcon() {
+        public Icon getIcon() {
             return color.getIcon();
         }
 

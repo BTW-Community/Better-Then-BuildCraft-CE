@@ -12,7 +12,7 @@ import net.minecraft.TextureMap;
 import net.minecraft.TileEntityRendererDispatcher;
 import net.minecraft.TileEntitySpecialRenderer;
 import net.minecraft.TileEntity;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import org.lwjgl.opengl.GL11;
@@ -338,7 +338,7 @@ public class PipeRendererTESR extends TileEntitySpecialRenderer {
         GL11.glColor3f(1, 1, 1);
         GL11.glTranslatef((float) x, (float) y, (float) z);
 
-        IIcon lightIcon;
+        Icon lightIcon;
         if (gate.isLit) {
             lightIcon = gate.getLogic().getIconLit();
         } else {
@@ -352,7 +352,7 @@ public class PipeRendererTESR extends TileEntitySpecialRenderer {
         float pulseStage = gate.getPulseStage() * 2F;
 
         if (gate.isPulsing || pulseStage != 0) {
-            IIcon gateIcon = gate.getLogic().getGateIcon();
+            Icon gateIcon = gate.getLogic().getGateIcon();
 
             // Render pulsing gate
             float amplitude = 0.10F;
@@ -368,7 +368,7 @@ public class PipeRendererTESR extends TileEntitySpecialRenderer {
             renderGate(lightIcon, 0, 0.13F, translateCenter, translateCenter, direction, gate.isLit, 0);
         }
 
-        IIcon materialIcon = gate.getMaterial().getIconBlock();
+        Icon materialIcon = gate.getMaterial().getIconBlock();
         if (materialIcon != null) {
             renderGate(materialIcon, 1, 0.13F, translateCenter, translateCenter, direction, false, 1);
         }
@@ -380,7 +380,7 @@ public class PipeRendererTESR extends TileEntitySpecialRenderer {
         GL11.glPopMatrix();
     }
 
-    private static void renderGate(IIcon icon, int layer, float trim, float translateCenter, float extraDepth,
+    private static void renderGate(Icon icon, int layer, float trim, float translateCenter, float extraDepth,
             ForgeDirection direction, boolean isLit, int sideRenderingMode) {
         RenderInfo renderBox = new RenderInfo();
         renderBox.texture = icon;

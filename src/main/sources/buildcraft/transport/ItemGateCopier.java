@@ -6,7 +6,7 @@ import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
 import net.minecraft.TileEntity;
 import net.minecraft.ChatComponentTranslation;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -18,8 +18,8 @@ import buildcraft.transport.BlockGenericPipe.Part;
 import buildcraft.transport.BlockGenericPipe.RaytraceResult;
 import buildcraft.transport.gates.GateDefinition.GateMaterial;
 import buildcraft.transport.gates.GatePluggable;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemGateCopier extends ItemBuildCraft {
 
@@ -30,8 +30,8 @@ public class ItemGateCopier extends ItemBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIconIndex(ItemStack i) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIconIndex(ItemStack i) {
         NBTTagCompound cpt = NBTUtils.getItemData(i);
         this.itemIcon = cpt.hasKey("logic") ? icons[1] : icons[0];
         return this.itemIcon;

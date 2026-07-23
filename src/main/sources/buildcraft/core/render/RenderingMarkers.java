@@ -9,7 +9,7 @@ package buildcraft.core.render;
 import net.minecraft.Block;
 import net.minecraft.RenderBlocks;
 import net.minecraft.Tessellator;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.IBlockAccess;
 
 import com.gtnewhorizons.angelica.api.ThreadSafeISBRH;
@@ -143,7 +143,7 @@ public class RenderingMarkers extends BCSimpleBlockRenderingHandler {
         int yCoord = (int) y;
         int zCoord = (int) z;
 
-        IIcon i = block.getIcon(iblockaccess, xCoord, yCoord, zCoord, 1);
+        Icon i = block.getIcon(iblockaccess, xCoord, yCoord, zCoord, 1);
 
         int m = metaToOld[metadata];
         x += 0.5D;

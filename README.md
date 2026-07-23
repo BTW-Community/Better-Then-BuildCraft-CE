@@ -13,7 +13,7 @@ IIconRegister => IconRegister
 BlockFalling => FallingBlock
 
 ### FML
-cpw.mods.fml.relauncher.Side => EnvType;
+cpw.mods.fml.relauncher.EnvType => EnvType;
 import cpw.mods.fml.relauncher.SideOnly => Environment;
 ## Added shims/extensions
 - ForgeDirection

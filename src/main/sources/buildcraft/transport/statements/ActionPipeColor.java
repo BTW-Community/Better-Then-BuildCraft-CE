@@ -8,7 +8,7 @@ package buildcraft.transport.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 
 import buildcraft.api.core.EnumColor;
 import buildcraft.api.statements.IActionInternal;
@@ -33,7 +33,7 @@ public class ActionPipeColor extends BCStatement implements IActionInternal {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcraftcore:paintbrush/" + color.name().toLowerCase(Locale.ENGLISH));
     }
 

@@ -7,13 +7,13 @@
 package buildcraft.api.core.render;
 
 import net.minecraft.src.Block;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public interface ITextureStates extends ICullable {
 
     ITextureStateManager getTextureState();
 
-    IIcon getIcon(int side, int meta);
+    Icon getIcon(int side, int meta);
 
     Block getBlock();
 }

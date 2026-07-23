@@ -12,7 +12,7 @@ import java.util.Random;
 
 import net.minecraft.Block;
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.EntityLivingBase;
 import net.minecraft.Item;
@@ -73,7 +73,7 @@ public class BlockPlainPipe extends Block {
     }
 
     @Override
-    public void registerBlockIcons(IIconRegister register) {
+    public void registerBlockIcons(IconRegister register) {
         blockIcon = register.registerIcon("buildcraftfactory:plainPipeBlock/default");
     }
 }

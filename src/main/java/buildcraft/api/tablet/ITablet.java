@@ -1,11 +1,11 @@
 package buildcraft.api.tablet;
 
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import net.minecraft.src.NBTTagCompound;
 
 public interface ITablet {
 
-    Side getSide();
+    EnvType getSide();
 
     void refreshScreen(TabletBitmap data);
 

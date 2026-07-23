@@ -1,9 +1,9 @@
 package buildcraft.core.builders.patterns;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 
 import buildcraft.api.statements.IStatement;
 import buildcraft.api.statements.IStatementContainer;
@@ -13,7 +13,7 @@ import buildcraft.core.lib.utils.StringUtils;
 
 public class PatternParameterYDir implements IStatementParameter {
 
-    private static IIcon iconUp, iconDown;
+    private static Icon iconUp, iconDown;
 
     public boolean up = false;
 
@@ -32,7 +32,7 @@ public class PatternParameterYDir implements IStatementParameter {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return up ? iconUp : iconDown;
     }
 
@@ -42,7 +42,7 @@ public class PatternParameterYDir implements IStatementParameter {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         iconUp = iconRegister.registerIcon("buildcraftcore:fillerParameters/stairs_ascend");
         iconDown = iconRegister.registerIcon("buildcraftcore:fillerParameters/stairs_descend");
     }

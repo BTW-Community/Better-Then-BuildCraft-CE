@@ -6,8 +6,8 @@
  */
 package buildcraft.transport.gates;
 
-import net.minecraft.IIconRegister;
-import net.minecraft.IIcon;
+import net.minecraft.IconRegister;
+import net.minecraft.Icon;
 
 import buildcraft.api.gates.IGateExpansion;
 import buildcraft.core.lib.utils.StringUtils;
@@ -15,8 +15,8 @@ import buildcraft.core.lib.utils.StringUtils;
 public abstract class GateExpansionBuildcraft implements IGateExpansion {
 
     private final String tag;
-    private IIcon iconBlock;
-    private IIcon iconItem;
+    private Icon iconBlock;
+    private Icon iconItem;
 
     public GateExpansionBuildcraft(String tag) {
         this.tag = tag;
@@ -33,22 +33,22 @@ public abstract class GateExpansionBuildcraft implements IGateExpansion {
     }
 
     @Override
-    public void registerBlockOverlay(IIconRegister iconRegister) {
+    public void registerBlockOverlay(IconRegister iconRegister) {
         iconBlock = iconRegister.registerIcon("buildcrafttransport:gates/gate_expansion_" + tag);
     }
 
     @Override
-    public void registerItemOverlay(IIconRegister iconRegister) {
+    public void registerItemOverlay(IconRegister iconRegister) {
         iconItem = iconRegister.registerIcon("buildcrafttransport:gates/gate_expansion_" + tag);
     }
 
     @Override
-    public IIcon getOverlayBlock() {
+    public Icon getOverlayBlock() {
         return iconBlock;
     }
 
     @Override
-    public IIcon getOverlayItem() {
+    public Icon getOverlayItem() {
         return iconItem;
     }
 }

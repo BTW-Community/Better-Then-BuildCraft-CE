@@ -20,8 +20,8 @@ import net.minecraftforge.fluids.IFluidHandler;
 
 import com.google.common.collect.ForwardingList;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import io.netty.buffer.ByteBuf;
 
 public class TankManager<T extends Tank> extends ForwardingList<T> implements IFluidHandler, List<T> {
@@ -122,7 +122,7 @@ public class TankManager<T extends Tank> extends ForwardingList<T> implements IF
         }
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void readData(ByteBuf data) {
         for (Tank tank : tanks) {
             int fluidId = data.readShort();

@@ -8,7 +8,7 @@ package buildcraft.transport.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 
 import buildcraft.api.statements.IActionInternal;
 import buildcraft.api.statements.IStatementContainer;
@@ -65,7 +65,7 @@ public class ActionSignalOutput extends BCStatement implements IActionInternal {
     }
 
     @Override
-    public void registerIcons(IIconRegister register) {
+    public void registerIcons(IconRegister register) {
         icon = register.registerIcon(
                 "buildcrafttransport:triggers/trigger_pipesignal_" + color.name().toLowerCase() + "_active");
     }

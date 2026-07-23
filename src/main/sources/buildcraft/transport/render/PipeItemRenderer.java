@@ -12,7 +12,7 @@ import net.minecraft.RenderBlocks;
 import net.minecraft.Tessellator;
 import net.minecraft.TextureMap;
 import net.minecraft.ItemStack;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
@@ -39,7 +39,7 @@ public class PipeItemRenderer implements IItemRenderer {
         Tessellator tessellator = Tessellator.instance;
 
         Block block = FakeBlock.INSTANCE;
-        IIcon icon = PipeIconProvider.TYPE.PipeStainedOverlay.getIcon();
+        Icon icon = PipeIconProvider.TYPE.PipeStainedOverlay.getIcon();
 
         if (item.getItemDamage() >= 1) {
             GL11.glPushMatrix();

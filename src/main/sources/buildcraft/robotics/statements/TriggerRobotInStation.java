@@ -8,7 +8,7 @@ package buildcraft.robotics.statements;
 
 import java.util.List;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 
 import buildcraft.api.robots.DockingStation;
 import buildcraft.api.statements.IStatementContainer;
@@ -31,7 +31,7 @@ public class TriggerRobotInStation extends BCStatement implements ITriggerIntern
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcraftrobotics:triggers/trigger_robot_in_station");
     }
 

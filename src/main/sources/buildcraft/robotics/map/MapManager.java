@@ -18,7 +18,7 @@ import com.google.common.collect.HashBiMap;
 import buildcraft.core.lib.utils.Utils;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 
 public class MapManager implements Runnable {
 

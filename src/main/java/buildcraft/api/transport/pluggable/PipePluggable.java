@@ -9,8 +9,8 @@ package buildcraft.api.transport.pluggable;
 import buildcraft.api.core.INBTStoreable;
 import buildcraft.api.core.ISerializable;
 import buildcraft.api.transport.IPipeTile;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.AxisAlignedBB;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -44,10 +44,10 @@ public abstract class PipePluggable implements INBTStoreable, ISerializable {
 
     public abstract AxisAlignedBB getBoundingBox(ForgeDirection side);
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public abstract IPipePluggableRenderer getRenderer();
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public IPipePluggableDynamicRenderer getDynamicRenderer() {
         return null;
     }

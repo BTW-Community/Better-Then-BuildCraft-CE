@@ -6,7 +6,7 @@
  */
 package buildcraft.energy.statements;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -16,8 +16,8 @@ import buildcraft.api.statements.ITriggerExternal;
 import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.core.statements.BCStatement;
 import buildcraft.energy.TileEngineIron;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class TriggerCoolantBelowThreshold extends BCStatement implements ITriggerExternal {
 
@@ -44,8 +44,8 @@ public class TriggerCoolantBelowThreshold extends BCStatement implements ITrigge
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcraftenergy:triggers/trigger_coolant_below_threshold");
     }
 }

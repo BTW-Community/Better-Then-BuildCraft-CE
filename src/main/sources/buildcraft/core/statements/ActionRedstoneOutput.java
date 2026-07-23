@@ -6,7 +6,7 @@
  */
 package buildcraft.core.statements;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.statements.IActionInternal;
@@ -15,8 +15,8 @@ import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.containers.IRedstoneStatementContainer;
 import buildcraft.api.statements.containers.ISidedStatementContainer;
 import buildcraft.core.lib.utils.StringUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ActionRedstoneOutput extends BCStatement implements IActionInternal {
 
@@ -75,8 +75,8 @@ public class ActionRedstoneOutput extends BCStatement implements IActionInternal
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister register) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister register) {
         icon = register.registerIcon("buildcraftcore:triggers/action_redstoneoutput");
     }
 }

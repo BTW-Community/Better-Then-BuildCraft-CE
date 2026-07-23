@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentSkipListSet;
 
 import net.minecraft.Block;
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.Entity;
 import net.minecraft.Item;
@@ -278,7 +278,7 @@ public class BlockFrame extends Block implements IFramePipeConnection {
     }
 
     @Override
-    public void registerBlockIcons(IIconRegister register) {
+    public void registerBlockIcons(IconRegister register) {
         blockIcon = register.registerIcon("buildcraftbuilders:frameBlock/default");
     }
 }

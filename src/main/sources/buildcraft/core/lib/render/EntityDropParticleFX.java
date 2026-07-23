@@ -13,10 +13,10 @@ import net.minecraft.MathHelper;
 import net.minecraft.World;
 import net.minecraftforge.fluids.IFluidBlock;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
-@SideOnly(Side.CLIENT)
+@Environment(EnvType.CLIENT)
 public class EntityDropParticleFX extends EntityFX {
 
     /**

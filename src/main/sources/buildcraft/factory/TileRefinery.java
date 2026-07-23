@@ -31,7 +31,7 @@ import buildcraft.core.lib.fluids.TankManager;
 import buildcraft.core.lib.network.command.ICommandReceiver;
 import buildcraft.core.lib.utils.NetworkUtils;
 import buildcraft.core.recipes.RefineryRecipeManager;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 
 public class TileRefinery extends TileBuildCraft
@@ -352,7 +352,7 @@ public class TileRefinery extends TileBuildCraft
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         if (side == Side.SERVER && "setFilter".equals(command)) {
             setFilter(stream.readByte(), FluidRegistry.getFluid(stream.readShort()));
         }

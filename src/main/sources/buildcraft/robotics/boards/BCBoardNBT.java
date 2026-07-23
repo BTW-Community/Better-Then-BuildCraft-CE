@@ -5,12 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.EntityPlayer;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
 import net.minecraft.EnumChatFormatting;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.ResourceLocation;
 
 import buildcraft.api.boards.RedstoneBoardRobot;
@@ -18,8 +18,8 @@ import buildcraft.api.boards.RedstoneBoardRobotNBT;
 import buildcraft.api.robots.EntityRobotBase;
 import buildcraft.core.DefaultProps;
 import buildcraft.core.lib.utils.StringUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class BCBoardNBT extends RedstoneBoardRobotNBT {
 
@@ -28,8 +28,8 @@ public class BCBoardNBT extends RedstoneBoardRobotNBT {
     private final String id, upperName, boardType;
     private final Constructor<? extends RedstoneBoardRobot> boardInit;
 
-    @SideOnly(Side.CLIENT)
-    private IIcon icon;
+    @Environment(EnvType.CLIENT)
+    private Icon icon;
 
     public BCBoardNBT(String id, String name, Class<? extends RedstoneBoardRobot> board, String boardType) {
         this.id = id;
@@ -71,14 +71,14 @@ public class BCBoardNBT extends RedstoneBoardRobotNBT {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcraftrobotics:board/" + boardType);
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(NBTTagCompound nbt) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIcon(NBTTagCompound nbt) {
         return icon;
     }
 

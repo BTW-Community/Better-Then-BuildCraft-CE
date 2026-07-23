@@ -6,10 +6,10 @@
  */
 package buildcraft.core.statements;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.statements.IStatement;
@@ -21,7 +21,7 @@ import buildcraft.core.lib.utils.StringUtils;
 
 public class StatementParameterDirection implements IStatementParameter {
 
-    private static IIcon[] icons;
+    private static Icon[] icons;
 
     public ForgeDirection direction = ForgeDirection.UNKNOWN;
 
@@ -33,7 +33,7 @@ public class StatementParameterDirection implements IStatementParameter {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         if (direction == ForgeDirection.UNKNOWN) {
             return null;
         } else {
@@ -97,8 +97,8 @@ public class StatementParameterDirection implements IStatementParameter {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
-        icons = new IIcon[] { iconRegister.registerIcon("buildcraftcore:triggers/trigger_dir_down"),
+    public void registerIcons(IconRegister iconRegister) {
+        icons = new Icon[] { iconRegister.registerIcon("buildcraftcore:triggers/trigger_dir_down"),
                 iconRegister.registerIcon("buildcraftcore:triggers/trigger_dir_up"),
                 iconRegister.registerIcon("buildcraftcore:triggers/trigger_dir_north"),
                 iconRegister.registerIcon("buildcraftcore:triggers/trigger_dir_south"),

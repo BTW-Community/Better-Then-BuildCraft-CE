@@ -9,7 +9,7 @@ package buildcraft.robotics.statements;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.ItemStack;
 
 import buildcraft.api.robots.DockingStation;
@@ -36,7 +36,7 @@ public class ActionRobotFilterTool extends BCStatement implements IActionInterna
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcraftrobotics:triggers/action_robot_filter_tool");
     }
 

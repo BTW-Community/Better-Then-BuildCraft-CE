@@ -8,13 +8,13 @@ package buildcraft.transport.gates;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
-import net.minecraft.IIcon;
+import net.minecraft.IconRegister;
+import net.minecraft.Icon;
 import net.minecraft.ResourceLocation;
 
 import buildcraft.core.lib.utils.StringUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public final class GateDefinition {
 
@@ -48,11 +48,11 @@ public final class GateDefinition {
         public final int numActionParameters;
         public final int maxWireColor;
 
-        @SideOnly(Side.CLIENT)
-        private IIcon iconBlock;
+        @Environment(EnvType.CLIENT)
+        private Icon iconBlock;
 
-        @SideOnly(Side.CLIENT)
-        private IIcon iconItem;
+        @Environment(EnvType.CLIENT)
+        private Icon iconItem;
 
         GateMaterial(String guiFile, int guiHeight, int numSlots, int triggerParameterSlots, int actionParameterSlots,
                 int maxWireColor) {
@@ -64,13 +64,13 @@ public final class GateDefinition {
             this.maxWireColor = maxWireColor;
         }
 
-        @SideOnly(Side.CLIENT)
-        public IIcon getIconBlock() {
+        @Environment(EnvType.CLIENT)
+        public Icon getIconBlock() {
             return iconBlock;
         }
 
-        @SideOnly(Side.CLIENT)
-        public IIcon getIconItem() {
+        @Environment(EnvType.CLIENT)
+        public Icon getIconItem() {
             return iconItem;
         }
 
@@ -78,15 +78,15 @@ public final class GateDefinition {
             return name().toLowerCase(Locale.ENGLISH);
         }
 
-        @SideOnly(Side.CLIENT)
-        public void registerBlockIcon(IIconRegister iconRegister) {
+        @Environment(EnvType.CLIENT)
+        public void registerBlockIcon(IconRegister iconRegister) {
             if (this != REDSTONE) {
                 iconBlock = iconRegister.registerIcon("buildcrafttransport:gates/gate_material_" + getTag());
             }
         }
 
-        @SideOnly(Side.CLIENT)
-        public void registerItemIcon(IIconRegister iconRegister) {
+        @Environment(EnvType.CLIENT)
+        public void registerItemIcon(IconRegister iconRegister) {
             if (this != REDSTONE) {
                 iconItem = iconRegister.registerIcon("buildcrafttransport:gates/gate_material_" + getTag());
             }
@@ -107,35 +107,35 @@ public final class GateDefinition {
 
         public static final GateLogic[] VALUES = values();
 
-        @SideOnly(Side.CLIENT)
-        private IIcon iconLit;
+        @Environment(EnvType.CLIENT)
+        private Icon iconLit;
 
-        @SideOnly(Side.CLIENT)
-        private IIcon iconDark;
+        @Environment(EnvType.CLIENT)
+        private Icon iconDark;
 
-        @SideOnly(Side.CLIENT)
-        private IIcon iconItem;
+        @Environment(EnvType.CLIENT)
+        private Icon iconItem;
 
-        @SideOnly(Side.CLIENT)
-        private IIcon iconGate;
+        @Environment(EnvType.CLIENT)
+        private Icon iconGate;
 
-        @SideOnly(Side.CLIENT)
-        public IIcon getIconLit() {
+        @Environment(EnvType.CLIENT)
+        public Icon getIconLit() {
             return iconLit;
         }
 
-        @SideOnly(Side.CLIENT)
-        public IIcon getIconDark() {
+        @Environment(EnvType.CLIENT)
+        public Icon getIconDark() {
             return iconDark;
         }
 
-        @SideOnly(Side.CLIENT)
-        public IIcon getGateIcon() {
+        @Environment(EnvType.CLIENT)
+        public Icon getGateIcon() {
             return iconGate;
         }
 
-        @SideOnly(Side.CLIENT)
-        public IIcon getIconItem() {
+        @Environment(EnvType.CLIENT)
+        public Icon getIconItem() {
             return iconItem;
         }
 
@@ -143,16 +143,16 @@ public final class GateDefinition {
             return name().toLowerCase(Locale.ENGLISH);
         }
 
-        @SideOnly(Side.CLIENT)
-        public void registerBlockIcon(IIconRegister iconRegister) {
+        @Environment(EnvType.CLIENT)
+        public void registerBlockIcon(IconRegister iconRegister) {
             iconLit = iconRegister.registerIcon("buildcrafttransport:gates/gate_" + getTag() + "_lit");
             iconDark = iconRegister.registerIcon("buildcrafttransport:gates/gate_" + getTag() + "_dark");
 
             iconGate = iconRegister.registerIcon("buildcrafttransport:gates/gate_" + getTag());
         }
 
-        @SideOnly(Side.CLIENT)
-        public void registerItemIcon(IIconRegister iconRegister) {
+        @Environment(EnvType.CLIENT)
+        public void registerItemIcon(IconRegister iconRegister) {
             iconItem = iconRegister.registerIcon("buildcrafttransport:gates/gate_logic_" + getTag());
         }
 

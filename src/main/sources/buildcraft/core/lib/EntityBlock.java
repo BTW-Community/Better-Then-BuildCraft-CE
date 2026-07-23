@@ -8,16 +8,16 @@ package buildcraft.core.lib;
 
 import net.minecraft.Entity;
 import net.minecraft.NBTTagCompound;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.World;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class EntityBlock extends Entity {
 
-    @SideOnly(Side.CLIENT)
-    public IIcon[] texture;
+    @Environment(EnvType.CLIENT)
+    public Icon[] texture;
 
     public float shadowSize = 0;
     public float rotationX = 0;
@@ -49,9 +49,9 @@ public class EntityBlock extends Entity {
         this.motionZ = 0.0;
     }
 
-    public void setTexture(IIcon icon) {
+    public void setTexture(Icon icon) {
         if (this.texture == null) {
-            this.texture = new IIcon[6];
+            this.texture = new Icon[6];
         }
         for (int i = 0; i < 6; i++) {
             this.texture[i] = icon;
@@ -101,7 +101,7 @@ public class EntityBlock extends Entity {
         return brightness > 0 ? brightness : super.getBrightnessForRender(par1);
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public boolean isInRangeToRenderDist(double distance) {
         return distance < 50000;
     }

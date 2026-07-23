@@ -8,7 +8,7 @@ package buildcraft.robotics.statements;
 
 import java.util.List;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -40,7 +40,7 @@ public class ActionRobotGotoStation extends BCStatement implements IActionIntern
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcraftrobotics:triggers/action_robot_goto_station");
     }
 

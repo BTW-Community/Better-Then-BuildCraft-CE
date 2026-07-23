@@ -8,7 +8,7 @@ package buildcraft.transport.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.statements.IActionInternal;
@@ -54,7 +54,7 @@ public class ActionValve extends BCStatement implements IActionInternal {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister
                 .registerIcon("buildcrafttransport:triggers/action_valve_" + state.name().toLowerCase(Locale.ENGLISH));
     }

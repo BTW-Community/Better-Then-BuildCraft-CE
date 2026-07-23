@@ -6,7 +6,7 @@
  */
 package buildcraft.core.statements;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -50,7 +50,7 @@ public class TriggerMachine extends BCStatement implements ITriggerExternal {
     }
 
     @Override
-    public void registerIcons(IIconRegister register) {
+    public void registerIcons(IconRegister register) {
         icon = register.registerIcon("buildcraftcore:triggers/trigger_machine_" + (active ? "active" : "inactive"));
     }
 }

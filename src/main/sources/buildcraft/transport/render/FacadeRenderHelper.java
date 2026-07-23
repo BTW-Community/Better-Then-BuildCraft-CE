@@ -8,7 +8,7 @@ package buildcraft.transport.render;
 
 import net.minecraft.Block;
 import net.minecraft.RenderBlocks;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -94,7 +94,7 @@ public final class FacadeRenderHelper {
     public static void pipeFacadeRenderer(RenderBlocks renderblocks, ITextureStates blockStateMachine, IPipeTile tile,
             int renderPass, int x, int y, int z, ForgeDirection direction, IFacadePluggable pluggable) {
         ITextureStates textureManager = blockStateMachine;
-        IIcon[] textures = ((TextureStateManager) textureManager.getTextureState()).popArray();
+        Icon[] textures = ((TextureStateManager) textureManager.getTextureState()).popArray();
 
         Block renderBlock = pluggable.getCurrentBlock();
 

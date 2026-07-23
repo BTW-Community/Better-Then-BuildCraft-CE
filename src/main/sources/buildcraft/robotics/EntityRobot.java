@@ -34,7 +34,7 @@ import net.minecraft.TileEntity;
 import net.minecraft.AxisAlignedBB;
 import net.minecraft.DamageSource;
 import net.minecraft.EntityDamageSource;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.MathHelper;
 import net.minecraft.ResourceLocation;
 import net.minecraft.StatCollector;
@@ -91,8 +91,8 @@ import buildcraft.robotics.ai.AIRobotSleep;
 import buildcraft.robotics.statements.ActionRobotWorkInArea;
 import buildcraft.robotics.statements.ActionRobotWorkInArea.AreaType;
 import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import io.netty.buffer.ByteBuf;
 
 public class EntityRobot extends EntityRobotBase
@@ -396,7 +396,7 @@ public class EntityRobot extends EntityRobotBase
         return false;
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     private void updateEnergyFX() {
         energyFX += energySpendPerCycle;
 
@@ -406,7 +406,7 @@ public class EntityRobot extends EntityRobotBase
         }
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     private void spawnEnergyFX() {
         Minecraft.getMinecraft().effectRenderer.addEffect(
                 new EntityRobotEnergyParticle(
@@ -817,7 +817,7 @@ public class EntityRobot extends EntityRobotBase
     }
 
     @Override
-    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
         if (side.isClient()) {
             if ("clientSetItemInUse".equals(command)) {
                 itemInUse = NetworkUtils.readStack(stream);
@@ -1018,7 +1018,7 @@ public class EntityRobot extends EntityRobotBase
         return linkedDockingStation;
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     @Override
     public boolean isInRangeToRenderDist(double par1) {
         return true;
@@ -1500,9 +1500,9 @@ public class EntityRobot extends EntityRobotBase
         return new FluidTankInfo[] { new FluidTankInfo(tank, maxFluid) };
     }
 
-    @SideOnly(Side.CLIENT)
-    public IIcon getItemIcon(ItemStack stack, int renderPass) {
-        IIcon iicon = super.getItemIcon(stack, renderPass);
+    @Environment(EnvType.CLIENT)
+    public Icon getItemIcon(ItemStack stack, int renderPass) {
+        Icon iicon = super.getItemIcon(stack, renderPass);
 
         if (iicon == null) {
             iicon = stack.getItem().getIcon(stack, renderPass, null, itemInUse, 0);

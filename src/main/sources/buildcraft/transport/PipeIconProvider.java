@@ -6,15 +6,15 @@
  */
 package buildcraft.transport;
 
-import net.minecraft.IIconRegister;
-import net.minecraft.IIcon;
+import net.minecraft.IconRegister;
+import net.minecraft.Icon;
 
 import buildcraft.BuildCraftCore;
-import buildcraft.api.core.IIconProvider;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import buildcraft.api.core.IconProvider;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
-public class PipeIconProvider implements IIconProvider {
+public class PipeIconProvider implements IconProvider {
 
     public enum TYPE {
 
@@ -152,7 +152,7 @@ public class PipeIconProvider implements IIconProvider {
         public static final TYPE[] VALUES = values();
         private final String iconTag;
         private final String iconTagColorBlind;
-        private IIcon icon;
+        private Icon icon;
 
         TYPE(String iconTag, String iconTagColorBlind) {
             this.iconTag = iconTag;
@@ -163,7 +163,7 @@ public class PipeIconProvider implements IIconProvider {
             this(iconTag, iconTag);
         }
 
-        private void registerIcon(IIconRegister iconRegister) {
+        private void registerIcon(IconRegister iconRegister) {
             String name = BuildCraftCore.colorBlindMode ? iconTagColorBlind : iconTag;
             if (!name.contains(":")) {
                 name = "transport:pipes/" + name;
@@ -171,14 +171,14 @@ public class PipeIconProvider implements IIconProvider {
             icon = iconRegister.registerIcon("buildcraft" + name);
         }
 
-        public IIcon getIcon() {
+        public Icon getIcon() {
             return icon;
         }
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int pipeIconIndex) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIcon(int pipeIconIndex) {
         if (pipeIconIndex == -1) {
             return null;
         }
@@ -186,8 +186,8 @@ public class PipeIconProvider implements IIconProvider {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
         for (TYPE type : TYPE.VALUES) {
             type.registerIcon(iconRegister);
         }

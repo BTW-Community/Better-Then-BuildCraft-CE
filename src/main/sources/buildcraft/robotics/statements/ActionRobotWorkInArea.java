@@ -6,7 +6,7 @@
  */
 package buildcraft.robotics.statements;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.ItemStack;
 
 import buildcraft.api.core.IZone;
@@ -58,7 +58,7 @@ public class ActionRobotWorkInArea extends BCStatement implements IActionInterna
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon(areaType.getIcon());
     }
 

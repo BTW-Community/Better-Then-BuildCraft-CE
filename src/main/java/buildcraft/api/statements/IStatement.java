@@ -6,10 +6,10 @@
  */
 package buildcraft.api.statements;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.src.IIconRegister;
-import net.minecraft.src.IIcon;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.src.IconRegister;
+import net.minecraft.src.Icon;
 
 public interface IStatement {
 
@@ -20,11 +20,11 @@ public interface IStatement {
      */
     String getUniqueTag();
 
-    @SideOnly(Side.CLIENT)
-    IIcon getIcon();
+    @Environment(EnvType.CLIENT)
+    Icon getIcon();
 
-    @SideOnly(Side.CLIENT)
-    void registerIcons(IIconRegister iconRegister);
+    @Environment(EnvType.CLIENT)
+    void registerIcons(IconRegister iconRegister);
 
     /**
      * Return the maximum number of parameter this statement can have, 0 if none.

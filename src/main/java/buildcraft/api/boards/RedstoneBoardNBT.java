@@ -6,13 +6,13 @@
  */
 package buildcraft.api.boards;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.src.IIconRegister;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraftforge.common.util.Constants;
 
 import java.util.List;
@@ -28,11 +28,11 @@ public abstract class RedstoneBoardNBT<T> {
 
     public abstract IRedstoneBoard<T> create(NBTTagCompound nbt, T object);
 
-    @SideOnly(Side.CLIENT)
-    public abstract void registerIcons(IIconRegister iconRegister);
+    @Environment(EnvType.CLIENT)
+    public abstract void registerIcons(IconRegister iconRegister);
 
-    @SideOnly(Side.CLIENT)
-    public abstract IIcon getIcon(NBTTagCompound nbt);
+    @Environment(EnvType.CLIENT)
+    public abstract Icon getIcon(NBTTagCompound nbt);
 
     public void createBoard(NBTTagCompound nbt) {
         nbt.setString("id", getID());

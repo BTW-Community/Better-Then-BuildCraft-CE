@@ -6,9 +6,9 @@
  */
 package buildcraft.api.core;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.src.IIcon;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.src.Icon;
 import net.minecraft.src.StatCollector;
 
 import java.util.Locale;
@@ -44,8 +44,8 @@ public enum EnumColor {
     public static final int[] LIGHT_HEX = { 0x181414, 0xBE2B27, 0x007F0E, 0x89502D, 0x253193, 0x7e34bf, 0x299799,
             0xa0a7a7, 0x7A7A7A, 0xD97199, 0x39D52E, 0xFFD91C, 0x66AAFF, 0xD943C6, 0xEA7835, 0xe4e4e4 };
 
-    @SideOnly(Side.CLIENT)
-    private static IIcon[] brushIcons;
+    @Environment(EnvType.CLIENT)
+    private static Icon[] brushIcons;
 
     public int getDarkHex() {
         return DARK_HEX[ordinal()];
@@ -129,12 +129,12 @@ public enum EnumColor {
         return b.toString().trim();
     }
 
-    public static void setIconArray(IIcon[] icons) {
+    public static void setIconArray(Icon[] icons) {
         brushIcons = icons;
     }
 
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon() {
+    @Environment(EnvType.CLIENT)
+    public Icon getIcon() {
         return brushIcons[ordinal()];
     }
 }

@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Map;
 
 import net.minecraft.Block;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Blocks;
 import net.minecraft.ItemStack;
 import net.minecraft.TileEntity;
 import net.minecraft.EnumChatFormatting;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -26,7 +26,7 @@ import com.google.common.collect.ImmutableMap;
 
 import buildcraft.BuildCraftTransport;
 import buildcraft.api.core.BCLog;
-import buildcraft.api.core.IIconProvider;
+import buildcraft.api.core.IconProvider;
 import buildcraft.api.transport.IItemPipe;
 import buildcraft.core.BCCreativeTab;
 import buildcraft.core.lib.items.ItemBuildCraft;
@@ -41,13 +41,13 @@ import buildcraft.transport.pipes.PipePowerQuartz;
 import buildcraft.transport.pipes.PipePowerSandstone;
 import buildcraft.transport.pipes.PipePowerStone;
 import buildcraft.transport.pipes.PipePowerWood;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemPipe extends ItemBuildCraft implements IItemPipe {
 
-    @SideOnly(Side.CLIENT)
-    private IIconProvider iconProvider;
+    @Environment(EnvType.CLIENT)
+    private IconProvider iconProvider;
 
     private int pipeIconIndex;
 
@@ -134,8 +134,8 @@ public class ItemPipe extends ItemBuildCraft implements IItemPipe {
         }
     }
 
-    @SideOnly(Side.CLIENT)
-    public void setPipesIcons(IIconProvider iconProvider) {
+    @Environment(EnvType.CLIENT)
+    public void setPipesIcons(IconProvider iconProvider) {
         this.iconProvider = iconProvider;
     }
 
@@ -144,8 +144,8 @@ public class ItemPipe extends ItemBuildCraft implements IItemPipe {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIconFromDamage(int par1) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIconFromDamage(int par1) {
         if (iconProvider != null) { // invalid pipes won't have this set
             return iconProvider.getIcon(pipeIconIndex);
         } else {
@@ -154,13 +154,13 @@ public class ItemPipe extends ItemBuildCraft implements IItemPipe {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister) {
         // NOOP
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public int getSpriteNumber() {
         return 0;
     }

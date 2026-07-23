@@ -6,12 +6,12 @@
  */
 package buildcraft.api.statements;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.src.IIconRegister;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public interface IStatementParameter {
 
@@ -22,8 +22,8 @@ public interface IStatementParameter {
      */
     String getUniqueTag();
 
-    @SideOnly(Side.CLIENT)
-    IIcon getIcon();
+    @Environment(EnvType.CLIENT)
+    Icon getIcon();
 
     ItemStack getItemStack();
 
@@ -32,8 +32,8 @@ public interface IStatementParameter {
      * every IStatementParameter is instantiated upon creation, in opposition to IStatements which are singletons (due
      * to the fact that they, unlike Parameters, store no additional data)
      */
-    @SideOnly(Side.CLIENT)
-    void registerIcons(IIconRegister iconRegister);
+    @Environment(EnvType.CLIENT)
+    void registerIcons(IconRegister iconRegister);
 
     /**
      * Return the parameter description in the UI

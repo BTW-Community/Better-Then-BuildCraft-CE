@@ -11,12 +11,12 @@ import java.util.Random;
 
 import net.minecraft.Block;
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.Entity;
 import net.minecraft.EntityPlayer;
 import net.minecraft.TileEntity;
 import net.minecraft.AxisAlignedBB;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.MovingObjectPosition;
 import net.minecraft.Vec3;
 import net.minecraft.IBlockAccess;
@@ -29,8 +29,8 @@ import buildcraft.api.transport.IItemPipe;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.lib.render.ICustomHighlight;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public abstract class BlockEngineBase extends BlockBuildCraft implements ICustomHighlight {
 
@@ -56,19 +56,19 @@ public abstract class BlockEngineBase extends BlockBuildCraft implements ICustom
     public abstract String getTexturePrefix(int meta, boolean addPrefix);
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIconAbsolute(int side, int metadata) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIconAbsolute(int side, int metadata) {
         return icons[metadata] == null ? icons[0][0] : icons[metadata][0];
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister register) {
-        icons = new IIcon[16][];
+    @Environment(EnvType.CLIENT)
+    public void registerBlockIcons(IconRegister register) {
+        icons = new Icon[16][];
         for (int meta = 0; meta < 16; meta++) {
             String prefix = getTexturePrefix(meta, false);
             if (prefix != null) {
-                icons[meta] = new IIcon[1];
+                icons[meta] = new Icon[1];
                 icons[meta][0] = register.registerIcon(prefix + "/icon");
             }
         }

@@ -13,7 +13,7 @@ import net.minecraft.src.IInventory;
 import net.minecraft.src.NBTTagCompound;
 import net.minecraft.src.World;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.src.IFluidHandler;
+import net.minecraftforge.fluids.IFluidHandler;
 
 public abstract class DockingStation {
 

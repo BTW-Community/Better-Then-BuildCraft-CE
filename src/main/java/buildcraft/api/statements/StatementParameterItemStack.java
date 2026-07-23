@@ -6,17 +6,17 @@
  */
 package buildcraft.api.statements;
 
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public class StatementParameterItemStack implements IStatementParameter {
 
     protected ItemStack stack;
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return null;
     }
 
@@ -76,7 +76,7 @@ public class StatementParameterItemStack implements IStatementParameter {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {}
+    public void registerIcons(IconRegister iconRegister) {}
 
     @Override
     public IStatementParameter rotateLeft() {

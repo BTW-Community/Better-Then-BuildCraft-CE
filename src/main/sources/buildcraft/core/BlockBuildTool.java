@@ -8,8 +8,8 @@ package buildcraft.core;
 
 import net.minecraft.Block;
 import net.minecraft.Material;
-import net.minecraft.IIconRegister;
-import net.minecraft.IIcon;
+import net.minecraft.IconRegister;
+import net.minecraft.Icon;
 
 import buildcraft.BuildCraftCore;
 
@@ -20,10 +20,10 @@ public class BlockBuildTool extends Block {
     }
 
     @Override
-    public void registerBlockIcons(IIconRegister itemRegister) {}
+    public void registerBlockIcons(IconRegister itemRegister) {}
 
     @Override
-    public IIcon getIcon(int i, int j) {
+    public Icon getIcon(int i, int j) {
         return BuildCraftCore.redLaserTexture;
     }
 }

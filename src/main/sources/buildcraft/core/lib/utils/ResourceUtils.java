@@ -3,17 +3,17 @@ package buildcraft.core.lib.utils;
 import java.io.IOException;
 
 import net.minecraft.Minecraft;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.TextureMap;
 import net.minecraft.IResource;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.ResourceLocation;
 
 public final class ResourceUtils {
 
     private ResourceUtils() {}
 
-    public static IIcon getIconPriority(IIconRegister register, String prefix, String[] suffixes) {
+    public static Icon getIconPriority(IconRegister register, String prefix, String[] suffixes) {
         for (int i = 0; i < suffixes.length; i++) {
             String suffix = suffixes[i];
             String path = prefix + "/" + suffix;
@@ -24,11 +24,11 @@ public final class ResourceUtils {
         return null;
     }
 
-    public static IIcon getIcon(IIconRegister register, String prefix, String suffix) {
+    public static Icon getIcon(IconRegister register, String prefix, String suffix) {
         return register.registerIcon(prefix + "/" + suffix);
     }
 
-    public static String iconToResourcePath(IIconRegister register, String name) {
+    public static String iconToResourcePath(IconRegister register, String name) {
         int splitLocation = name.indexOf(":");
 
         if (register instanceof TextureMap) {

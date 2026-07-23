@@ -7,7 +7,7 @@
 package buildcraft.builders.statements;
 
 import net.minecraft.TileEntity;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.statements.IActionExternal;
@@ -32,7 +32,7 @@ public class ActionFiller extends BCStatement implements IActionExternal {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return pattern.getIcon();
     }
 

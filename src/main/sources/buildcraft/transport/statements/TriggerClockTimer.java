@@ -8,7 +8,7 @@ package buildcraft.transport.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 
 import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
@@ -46,7 +46,7 @@ public class TriggerClockTimer extends BCStatement implements ITriggerInternal {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister
                 .registerIcon("buildcrafttransport:triggers/trigger_timer_" + time.name().toLowerCase(Locale.ENGLISH));
     }

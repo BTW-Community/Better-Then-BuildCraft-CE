@@ -8,7 +8,7 @@ package buildcraft.energy.statements;
 
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -19,8 +19,8 @@ import buildcraft.core.lib.engines.TileEngineBase;
 import buildcraft.core.lib.engines.TileEngineBase.EnergyStage;
 import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.core.statements.BCStatement;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class TriggerEngineHeat extends BCStatement implements ITriggerExternal {
 
@@ -52,8 +52,8 @@ public class TriggerEngineHeat extends BCStatement implements ITriggerExternal {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister iconRegister) {
         icon = iconRegister.registerIcon(
                 "buildcraftenergy:triggers/trigger_engineheat_" + stage.name().toLowerCase(Locale.ENGLISH));
     }

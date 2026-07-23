@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Locale;
 
 import net.minecraft.Block;
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.EntityPlayer;
 import net.minecraft.Item;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.Vec3;
 import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -26,8 +26,8 @@ import buildcraft.api.blocks.IColorRemovable;
 import buildcraft.api.core.EnumColor;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemPaintbrush extends ItemBuildCraft {
 
@@ -68,18 +68,18 @@ public class ItemPaintbrush extends ItemBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister) {
         super.registerIcons(par1IconRegister);
 
-        IIcon[] brushColors = new IIcon[16];
+        Icon[] brushColors = new Icon[16];
         System.arraycopy(icons, 1, brushColors, 0, 16);
         EnumColor.setIconArray(brushColors);
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIconIndex(ItemStack stack) {
+    @Environment(EnvType.CLIENT)
+    public Icon getIconIndex(ItemStack stack) {
         this.itemIcon = icons[(getColor(stack) + 1) % icons.length];
         return itemIcon;
     }
@@ -178,7 +178,7 @@ public class ItemPaintbrush extends ItemBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List itemList) {
         itemList.add(new ItemStack(this));
         for (int i = 0; i < 16; i++) {

@@ -9,18 +9,18 @@ package buildcraft.silicon;
 import java.util.List;
 import java.util.Locale;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.CreativeTabs;
 import net.minecraft.Item;
 import net.minecraft.ItemStack;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.oredict.OreDictionary;
 
 import buildcraft.BuildCraftSilicon;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ItemRedstoneChipset extends ItemBuildCraft {
 
@@ -36,7 +36,7 @@ public class ItemRedstoneChipset extends ItemBuildCraft {
         EMERALD;
 
         public static final Chipset[] VALUES = values();
-        private IIcon icon;
+        private Icon icon;
 
         public String getChipsetName() {
             return "redstone_" + name().toLowerCase(Locale.ENGLISH) + "_chipset";
@@ -65,7 +65,7 @@ public class ItemRedstoneChipset extends ItemBuildCraft {
     }
 
     @Override
-    public IIcon getIconFromDamage(int damage) {
+    public Icon getIconFromDamage(int damage) {
         return Chipset.fromOrdinal(damage).icon;
     }
 
@@ -76,7 +76,7 @@ public class ItemRedstoneChipset extends ItemBuildCraft {
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List itemList) {
         for (Chipset chipset : Chipset.VALUES) {
             itemList.add(chipset.getStack());
@@ -84,8 +84,8 @@ public class ItemRedstoneChipset extends ItemBuildCraft {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
+    @Environment(EnvType.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister) {
         for (Chipset chipset : Chipset.VALUES) {
             chipset.icon = par1IconRegister.registerIcon("buildcraftsilicon:chipset/" + chipset.getChipsetName());
         }

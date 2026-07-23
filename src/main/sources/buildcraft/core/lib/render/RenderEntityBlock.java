@@ -15,7 +15,7 @@ import net.minecraft.Render;
 import net.minecraft.TextureMap;
 import net.minecraft.Entity;
 import net.minecraft.Blocks;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraft.ResourceLocation;
 import net.minecraft.EnumSkyBlock;
 import net.minecraft.IBlockAccess;
@@ -48,15 +48,15 @@ public final class RenderEntityBlock extends Render {
         public double maxY = 1.0F;
         public double maxZ = 1.0F;
         public Block baseBlock = Blocks.sand;
-        public IIcon texture = null;
-        public IIcon[] textureArray = null;
+        public Icon texture = null;
+        public Icon[] textureArray = null;
         public boolean[] renderSide = new boolean[] { true, true, true, true, true, true };
         public int light = -1;
         public int brightness = -1;
 
         public RenderInfo() {}
 
-        public RenderInfo(Block template, IIcon[] texture) {
+        public RenderInfo(Block template, Icon[] texture) {
             this();
             this.baseBlock = template;
             this.textureArray = texture;
@@ -115,7 +115,7 @@ public final class RenderEntityBlock extends Render {
             maxZ = 1 - temp;
         }
 
-        public IIcon getBlockTextureFromSide(int i) {
+        public Icon getBlockTextureFromSide(int i) {
             if (texture != null) {
                 return texture;
             }

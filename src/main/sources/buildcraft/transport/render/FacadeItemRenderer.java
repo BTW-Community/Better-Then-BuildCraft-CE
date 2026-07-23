@@ -11,7 +11,7 @@ import net.minecraft.OpenGlHelper;
 import net.minecraft.RenderBlocks;
 import net.minecraft.Tessellator;
 import net.minecraft.ItemStack;
-import net.minecraft.IIcon;
+import net.minecraft.Icon;
 import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
@@ -32,8 +32,8 @@ public class FacadeItemRenderer implements IItemRenderer {
 
     private int renderState = 0;
 
-    private IIcon tryGetBlockIcon(Block block, int side, int decodedMeta) {
-        IIcon icon = RenderUtils.tryGetBlockIcon(block, side, decodedMeta);
+    private Icon tryGetBlockIcon(Block block, int side, int decodedMeta) {
+        Icon icon = RenderUtils.tryGetBlockIcon(block, side, decodedMeta);
 
         if (icon == null) {
             icon = PipeIconProvider.TYPE.TransparentFacade.getIcon();
@@ -43,12 +43,12 @@ public class FacadeItemRenderer implements IItemRenderer {
     }
 
     private void drawHollowCube(Tessellator tessellator, RenderBlocks render, Block block, int decodedMeta) {
-        IIcon icon0 = tryGetBlockIcon(block, 0, decodedMeta);
-        IIcon icon1 = tryGetBlockIcon(block, 1, decodedMeta);
-        IIcon icon2 = tryGetBlockIcon(block, 2, decodedMeta);
-        IIcon icon3 = tryGetBlockIcon(block, 3, decodedMeta);
-        IIcon icon4 = tryGetBlockIcon(block, 4, decodedMeta);
-        IIcon icon5 = tryGetBlockIcon(block, 5, decodedMeta);
+        Icon icon0 = tryGetBlockIcon(block, 0, decodedMeta);
+        Icon icon1 = tryGetBlockIcon(block, 1, decodedMeta);
+        Icon icon2 = tryGetBlockIcon(block, 2, decodedMeta);
+        Icon icon3 = tryGetBlockIcon(block, 3, decodedMeta);
+        Icon icon4 = tryGetBlockIcon(block, 4, decodedMeta);
+        Icon icon5 = tryGetBlockIcon(block, 5, decodedMeta);
 
         float width = 1 - TransportConstants.FACADE_THICKNESS;
         float cavity = (CoreConstants.PIPE_MAX_POS - CoreConstants.PIPE_MIN_POS) / 2F;
@@ -170,7 +170,7 @@ public class FacadeItemRenderer implements IItemRenderer {
         // Render StructurePipe
         if (!hollow && block != null && (block.getMaterial() == null || block.getMaterial().isOpaque())) {
             block = BuildCraftTransport.genericPipeBlock;
-            IIcon textureID = BuildCraftTransport.instance.pipeIconProvider
+            Icon textureID = BuildCraftTransport.instance.pipeIconProvider
                     .getIcon(PipeIconProvider.TYPE.PipeStructureCobblestone.ordinal()); // Structure pipe
 
             render.setRenderBounds(

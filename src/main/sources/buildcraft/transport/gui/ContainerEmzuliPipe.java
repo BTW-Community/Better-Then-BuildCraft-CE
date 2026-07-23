@@ -29,8 +29,8 @@ import buildcraft.core.lib.network.PacketGuiReturn;
 import buildcraft.core.lib.utils.RevolvingList;
 import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.transport.pipes.PipeItemsEmzuli;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ContainerEmzuliPipe extends BuildCraftContainer {
 
@@ -95,7 +95,7 @@ public class ContainerEmzuliPipe extends BuildCraftContainer {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void updateProgressBar(int id, int data) {
         paintWidgets[id].colors.setCurrent(data == 0 ? null : EnumColor.fromId(data - 1));
     }

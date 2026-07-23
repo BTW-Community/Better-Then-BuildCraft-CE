@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
-import net.minecraft.IIconRegister;
+import net.minecraft.IconRegister;
 import net.minecraft.NBTTagCompound;
 
 import buildcraft.BuildCraftRobotics;
@@ -74,7 +74,7 @@ public class ImplRedstoneBoardRegistry extends RedstoneBoardRegistry {
     }
 
     @Override
-    public void registerIcons(IIconRegister par1IconRegister) {
+    public void registerIcons(IconRegister par1IconRegister) {
         emptyRobotBoardNBT.registerIcons(par1IconRegister);
         for (BoardFactory f : boards.values()) {
             f.boardNBT.registerIcons(par1IconRegister);

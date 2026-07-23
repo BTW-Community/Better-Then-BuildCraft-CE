@@ -16,10 +16,10 @@ import net.minecraft.GuiScreen;
 import buildcraft.BuildCraftCore;
 import buildcraft.BuildCraftTransport;
 import buildcraft.core.lib.utils.StringUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
-@SideOnly(Side.CLIENT)
+@Environment(EnvType.CLIENT)
 public final class PipeToolTipManager {
 
     private static final Map<Class<? extends Pipe<?>>, String> toolTips = new HashMap<>();
