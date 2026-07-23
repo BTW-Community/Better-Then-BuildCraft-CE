@@ -2,11 +2,11 @@ package buildcraft.robotics;
 
 import java.util.List;
 
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.RenderBlocks;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.AxisAlignedBB;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftRobotics;

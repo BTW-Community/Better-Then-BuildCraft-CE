@@ -6,8 +6,8 @@
  */
 package buildcraft.energy.gui;
 
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.InventoryPlayer;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 

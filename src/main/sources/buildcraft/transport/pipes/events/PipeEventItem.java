@@ -8,8 +8,8 @@ package buildcraft.transport.pipes.events;
 
 import java.util.List;
 
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.EntityItem;
+import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.transport.Pipe;

@@ -1,6 +1,6 @@
 package buildcraft.core.list;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.lists.ListMatchHandler;
 import buildcraft.api.lists.ListRegistry;

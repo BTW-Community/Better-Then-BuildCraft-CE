@@ -8,7 +8,7 @@ package buildcraft.api.blueprints;
 
 import java.util.HashMap;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 public abstract class SchematicFactory<S extends Schematic> {
 

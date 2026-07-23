@@ -9,14 +9,14 @@ package buildcraft.core;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.Material;
+import net.minecraft.IIconRegister;
+import net.minecraft.CreativeTabs;
+import net.minecraft.Blocks;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.World;
 
 import buildcraft.core.lib.utils.XorShift128Random;
 import cpw.mods.fml.relauncher.Side;

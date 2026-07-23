@@ -6,12 +6,12 @@
  */
 package buildcraft.core.lib.engines;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.Container;
-import net.minecraft.inventory.ICrafting;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.Block;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Container;
+import net.minecraft.ICrafting;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.ResourceLocation;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftCore;

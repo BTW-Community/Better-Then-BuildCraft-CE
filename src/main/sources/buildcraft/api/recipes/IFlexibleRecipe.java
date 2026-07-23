@@ -6,7 +6,7 @@
  */
 package buildcraft.api.recipes;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 public interface IFlexibleRecipe<T> {
 

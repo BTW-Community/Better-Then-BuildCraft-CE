@@ -1,8 +1,8 @@
 package buildcraft.transport;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.Block;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
 
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;

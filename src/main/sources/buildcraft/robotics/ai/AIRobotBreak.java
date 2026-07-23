@@ -6,11 +6,11 @@
  */
 package buildcraft.robotics.ai;
 
-import net.minecraft.block.Block;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.WorldServer;
+import net.minecraft.Block;
+import net.minecraft.EnchantmentHelper;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.WorldServer;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.event.ForgeEventFactory;
 

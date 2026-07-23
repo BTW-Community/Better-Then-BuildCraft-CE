@@ -8,8 +8,8 @@ package buildcraft.core.lib.inventory;
 
 import java.util.Iterator;
 
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.core.IInvSlot;
 

@@ -1,6 +1,6 @@
 package buildcraft.builders.gui;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import org.lwjgl.opengl.GL11;
 

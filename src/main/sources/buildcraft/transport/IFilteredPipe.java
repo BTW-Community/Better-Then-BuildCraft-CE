@@ -6,7 +6,7 @@
  */
 package buildcraft.transport;
 
-import net.minecraft.inventory.IInventory;
+import net.minecraft.IInventory;
 
 import buildcraft.api.core.ISerializable;
 

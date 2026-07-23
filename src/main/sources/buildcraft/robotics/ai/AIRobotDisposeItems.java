@@ -6,7 +6,7 @@
  */
 package buildcraft.robotics.ai;
 
-import net.minecraft.entity.item.EntityItem;
+import net.minecraft.EntityItem;
 
 import buildcraft.api.core.IInvSlot;
 import buildcraft.api.robots.AIRobot;

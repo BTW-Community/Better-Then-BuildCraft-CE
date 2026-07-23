@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import net.minecraft.command.ICommand;
-import net.minecraft.command.ICommandSender;
+import net.minecraft.ICommand;
+import net.minecraft.ICommandSender;
 
 public abstract class SubCommand implements IModCommand {
 

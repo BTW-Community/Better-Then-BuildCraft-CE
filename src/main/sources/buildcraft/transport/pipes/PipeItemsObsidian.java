@@ -9,15 +9,15 @@ package buildcraft.transport.pipes;
 import java.util.List;
 import java.util.WeakHashMap;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.init.Items;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.Entity;
+import net.minecraft.EntityItem;
+import net.minecraft.EntityMinecart;
+import net.minecraft.EntityArrow;
+import net.minecraft.Items;
+import net.minecraft.IInventory;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.AxisAlignedBB;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftTransport;

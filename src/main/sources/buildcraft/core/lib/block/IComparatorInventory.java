@@ -1,7 +1,7 @@
 package buildcraft.core.lib.block;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
 
 /**
  * Implemented by Blocks which have an inventory Comparator override.

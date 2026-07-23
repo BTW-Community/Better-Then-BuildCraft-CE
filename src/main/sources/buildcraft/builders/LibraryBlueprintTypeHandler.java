@@ -1,7 +1,7 @@
 package buildcraft.builders;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.BuildCraftBuilders;
 import buildcraft.api.library.LibraryTypeHandlerNBT;

@@ -21,7 +21,7 @@ public final class ThreadSafeUtils {
      * @param channel
      * @return
      */
-    public static net.minecraft.network.Packet generatePacketFrom(Packet packet, FMLEmbeddedChannel channel) {
+    public static net.minecraft.Packet generatePacketFrom(Packet packet, FMLEmbeddedChannel channel) {
         ByteBuf data = Unpooled.buffer();
         for (io.netty.channel.ChannelHandler h : channel.pipeline().toMap().values()) {
             if (h instanceof ChannelHandler) {

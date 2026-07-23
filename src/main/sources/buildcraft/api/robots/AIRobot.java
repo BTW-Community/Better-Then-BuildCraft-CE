@@ -6,8 +6,8 @@
  */
 package buildcraft.api.robots;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
 
 public class AIRobot {
 

@@ -6,9 +6,9 @@
  */
 package buildcraft.builders;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.EntityPlayer;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import buildcraft.builders.gui.ContainerArchitect;
 import buildcraft.builders.gui.ContainerBlueprintLibrary;

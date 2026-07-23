@@ -1,6 +1,6 @@
 package buildcraft.api.library;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 public abstract class LibraryTypeHandlerByteArray extends LibraryTypeHandler {
 

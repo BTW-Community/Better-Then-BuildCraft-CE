@@ -6,11 +6,11 @@
  */
 package buildcraft.core.lib.render;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.particle.EntityFX;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.Material;
+import net.minecraft.EntityFX;
+import net.minecraft.MathHelper;
+import net.minecraft.World;
 import net.minecraftforge.fluids.IFluidBlock;
 
 import cpw.mods.fml.relauncher.Side;

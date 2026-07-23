@@ -6,8 +6,8 @@
  */
 package buildcraft.builders.gui;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
+import net.minecraft.EntityPlayer;
+import net.minecraft.IInventory;
 
 import buildcraft.builders.TileArchitect;
 import buildcraft.core.lib.gui.slots.SlotBase;

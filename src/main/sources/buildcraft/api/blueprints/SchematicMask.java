@@ -8,11 +8,11 @@ package buildcraft.api.blueprints;
 
 import java.util.LinkedList;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.WorldServer;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Blocks;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.WorldServer;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.core.BuildCraftAPI;

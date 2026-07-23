@@ -6,7 +6,7 @@
  */
 package buildcraft.transport.network;
 
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.EntityPlayer;
 
 import buildcraft.BuildCraftTransport;
 import buildcraft.core.lib.network.Packet;

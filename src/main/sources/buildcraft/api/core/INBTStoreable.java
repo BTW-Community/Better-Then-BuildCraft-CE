@@ -1,6 +1,6 @@
 package buildcraft.api.core;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 public interface INBTStoreable {
 

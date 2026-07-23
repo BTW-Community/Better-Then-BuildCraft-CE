@@ -1,7 +1,7 @@
 package buildcraft.core.list;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.ItemStack;
+import net.minecraft.EnumChatFormatting;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 
 import buildcraft.api.items.IList;

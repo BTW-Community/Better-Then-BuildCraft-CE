@@ -1,6 +1,6 @@
 package buildcraft.silicon;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.tiles.IHasWork;
 import buildcraft.core.lib.utils.StringUtils;

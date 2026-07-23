@@ -8,15 +8,15 @@ package buildcraft.core.lib.inventory;
 
 import java.util.Iterator;
 
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.InventoryLargeChest;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
-import net.minecraft.nbt.NBTTagString;
-import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.world.World;
+import net.minecraft.EntityItem;
+import net.minecraft.IInventory;
+import net.minecraft.InventoryLargeChest;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.NBTTagList;
+import net.minecraft.NBTTagString;
+import net.minecraft.TileEntityChest;
+import net.minecraft.World;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
 

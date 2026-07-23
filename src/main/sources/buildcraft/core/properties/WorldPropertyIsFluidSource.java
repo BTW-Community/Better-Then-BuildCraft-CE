@@ -6,9 +6,9 @@
  */
 package buildcraft.core.properties;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockLiquid;
-import net.minecraft.world.IBlockAccess;
+import net.minecraft.Block;
+import net.minecraft.BlockLiquid;
+import net.minecraft.IBlockAccess;
 import net.minecraftforge.fluids.BlockFluidBase;
 
 public class WorldPropertyIsFluidSource extends WorldProperty {

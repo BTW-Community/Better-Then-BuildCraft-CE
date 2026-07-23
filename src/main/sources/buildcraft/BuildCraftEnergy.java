@@ -10,15 +10,15 @@ import static buildcraft.BuildCraftCore.GTNH;
 
 import java.util.Set;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
-import net.minecraft.block.material.Material;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
-import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.Block;
+import net.minecraft.MapColor;
+import net.minecraft.Material;
+import net.minecraft.Blocks;
+import net.minecraft.Items;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.Achievement;
+import net.minecraft.BiomeGenBase;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.MinecraftForge;

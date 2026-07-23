@@ -9,10 +9,10 @@ package buildcraft.core;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.CreativeTabs;
+import net.minecraft.Blocks;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.core.lib.utils.Utils;

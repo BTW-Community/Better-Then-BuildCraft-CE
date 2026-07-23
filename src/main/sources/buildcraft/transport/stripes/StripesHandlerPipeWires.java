@@ -1,9 +1,9 @@
 package buildcraft.transport.stripes;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.core.Position;

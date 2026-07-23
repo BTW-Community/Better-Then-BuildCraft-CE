@@ -8,8 +8,8 @@ package buildcraft.energy.worldgen;
 
 import java.util.Random;
 
-import net.minecraft.world.gen.layer.GenLayer;
-import net.minecraft.world.gen.layer.IntCache;
+import net.minecraft.GenLayer;
+import net.minecraft.IntCache;
 
 import buildcraft.core.lib.utils.SimplexNoise;
 

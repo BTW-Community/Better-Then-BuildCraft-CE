@@ -6,9 +6,9 @@
  */
 package buildcraft.core;
 
-import net.minecraft.block.Block;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.IBlockAccess;
+import net.minecraft.Block;
+import net.minecraft.TileEntity;
+import net.minecraft.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.transport.IInjectable;

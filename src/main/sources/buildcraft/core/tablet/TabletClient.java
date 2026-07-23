@@ -1,6 +1,6 @@
 package buildcraft.core.tablet;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.api.tablet.TabletBitmap;

@@ -10,12 +10,12 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
-import net.minecraft.util.MathHelper;
+import net.minecraft.Block;
+import net.minecraft.ItemBlock;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.NBTTagList;
+import net.minecraft.MathHelper;
 import net.minecraftforge.common.util.Constants;
 
 import buildcraft.BuildCraftCore;

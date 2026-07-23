@@ -1,6 +1,6 @@
 package buildcraft.core.lib.render;
 
-import net.minecraft.util.IIcon;
+import net.minecraft.IIcon;
 
 public class FakeIcon implements IIcon {
 

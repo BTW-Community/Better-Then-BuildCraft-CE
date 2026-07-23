@@ -6,7 +6,7 @@
  */
 package buildcraft.robotics.ai;
 
-import net.minecraft.util.MathHelper;
+import net.minecraft.MathHelper;
 
 import buildcraft.api.core.BlockIndex;
 import buildcraft.api.core.IZone;

@@ -8,7 +8,7 @@ package buildcraft.factory.schematics;
 
 import java.util.LinkedList;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.blueprints.IBuilderContext;
 import buildcraft.api.blueprints.SchematicTile;

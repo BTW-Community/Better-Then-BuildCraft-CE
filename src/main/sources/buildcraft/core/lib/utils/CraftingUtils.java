@@ -9,13 +9,13 @@ package buildcraft.core.lib.utils;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.inventory.InventoryCrafting;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.item.crafting.ShapelessRecipes;
-import net.minecraft.world.World;
+import net.minecraft.InventoryCrafting;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.CraftingManager;
+import net.minecraft.IRecipe;
+import net.minecraft.ShapelessRecipes;
+import net.minecraft.World;
 
 public final class CraftingUtils {
 

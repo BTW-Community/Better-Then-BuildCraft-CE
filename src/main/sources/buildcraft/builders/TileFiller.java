@@ -6,11 +6,11 @@
  */
 package buildcraft.builders;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntity;
+import net.minecraft.AxisAlignedBB;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.api.core.IAreaProvider;

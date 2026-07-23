@@ -9,7 +9,7 @@ package buildcraft.robotics;
 import java.util.BitSet;
 import java.util.Random;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.api.core.BlockIndex;
 import buildcraft.api.core.ISerializable;

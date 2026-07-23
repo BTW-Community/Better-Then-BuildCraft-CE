@@ -6,10 +6,10 @@
  */
 package buildcraft.energy.gui;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.ICrafting;
-import net.minecraft.inventory.Slot;
+import net.minecraft.EntityPlayer;
+import net.minecraft.InventoryPlayer;
+import net.minecraft.ICrafting;
+import net.minecraft.Slot;
 
 import buildcraft.core.lib.engines.TileEngineWithInventory;
 import buildcraft.core.lib.gui.BuildCraftContainer;

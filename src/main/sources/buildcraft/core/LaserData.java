@@ -6,7 +6,7 @@
  */
 package buildcraft.core;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.api.core.ISerializable;
 import buildcraft.api.core.Position;

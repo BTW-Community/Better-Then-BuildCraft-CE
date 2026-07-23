@@ -9,7 +9,7 @@ package buildcraft.transport.recipes;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.BuildCraftTransport;
 import buildcraft.api.core.JavaTools;

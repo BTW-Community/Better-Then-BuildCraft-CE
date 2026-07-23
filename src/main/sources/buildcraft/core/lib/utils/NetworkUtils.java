@@ -3,11 +3,11 @@ package buildcraft.core.lib.utils;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompressedStreamTools;
-import net.minecraft.nbt.NBTSizeTracker;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.CompressedStreamTools;
+import net.minecraft.NBTSizeTracker;
+import net.minecraft.NBTTagCompound;
 
 import io.netty.buffer.ByteBuf;
 

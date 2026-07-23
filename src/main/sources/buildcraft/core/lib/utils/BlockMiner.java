@@ -2,12 +2,12 @@ package buildcraft.core.lib.utils;
 
 import java.util.List;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
+import net.minecraft.Block;
+import net.minecraft.EntityItem;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
+import net.minecraft.WorldServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.event.world.BlockEvent;

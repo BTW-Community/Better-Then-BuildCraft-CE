@@ -6,8 +6,8 @@
  */
 package buildcraft.factory;
 
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
+import net.minecraft.IIcon;
+import net.minecraft.World;
 
 import buildcraft.BuildCraftFactory;
 import buildcraft.core.lib.EntityBlock;

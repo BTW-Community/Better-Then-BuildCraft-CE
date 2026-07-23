@@ -5,12 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.WeakHashMap;
 
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.Block;
+import net.minecraft.CreativeTabs;
+import net.minecraft.Item;
+import net.minecraft.ItemBlock;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
 import net.minecraftforge.oredict.OreDictionary;
 
 import buildcraft.core.lib.inventory.StackHelper;

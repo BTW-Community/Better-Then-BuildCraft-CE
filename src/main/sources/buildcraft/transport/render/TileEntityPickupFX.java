@@ -11,14 +11,14 @@
  */
 package buildcraft.transport.render;
 
-import net.minecraft.client.particle.EntityFX;
-import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.EntityFX;
+import net.minecraft.OpenGlHelper;
+import net.minecraft.Tessellator;
+import net.minecraft.RenderManager;
+import net.minecraft.Entity;
+import net.minecraft.EntityItem;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import org.lwjgl.opengl.GL11;
 

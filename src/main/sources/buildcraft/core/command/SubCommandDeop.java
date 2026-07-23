@@ -1,7 +1,7 @@
 package buildcraft.core.command;
 
-import net.minecraft.command.ICommandSender;
-import net.minecraft.server.MinecraftServer;
+import net.minecraft.ICommandSender;
+import net.minecraft.MinecraftServer;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.core.lib.commands.CommandHelpers;

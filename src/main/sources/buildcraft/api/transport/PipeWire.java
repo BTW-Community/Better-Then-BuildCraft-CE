@@ -8,8 +8,8 @@ package buildcraft.api.transport;
 
 import java.util.Locale;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
 
 public enum PipeWire {
 

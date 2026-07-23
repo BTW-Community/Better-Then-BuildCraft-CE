@@ -6,12 +6,12 @@
  */
 package buildcraft.transport.render;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockChest;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.IBlockAccess;
+import net.minecraft.Block;
+import net.minecraft.BlockChest;
+import net.minecraft.Minecraft;
+import net.minecraft.RenderBlocks;
+import net.minecraft.TileEntity;
+import net.minecraft.IBlockAccess;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.common.util.ForgeDirection;
 

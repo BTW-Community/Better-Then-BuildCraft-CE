@@ -6,13 +6,13 @@
  */
 package buildcraft.factory;
 
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
+import net.minecraft.Material;
+import net.minecraft.IIconRegister;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
+import net.minecraft.IIcon;
+import net.minecraft.World;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.BuildCraftFactory;

@@ -2,7 +2,7 @@ package buildcraft.api.recipes;
 
 import java.util.List;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 public interface IProgrammingRecipe {
 

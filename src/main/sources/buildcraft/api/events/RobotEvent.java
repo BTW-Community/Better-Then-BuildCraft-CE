@@ -6,8 +6,8 @@
  */
 package buildcraft.api.events;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.robots.EntityRobotBase;
 import cpw.mods.fml.common.eventhandler.Cancelable;

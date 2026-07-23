@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.gui.slots;
 
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
 
 public class SlotOutput extends SlotBase {
 

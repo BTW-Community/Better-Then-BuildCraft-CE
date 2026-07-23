@@ -6,7 +6,7 @@
  */
 package buildcraft.api.blueprints;
 
-import net.minecraft.inventory.IInventory;
+import net.minecraft.IInventory;
 
 public interface ITileBuilder extends IInventory {
 

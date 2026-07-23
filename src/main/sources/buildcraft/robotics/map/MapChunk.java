@@ -1,9 +1,9 @@
 package buildcraft.robotics.map;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.chunk.Chunk;
+import net.minecraft.Block;
+import net.minecraft.MapColor;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.Chunk;
 
 import buildcraft.api.core.BCLog;
 

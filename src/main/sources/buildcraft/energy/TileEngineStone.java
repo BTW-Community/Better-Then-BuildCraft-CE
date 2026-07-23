@@ -6,13 +6,13 @@
  */
 package buildcraft.energy;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.inventory.Container;
-import net.minecraft.inventory.ICrafting;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntityFurnace;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Items;
+import net.minecraft.Container;
+import net.minecraft.ICrafting;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntityFurnace;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftEnergy;

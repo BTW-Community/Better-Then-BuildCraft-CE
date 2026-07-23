@@ -6,7 +6,7 @@
  */
 package buildcraft.api.filler;
 
-import net.minecraft.util.IIcon;
+import net.minecraft.IIcon;
 
 import buildcraft.api.statements.IStatement;
 

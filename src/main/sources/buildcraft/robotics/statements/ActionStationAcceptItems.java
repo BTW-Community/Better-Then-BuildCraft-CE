@@ -6,7 +6,7 @@
  */
 package buildcraft.robotics.statements;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.IIconRegister;
 
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementManager;

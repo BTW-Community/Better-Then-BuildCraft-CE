@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.recipes.IAssemblyRecipeManager;
 import buildcraft.api.recipes.IFlexibleRecipe;

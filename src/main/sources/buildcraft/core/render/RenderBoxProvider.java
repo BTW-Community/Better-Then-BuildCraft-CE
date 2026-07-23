@@ -6,10 +6,10 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.TileEntityRendererDispatcher;
+import net.minecraft.TileEntitySpecialRenderer;
+import net.minecraft.TileEntity;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 

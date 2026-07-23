@@ -1,6 +1,6 @@
 package buildcraft.core.command;
 
-import net.minecraft.command.ICommandSender;
+import net.minecraft.ICommandSender;
 
 import buildcraft.core.Version;
 import buildcraft.core.lib.commands.SubCommand;

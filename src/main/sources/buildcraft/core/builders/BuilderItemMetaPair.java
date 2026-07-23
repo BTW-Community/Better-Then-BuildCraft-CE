@@ -2,9 +2,9 @@ package buildcraft.core.builders;
 
 import java.util.List;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Blocks;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.blueprints.IBuilderContext;
 

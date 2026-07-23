@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.minecraft.world.World;
+import net.minecraft.World;
 
 import buildcraft.api.transport.pluggable.PipePluggable;
 

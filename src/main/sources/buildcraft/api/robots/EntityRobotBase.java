@@ -6,12 +6,12 @@
  */
 package buildcraft.api.robots;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.Entity;
+import net.minecraft.EntityLiving;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 import net.minecraftforge.fluids.IFluidHandler;
 
 import buildcraft.api.boards.RedstoneBoardRobot;

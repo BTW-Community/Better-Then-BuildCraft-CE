@@ -6,8 +6,8 @@
  */
 package buildcraft.api.facades;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Block;
+import net.minecraft.ItemStack;
 
 public interface IFacadeItem {
 

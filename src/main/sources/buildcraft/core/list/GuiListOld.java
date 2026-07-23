@@ -6,10 +6,10 @@
  */
 package buildcraft.core.list;
 
-import net.minecraft.client.gui.GuiTextField;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.GuiTextField;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.ResourceLocation;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.core.ItemList;

@@ -1,10 +1,10 @@
 package buildcraft.transport;
 
-import net.minecraft.init.Items;
-import net.minecraft.inventory.InventoryCrafting;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.world.World;
+import net.minecraft.Items;
+import net.minecraft.InventoryCrafting;
+import net.minecraft.ItemStack;
+import net.minecraft.IRecipe;
+import net.minecraft.World;
 
 import buildcraft.core.lib.utils.ColorUtils;
 

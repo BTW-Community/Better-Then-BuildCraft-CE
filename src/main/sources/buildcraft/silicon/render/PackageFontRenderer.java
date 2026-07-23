@@ -3,13 +3,13 @@ package buildcraft.silicon.render;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.renderer.entity.RenderItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.Minecraft;
+import net.minecraft.FontRenderer;
+import net.minecraft.RenderItem;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.EnumChatFormatting;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 

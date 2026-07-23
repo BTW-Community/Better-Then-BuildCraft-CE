@@ -6,10 +6,10 @@
  */
 package buildcraft.core.properties;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockDirt;
-import net.minecraft.block.BlockGrass;
-import net.minecraft.world.IBlockAccess;
+import net.minecraft.Block;
+import net.minecraft.BlockDirt;
+import net.minecraft.BlockGrass;
+import net.minecraft.IBlockAccess;
 
 public class WorldPropertyIsDirt extends WorldProperty {
 

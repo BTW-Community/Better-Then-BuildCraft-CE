@@ -1,7 +1,7 @@
 package buildcraft.api.library;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
 
 public abstract class LibraryTypeHandlerNBT extends LibraryTypeHandler {
 

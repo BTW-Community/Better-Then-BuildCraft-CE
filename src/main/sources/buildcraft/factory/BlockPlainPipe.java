@@ -10,15 +10,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.Material;
+import net.minecraft.IIconRegister;
+import net.minecraft.CreativeTabs;
+import net.minecraft.EntityLivingBase;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.IBlockAccess;
+import net.minecraft.World;
 
 import buildcraft.core.CoreConstants;
 

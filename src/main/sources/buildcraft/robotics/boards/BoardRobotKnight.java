@@ -6,11 +6,11 @@
  */
 package buildcraft.robotics.boards;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.monster.IMob;
-import net.minecraft.entity.passive.EntityWolf;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
+import net.minecraft.Entity;
+import net.minecraft.IMob;
+import net.minecraft.EntityWolf;
+import net.minecraft.ItemStack;
+import net.minecraft.ItemSword;
 
 import buildcraft.api.boards.RedstoneBoardRobot;
 import buildcraft.api.boards.RedstoneBoardRobotNBT;

@@ -6,7 +6,7 @@
  */
 package buildcraft.silicon;
 
-import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraft.RenderSnowball;
 
 import buildcraft.BuildCraftSilicon;
 import buildcraft.silicon.render.RenderLaserBlock;

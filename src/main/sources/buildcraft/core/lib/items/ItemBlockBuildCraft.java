@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.items;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
+import net.minecraft.Block;
+import net.minecraft.ItemBlock;
 
 public class ItemBlockBuildCraft extends ItemBlock {
 

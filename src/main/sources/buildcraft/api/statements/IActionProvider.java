@@ -8,7 +8,7 @@ package buildcraft.api.statements;
 
 import java.util.Collection;
 
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
 public interface IActionProvider {

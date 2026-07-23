@@ -2,7 +2,7 @@ package buildcraft.core.lib.gui;
 
 import java.util.ArrayList;
 
-import net.minecraft.util.IIcon;
+import net.minecraft.IIcon;
 
 import buildcraft.api.statements.IStatement;
 import cpw.mods.fml.relauncher.Side;

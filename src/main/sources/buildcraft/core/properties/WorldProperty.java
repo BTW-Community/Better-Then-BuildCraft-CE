@@ -8,9 +8,9 @@ package buildcraft.core.properties;
 
 import java.util.HashMap;
 
-import net.minecraft.block.Block;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.IBlockAccess;
+import net.minecraft.World;
 
 import buildcraft.api.core.IWorldProperty;
 

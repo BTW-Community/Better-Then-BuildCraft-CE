@@ -6,11 +6,11 @@
  */
 package buildcraft.core;
 
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.ModelBase;
+import net.minecraft.ModelRenderer;
+import net.minecraft.TileEntityRendererDispatcher;
+import net.minecraft.TileEntitySpecialRenderer;
+import net.minecraft.TileEntity;
 
 import org.lwjgl.opengl.GL11;
 

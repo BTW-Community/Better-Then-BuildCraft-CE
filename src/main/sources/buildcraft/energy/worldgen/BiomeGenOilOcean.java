@@ -6,8 +6,8 @@
  */
 package buildcraft.energy.worldgen;
 
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.BiomeGenOcean;
+import net.minecraft.BiomeGenBase;
+import net.minecraft.BiomeGenOcean;
 import net.minecraftforge.common.BiomeDictionary;
 
 public final class BiomeGenOilOcean extends BiomeGenOcean {

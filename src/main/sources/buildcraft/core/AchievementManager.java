@@ -1,7 +1,7 @@
 package buildcraft.core;
 
-import net.minecraft.item.Item;
-import net.minecraft.stats.Achievement;
+import net.minecraft.Item;
+import net.minecraft.Achievement;
 import net.minecraftforge.common.AchievementPage;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

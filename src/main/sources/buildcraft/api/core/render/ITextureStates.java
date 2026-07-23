@@ -6,8 +6,8 @@
  */
 package buildcraft.api.core.render;
 
-import net.minecraft.block.Block;
-import net.minecraft.util.IIcon;
+import net.minecraft.Block;
+import net.minecraft.IIcon;
 
 public interface ITextureStates extends ICullable {
 

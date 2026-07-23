@@ -6,8 +6,8 @@
  */
 package buildcraft.builders.statements;
 
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IIcon;
+import net.minecraft.TileEntity;
+import net.minecraft.IIcon;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.statements.IActionExternal;

@@ -6,12 +6,12 @@
  */
 package buildcraft.builders.schematics;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityHanging;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.Entity;
+import net.minecraft.EntityHanging;
+import net.minecraft.Items;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.api.blueprints.IBuilderContext;
 import buildcraft.api.blueprints.SchematicEntity;

@@ -1,6 +1,6 @@
 package buildcraft.api.transport.pluggable;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.transport.IPipe;

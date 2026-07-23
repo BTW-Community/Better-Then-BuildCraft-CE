@@ -10,10 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.MathHelper;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntity;
+import net.minecraft.AxisAlignedBB;
+import net.minecraft.MathHelper;
 
 import buildcraft.api.core.BlockIndex;
 import buildcraft.api.core.IAreaProvider;

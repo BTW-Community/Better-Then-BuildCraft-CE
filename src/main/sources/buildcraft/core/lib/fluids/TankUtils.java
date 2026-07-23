@@ -6,11 +6,11 @@
  */
 package buildcraft.core.lib.fluids;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.Block;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Blocks;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;

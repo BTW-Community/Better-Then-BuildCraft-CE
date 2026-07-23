@@ -2,16 +2,16 @@ package buildcraft.builders;
 
 import java.util.Iterator;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockBasePressurePlate;
-import net.minecraft.block.BlockBush;
-import net.minecraft.block.BlockButton;
-import net.minecraft.block.BlockDynamicLiquid;
-import net.minecraft.block.BlockLever;
-import net.minecraft.block.BlockStairs;
-import net.minecraft.block.BlockTorch;
-import net.minecraft.block.IGrowable;
-import net.minecraft.init.Blocks;
+import net.minecraft.Block;
+import net.minecraft.BlockBasePressurePlate;
+import net.minecraft.BlockBush;
+import net.minecraft.BlockButton;
+import net.minecraft.BlockDynamicLiquid;
+import net.minecraft.BlockLever;
+import net.minecraft.BlockStairs;
+import net.minecraft.BlockTorch;
+import net.minecraft.IGrowable;
+import net.minecraft.Blocks;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.fluids.FluidStack;
 

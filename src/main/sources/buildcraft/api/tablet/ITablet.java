@@ -1,6 +1,6 @@
 package buildcraft.api.tablet;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 import cpw.mods.fml.relauncher.Side;
 

@@ -2,17 +2,17 @@ package buildcraft.silicon;
 
 import java.util.List;
 
-import net.minecraft.block.BlockDispenser;
-import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.dispenser.BehaviorDefaultDispenseItem;
-import net.minecraft.dispenser.IBlockSource;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.world.World;
+import net.minecraft.BlockDispenser;
+import net.minecraft.FontRenderer;
+import net.minecraft.CreativeTabs;
+import net.minecraft.BehaviorDefaultDispenseItem;
+import net.minecraft.IBlockSource;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.EnumFacing;
+import net.minecraft.World;
 
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;

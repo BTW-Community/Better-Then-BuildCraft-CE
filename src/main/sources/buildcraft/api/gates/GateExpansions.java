@@ -12,7 +12,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import com.google.common.collect.HashBiMap;
 

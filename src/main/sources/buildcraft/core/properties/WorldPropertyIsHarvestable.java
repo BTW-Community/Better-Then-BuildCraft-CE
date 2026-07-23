@@ -6,8 +6,8 @@
  */
 package buildcraft.core.properties;
 
-import net.minecraft.block.Block;
-import net.minecraft.world.IBlockAccess;
+import net.minecraft.Block;
+import net.minecraft.IBlockAccess;
 
 import buildcraft.api.crops.CropManager;
 

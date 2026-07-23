@@ -8,11 +8,11 @@ package buildcraft.core.lib.network;
 
 import java.io.IOException;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.network.INetHandler;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.Entity;
+import net.minecraft.EntityPlayer;
+import net.minecraft.INetHandler;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import buildcraft.api.core.ISerializable;
 import buildcraft.core.lib.network.command.PacketCommand;

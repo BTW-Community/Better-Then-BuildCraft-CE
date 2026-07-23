@@ -6,7 +6,7 @@
  */
 package buildcraft.transport.network;
 
-import net.minecraft.util.MathHelper;
+import net.minecraft.MathHelper;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.core.EnumColor;

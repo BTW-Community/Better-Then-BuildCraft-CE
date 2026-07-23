@@ -6,10 +6,10 @@
  */
 package buildcraft.robotics.boards;
 
-import net.minecraft.entity.item.EntityTNTPrimed;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.EntityTNTPrimed;
+import net.minecraft.Blocks;
+import net.minecraft.ItemStack;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.boards.RedstoneBoardRobot;

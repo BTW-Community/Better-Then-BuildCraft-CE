@@ -8,7 +8,7 @@ package buildcraft.robotics.statements;
 
 import java.util.LinkedList;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.statements.ActionState;
 import buildcraft.core.lib.inventory.filters.IStackFilter;

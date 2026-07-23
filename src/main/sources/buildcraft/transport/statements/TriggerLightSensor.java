@@ -1,7 +1,7 @@
 package buildcraft.transport.statements;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.IIconRegister;
+import net.minecraft.TileEntity;
 
 import buildcraft.api.core.Position;
 import buildcraft.api.statements.IStatementContainer;

@@ -12,8 +12,8 @@ import java.util.LinkedList;
 import java.util.Set;
 import java.util.TreeMap;
 
-import net.minecraft.block.Block;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.Block;
+import net.minecraft.NBTTagCompound;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.BlockFluidBase;
 import net.minecraftforge.fluids.Fluid;

@@ -6,10 +6,10 @@
  */
 package buildcraft.builders.gui;
 
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiTextField;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.GuiButton;
+import net.minecraft.GuiTextField;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;

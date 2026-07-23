@@ -9,9 +9,9 @@ package buildcraft.transport.pipes;
 import java.util.Collection;
 import java.util.LinkedList;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Item;
+import net.minecraft.ChatComponentTranslation;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.common.util.ForgeDirection;
 

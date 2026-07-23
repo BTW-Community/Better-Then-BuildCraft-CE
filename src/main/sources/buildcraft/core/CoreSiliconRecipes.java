@@ -1,7 +1,7 @@
 package buildcraft.core;
 
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Items;
+import net.minecraft.ItemStack;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.api.recipes.BuildcraftRecipeRegistry;

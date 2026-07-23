@@ -6,9 +6,9 @@
  */
 package buildcraft.core.lib.gui.slots;
 
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
-import net.minecraft.item.ItemStack;
+import net.minecraft.IInventory;
+import net.minecraft.Slot;
+import net.minecraft.ItemStack;
 
 public class SlotValidated extends Slot {
 

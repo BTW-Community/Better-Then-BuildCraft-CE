@@ -6,7 +6,7 @@
  */
 package buildcraft.robotics.ai;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.api.core.BlockIndex;
 import buildcraft.api.robots.AIRobot;

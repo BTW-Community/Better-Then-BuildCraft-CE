@@ -11,15 +11,15 @@ import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.network.NetHandlerPlayServer;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
+import net.minecraft.Entity;
+import net.minecraft.EntityPlayer;
+import net.minecraft.EntityPlayerMP;
+import net.minecraft.NetHandlerPlayServer;
+import net.minecraft.NetworkManager;
+import net.minecraft.MinecraftServer;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
+import net.minecraft.WorldServer;
 
 import buildcraft.api.core.BCLog;
 import buildcraft.core.DefaultProps;
@@ -129,7 +129,7 @@ public class BuildCraftMod {
             while (true) {
                 try {
                     SendRequest r = packets.take();
-                    net.minecraft.network.Packet p = ThreadSafeUtils
+                    net.minecraft.Packet p = ThreadSafeUtils
                             .generatePacketFrom(r.packet, r.source.channels.get(Side.SERVER));
                     List<EntityPlayerMP> playerList = MinecraftServer.getServer()
                             .getConfigurationManager().playerEntityList;

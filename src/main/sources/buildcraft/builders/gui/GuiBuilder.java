@@ -9,12 +9,12 @@ package buildcraft.builders.gui;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.StatCollector;
+import net.minecraft.Minecraft;
+import net.minecraft.GuiButton;
+import net.minecraft.IInventory;
+import net.minecraft.EnumChatFormatting;
+import net.minecraft.ResourceLocation;
+import net.minecraft.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 

@@ -11,8 +11,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-import net.minecraft.block.Block;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.World;
 
 public final class BuildCraftAPI {
 

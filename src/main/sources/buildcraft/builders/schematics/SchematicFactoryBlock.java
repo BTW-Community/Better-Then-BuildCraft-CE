@@ -6,9 +6,9 @@
  */
 package buildcraft.builders.schematics;
 
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.Block;
+import net.minecraft.Blocks;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.api.blueprints.MappingNotFoundException;
 import buildcraft.api.blueprints.MappingRegistry;

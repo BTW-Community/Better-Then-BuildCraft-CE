@@ -6,12 +6,12 @@
  */
 package buildcraft.energy;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBucket;
+import net.minecraft.Block;
+import net.minecraft.IIconRegister;
+import net.minecraft.CreativeTabs;
+import net.minecraft.Items;
+import net.minecraft.Item;
+import net.minecraft.ItemBucket;
 
 import buildcraft.core.BCCreativeTab;
 import cpw.mods.fml.relauncher.Side;

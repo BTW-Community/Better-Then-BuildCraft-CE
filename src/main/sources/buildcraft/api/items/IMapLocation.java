@@ -2,7 +2,7 @@ package buildcraft.api.items;
 
 import java.util.List;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.core.BlockIndex;

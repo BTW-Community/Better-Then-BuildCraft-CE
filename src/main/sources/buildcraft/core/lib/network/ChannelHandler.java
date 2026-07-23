@@ -9,9 +9,9 @@ package buildcraft.core.lib.network;
 import java.lang.ref.WeakReference;
 import java.util.List;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.network.INetHandler;
+import net.minecraft.EntityPlayer;
+import net.minecraft.EntityPlayerMP;
+import net.minecraft.INetHandler;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Marker;

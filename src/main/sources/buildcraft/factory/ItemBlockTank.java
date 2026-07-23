@@ -2,10 +2,10 @@ package buildcraft.factory;
 
 import java.util.List;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.StatCollector;
+import net.minecraft.Block;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.StatCollector;
 
 import buildcraft.core.lib.items.ItemBlockBuildCraft;
 

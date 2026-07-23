@@ -1,6 +1,6 @@
 package buildcraft.robotics.statements;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.items.IMapLocation;
 import buildcraft.api.statements.IStatement;

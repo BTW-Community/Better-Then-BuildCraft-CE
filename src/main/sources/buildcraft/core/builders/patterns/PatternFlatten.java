@@ -6,7 +6,7 @@
  */
 package buildcraft.core.builders.patterns;
 
-import net.minecraft.world.World;
+import net.minecraft.World;
 
 import buildcraft.api.blueprints.SchematicMask;
 import buildcraft.api.statements.IStatementParameter;

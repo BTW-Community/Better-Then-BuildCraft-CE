@@ -6,12 +6,12 @@
  */
 package buildcraft.core.lib.items;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
+import net.minecraft.IIconRegister;
+import net.minecraft.CreativeTabs;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Item;
+import net.minecraft.IIcon;
+import net.minecraft.World;
 
 import buildcraft.core.BCCreativeTab;
 import buildcraft.core.lib.utils.ResourceUtils;

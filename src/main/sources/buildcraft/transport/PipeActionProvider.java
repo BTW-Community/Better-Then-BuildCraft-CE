@@ -3,7 +3,7 @@ package buildcraft.transport;
 import java.util.Collection;
 import java.util.LinkedList;
 
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.gates.IGate;

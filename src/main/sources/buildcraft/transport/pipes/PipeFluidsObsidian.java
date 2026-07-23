@@ -1,8 +1,8 @@
 package buildcraft.transport.pipes;
 
-import net.minecraft.item.Item;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.World;
+import net.minecraft.Item;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidStack;
 

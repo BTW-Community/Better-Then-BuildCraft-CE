@@ -1,10 +1,10 @@
 package buildcraft.transport.stripes;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.EntityPlayer;
+import net.minecraft.EntityArrow;
+import net.minecraft.Items;
+import net.minecraft.ItemStack;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.transport.IStripesActivator;

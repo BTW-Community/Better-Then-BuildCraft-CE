@@ -6,10 +6,10 @@
  */
 package buildcraft.core.lib.inventory;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.ItemStack;
+import net.minecraft.EntityPlayer;
+import net.minecraft.IInventory;
+import net.minecraft.ISidedInventory;
+import net.minecraft.ItemStack;
 
 public abstract class InventoryWrapper implements ISidedInventory {
 

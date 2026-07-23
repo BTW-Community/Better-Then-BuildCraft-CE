@@ -9,8 +9,8 @@ package buildcraft.robotics.statements;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.ItemStack;
+import net.minecraft.IIconRegister;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.robots.DockingStation;
 import buildcraft.api.statements.IActionInternal;

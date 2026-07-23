@@ -2,7 +2,7 @@ package buildcraft.builders;
 
 import java.util.List;
 
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.EnumChatFormatting;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 
 import buildcraft.builders.gui.ContainerBuilder;

@@ -6,13 +6,13 @@
  */
 package buildcraft.transport.render;
 
-import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IIcon;
+import net.minecraft.OpenGlHelper;
+import net.minecraft.RenderBlocks;
+import net.minecraft.TextureMap;
+import net.minecraft.TileEntityRendererDispatcher;
+import net.minecraft.TileEntitySpecialRenderer;
+import net.minecraft.TileEntity;
+import net.minecraft.IIcon;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import org.lwjgl.opengl.GL11;

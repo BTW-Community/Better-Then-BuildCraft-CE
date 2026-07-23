@@ -8,8 +8,8 @@ package buildcraft.builders.schematics;
 
 import java.util.LinkedList;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.blueprints.IBuilderContext;
 import buildcraft.core.builders.schematics.SchematicBlockFloored;

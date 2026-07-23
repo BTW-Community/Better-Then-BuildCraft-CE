@@ -9,12 +9,12 @@ package buildcraft.robotics.gui;
 import java.util.LinkedList;
 import java.util.List;
 
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiTextField;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
-import net.minecraft.util.IIcon;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.GuiButton;
+import net.minecraft.GuiTextField;
+import net.minecraft.IInventory;
+import net.minecraft.Slot;
+import net.minecraft.IIcon;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;

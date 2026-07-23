@@ -1,9 +1,9 @@
 package buildcraft.silicon;
 
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.Material;
+import net.minecraft.EntityPlayer;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import buildcraft.BuildCraftSilicon;
 import buildcraft.core.BCCreativeTab;

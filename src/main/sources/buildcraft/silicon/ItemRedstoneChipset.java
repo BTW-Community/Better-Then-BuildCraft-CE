@@ -9,11 +9,11 @@ package buildcraft.silicon;
 import java.util.List;
 import java.util.Locale;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
+import net.minecraft.IIconRegister;
+import net.minecraft.CreativeTabs;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.IIcon;
 import net.minecraftforge.oredict.OreDictionary;
 
 import buildcraft.BuildCraftSilicon;

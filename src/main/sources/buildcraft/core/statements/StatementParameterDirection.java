@@ -6,10 +6,10 @@
  */
 package buildcraft.core.statements;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.IIcon;
+import net.minecraft.IIconRegister;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.IIcon;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.statements.IStatement;

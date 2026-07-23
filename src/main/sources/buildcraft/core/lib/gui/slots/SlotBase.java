@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.gui.slots;
 
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
+import net.minecraft.IInventory;
+import net.minecraft.Slot;
 
 import buildcraft.core.lib.gui.tooltips.IToolTipProvider;
 import buildcraft.core.lib.gui.tooltips.ToolTip;

@@ -3,9 +3,9 @@ package buildcraft.core.config;
 import java.util.ArrayList;
 import java.util.Set;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.resources.I18n;
+import net.minecraft.Minecraft;
+import net.minecraft.GuiScreen;
+import net.minecraft.I18n;
 import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;

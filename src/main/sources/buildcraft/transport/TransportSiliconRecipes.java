@@ -3,8 +3,8 @@ package buildcraft.transport;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Blocks;
+import net.minecraft.ItemStack;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.BuildCraftTransport;

@@ -8,11 +8,11 @@ package buildcraft.silicon.gui;
 
 import java.util.Iterator;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.Minecraft;
+import net.minecraft.TextureMap;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 

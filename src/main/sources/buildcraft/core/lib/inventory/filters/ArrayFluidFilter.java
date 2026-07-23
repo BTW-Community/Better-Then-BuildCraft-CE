@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.inventory.filters;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidStack;

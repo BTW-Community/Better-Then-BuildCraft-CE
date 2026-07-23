@@ -10,14 +10,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityList;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagDouble;
-import net.minecraft.nbt.NBTTagFloat;
-import net.minecraft.nbt.NBTTagList;
+import net.minecraft.Entity;
+import net.minecraft.EntityList;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.NBTTagDouble;
+import net.minecraft.NBTTagFloat;
+import net.minecraft.NBTTagList;
 import net.minecraftforge.common.util.Constants;
 
 import buildcraft.api.core.Position;

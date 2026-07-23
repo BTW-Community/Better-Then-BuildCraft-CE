@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.gui.slots;
 
-import net.minecraft.inventory.IInventory;
+import net.minecraft.IInventory;
 
 public class SlotLimited extends SlotBase {
 

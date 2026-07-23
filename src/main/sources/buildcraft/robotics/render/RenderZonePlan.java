@@ -2,10 +2,10 @@ package buildcraft.robotics.render;
 
 import java.util.HashMap;
 
-import net.minecraft.block.material.MapColor;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.MapColor;
+import net.minecraft.TileEntitySpecialRenderer;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import org.lwjgl.opengl.GL11;
 

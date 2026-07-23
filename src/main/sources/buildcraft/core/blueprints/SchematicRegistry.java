@@ -11,8 +11,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
+import net.minecraft.Block;
+import net.minecraft.Entity;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 

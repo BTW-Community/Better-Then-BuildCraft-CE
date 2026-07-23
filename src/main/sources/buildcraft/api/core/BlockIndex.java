@@ -6,11 +6,11 @@
  */
 package buildcraft.api.core;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.Entity;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 /**
  * This class is a comparable container for integer block positions.

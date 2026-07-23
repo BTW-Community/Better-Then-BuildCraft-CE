@@ -6,9 +6,9 @@
  */
 package buildcraft.transport.gui;
 
-import net.minecraft.inventory.IInventory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.StatCollector;
+import net.minecraft.IInventory;
+import net.minecraft.ResourceLocation;
+import net.minecraft.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 

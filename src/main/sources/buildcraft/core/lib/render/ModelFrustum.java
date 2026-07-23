@@ -6,10 +6,10 @@
  */
 package buildcraft.core.lib.render;
 
-import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.client.model.PositionTextureVertex;
-import net.minecraft.client.model.TexturedQuad;
-import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.ModelRenderer;
+import net.minecraft.PositionTextureVertex;
+import net.minecraft.TexturedQuad;
+import net.minecraft.Tessellator;
 
 public class ModelFrustum {
 

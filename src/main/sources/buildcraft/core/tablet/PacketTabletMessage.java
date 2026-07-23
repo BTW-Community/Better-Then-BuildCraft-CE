@@ -2,9 +2,9 @@ package buildcraft.core.tablet;
 
 import java.io.IOException;
 
-import net.minecraft.nbt.CompressedStreamTools;
-import net.minecraft.nbt.NBTSizeTracker;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.CompressedStreamTools;
+import net.minecraft.NBTSizeTracker;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.api.core.BCLog;
 import buildcraft.core.lib.network.Packet;

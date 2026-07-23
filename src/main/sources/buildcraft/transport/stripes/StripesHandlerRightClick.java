@@ -3,12 +3,12 @@ package buildcraft.transport.stripes;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemPotion;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Items;
+import net.minecraft.Item;
+import net.minecraft.ItemPotion;
+import net.minecraft.ItemStack;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.transport.IStripesActivator;

@@ -6,9 +6,9 @@
  */
 package buildcraft.robotics;
 
-import net.minecraft.client.particle.EntityFX;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.world.World;
+import net.minecraft.EntityFX;
+import net.minecraft.Tessellator;
+import net.minecraft.World;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

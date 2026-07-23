@@ -9,10 +9,10 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.LongHashMap;
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.Chunk;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.LongHashMap;
+import net.minecraft.World;
+import net.minecraft.Chunk;
 
 import buildcraft.core.lib.utils.NBTUtils;
 import gnu.trove.map.hash.TLongLongHashMap;

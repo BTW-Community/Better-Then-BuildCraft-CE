@@ -6,11 +6,11 @@
  */
 package buildcraft.transport;
 
-import net.minecraft.client.renderer.GLAllocation;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.item.Item;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.GLAllocation;
+import net.minecraft.EntityItem;
+import net.minecraft.Item;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 import buildcraft.BuildCraftTransport;

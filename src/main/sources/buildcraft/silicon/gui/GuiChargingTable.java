@@ -6,8 +6,8 @@
  */
 package buildcraft.silicon.gui;
 
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.InventoryPlayer;
+import net.minecraft.ResourceLocation;
 
 import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.silicon.TileChargingTable;

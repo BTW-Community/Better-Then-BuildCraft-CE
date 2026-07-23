@@ -6,14 +6,14 @@
  */
 package buildcraft.core.proxy;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.multiplayer.WorldClient;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.network.INetHandler;
-import net.minecraft.network.NetHandlerPlayServer;
-import net.minecraft.world.World;
+import net.minecraft.Minecraft;
+import net.minecraft.WorldClient;
+import net.minecraft.Entity;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.INetHandler;
+import net.minecraft.NetHandlerPlayServer;
+import net.minecraft.World;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.core.LaserKind;

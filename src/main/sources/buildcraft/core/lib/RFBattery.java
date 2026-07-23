@@ -1,6 +1,6 @@
 package buildcraft.core.lib;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 import cofh.api.energy.IEnergyStorage;
 

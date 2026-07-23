@@ -12,12 +12,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-import net.minecraft.command.ICommandSender;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.ICommandSender;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.ChatComponentText;
+import net.minecraft.ChatComponentTranslation;
+import net.minecraft.ChatStyle;
+import net.minecraft.EnumChatFormatting;
 import net.minecraftforge.common.config.Property;
 
 import buildcraft.BuildCraftCore;

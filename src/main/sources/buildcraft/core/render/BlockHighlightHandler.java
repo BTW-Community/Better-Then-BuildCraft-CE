@@ -6,12 +6,12 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.client.renderer.RenderGlobal;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.Vec3;
+import net.minecraft.Block;
+import net.minecraft.OpenGlHelper;
+import net.minecraft.RenderGlobal;
+import net.minecraft.AxisAlignedBB;
+import net.minecraft.MovingObjectPosition;
+import net.minecraft.Vec3;
 import net.minecraftforge.client.event.DrawBlockHighlightEvent;
 
 import org.lwjgl.opengl.GL11;

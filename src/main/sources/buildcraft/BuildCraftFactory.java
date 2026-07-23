@@ -8,13 +8,13 @@ package buildcraft;
 
 import static buildcraft.BuildCraftCore.GTNH;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
+import net.minecraft.Block;
+import net.minecraft.TextureMap;
+import net.minecraft.Blocks;
+import net.minecraft.Items;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.Achievement;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -102,12 +102,12 @@ public class BuildCraftFactory extends BuildCraftMod {
 
         BCRegistry.INSTANCE.registerTileEntity(TileMiningWell.class, "MiningWell");
         BCRegistry.INSTANCE.registerTileEntity(TileAutoWorkbench.class, "AutoWorkbench");
-        BCRegistry.INSTANCE.registerTileEntity(TilePump.class, "net.minecraft.src.buildcraft.factory.TilePump");
+        BCRegistry.INSTANCE.registerTileEntity(TilePump.class, "net.minecraft.TilePump");
         BCRegistry.INSTANCE
-                .registerTileEntity(TileFloodGate.class, "net.minecraft.src.buildcraft.factory.TileFloodGate");
-        BCRegistry.INSTANCE.registerTileEntity(TileTank.class, "net.minecraft.src.buildcraft.factory.TileTank");
-        BCRegistry.INSTANCE.registerTileEntity(TileRefinery.class, "net.minecraft.src.buildcraft.factory.Refinery");
-        BCRegistry.INSTANCE.registerTileEntity(TileHopper.class, "net.minecraft.src.buildcraft.factory.TileHopper");
+                .registerTileEntity(TileFloodGate.class, "net.minecraft.TileFloodGate");
+        BCRegistry.INSTANCE.registerTileEntity(TileTank.class, "net.minecraft.TileTank");
+        BCRegistry.INSTANCE.registerTileEntity(TileRefinery.class, "net.minecraft.Refinery");
+        BCRegistry.INSTANCE.registerTileEntity(TileHopper.class, "net.minecraft.TileHopper");
 
         FactoryProxy.proxy.initializeTileEntities();
 

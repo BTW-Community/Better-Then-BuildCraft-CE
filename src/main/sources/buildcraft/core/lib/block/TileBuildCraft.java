@@ -8,12 +8,12 @@ package buildcraft.core.lib.block;
 
 import java.util.HashSet;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.Block;
+import net.minecraft.EntityLivingBase;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftCore;
@@ -120,7 +120,7 @@ public abstract class TileBuildCraft extends TileEntity implements IEnergyHandle
     }
 
     @Override
-    public net.minecraft.network.Packet getDescriptionPacket() {
+    public net.minecraft.Packet getDescriptionPacket() {
         return Utils.toPacket(getPacketUpdate(), 0);
     }
 

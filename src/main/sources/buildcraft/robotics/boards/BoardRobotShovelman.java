@@ -6,8 +6,8 @@
  */
 package buildcraft.robotics.boards;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.ItemStack;
+import net.minecraft.World;
 
 import buildcraft.api.boards.RedstoneBoardRobotNBT;
 import buildcraft.api.core.BuildCraftAPI;

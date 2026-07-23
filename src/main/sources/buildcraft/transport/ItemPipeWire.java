@@ -8,11 +8,11 @@ package buildcraft.transport;
 
 import java.util.List;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
+import net.minecraft.IIconRegister;
+import net.minecraft.CreativeTabs;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.IIcon;
 
 import buildcraft.api.transport.PipeWire;
 import buildcraft.core.lib.items.ItemBuildCraft;

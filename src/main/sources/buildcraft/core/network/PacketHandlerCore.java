@@ -1,7 +1,7 @@
 package buildcraft.core.network;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.network.INetHandler;
+import net.minecraft.EntityPlayer;
+import net.minecraft.INetHandler;
 
 import buildcraft.core.lib.network.Packet;
 import buildcraft.core.lib.network.PacketHandler;

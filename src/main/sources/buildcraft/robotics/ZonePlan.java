@@ -10,8 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.NBTTagList;
 import net.minecraftforge.common.util.Constants;
 
 import buildcraft.api.core.BlockIndex;

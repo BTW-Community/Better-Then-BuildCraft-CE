@@ -1,7 +1,7 @@
 package buildcraft.api.robots;
 
-import net.minecraft.client.renderer.texture.TextureManager;
-import net.minecraft.item.ItemStack;
+import net.minecraft.TextureManager;
+import net.minecraft.ItemStack;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

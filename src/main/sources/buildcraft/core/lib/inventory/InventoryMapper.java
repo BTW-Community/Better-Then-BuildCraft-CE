@@ -6,9 +6,9 @@
  */
 package buildcraft.core.lib.inventory;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
+import net.minecraft.EntityPlayer;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
 
 /**
  * Wrapper class used to specify part of an existing inventory to be treated as a complete inventory. Used primarily to

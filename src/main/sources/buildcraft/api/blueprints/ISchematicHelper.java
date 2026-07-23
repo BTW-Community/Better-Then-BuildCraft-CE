@@ -1,6 +1,6 @@
 package buildcraft.api.blueprints;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 public interface ISchematicHelper {
 

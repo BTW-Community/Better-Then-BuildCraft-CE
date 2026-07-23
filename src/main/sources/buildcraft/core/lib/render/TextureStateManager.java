@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.render;
 
-import net.minecraft.util.IIcon;
+import net.minecraft.IIcon;
 
 import buildcraft.api.core.render.ITextureStateManager;
 import cpw.mods.fml.relauncher.Side;

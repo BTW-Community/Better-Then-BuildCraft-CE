@@ -6,16 +6,16 @@
  */
 package buildcraft.core.lib.commands;
 
-import net.minecraft.command.ICommandSender;
-import net.minecraft.command.WrongUsageException;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.StatCollector;
-import net.minecraft.world.World;
+import net.minecraft.ICommandSender;
+import net.minecraft.WrongUsageException;
+import net.minecraft.EntityPlayer;
+import net.minecraft.MinecraftServer;
+import net.minecraft.ChatComponentText;
+import net.minecraft.ChatComponentTranslation;
+import net.minecraft.ChatStyle;
+import net.minecraft.EnumChatFormatting;
+import net.minecraft.StatCollector;
+import net.minecraft.World;
 
 public final class CommandHelpers {
 

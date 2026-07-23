@@ -8,11 +8,11 @@ package buildcraft.robotics;
 
 import java.util.Arrays;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.server.MinecraftServer;
+import net.minecraft.EntityPlayer;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.MinecraftServer;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.BuildCraftRobotics;

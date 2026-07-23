@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Iterables;

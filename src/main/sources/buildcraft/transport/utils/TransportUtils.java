@@ -6,7 +6,7 @@
  */
 package buildcraft.transport.utils;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.core.CoreConstants;
 

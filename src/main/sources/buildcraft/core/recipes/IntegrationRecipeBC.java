@@ -3,7 +3,7 @@ package buildcraft.core.recipes;
 import java.lang.ref.SoftReference;
 import java.util.List;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.recipes.IIntegrationRecipe;
 

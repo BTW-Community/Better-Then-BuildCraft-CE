@@ -8,7 +8,7 @@ package buildcraft.core.lib.network.command;
 
 import java.util.ArrayList;
 
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.EntityPlayer;
 
 import buildcraft.core.lib.network.Packet;
 import buildcraft.core.lib.utils.NetworkUtils;

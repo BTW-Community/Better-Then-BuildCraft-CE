@@ -6,10 +6,10 @@
  */
 package buildcraft.core;
 
-import net.minecraft.block.Block;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.api.core.ISerializable;

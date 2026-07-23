@@ -1,6 +1,6 @@
 package buildcraft.core.blueprints;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 public class RequirementItemStack {
 

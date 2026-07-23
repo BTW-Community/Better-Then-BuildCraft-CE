@@ -3,8 +3,8 @@ package buildcraft.transport.render;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.Minecraft;
+import net.minecraft.ResourceLocation;
 
 import buildcraft.transport.Pipe;
 import buildcraft.transport.PipeTransport;

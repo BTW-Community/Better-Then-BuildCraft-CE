@@ -9,16 +9,16 @@ package buildcraft;
 import java.io.File;
 import java.util.UUID;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockLiquid;
-import net.minecraft.entity.EntityList;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
-import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
-import net.minecraft.util.IIcon;
+import net.minecraft.Block;
+import net.minecraft.BlockLiquid;
+import net.minecraft.EntityList;
+import net.minecraft.Blocks;
+import net.minecraft.Items;
+import net.minecraft.Item;
+import net.minecraft.ItemFood;
+import net.minecraft.ItemStack;
+import net.minecraft.Achievement;
+import net.minecraft.IIcon;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.MinecraftForge;
@@ -476,7 +476,7 @@ public class BuildCraftCore extends BuildCraftMod {
                 "tile.engineWood",
                 "buildcraftcore:engineWood");
         BCRegistry.INSTANCE
-                .registerTileEntity(TileEngineWood.class, "net.minecraft.src.buildcraft.energy.TileEngineWood");
+                .registerTileEntity(TileEngineWood.class, "net.minecraft.TileEngineWood");
 
         markerBlock = (BlockMarker) CompatHooks.INSTANCE.getBlock(BlockMarker.class);
         BCRegistry.INSTANCE.registerBlock(markerBlock.setBlockName("markerBlock"), false);

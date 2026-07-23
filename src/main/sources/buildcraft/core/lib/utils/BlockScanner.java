@@ -8,8 +8,8 @@ package buildcraft.core.lib.utils;
 
 import java.util.Iterator;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.World;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.World;
 
 import buildcraft.api.core.BlockIndex;
 import buildcraft.core.Box;

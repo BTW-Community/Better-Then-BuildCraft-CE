@@ -9,15 +9,15 @@ package buildcraft.transport;
 import java.util.List;
 import java.util.Map;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.IIconRegister;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Blocks;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
+import net.minecraft.EnumChatFormatting;
+import net.minecraft.IIcon;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import org.apache.logging.log4j.Level;

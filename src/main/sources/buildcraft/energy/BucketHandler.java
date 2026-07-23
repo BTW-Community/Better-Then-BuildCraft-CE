@@ -9,11 +9,11 @@ package buildcraft.energy;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.MovingObjectPosition;
+import net.minecraft.World;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;

@@ -6,12 +6,12 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.client.renderer.entity.RenderItem;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.RenderItem;
+import net.minecraft.RenderManager;
+import net.minecraft.EntityItem;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
 
 import org.lwjgl.opengl.GL11;
 

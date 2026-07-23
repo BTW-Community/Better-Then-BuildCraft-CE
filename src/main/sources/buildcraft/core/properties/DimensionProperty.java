@@ -6,14 +6,14 @@
  */
 package buildcraft.core.properties;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.LongHashMap;
-import net.minecraft.world.ChunkCoordIntPair;
-import net.minecraft.world.IWorldAccess;
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.Chunk;
+import net.minecraft.Block;
+import net.minecraft.Entity;
+import net.minecraft.EntityPlayer;
+import net.minecraft.LongHashMap;
+import net.minecraft.ChunkCoordIntPair;
+import net.minecraft.IWorldAccess;
+import net.minecraft.World;
+import net.minecraft.Chunk;
 
 public class DimensionProperty implements IWorldAccess {
 

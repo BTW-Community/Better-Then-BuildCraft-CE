@@ -2,16 +2,16 @@ package buildcraft.silicon;
 
 import java.lang.ref.WeakReference;
 
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.inventory.InventoryCrafting;
-import net.minecraft.inventory.SlotCrafting;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.WorldServer;
+import net.minecraft.EntityItem;
+import net.minecraft.EntityPlayer;
+import net.minecraft.IInventory;
+import net.minecraft.ISidedInventory;
+import net.minecraft.InventoryCrafting;
+import net.minecraft.SlotCrafting;
+import net.minecraft.ItemStack;
+import net.minecraft.IRecipe;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.WorldServer;
 
 import buildcraft.api.tiles.IHasWork;
 import buildcraft.core.lib.gui.ContainerDummy;

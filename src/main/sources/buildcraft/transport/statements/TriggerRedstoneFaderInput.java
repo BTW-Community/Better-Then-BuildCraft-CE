@@ -6,7 +6,7 @@
  */
 package buildcraft.transport.statements;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.IIconRegister;
 
 import buildcraft.api.gates.IGate;
 import buildcraft.api.statements.IStatementContainer;

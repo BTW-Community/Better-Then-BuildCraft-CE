@@ -1,8 +1,8 @@
 package buildcraft.core.tablet;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.World;
 
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.tablet.manager.TabletManagerServer;

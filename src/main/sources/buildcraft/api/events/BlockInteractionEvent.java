@@ -6,8 +6,8 @@
  */
 package buildcraft.api.events;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.Block;
+import net.minecraft.EntityPlayer;
 
 import cpw.mods.fml.common.eventhandler.Cancelable;
 import cpw.mods.fml.common.eventhandler.Event;

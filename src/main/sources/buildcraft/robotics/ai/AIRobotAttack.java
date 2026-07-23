@@ -6,7 +6,7 @@
  */
 package buildcraft.robotics.ai;
 
-import net.minecraft.entity.Entity;
+import net.minecraft.Entity;
 
 import buildcraft.api.blueprints.BuilderAPI;
 import buildcraft.api.robots.AIRobot;

@@ -6,8 +6,8 @@
  */
 package buildcraft.energy.worldgen;
 
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.gen.layer.GenLayer;
+import net.minecraft.BiomeGenBase;
+import net.minecraft.GenLayer;
 
 import buildcraft.BuildCraftEnergy;
 

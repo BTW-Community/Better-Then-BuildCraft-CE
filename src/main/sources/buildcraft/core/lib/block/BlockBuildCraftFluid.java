@@ -8,17 +8,17 @@ package buildcraft.core.lib.block;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.particle.EntityFX;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.Entity;
-import net.minecraft.init.Blocks;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.Explosion;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.MapColor;
+import net.minecraft.Material;
+import net.minecraft.EntityFX;
+import net.minecraft.IIconRegister;
+import net.minecraft.Entity;
+import net.minecraft.Blocks;
+import net.minecraft.IIcon;
+import net.minecraft.Explosion;
+import net.minecraft.IBlockAccess;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;

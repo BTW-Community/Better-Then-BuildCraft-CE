@@ -6,10 +6,10 @@
  */
 package buildcraft.builders.gui;
 
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
+import net.minecraft.TextureMap;
+import net.minecraft.EntityPlayer;
+import net.minecraft.IInventory;
+import net.minecraft.Slot;
 
 import buildcraft.builders.TileFiller;
 import buildcraft.core.lib.gui.BuildCraftContainer;

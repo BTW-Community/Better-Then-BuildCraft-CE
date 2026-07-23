@@ -8,16 +8,16 @@ package buildcraft.silicon;
 
 import java.util.List;
 
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.IIcon;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.Vec3;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
+import net.minecraft.Material;
+import net.minecraft.Entity;
+import net.minecraft.EntityPlayer;
+import net.minecraft.TileEntity;
+import net.minecraft.AxisAlignedBB;
+import net.minecraft.IIcon;
+import net.minecraft.MovingObjectPosition;
+import net.minecraft.Vec3;
+import net.minecraft.IBlockAccess;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.core.BCCreativeTab;

@@ -1,6 +1,6 @@
 package buildcraft.transport.pipes;
 
-import net.minecraft.item.Item;
+import net.minecraft.Item;
 
 import buildcraft.transport.PipeIconProvider;
 

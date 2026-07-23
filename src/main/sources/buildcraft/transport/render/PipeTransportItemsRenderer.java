@@ -1,13 +1,13 @@
 package buildcraft.transport.render;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.GLAllocation;
-import net.minecraft.client.renderer.entity.RenderItem;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Block;
+import net.minecraft.GLAllocation;
+import net.minecraft.RenderItem;
+import net.minecraft.RenderManager;
+import net.minecraft.TextureMap;
+import net.minecraft.EntityItem;
+import net.minecraft.ItemBlock;
+import net.minecraft.ItemStack;
 
 import org.lwjgl.opengl.GL11;
 

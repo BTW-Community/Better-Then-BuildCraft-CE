@@ -6,10 +6,10 @@
  */
 package buildcraft.builders;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.Entity;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import buildcraft.core.lib.EntityBlock;
 

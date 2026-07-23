@@ -6,8 +6,8 @@
  */
 package buildcraft.core;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.world.World;
+import net.minecraft.EntityPlayer;
+import net.minecraft.World;
 
 import buildcraft.core.list.ContainerListNew;
 import buildcraft.core.list.ContainerListOld;

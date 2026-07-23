@@ -6,8 +6,8 @@
  */
 package buildcraft.robotics.statements;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.ItemStack;
+import net.minecraft.IIconRegister;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.core.IZone;
 import buildcraft.api.items.IMapLocation;

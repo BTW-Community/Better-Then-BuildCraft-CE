@@ -1,6 +1,6 @@
 package buildcraft.transport;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 public interface IEmeraldPipe extends IFilteredPipe {
 

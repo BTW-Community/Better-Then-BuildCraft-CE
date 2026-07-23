@@ -1,9 +1,9 @@
 package buildcraft.core.command;
 
-import net.minecraft.command.ICommandSender;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.ICommandSender;
+import net.minecraft.ChatComponentTranslation;
+import net.minecraft.ChatStyle;
+import net.minecraft.EnumChatFormatting;
 
 import buildcraft.core.Version;
 import buildcraft.core.lib.commands.SubCommand;

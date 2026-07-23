@@ -8,8 +8,8 @@ package buildcraft.api.core;
 
 import java.lang.ref.WeakReference;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.world.WorldServer;
+import net.minecraft.EntityPlayer;
+import net.minecraft.WorldServer;
 
 public interface ICoreProxy {
 

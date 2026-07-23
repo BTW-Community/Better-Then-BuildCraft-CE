@@ -6,8 +6,8 @@
  */
 package buildcraft.api.blueprints;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
+import net.minecraft.Block;
+import net.minecraft.Entity;
 
 public interface ISchematicRegistry {
 

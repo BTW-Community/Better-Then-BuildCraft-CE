@@ -6,8 +6,8 @@
  */
 package buildcraft.energy.worldgen;
 
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.BiomeGenDesert;
+import net.minecraft.BiomeGenBase;
+import net.minecraft.BiomeGenDesert;
 import net.minecraftforge.common.BiomeDictionary;
 
 public final class BiomeGenOilDesert extends BiomeGenDesert {

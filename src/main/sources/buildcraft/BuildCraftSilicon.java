@@ -8,13 +8,13 @@ package buildcraft;
 
 import static buildcraft.BuildCraftCore.GTNH;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockDispenser;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
+import net.minecraft.Block;
+import net.minecraft.BlockDispenser;
+import net.minecraft.Blocks;
+import net.minecraft.Items;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.Achievement;
 import net.minecraftforge.oredict.OreDictionary;
 
 import buildcraft.api.blueprints.BuilderAPI;
@@ -142,20 +142,20 @@ public class BuildCraftSilicon extends BuildCraftMod {
                 new PacketHandlerSilicon());
 
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new SiliconGuiHandler());
-        BCRegistry.INSTANCE.registerTileEntity(TileLaser.class, "net.minecraft.src.buildcraft.factory.TileLaser");
+        BCRegistry.INSTANCE.registerTileEntity(TileLaser.class, "net.minecraft.TileLaser");
         BCRegistry.INSTANCE
-                .registerTileEntity(TileAssemblyTable.class, "net.minecraft.src.buildcraft.factory.TileAssemblyTable");
+                .registerTileEntity(TileAssemblyTable.class, "net.minecraft.TileAssemblyTable");
         BCRegistry.INSTANCE.registerTileEntity(
                 TileAdvancedCraftingTable.class,
-                "net.minecraft.src.buildcraft.factory.TileAssemblyAdvancedWorkbench");
+                "net.minecraft.TileAssemblyAdvancedWorkbench");
         BCRegistry.INSTANCE.registerTileEntity(
                 TileIntegrationTable.class,
-                "net.minecraft.src.buildcraft.factory.TileIntegrationTable");
+                "net.minecraft.TileIntegrationTable");
         BCRegistry.INSTANCE
-                .registerTileEntity(TileChargingTable.class, "net.minecraft.src.buildcraft.factory.TileChargingTable");
+                .registerTileEntity(TileChargingTable.class, "net.minecraft.TileChargingTable");
         BCRegistry.INSTANCE.registerTileEntity(
                 TileProgrammingTable.class,
-                "net.minecraft.src.buildcraft.factory.TileProgrammingTable");
+                "net.minecraft.TileProgrammingTable");
         BCRegistry.INSTANCE.registerTileEntity(TilePackager.class, "buildcraft.TilePackager");
         BCRegistry.INSTANCE.registerTileEntity(TileStampingTable.class, "buildcraft.TileStampingTable");
 

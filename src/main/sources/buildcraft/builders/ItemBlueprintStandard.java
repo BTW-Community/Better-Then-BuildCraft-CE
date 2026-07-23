@@ -6,7 +6,7 @@
  */
 package buildcraft.builders;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 public class ItemBlueprintStandard extends ItemBlueprint {
 

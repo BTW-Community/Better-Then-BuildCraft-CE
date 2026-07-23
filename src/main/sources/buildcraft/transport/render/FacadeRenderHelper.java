@@ -6,10 +6,10 @@
  */
 package buildcraft.transport.render;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.IBlockAccess;
+import net.minecraft.Block;
+import net.minecraft.RenderBlocks;
+import net.minecraft.IIcon;
+import net.minecraft.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftTransport;

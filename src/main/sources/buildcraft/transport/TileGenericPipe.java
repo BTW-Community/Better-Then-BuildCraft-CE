@@ -8,15 +8,15 @@ package buildcraft.transport;
 
 import java.util.List;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
+import net.minecraft.Block;
+import net.minecraft.EntityPlayer;
+import net.minecraft.EntityPlayerMP;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
+import net.minecraft.WorldServer;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.Fluid;
@@ -686,7 +686,7 @@ public class TileGenericPipe extends TileEntity
     }
 
     @Override
-    public net.minecraft.network.Packet getDescriptionPacket() {
+    public net.minecraft.Packet getDescriptionPacket() {
         return Utils.toPacket(getBCDescriptionPacket(), 1);
     }
 

@@ -6,8 +6,8 @@
  */
 package buildcraft.transport.gates;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.util.IIcon;
+import net.minecraft.IIconRegister;
+import net.minecraft.IIcon;
 
 import buildcraft.api.gates.IGateExpansion;
 import buildcraft.core.lib.utils.StringUtils;

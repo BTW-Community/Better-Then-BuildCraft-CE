@@ -6,10 +6,10 @@
  */
 package buildcraft.api.transport;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.core.EnumColor;

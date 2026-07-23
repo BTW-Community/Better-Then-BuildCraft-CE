@@ -6,10 +6,10 @@
  */
 package buildcraft.factory;
 
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.Material;
+import net.minecraft.EntityPlayer;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import buildcraft.BuildCraftFactory;
 import buildcraft.api.transport.IItemPipe;

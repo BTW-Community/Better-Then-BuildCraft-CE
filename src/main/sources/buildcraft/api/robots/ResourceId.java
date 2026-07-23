@@ -6,7 +6,7 @@
  */
 package buildcraft.api.robots;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 public abstract class ResourceId {
 

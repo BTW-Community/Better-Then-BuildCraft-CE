@@ -8,8 +8,8 @@ package buildcraft.robotics.ai;
 
 import java.util.LinkedList;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.NBTTagList;
 import net.minecraftforge.common.util.Constants;
 
 import buildcraft.api.core.BlockIndex;

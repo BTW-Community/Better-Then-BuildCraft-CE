@@ -2,7 +2,7 @@ package buildcraft.core.tablet;
 
 import java.util.LinkedList;
 
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.api.core.BCLog;
 import buildcraft.api.tablet.ITablet;

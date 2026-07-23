@@ -1,8 +1,8 @@
 package buildcraft.transport.render;
 
-import net.minecraft.client.renderer.GLAllocation;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.world.World;
+import net.minecraft.GLAllocation;
+import net.minecraft.TextureMap;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import org.lwjgl.opengl.GL11;

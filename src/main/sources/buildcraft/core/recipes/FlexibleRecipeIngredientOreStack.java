@@ -9,7 +9,7 @@ package buildcraft.core.recipes;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 import buildcraft.api.recipes.IFlexibleRecipeIngredient;

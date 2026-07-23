@@ -6,7 +6,7 @@
  */
 package buildcraft.core.internal;
 
-import net.minecraft.world.IBlockAccess;
+import net.minecraft.IBlockAccess;
 
 public interface IFramePipeConnection {
 

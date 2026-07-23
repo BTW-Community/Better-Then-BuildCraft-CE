@@ -9,11 +9,11 @@ package buildcraft.core.builders.patterns;
 import java.util.Map;
 import java.util.TreeMap;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.IIconRegister;
+import net.minecraft.TextureMap;
+import net.minecraft.IIcon;
+import net.minecraft.World;
 
 import buildcraft.api.blueprints.SchematicMask;
 import buildcraft.api.filler.IFillerPattern;

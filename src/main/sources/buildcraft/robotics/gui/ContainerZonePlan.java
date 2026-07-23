@@ -6,10 +6,10 @@
  */
 package buildcraft.robotics.gui;
 
-import net.minecraft.block.material.MapColor;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
+import net.minecraft.MapColor;
+import net.minecraft.EntityPlayer;
+import net.minecraft.IInventory;
+import net.minecraft.Slot;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.BuildCraftRobotics;

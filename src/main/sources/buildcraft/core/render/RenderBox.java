@@ -6,8 +6,8 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.client.renderer.texture.TextureManager;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.TextureManager;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 

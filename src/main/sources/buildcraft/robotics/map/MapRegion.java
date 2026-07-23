@@ -1,7 +1,7 @@
 package buildcraft.robotics.map;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.IntHashMap;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.IntHashMap;
 
 import buildcraft.api.core.INBTStoreable;
 

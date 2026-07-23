@@ -6,9 +6,9 @@
  */
 package buildcraft.transport;
 
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.EntityItem;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import buildcraft.core.CompatHooks;
 import cpw.mods.fml.common.SidedProxy;
@@ -28,12 +28,12 @@ public class TransportProxy {
         // compatibility
         GameRegistry.registerTileEntityWithAlternatives(
                 CompatHooks.INSTANCE.getTile(TileGenericPipe.class),
-                "net.minecraft.src.buildcraft.transport.GenericPipe",
-                "net.minecraft.src.buildcraft.GenericPipe",
-                "net.minecraft.src.buildcraft.transport.TileGenericPipe");
+                "net.minecraft.GenericPipe",
+                "net.minecraft.GenericPipe",
+                "net.minecraft.TileGenericPipe");
         GameRegistry.registerTileEntity(
                 CompatHooks.INSTANCE.getTile(TileFilteredBuffer.class),
-                "net.minecraft.src.buildcraft.transport.TileFilteredBuffer");
+                "net.minecraft.TileFilteredBuffer");
     }
 
     public void registerRenderers() {}

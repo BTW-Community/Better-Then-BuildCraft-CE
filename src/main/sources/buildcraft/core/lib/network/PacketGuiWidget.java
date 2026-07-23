@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.network;
 
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.EntityPlayer;
 
 import buildcraft.core.lib.gui.BuildCraftContainer;
 import buildcraft.core.network.PacketIds;

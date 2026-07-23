@@ -6,10 +6,10 @@
  */
 package buildcraft.core.lib.render;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.util.IIcon;
+import net.minecraft.Block;
+import net.minecraft.RenderBlocks;
+import net.minecraft.Tessellator;
+import net.minecraft.IIcon;
 
 import org.lwjgl.opengl.GL11;
 

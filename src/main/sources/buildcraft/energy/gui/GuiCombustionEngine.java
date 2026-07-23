@@ -9,8 +9,8 @@ package buildcraft.energy.gui;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.InventoryPlayer;
+import net.minecraft.ResourceLocation;
 import net.minecraftforge.fluids.FluidStack;
 
 import buildcraft.core.lib.utils.StringUtils;

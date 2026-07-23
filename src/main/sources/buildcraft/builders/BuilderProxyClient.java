@@ -6,9 +6,9 @@
  */
 package buildcraft.builders;
 
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
+import net.minecraft.TileEntitySpecialRenderer;
+import net.minecraft.IIcon;
+import net.minecraft.World;
 
 import buildcraft.BuildCraftBuilders;
 import buildcraft.builders.render.RenderArchitect;

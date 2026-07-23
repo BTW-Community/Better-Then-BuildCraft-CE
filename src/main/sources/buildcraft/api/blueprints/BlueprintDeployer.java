@@ -8,7 +8,7 @@ package buildcraft.api.blueprints;
 
 import java.io.File;
 
-import net.minecraft.world.World;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 /**

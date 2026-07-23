@@ -6,8 +6,8 @@
  */
 package buildcraft.core;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ChatComponentTranslation;
 
 import buildcraft.core.proxy.CoreProxy;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

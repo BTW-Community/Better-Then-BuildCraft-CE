@@ -6,10 +6,10 @@
  */
 package buildcraft.silicon.gui;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.ICrafting;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ICrafting;
+import net.minecraft.IInventory;
+import net.minecraft.Slot;
 
 import buildcraft.core.lib.gui.BuildCraftContainer;
 import buildcraft.silicon.TileProgrammingTable;

@@ -8,18 +8,18 @@ package buildcraft.core.lib.render;
 
 import java.util.Arrays;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.entity.Entity;
-import net.minecraft.init.Blocks;
-import net.minecraft.util.IIcon;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.EnumSkyBlock;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.RenderBlocks;
+import net.minecraft.Tessellator;
+import net.minecraft.Render;
+import net.minecraft.TextureMap;
+import net.minecraft.Entity;
+import net.minecraft.Blocks;
+import net.minecraft.IIcon;
+import net.minecraft.ResourceLocation;
+import net.minecraft.EnumSkyBlock;
+import net.minecraft.IBlockAccess;
+import net.minecraft.World;
 
 import org.lwjgl.opengl.GL11;
 

@@ -12,12 +12,12 @@ import java.util.Iterator;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.ICrafting;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ICrafting;
+import net.minecraft.IInventory;
+import net.minecraft.Slot;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.ResourceLocation;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.BuildCraftCore;

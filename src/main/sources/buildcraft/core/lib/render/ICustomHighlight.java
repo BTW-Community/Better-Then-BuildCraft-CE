@@ -6,9 +6,9 @@
  */
 package buildcraft.core.lib.render;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.world.World;
+import net.minecraft.EntityPlayer;
+import net.minecraft.AxisAlignedBB;
+import net.minecraft.World;
 
 public interface ICustomHighlight {
 

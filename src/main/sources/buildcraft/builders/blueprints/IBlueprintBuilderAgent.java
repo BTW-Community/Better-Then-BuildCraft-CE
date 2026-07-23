@@ -6,7 +6,7 @@
  */
 package buildcraft.builders.blueprints;
 
-import net.minecraft.inventory.IInventory;
+import net.minecraft.IInventory;
 
 public interface IBlueprintBuilderAgent {
 

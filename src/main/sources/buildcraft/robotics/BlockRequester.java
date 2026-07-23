@@ -6,11 +6,11 @@
  */
 package buildcraft.robotics;
 
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.Material;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import buildcraft.BuildCraftRobotics;
 import buildcraft.core.GuiIds;

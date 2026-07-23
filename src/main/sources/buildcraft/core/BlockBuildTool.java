@@ -6,10 +6,10 @@
  */
 package buildcraft.core;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.util.IIcon;
+import net.minecraft.Block;
+import net.minecraft.Material;
+import net.minecraft.IIconRegister;
+import net.minecraft.IIcon;
 
 import buildcraft.BuildCraftCore;
 

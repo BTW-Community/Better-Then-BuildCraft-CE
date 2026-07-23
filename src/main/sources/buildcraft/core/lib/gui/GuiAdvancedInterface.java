@@ -8,13 +8,13 @@ package buildcraft.core.lib.gui;
 
 import java.util.ArrayList;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.client.renderer.entity.RenderItem;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.Minecraft;
+import net.minecraft.OpenGlHelper;
+import net.minecraft.RenderHelper;
+import net.minecraft.RenderItem;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;

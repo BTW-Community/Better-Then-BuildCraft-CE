@@ -14,22 +14,22 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.List;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.entity.item.EntityItemFrame;
-import net.minecraft.entity.item.EntityMinecartChest;
-import net.minecraft.entity.item.EntityMinecartEmpty;
-import net.minecraft.entity.item.EntityMinecartFurnace;
-import net.minecraft.entity.item.EntityMinecartHopper;
-import net.minecraft.entity.item.EntityMinecartTNT;
-import net.minecraft.entity.item.EntityPainting;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.launchwrapper.Launch;
-import net.minecraft.stats.Achievement;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.TextureMap;
+import net.minecraft.EntityItemFrame;
+import net.minecraft.EntityMinecartChest;
+import net.minecraft.EntityMinecartEmpty;
+import net.minecraft.EntityMinecartFurnace;
+import net.minecraft.EntityMinecartHopper;
+import net.minecraft.EntityMinecartTNT;
+import net.minecraft.EntityPainting;
+import net.minecraft.Blocks;
+import net.minecraft.Items;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
+import net.minecraft.Launch;
+import net.minecraft.Achievement;
+import net.minecraft.World;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.ForgeChunkManager;
@@ -627,11 +627,11 @@ public class BuildCraftBuilders extends BuildCraftMod {
         BCRegistry.INSTANCE.registerTileEntity(TileQuarry.class, "Machine");
         BCRegistry.INSTANCE.registerTileEntity(TileMarker.class, "Marker");
         BCRegistry.INSTANCE.registerTileEntity(TileFiller.class, "Filler");
-        BCRegistry.INSTANCE.registerTileEntity(TileBuilder.class, "net.minecraft.src.builders.TileBuilder");
-        BCRegistry.INSTANCE.registerTileEntity(TileArchitect.class, "net.minecraft.src.builders.TileTemplate");
-        BCRegistry.INSTANCE.registerTileEntity(TilePathMarker.class, "net.minecraft.src.builders.TilePathMarker");
+        BCRegistry.INSTANCE.registerTileEntity(TileBuilder.class, "net.minecraft.TileBuilder");
+        BCRegistry.INSTANCE.registerTileEntity(TileArchitect.class, "net.minecraft.TileTemplate");
+        BCRegistry.INSTANCE.registerTileEntity(TilePathMarker.class, "net.minecraft.TilePathMarker");
         BCRegistry.INSTANCE
-                .registerTileEntity(TileBlueprintLibrary.class, "net.minecraft.src.builders.TileBlueprintLibrary");
+                .registerTileEntity(TileBlueprintLibrary.class, "net.minecraft.TileBlueprintLibrary");
 
         constructionMarkerBlock = (BlockConstructionMarker) CompatHooks.INSTANCE
                 .getBlock(BlockConstructionMarker.class);
@@ -641,7 +641,7 @@ public class BuildCraftBuilders extends BuildCraftMod {
                 false);
 
         BCRegistry.INSTANCE
-                .registerTileEntity(TileConstructionMarker.class, "net.minecraft.src.builders.TileConstructionMarker");
+                .registerTileEntity(TileConstructionMarker.class, "net.minecraft.TileConstructionMarker");
 
         SchematicRegistry.INSTANCE.readConfiguration(BuildCraftCore.mainConfiguration);
 

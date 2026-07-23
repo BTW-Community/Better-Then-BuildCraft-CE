@@ -2,7 +2,7 @@ package buildcraft.core.tablet.manager;
 
 import java.util.HashMap;
 
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.EntityPlayer;
 
 import buildcraft.core.tablet.TabletServer;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

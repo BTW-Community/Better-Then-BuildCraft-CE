@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.network;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.world.World;
+import net.minecraft.Entity;
+import net.minecraft.World;
 
 import buildcraft.api.core.ISerializable;
 import buildcraft.core.network.PacketIds;

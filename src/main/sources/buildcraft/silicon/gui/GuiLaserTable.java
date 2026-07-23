@@ -6,11 +6,11 @@
  */
 package buildcraft.silicon.gui;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.Minecraft;
+import net.minecraft.TextureMap;
+import net.minecraft.InventoryPlayer;
+import net.minecraft.IInventory;
+import net.minecraft.ResourceLocation;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.core.CoreIconProvider;

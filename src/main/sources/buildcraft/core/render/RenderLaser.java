@@ -6,15 +6,15 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.client.renderer.GLAllocation;
-import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.texture.TextureManager;
-import net.minecraft.entity.Entity;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.ModelBase;
+import net.minecraft.ModelRenderer;
+import net.minecraft.GLAllocation;
+import net.minecraft.OpenGlHelper;
+import net.minecraft.Render;
+import net.minecraft.TextureManager;
+import net.minecraft.Entity;
+import net.minecraft.MathHelper;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 

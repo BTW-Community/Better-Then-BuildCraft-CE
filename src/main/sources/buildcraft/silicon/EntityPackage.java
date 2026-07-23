@@ -1,14 +1,14 @@
 package buildcraft.silicon;
 
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityThrowable;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.world.World;
+import net.minecraft.EntityItem;
+import net.minecraft.EntityPlayer;
+import net.minecraft.EntityThrowable;
+import net.minecraft.ItemBlock;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.DamageSource;
+import net.minecraft.MovingObjectPosition;
+import net.minecraft.World;
 
 import buildcraft.BuildCraftSilicon;
 

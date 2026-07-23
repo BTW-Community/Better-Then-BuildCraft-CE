@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import net.minecraft.command.CommandBase;
-import net.minecraft.command.ICommandSender;
+import net.minecraft.CommandBase;
+import net.minecraft.ICommandSender;
 
 public class RootCommand extends CommandBase implements IModCommand {
 

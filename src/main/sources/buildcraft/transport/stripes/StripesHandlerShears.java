@@ -2,13 +2,13 @@ package buildcraft.transport.stripes;
 
 import java.util.List;
 
-import net.minecraft.block.Block;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemShears;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.Enchantment;
+import net.minecraft.EnchantmentHelper;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemShears;
+import net.minecraft.ItemStack;
+import net.minecraft.World;
 import net.minecraftforge.common.IShearable;
 import net.minecraftforge.common.util.ForgeDirection;
 

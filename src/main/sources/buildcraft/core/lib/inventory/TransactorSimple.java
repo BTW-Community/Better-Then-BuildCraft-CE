@@ -9,8 +9,8 @@ package buildcraft.core.lib.inventory;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import buildcraft.api.core.IInvSlot;

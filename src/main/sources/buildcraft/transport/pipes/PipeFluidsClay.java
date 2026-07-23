@@ -9,8 +9,8 @@ package buildcraft.transport.pipes;
 import java.util.HashSet;
 import java.util.Set;
 
-import net.minecraft.item.Item;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.Item;
+import net.minecraft.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.IFluidHandler;
 

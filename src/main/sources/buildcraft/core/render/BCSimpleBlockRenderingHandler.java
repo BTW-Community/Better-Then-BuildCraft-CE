@@ -1,6 +1,6 @@
 package buildcraft.core.render;
 
-import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.Tessellator;
 
 import buildcraft.BuildCraftCore;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;

@@ -1,7 +1,7 @@
 package buildcraft.core.lib.render;
 
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.texture.DynamicTexture;
+import net.minecraft.Tessellator;
+import net.minecraft.DynamicTexture;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;

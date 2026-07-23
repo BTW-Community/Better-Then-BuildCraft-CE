@@ -6,10 +6,10 @@
  */
 package buildcraft.builders.gui;
 
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.StatCollector;
+import net.minecraft.GuiButton;
+import net.minecraft.IInventory;
+import net.minecraft.ResourceLocation;
+import net.minecraft.StatCollector;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.api.filler.FillerManager;

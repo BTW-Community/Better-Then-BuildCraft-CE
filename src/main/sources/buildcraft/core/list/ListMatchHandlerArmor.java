@@ -1,7 +1,7 @@
 package buildcraft.core.list;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
+import net.minecraft.EntityPlayer;
+import net.minecraft.ItemStack;
 import net.minecraftforge.common.DimensionManager;
 
 import buildcraft.api.lists.ListMatchHandler;

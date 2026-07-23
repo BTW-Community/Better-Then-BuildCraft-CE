@@ -1,9 +1,9 @@
 package buildcraft.robotics.ai;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.WorldServer;
+import net.minecraft.EntityPlayer;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.MathHelper;
+import net.minecraft.WorldServer;
 
 import buildcraft.api.core.BlockIndex;
 import buildcraft.api.crops.CropManager;

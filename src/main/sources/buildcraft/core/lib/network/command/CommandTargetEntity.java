@@ -6,9 +6,9 @@
  */
 package buildcraft.core.lib.network.command;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.world.World;
+import net.minecraft.Entity;
+import net.minecraft.EntityPlayer;
+import net.minecraft.World;
 
 import io.netty.buffer.ByteBuf;
 

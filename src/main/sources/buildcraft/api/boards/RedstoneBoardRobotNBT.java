@@ -6,8 +6,8 @@
  */
 package buildcraft.api.boards;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.ResourceLocation;
 
 import buildcraft.api.robots.EntityRobotBase;
 

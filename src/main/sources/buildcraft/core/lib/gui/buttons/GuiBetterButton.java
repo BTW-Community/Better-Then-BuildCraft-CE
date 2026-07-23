@@ -6,9 +6,9 @@
  */
 package buildcraft.core.lib.gui.buttons;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.gui.GuiButton;
+import net.minecraft.Minecraft;
+import net.minecraft.FontRenderer;
+import net.minecraft.GuiButton;
 
 import org.lwjgl.opengl.GL11;
 

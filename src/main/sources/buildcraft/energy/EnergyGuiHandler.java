@@ -6,9 +6,9 @@
  */
 package buildcraft.energy;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.EntityPlayer;
+import net.minecraft.TileEntity;
+import net.minecraft.World;
 
 import buildcraft.core.GuiIds;
 import buildcraft.core.lib.engines.TileEngineWithInventory;

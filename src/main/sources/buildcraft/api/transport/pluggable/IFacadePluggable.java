@@ -1,6 +1,6 @@
 package buildcraft.api.transport.pluggable;
 
-import net.minecraft.block.Block;
+import net.minecraft.Block;
 
 public interface IFacadePluggable {
 

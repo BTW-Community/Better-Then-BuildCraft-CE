@@ -8,7 +8,7 @@ package buildcraft.api.recipes;
 
 import java.util.Collection;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 public interface IAssemblyRecipeManager {
 

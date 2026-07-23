@@ -1,7 +1,7 @@
 package buildcraft.builders.render;
 
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.TextureMap;
+import net.minecraft.TileEntity;
 
 import org.lwjgl.opengl.GL11;
 

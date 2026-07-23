@@ -8,9 +8,9 @@ package buildcraft.core.lib.gui.buttons;
 
 import java.util.ArrayList;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.Minecraft;
+import net.minecraft.GuiButton;
+import net.minecraft.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 

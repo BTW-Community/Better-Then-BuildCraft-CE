@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.WorldSettings;
+import net.minecraft.ItemStack;
+import net.minecraft.WorldSettings;
 
 import buildcraft.core.builders.BuilderItemMetaPair;
 import buildcraft.core.builders.BuildingSlotBlock;

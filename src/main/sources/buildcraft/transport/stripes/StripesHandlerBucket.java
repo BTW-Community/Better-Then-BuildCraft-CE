@@ -1,12 +1,12 @@
 package buildcraft.transport.stripes;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemBucket;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.EntityPlayer;
+import net.minecraft.Blocks;
+import net.minecraft.Items;
+import net.minecraft.ItemBucket;
+import net.minecraft.ItemStack;
+import net.minecraft.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidStack;

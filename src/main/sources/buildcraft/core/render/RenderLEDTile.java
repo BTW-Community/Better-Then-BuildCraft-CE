@@ -5,12 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IIcon;
+import net.minecraft.Block;
+import net.minecraft.IIconRegister;
+import net.minecraft.TextureMap;
+import net.minecraft.TileEntitySpecialRenderer;
+import net.minecraft.TileEntity;
+import net.minecraft.IIcon;
 
 import org.lwjgl.opengl.GL11;
 

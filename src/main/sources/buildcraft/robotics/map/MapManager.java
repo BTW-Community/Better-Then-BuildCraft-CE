@@ -3,11 +3,11 @@ package buildcraft.robotics.map;
 import java.io.File;
 import java.util.Date;
 
-import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
-import net.minecraft.world.chunk.Chunk;
-import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.ChunkProviderServer;
+import net.minecraft.World;
+import net.minecraft.WorldServer;
+import net.minecraft.Chunk;
+import net.minecraft.IChunkProvider;
+import net.minecraft.ChunkProviderServer;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.event.world.ChunkEvent;

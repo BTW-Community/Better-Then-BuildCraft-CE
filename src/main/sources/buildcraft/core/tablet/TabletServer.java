@@ -1,7 +1,7 @@
 package buildcraft.core.tablet;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.EntityPlayer;
+import net.minecraft.NBTTagCompound;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.api.tablet.TabletBitmap;

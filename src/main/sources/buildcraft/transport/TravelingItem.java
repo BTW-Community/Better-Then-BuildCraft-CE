@@ -9,12 +9,12 @@ package buildcraft.transport;
 import java.util.EnumSet;
 import java.util.Map;
 
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.MathHelper;
+import net.minecraft.EntityItem;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntity;
+import net.minecraft.MathHelper;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.MapMaker;

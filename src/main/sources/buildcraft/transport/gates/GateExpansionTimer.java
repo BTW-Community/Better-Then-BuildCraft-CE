@@ -8,7 +8,7 @@ package buildcraft.transport.gates;
 
 import java.util.List;
 
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.TileEntity;
 
 import buildcraft.BuildCraftTransport;
 import buildcraft.api.gates.GateExpansionController;

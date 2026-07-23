@@ -2,11 +2,11 @@ package buildcraft.robotics.boards;
 
 import java.util.ArrayList;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.World;
+import net.minecraft.Block;
+import net.minecraft.ItemBlock;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.World;
 
 import buildcraft.api.boards.RedstoneBoardRobot;
 import buildcraft.api.core.BlockIndex;

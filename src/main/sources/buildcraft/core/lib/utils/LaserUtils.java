@@ -1,6 +1,6 @@
 package buildcraft.core.lib.utils;
 
-import net.minecraft.world.World;
+import net.minecraft.World;
 
 import buildcraft.api.core.Position;
 import buildcraft.core.LaserData;

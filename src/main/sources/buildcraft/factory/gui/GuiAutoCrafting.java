@@ -6,9 +6,9 @@
  */
 package buildcraft.factory.gui;
 
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
+import net.minecraft.InventoryPlayer;
+import net.minecraft.ResourceLocation;
+import net.minecraft.World;
 
 import org.lwjgl.opengl.GL11;
 

@@ -6,8 +6,8 @@
  */
 package buildcraft.silicon;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Block;
+import net.minecraft.ItemStack;
 
 import buildcraft.core.lib.items.ItemBlockBuildCraft;
 

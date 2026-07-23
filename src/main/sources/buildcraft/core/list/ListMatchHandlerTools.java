@@ -2,7 +2,7 @@ package buildcraft.core.list;
 
 import java.util.Set;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.ItemStack;
 
 import buildcraft.api.lists.ListMatchHandler;
 

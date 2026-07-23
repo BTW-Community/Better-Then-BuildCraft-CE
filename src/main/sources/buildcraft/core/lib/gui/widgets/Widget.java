@@ -9,7 +9,7 @@ package buildcraft.core.lib.gui.widgets;
 import java.io.DataInputStream;
 import java.io.IOException;
 
-import net.minecraft.inventory.ICrafting;
+import net.minecraft.ICrafting;
 
 import buildcraft.core.lib.gui.BuildCraftContainer;
 import buildcraft.core.lib.gui.GuiBuildCraft;

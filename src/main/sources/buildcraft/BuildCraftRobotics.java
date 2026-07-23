@@ -13,10 +13,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.Blocks;
+import net.minecraft.Items;
+import net.minecraft.Item;
+import net.minecraft.ItemStack;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
@@ -320,9 +320,9 @@ public class BuildCraftRobotics extends BuildCraftMod {
         EntityRegistry.registerModEntity(EntityRobot.class, "bcRobot", EntityIds.ROBOT, instance, 50, 1, true);
 
         BCRegistry.INSTANCE
-                .registerTileEntity(TileZonePlan.class, "net.minecraft.src.buildcraft.commander.TileZonePlan");
+                .registerTileEntity(TileZonePlan.class, "net.minecraft.TileZonePlan");
         BCRegistry.INSTANCE
-                .registerTileEntity(TileRequester.class, "net.minecraft.src.buildcraft.commander.TileRequester");
+                .registerTileEntity(TileRequester.class, "net.minecraft.TileRequester");
 
         RobotManager.registryProvider = new RobotRegistryProvider();
 

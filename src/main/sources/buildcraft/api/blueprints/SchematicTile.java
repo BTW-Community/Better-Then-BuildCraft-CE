@@ -9,10 +9,10 @@ package buildcraft.api.blueprints;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.IInventory;
+import net.minecraft.ItemStack;
+import net.minecraft.NBTTagCompound;
+import net.minecraft.TileEntity;
 
 import buildcraft.api.core.JavaTools;
 
