@@ -5,11 +5,15 @@ net\.minecraft[^f]\.?(?:[a-z]+)?\.?(?:[a-z]+)?\.?(?:[a-z]+)?\.?(?:[a-z]+)?\.([A-
 ```
 with `net.minecraft.src.$1`
 
-1.7 names to 1.6 names:
+## 1.7 names to 1.6 names:
+### Vanilla 
 IIcon => Icon
 IIconProvider => IconProvider
 IIconRegister => IconRegister
 BlockFalling => FallingBlock
 
+### FML
+cpw.mods.fml.relauncher.Side => EnvType;
+import cpw.mods.fml.relauncher.SideOnly => Environment;
 ## Added shims/extensions
 - ForgeDirection
