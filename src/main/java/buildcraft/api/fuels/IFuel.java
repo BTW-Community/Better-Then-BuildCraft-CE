@@ -6,7 +6,7 @@
  */
 package buildcraft.api.fuels;
 
-import net.minecraft.src.Fluid;
+import net.minecraftforge.fluids.Fluid;
 
 public interface IFuel {
 

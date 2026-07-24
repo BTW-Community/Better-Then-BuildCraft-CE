@@ -19,17 +19,25 @@
 
     ],
     "btw:addon": [
-      "btw.community.example.ExampleAddon"
+
     ]
   },
   "custom": {
-    "btw:addon_prefix": "EX"
+    "btw:addon_prefix": "EX",
+    "loom:injected_interfaces": {
+      "net/minecraft/class_322": ["dev/bagel/buildcraft/extensions/NBTTagCompoundExtension"],
+      "net/minecraft/class_1150": ["dev/bagel/buildcraft/extensions/IBlockAccessExtension"],
+      "net/minecraft/class_1158": ["dev/bagel/buildcraft/extensions/IBlockAccessExtension"],
+      "net/minecraft/class_474": ["dev/bagel/buildcraft/extensions/NBTTagListExtension"],
+      "net/minecraft/class_1069": ["dev/bagel/buildcraft/extensions/ItemExtension"],
+      "net/minecraft/class_197": ["dev/bagel/buildcraft/extensions/BlockExtension"]
+    }
   },
   "mixins": [
-    "${mod_id}.mixins.json"
+    "buildcraft.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.19",
+    "fabricloader": ">=0.18.4",
     "minecraft": "${minecraft_version}",
     "btw": ">=${btw_version}"
   }

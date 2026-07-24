@@ -7,7 +7,7 @@
 package buildcraft.api.blueprints;
 
 import net.minecraft.src.ItemStack;
-import net.minecraft.src.FluidStack;
+import net.minecraftforge.fluids.FluidStack;
 
 import java.util.LinkedList;
 
@@ -16,7 +16,7 @@ public class SchematicFluid extends SchematicBlock {
     private final ItemStack fluidItem;
 
     public SchematicFluid(FluidStack fluidStack) {
-        this.fluidItem = new ItemStack(fluidStack.getFluid().getBlock(), 1);
+        this.fluidItem = new ItemStack(fluidStack.getFluid().getBlockID(), 1, 0);
     }
 
     @Override

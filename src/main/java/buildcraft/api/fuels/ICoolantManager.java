@@ -7,7 +7,7 @@
 package buildcraft.api.fuels;
 
 import buildcraft.api.core.StackKey;
-import net.minecraft.src.Fluid;
+import net.minecraftforge.fluids.Fluid;
 
 import java.util.Collection;
 

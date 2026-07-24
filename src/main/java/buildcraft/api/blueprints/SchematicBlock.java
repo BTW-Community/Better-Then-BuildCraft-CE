@@ -7,15 +7,10 @@
 package buildcraft.api.blueprints;
 
 import buildcraft.api.core.BlockIndex;
-import net.minecraft.src.Block;
-import net.minecraft.src.BlockFalling;
-import net.minecraft.src.BlockLiquid;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.NBTTagList;
+import net.minecraft.src.*;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.src.BlockFluidBase;
+import net.minecraftforge.fluids.BlockFluidBase;
 
 import java.util.*;
 
@@ -106,7 +101,7 @@ public class SchematicBlock extends SchematicBlockBase {
 
     @Override
     public BuildingStage getBuildStage() {
-        if (block instanceof BlockFluidBase || block instanceof BlockLiquid) {
+        if (block instanceof BlockFluidBase || block instanceof BlockFluid) {
             return BuildingStage.EXPANDING;
         } else {
             return BuildingStage.STANDALONE;

@@ -9,9 +9,9 @@ package buildcraft.api.core;
 import net.minecraft.src.Block;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
-import net.minecraft.src.Fluid;
-import net.minecraft.src.FluidContainerRegistry;
-import net.minecraft.src.FluidStack;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidStack;
 
 /**
  * This class is used whenever stacks needs to be stored as keys.

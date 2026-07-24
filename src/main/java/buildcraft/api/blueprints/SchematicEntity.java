@@ -143,9 +143,12 @@ public class SchematicEntity extends Schematic {
 
                 if (sub.getInteger("id") >= 0) {
                     // Maps the id in the blueprint to the id in the world
-                    sub.setInteger("id", Item.itemRegistry.getIDForObject(registry.getItemForId(sub.getInteger("id"))));
+                    Item item = registry.getItemForId(sub.getInteger("id"));
+                    if (item != null) {
+                        sub.setInteger("id", item.itemID);
 
-                    rqs.add(ItemStack.loadItemStackFromNBT(sub));
+                        rqs.add(ItemStack.loadItemStackFromNBT(sub));
+                    }
                 } else {
                     defaultPermission = BuildingPermission.CREATIVE_ONLY;
                 }
@@ -165,7 +168,7 @@ public class SchematicEntity extends Schematic {
 
         for (int j = 0; j < i; ++j) {
             double d1 = adouble[j];
-            nbttaglist.appendTag(new NBTTagDouble(d1));
+            nbttaglist.appendTag(new NBTTagDouble(null, d1));
         }
 
         return nbttaglist;
@@ -178,7 +181,7 @@ public class SchematicEntity extends Schematic {
 
         for (int j = 0; j < i; ++j) {
             float f1 = afloat[j];
-            nbttaglist.appendTag(new NBTTagFloat(f1));
+            nbttaglist.appendTag(new NBTTagFloat(null, f1));
         }
 
         return nbttaglist;

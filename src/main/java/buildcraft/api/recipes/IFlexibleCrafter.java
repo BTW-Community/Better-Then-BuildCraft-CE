@@ -7,7 +7,7 @@
 package buildcraft.api.recipes;
 
 import net.minecraft.src.ItemStack;
-import net.minecraft.src.FluidStack;
+import net.minecraftforge.fluids.FluidStack;
 
 public interface IFlexibleCrafter {
 

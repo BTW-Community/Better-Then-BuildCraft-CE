@@ -1,0 +1,23 @@
+package dev.bagel.buildcraft.extensions;
+
+import net.minecraft.src.Block;
+import net.minecraft.src.TileEntity;
+import org.jetbrains.annotations.Nullable;
+
+public interface IBlockAccessExtension {
+    default boolean setBlock(int x, int y, int z, Block blockIn, int metadataIn, int flags) {
+        return false;
+    }
+
+    default boolean setBlock(int x, int y, int z, Block blockIn) {
+        return setBlock(x, y, z, blockIn, 0, 3);
+    }
+
+    default @Nullable Block getBlock(int x, int y, int z) {
+        return null;
+    }
+
+    default @Nullable TileEntity getTileEntity(int x, int y, int z) {
+        return null;
+    }
+}

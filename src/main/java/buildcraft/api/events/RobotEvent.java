@@ -7,12 +7,13 @@
 package buildcraft.api.events;
 
 import buildcraft.api.robots.EntityRobotBase;
-import cpw.mods.fml.common.eventhandler.Cancelable;
-import cpw.mods.fml.common.eventhandler.Event;
+//import cpw.mods.fml.common.eventhandler.Cancelable;
+//import cpw.mods.fml.common.eventhandler.Event;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.ItemStack;
 
-public abstract class RobotEvent extends Event {
+//CHANGED: Should be a fapi event
+public abstract class RobotEvent/* extends Event*/ {
 
     public final EntityRobotBase robot;
 
@@ -20,7 +21,8 @@ public abstract class RobotEvent extends Event {
         this.robot = robot;
     }
 
-    @Cancelable
+//    @Cancelable
+    //CHANGED: Should be cancelable
     public static class Place extends RobotEvent {
 
         public final EntityPlayer player;
@@ -31,7 +33,8 @@ public abstract class RobotEvent extends Event {
         }
     }
 
-    @Cancelable
+//    @Cancelable
+    //CHANGED: Should be cancelable
     public static class Interact extends RobotEvent {
 
         public final EntityPlayer player;
@@ -44,7 +47,8 @@ public abstract class RobotEvent extends Event {
         }
     }
 
-    @Cancelable
+//    @Cancelable
+    //CHANGED: Should be cancelable
     public static class Dismantle extends RobotEvent {
 
         public final EntityPlayer player;

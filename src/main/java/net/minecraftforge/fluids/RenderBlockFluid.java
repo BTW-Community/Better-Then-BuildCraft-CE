@@ -1,7 +1,7 @@
 package net.minecraftforge.fluids;
 
-import dev.bagel.btb.mixin.accessors.RenderBlocksAccessor;
-import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
+import dev.bagel.buildcraft.mixin.accessors.RenderBlocksAccessor;
+//import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import net.minecraft.src.Block;
 import net.minecraft.src.RenderBlocks;
 import net.minecraft.src.Tessellator;
@@ -9,7 +9,8 @@ import net.minecraft.src.Icon;
 import net.minecraft.src.MathHelper;
 import net.minecraft.src.IBlockAccess;
 
-public class RenderBlockFluid implements ISimpleBlockRenderingHandler {
+//CHANGED: Should implement ISimpleBlockRenderingHandler
+public class RenderBlockFluid /*implements ISimpleBlockRenderingHandler*/ {
    /**
     * The static instance of TileEntityRenderer
     */

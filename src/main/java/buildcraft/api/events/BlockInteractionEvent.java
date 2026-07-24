@@ -6,13 +6,12 @@
  */
 package buildcraft.api.events;
 
-import cpw.mods.fml.common.eventhandler.Cancelable;
-import cpw.mods.fml.common.eventhandler.Event;
 import net.minecraft.src.Block;
 import net.minecraft.src.EntityPlayer;
 
-@Cancelable
-public class BlockInteractionEvent extends Event {
+//@Cancelable
+//CHANGED: Should be cancelable, and be a fapi event
+public class BlockInteractionEvent/* extends Event*/ {
 
     public EntityPlayer player;
     public Block block;

@@ -11,9 +11,12 @@ IIcon => Icon
 IIconProvider => IconProvider
 IIconRegister => IconRegister
 BlockFalling => FallingBlock
+BlockLiquid => BlockFluid
 
 ### FML
 cpw.mods.fml.relauncher.EnvType => EnvType;
 import cpw.mods.fml.relauncher.SideOnly => Environment;
 ## Added shims/extensions
 - ForgeDirection
+- Forge Fluid API
+- Netty Byte Buf
