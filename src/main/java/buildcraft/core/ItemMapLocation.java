@@ -12,8 +12,8 @@ import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;
 import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.robotics.ZonePlan;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.IconRegister;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.ItemStack;
@@ -123,7 +123,7 @@ public class ItemMapLocation extends ItemBuildCraft implements IMapLocation {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void registerIcons(IconRegister par1IconRegister) {
         super.registerIcons(par1IconRegister);
     }

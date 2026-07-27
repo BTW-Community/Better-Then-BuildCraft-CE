@@ -12,8 +12,8 @@ import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;
 import buildcraft.core.list.ListHandlerNew;
 import buildcraft.core.list.ListHandlerOld;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.Item;
@@ -104,7 +104,7 @@ public class ItemList extends ItemBuildCraft implements IList {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List itemList) {
         itemList.add(new ItemStack(this, 1, 0)); // TODO: remove
         itemList.add(new ItemStack(this, 1, 1));

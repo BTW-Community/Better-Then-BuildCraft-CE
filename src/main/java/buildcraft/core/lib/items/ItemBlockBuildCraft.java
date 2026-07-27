@@ -11,8 +11,9 @@ import net.minecraft.src.ItemBlock;
 
 public class ItemBlockBuildCraft extends ItemBlock {
 
-    public ItemBlockBuildCraft(Block b) {
-        super(b);
+    public ItemBlockBuildCraft(int id, Block b) {
+        super(id);
+        this.blockID = b.blockID;
     }
 
     @Override

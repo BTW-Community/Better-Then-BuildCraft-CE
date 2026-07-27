@@ -7,8 +7,8 @@
 package buildcraft.core;
 
 import buildcraft.core.lib.utils.ResourceUtils;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.Block;
 import net.minecraft.src.IconRegister;
 import net.minecraft.src.TileEntity;
@@ -39,7 +39,7 @@ public class BlockPathMarker extends BlockMarker {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void registerBlockIcons(IconRegister par1IconRegister) {
         super.registerBlockIcons(par1IconRegister);
         activeMarker = par1IconRegister

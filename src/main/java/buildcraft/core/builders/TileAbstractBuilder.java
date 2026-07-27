@@ -18,7 +18,7 @@ import buildcraft.core.lib.network.Packet;
 import buildcraft.core.lib.network.command.CommandWriter;
 import buildcraft.core.lib.network.command.ICommandReceiver;
 import buildcraft.core.lib.network.command.PacketCommand;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.IInventory;

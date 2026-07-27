@@ -32,7 +32,7 @@ public class CoreProxy implements ICoreProxy {
     protected static WeakReference<EntityPlayer> buildCraftPlayer = new WeakReference<>(null);
 
     public String getMinecraftVersion() {
-        return Loader.instance().getMinecraftModContainer().getVersion();
+        return "1.6.4";
     }
 
     /* INSTANCES */

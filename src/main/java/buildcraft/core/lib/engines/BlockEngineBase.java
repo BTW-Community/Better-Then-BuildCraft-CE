@@ -12,8 +12,8 @@ import buildcraft.api.transport.IItemPipe;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.lib.render.ICustomHighlight;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.Block;
 import net.minecraft.src.Material;
 import net.minecraft.src.IconRegister;
@@ -55,13 +55,13 @@ public abstract class BlockEngineBase extends BlockBuildCraft implements ICustom
     public abstract String getTexturePrefix(int meta, boolean addPrefix);
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public Icon getIconAbsolute(int side, int metadata) {
         return icons[metadata] == null ? icons[0][0] : icons[metadata][0];
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void registerBlockIcons(IconRegister register) {
         icons = new Icon[16][];
         for (int meta = 0; meta < 16; meta++) {

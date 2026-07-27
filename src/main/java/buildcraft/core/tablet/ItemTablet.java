@@ -9,6 +9,10 @@ import net.minecraft.src.World;
 
 public class ItemTablet extends ItemBuildCraft {
 
+    public ItemTablet(int id) {
+        super(id);
+    }
+
     @Override
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
         if (world.isRemote) {

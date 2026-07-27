@@ -8,8 +8,8 @@ package buildcraft.core.lib.gui.buttons;
 
 import buildcraft.core.lib.gui.tooltips.IToolTipProvider;
 import buildcraft.core.lib.gui.tooltips.ToolTip;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.Minecraft;
 import net.minecraft.src.GuiButton;
 import net.minecraft.src.ResourceLocation;
@@ -17,7 +17,7 @@ import org.lwjgl.opengl.GL11;
 
 import java.util.ArrayList;
 
-@SideOnly(Side.CLIENT)
+@Environment(EnvType.CLIENT)
 public class GuiImageButton extends GuiButton implements IButtonClickEventTrigger, IToolTipProvider {
 
     private final int size, u, v, baseU, baseV;

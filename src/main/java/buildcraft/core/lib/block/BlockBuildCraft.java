@@ -16,8 +16,8 @@ import buildcraft.core.lib.utils.ResourceUtils;
 import buildcraft.core.lib.utils.Utils;
 import buildcraft.core.lib.utils.XorShift128Random;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.Block;
 import net.minecraft.src.BlockContainer;
 import net.minecraft.src.Material;
@@ -40,7 +40,7 @@ public abstract class BlockBuildCraft extends BlockContainer {
     private static final int[][] SIDE_TEXTURING_LOCATIONS = new int[][] { { 2, 3, 5, 4 }, { 3, 2, 4, 5 },
             { 4, 5, 2, 3 }, { 5, 4, 3, 2 } };
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public Icon[][] icons;
 
     protected final XorShift128Random rand = new XorShift128Random();
@@ -50,12 +50,12 @@ public abstract class BlockBuildCraft extends BlockContainer {
     private boolean rotatable = false;
     private boolean alphaPass = false;
 
-    protected BlockBuildCraft(Material material) {
-        this(material, BCCreativeTab.get("main"));
+    protected BlockBuildCraft(int id, Material material) {
+        this(id, material, BCCreativeTab.get("main"));
     }
 
-    protected BlockBuildCraft(Material material, CreativeTabs creativeTab) {
-        super(material);
+    protected BlockBuildCraft(int id, Material material, CreativeTabs creativeTab) {
+        super(id, material);
         setCreativeTab(creativeTab);
         setHardness(5F);
     }
@@ -156,12 +156,12 @@ public abstract class BlockBuildCraft extends BlockContainer {
         }
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public Icon getIconAbsolute(IBlockAccess access, int x, int y, int z, int side, int metadata) {
         return getIconAbsolute(side, metadata);
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public Icon getIconAbsolute(int side, int metadata) {
         if (metadata < 0 || metadata >= icons.length || icons[metadata] == null) {
             return icons[0][side];
@@ -171,7 +171,7 @@ public abstract class BlockBuildCraft extends BlockContainer {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public Icon getIcon(IBlockAccess access, int x, int y, int z, int side) {
         Icon icon;
         int metadata = access.getBlockMetadata(x, y, z);
@@ -195,7 +195,7 @@ public abstract class BlockBuildCraft extends BlockContainer {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public Icon getIcon(int side, int metadata) {
         if (isRotatable()) {
             if (side < 2) {
@@ -209,7 +209,7 @@ public abstract class BlockBuildCraft extends BlockContainer {
         }
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     protected void registerIconsForMeta(int meta, String blockName, IconRegister register) {
         icons[meta] = new Icon[6];
         String name = ResourceUtils.getObjectPrefix(blockName);
@@ -226,13 +226,13 @@ public abstract class BlockBuildCraft extends BlockContainer {
                 .getIconPriority(register, name, new String[] { "right", "leftright", "side", "default" });
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public String[] getIconBlockNames() {
         return new String[] { Block.blockRegistry.getNameForObject(this) };
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void registerBlockIcons(IconRegister register) {
         icons = new Icon[16][];
         String[] iconBlockNames = getIconBlockNames();
@@ -250,17 +250,17 @@ public abstract class BlockBuildCraft extends BlockContainer {
         return maxPasses;
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public Icon getIconForPass(IBlockAccess access, int x, int y, int z, int side, int pass) {
         return pass == 0 ? getIcon(access, x, y, z, side) : null;
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public Icon getIconForPass(int side, int meta, int pass) {
         return pass == 0 ? getIcon(side, meta) : null;
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public int getRenderBlockPass() {
         return hasAlphaPass() ? 1 : 0;
     }

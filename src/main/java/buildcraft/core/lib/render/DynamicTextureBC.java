@@ -1,8 +1,8 @@
 package buildcraft.core.lib.render;
 
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.Tessellator;
 import net.minecraft.src.DynamicTexture;
 
@@ -11,7 +11,7 @@ public class DynamicTextureBC {
     public final int width, height;
     public int[] colorMap;
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     protected DynamicTexture dynamicTexture;
 
     public DynamicTextureBC(int iWidth, int iHeight) {
@@ -24,7 +24,7 @@ public class DynamicTextureBC {
         }
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     private void createDynamicTexture() {
         dynamicTexture = new DynamicTexture(width, height);
         colorMap = dynamicTexture.getTextureData();
@@ -60,17 +60,17 @@ public class DynamicTextureBC {
         colorMap[x + y * width] = a << 24 | color;
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void updateTexture() {
         dynamicTexture.updateDynamicTexture();
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void draw(int screenX, int screenY, float zLevel) {
         draw(screenX, screenY, zLevel, 0, 0, width, height);
     }
 
-    @SideOnly(Side.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void draw(int screenX, int screenY, float zLevel, int clipX, int clipY, int clipWidth, int clipHeight) {
         updateTexture();
 

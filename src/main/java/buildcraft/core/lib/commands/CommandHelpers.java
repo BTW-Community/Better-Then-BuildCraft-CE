@@ -9,7 +9,7 @@ package buildcraft.core.lib.commands;
 import net.minecraft.src.ICommandSender;
 import net.minecraft.src.WrongUsageException;
 import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.MinecraftServer;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.*;
 import net.minecraft.src.World;
 

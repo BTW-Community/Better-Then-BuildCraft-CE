@@ -12,7 +12,7 @@ import buildcraft.core.proxy.CoreProxy;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.internal.FMLProxyPacket;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import gnu.trove.map.TByteIntMap;
 import gnu.trove.map.hash.TByteIntHashMap;
 import gnu.trove.map.hash.TByteObjectHashMap;

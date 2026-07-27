@@ -3,7 +3,7 @@ package buildcraft.core.list;
 import buildcraft.core.lib.inventory.StackHelper;
 import buildcraft.core.lib.utils.NBTUtils;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.relauncher.Side;
+import net.fabricmc.api.EnvType;
 import net.minecraft.src.Block;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.Item;

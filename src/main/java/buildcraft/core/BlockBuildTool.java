@@ -14,12 +14,12 @@ import net.minecraft.src.Icon;
 
 public class BlockBuildTool extends Block {
 
-    public BlockBuildTool() {
-        super(Material.iron);
+    public BlockBuildTool(int id) {
+        super(id, Material.iron);
     }
 
     @Override
-    public void registerBlockIcons(IconRegister itemRegister) {}
+    public void registerIcons(IconRegister itemRegister) {}
 
     @Override
     public Icon getIcon(int i, int j) {
