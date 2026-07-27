@@ -13,10 +13,15 @@ IIconRegister => IconRegister
 BlockFalling => FallingBlock
 BlockLiquid => BlockFluid
 GameType => EnumGameType
+ChatComponentTranslation => ChatMessageComponent
 
 ### FML
-cpw.mods.fml.relauncher.EnvType => EnvType;
-import cpw.mods.fml.relauncher.SideOnly => Environment;
+cpw.mods.fml.relauncher.EnvType => net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment => net.fabricmc.api.Environment;
+
+## 1.7 method names to 1.6 names:
+### Vanilla
+Block.registerBlockIcons => registerIcons
 ## Added shims/extensions
 - ForgeDirection
 - Forge Fluid API

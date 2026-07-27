@@ -4,7 +4,7 @@ import buildcraft.BuildCraftCore;
 import buildcraft.core.lib.commands.CommandHelpers;
 import buildcraft.core.lib.commands.SubCommand;
 import net.minecraft.src.ICommandSender;
-import net.minecraft.src.MinecraftServer;
+import net.minecraft.server.MinecraftServer;
 
 public class SubCommandDeop extends SubCommand {
 
@@ -15,7 +15,7 @@ public class SubCommandDeop extends SubCommand {
 
     @Override
     public void processSubCommand(ICommandSender sender, String[] args) {
-        MinecraftServer.getServer().getConfigurationManager().func_152610_b(BuildCraftCore.gameProfile);
+        MinecraftServer.getServer().getConfigurationManager().removeOp(BuildCraftCore.gameProfile);
         CommandHelpers.sendLocalizedChatMessage(sender, "commands.deop.success", "[BuildCraft]");
     }
 }

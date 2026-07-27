@@ -10,12 +10,7 @@ import buildcraft.BuildCraftCore;
 import buildcraft.api.core.BCLog;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLInterModComms;
-import net.minecraft.src.ICommandSender;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.ChatComponentText;
-import net.minecraft.src.ChatComponentTranslation;
-import net.minecraft.src.ChatStyle;
-import net.minecraft.src.EnumChatFormatting;
+import net.minecraft.src.*;
 import net.minecraftforge.common.config.Property;
 
 import java.io.BufferedReader;
@@ -158,9 +153,9 @@ public class Version implements Runnable {
     }
 
     public static void displayChangelog(ICommandSender sender) {
-        sender.addChatMessage(
-                new ChatComponentTranslation("command.buildcraft.changelog_header", getRecommendedVersion())
-                        .setChatStyle(new ChatStyle().setColor(EnumChatFormatting.GRAY).setBold(true)));
+        sender.sendChatToPlayer(
+                new ChatMessageComponent().addFormatted("command.buildcraft.changelog_header", getRecommendedVersion())
+                        .setColor(EnumChatFormatting.GRAY).setBold(true));
         for (String updateLine : Version.getChangelog()) {
             EnumChatFormatting format = EnumChatFormatting.BLUE;
             if (updateLine.startsWith("*")) {
@@ -168,7 +163,7 @@ public class Version implements Runnable {
             } else if (updateLine.trim().endsWith(":")) {
                 format = EnumChatFormatting.GOLD;
             }
-            sender.addChatMessage(new ChatComponentText(updateLine).setChatStyle(new ChatStyle().setColor(format)));
+            sender.sendChatToPlayer(new ChatMessageComponent().addText(updateLine).setColor(format));
         }
     }
 
