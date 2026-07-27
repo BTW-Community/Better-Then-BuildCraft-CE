@@ -142,8 +142,8 @@ tasks.register('copyBtwJar', Copy) {
 publishing {
     repositories {
         maven {
-            name = "GitHubPackage"
-            url = uri("https://github.com${System.getenv("GITHUB_REPOSITORY")}")
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/BTW-Community/Better-Then-BuildCraft-CE"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
