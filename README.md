@@ -12,6 +12,7 @@ IIconProvider => IconProvider
 IIconRegister => IconRegister
 BlockFalling => FallingBlock
 BlockLiquid => BlockFluid
+GameType => EnumGameType
 
 ### FML
 cpw.mods.fml.relauncher.EnvType => EnvType;

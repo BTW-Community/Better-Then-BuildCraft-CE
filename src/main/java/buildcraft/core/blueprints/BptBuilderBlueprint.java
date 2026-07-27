@@ -16,14 +16,7 @@ import buildcraft.core.builders.BuildingSlotBlock.Mode;
 import buildcraft.core.lib.inventory.InventoryCopy;
 import buildcraft.core.lib.inventory.InventoryIterator;
 import buildcraft.core.lib.utils.BlockUtils;
-import net.minecraft.src.Blocks;
-import net.minecraft.src.IInventory;
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemBlock;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.World;
-import net.minecraft.src.GameType;
+import net.minecraft.src.*;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
@@ -496,7 +489,7 @@ public class BptBuilderBlueprint extends BptBuilderBase {
 
         LinkedList<ItemStack> stacksUsed = new LinkedList<>();
 
-        if (context.world().getWorldInfo().getGameType() == GameType.CREATIVE) {
+        if (context.world().getWorldInfo().getGameType() == EnumGameType.CREATIVE) {
             for (ItemStack s : tmpReq) {
                 stacksUsed.add(s);
             }
@@ -573,7 +566,7 @@ public class BptBuilderBlueprint extends BptBuilderBase {
             BCLog.logger.throwing(t);
         }
 
-        if (context.world().getWorldInfo().getGameType() == GameType.CREATIVE) {
+        if (context.world().getWorldInfo().getGameType() == EnumGameType.CREATIVE) {
             for (ItemStack s : tmpReq) {
                 slot.addStackConsumed(s);
             }

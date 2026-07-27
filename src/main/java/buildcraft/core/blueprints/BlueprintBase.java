@@ -11,12 +11,7 @@ import buildcraft.api.core.BCLog;
 import buildcraft.api.core.Position;
 import buildcraft.core.Box;
 import buildcraft.core.Version;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.NBTTagList;
-import net.minecraft.src.TileEntity;
-import net.minecraft.src.World;
-import net.minecraft.src.GameType;
+import net.minecraft.src.*;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -267,7 +262,7 @@ public abstract class BlueprintBase {
 
     public BlueprintBase adjustToWorld(World world, int x, int y, int z, ForgeDirection o) {
         if (buildingPermission == BuildingPermission.NONE || (buildingPermission == BuildingPermission.CREATIVE_ONLY
-                && world.getWorldInfo().getGameType() != GameType.CREATIVE)) {
+                && world.getWorldInfo().getGameType() != EnumGameType.CREATIVE)) {
             return null;
         }
 
