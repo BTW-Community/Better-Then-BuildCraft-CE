@@ -13,7 +13,6 @@ import net.minecraft.src.Block;
 import net.minecraft.src.Material;
 import net.minecraft.src.IconRegister;
 import net.minecraft.src.CreativeTabs;
-import net.minecraft.src.Blocks;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.World;
@@ -27,7 +26,7 @@ public class BlockSpring extends Block {
 
     public enum EnumSpring {
 
-        WATER(5, -1, Blocks.water),
+        WATER(5, -1, Block.waterMoving),
         OIL(6000, 8, null); // Set in BuildCraftEnergy
 
         public static final EnumSpring[] VALUES = values();
@@ -49,11 +48,11 @@ public class BlockSpring extends Block {
         }
     }
 
-    public BlockSpring() {
-        super(Material.rock);
+    public BlockSpring(int id) {
+        super(id, Material.rock);
         setBlockUnbreakable();
         setResistance(6000000.0F);
-        setStepSound(soundTypeStone);
+        setStepSound(soundStoneFootstep);
 
         disableStats();
         setTickRandomly(true);
@@ -61,7 +60,7 @@ public class BlockSpring extends Block {
     }
 
     @Override
-    public void getSubBlocks(Item item, CreativeTabs tab, List list) {
+    public void getSubBlocks(int item, CreativeTabs tab, List list) {
         for (EnumSpring type : EnumSpring.VALUES) {
             list.add(new ItemStack(this, 1, type.ordinal()));
         }
@@ -85,13 +84,13 @@ public class BlockSpring extends Block {
     public void onBlockAdded(World world, int x, int y, int z) {
         super.onBlockAdded(world, x, y, z);
         int meta = world.getBlockMetadata(x, y, z);
-        world.scheduleBlockUpdate(x, y, z, this, EnumSpring.fromMeta(meta).tickRate);
+        world.scheduleBlockUpdate(x, y, z, this.blockID, EnumSpring.fromMeta(meta).tickRate);
     }
 
     private void assertSpring(World world, int x, int y, int z) {
         int meta = world.getBlockMetadata(x, y, z);
         EnumSpring spring = EnumSpring.fromMeta(meta);
-        world.scheduleBlockUpdate(x, y, z, this, spring.tickRate);
+        world.scheduleBlockUpdate(x, y, z, this.blockID, spring.tickRate);
         if (!spring.canGen || spring.liquidBlock == null) {
             return;
         }
@@ -106,13 +105,13 @@ public class BlockSpring extends Block {
 
     // Prevents updates on chunk generation
     @Override
-    public boolean func_149698_L() {
+    public boolean func_82506_l() {
         return false;
     }
 
     @Override
     @Environment(EnvType.CLIENT)
-    public void registerBlockIcons(IconRegister par1IconRegister) {
+    public void registerIcons(IconRegister par1IconRegister) {
         blockIcon = par1IconRegister.registerIcon("bedrock");
     }
 }

@@ -9,7 +9,7 @@ package buildcraft.core;
 import buildcraft.api.tools.IToolWrench;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.BlockUtils;
-import net.minecraft.block.*;
+import net.minecraft.src.*;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.World;
@@ -23,8 +23,8 @@ public class ItemWrench extends ItemBuildCraft implements IToolWrench {
     private final Set<Class<? extends Block>> shiftRotations = new HashSet<>();
     private final Set<Class<? extends Block>> blacklistedRotations = new HashSet<>();
 
-    public ItemWrench() {
-        super();
+    public ItemWrench(int id) {
+        super(id);
 
         setFull3D();
         setMaxStackSize(1);

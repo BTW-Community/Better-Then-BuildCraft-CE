@@ -48,8 +48,8 @@ public abstract class BlockEngineBase extends BlockBuildCraft implements ICustom
                     AxisAlignedBB.getBoundingBox(0.5, 0.25, 0.25, 1.0, 0.75, 0.75) } // +X
     };
 
-    public BlockEngineBase() {
-        super(Material.iron);
+    public BlockEngineBase(int id) {
+        super(id, Material.iron);
     }
 
     public abstract String getTexturePrefix(int meta, boolean addPrefix);
@@ -89,11 +89,11 @@ public abstract class BlockEngineBase extends BlockBuildCraft implements ICustom
     }
 
     @Override
-    public boolean isSideSolid(IBlockAccess world, int x, int y, int z, ForgeDirection side) {
+    public boolean canPlaceBlockOnSide(World world, int x, int y, int z, int side) {
         TileEntity tile = world.getTileEntity(x, y, z);
 
-        if (tile instanceof TileEngineBase) {
-            return ((TileEngineBase) tile).orientation.getOpposite() == side;
+        if (tile instanceof TileEngineBase engine) {
+            return engine.orientation.getOpposite().ordinal() == side;
         } else {
             return false;
         }
@@ -246,7 +246,7 @@ public abstract class BlockEngineBase extends BlockBuildCraft implements ICustom
     }
 
     @Override
-    public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
+    public void onNeighborBlockChange(World world, int x, int y, int z, int block) {
         TileEntity tile = world.getTileEntity(x, y, z);
 
         if (tile instanceof TileEngineBase) {
@@ -255,7 +255,7 @@ public abstract class BlockEngineBase extends BlockBuildCraft implements ICustom
     }
 
     @Override
-    public TileEntity createNewTileEntity(World world, int metadata) {
+    public TileEntity createNewTileEntity(World world) {
         return null;
     }
 

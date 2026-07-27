@@ -16,8 +16,8 @@ public abstract class BlockHatched extends BlockBuildCraft {
 
     private Icon itemHatch;
 
-    protected BlockHatched(Material material) {
-        super(material);
+    protected BlockHatched(int id, Material material) {
+        super(id, material);
 
         setRotatable(true);
         setPassCount(2);

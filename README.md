@@ -23,7 +23,14 @@ import net.fabricmc.api.Environment => net.fabricmc.api.Environment;
 
 ## 1.7 method names to 1.6 names:
 ### Vanilla
-Block.registerBlockIcons => registerIcons
+- Block 
+  - registerBlockIcons => registerIcons
+  - isSideSolid => canPlaceBlockOnSide (fix not ForgeDirection)
+  - setBlockName => setUnlocalizedName
+  - func_149698_L => func_82506_l (if it should update on world gen)
+
+
+
 ## Added shims/extensions
 - ForgeDirection
 - Forge Fluid API

@@ -12,13 +12,13 @@ import java.util.List;
 
 public class BlockEngine extends BlockEngineBase {
 
-    private final Class[] engineTiles;
+    private final Class<? extends TileEngineBase>[] engineTiles;
     private final String[] names;
     private final String[] texturePaths;
 
-    public BlockEngine() {
-        super();
-        setBlockName("engineBlock");
+    public BlockEngine(int id) {
+        super(id);
+        setUnlocalizedName("engineBlock");
 
         engineTiles = new Class[16];
         names = new String[16];
@@ -57,7 +57,7 @@ public class BlockEngine extends BlockEngineBase {
             return null;
         }
         try {
-            return (TileEntity) engineTiles[metadata].newInstance();
+            return engineTiles[metadata].getConstructor().newInstance();
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -66,7 +66,7 @@ public class BlockEngine extends BlockEngineBase {
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
-    public void getSubBlocks(Item item, CreativeTabs par2CreativeTabs, List itemList) {
+    public void getSubBlocks(int item, CreativeTabs par2CreativeTabs, List itemList) {
         for (int i = 0; i < 16; i++) {
             if (engineTiles[i] != null) {
                 itemList.add(new ItemStack(this, 1, i));
