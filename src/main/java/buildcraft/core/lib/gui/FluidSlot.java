@@ -9,7 +9,7 @@ package buildcraft.core.lib.gui;
 import buildcraft.core.lib.render.FluidRenderer;
 import buildcraft.core.lib.render.RenderUtils;
 import net.minecraft.src.TextureMap;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 
@@ -34,7 +34,7 @@ public class FluidSlot extends AdvancedSlot {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return FluidRenderer.getFluidTexture(fluid, false);
     }
 

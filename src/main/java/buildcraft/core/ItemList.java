@@ -20,7 +20,7 @@ import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
 import net.minecraft.src.EnumChatFormatting;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.StatCollector;
 import net.minecraft.src.World;
 
@@ -35,7 +35,7 @@ public class ItemList extends ItemBuildCraft implements IList {
     }
 
     @Override
-    public IIcon getIconIndex(ItemStack stack) {
+    public Icon getIconIndex(ItemStack stack) {
         itemIcon = icons[NBTUtils.getItemData(stack).hasKey("written") ? 1 : 0];
         return itemIcon;
     }

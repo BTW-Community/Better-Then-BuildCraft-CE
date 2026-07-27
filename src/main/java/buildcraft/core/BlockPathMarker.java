@@ -10,15 +10,15 @@ import buildcraft.core.lib.utils.ResourceUtils;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.src.Block;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.TileEntity;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.IBlockAccess;
 import net.minecraft.src.World;
 
 public class BlockPathMarker extends BlockMarker {
 
-    private IIcon activeMarker;
+    private Icon activeMarker;
 
     public BlockPathMarker() {}
 
@@ -28,7 +28,7 @@ public class BlockPathMarker extends BlockMarker {
     }
 
     @Override
-    public IIcon getIconAbsolute(IBlockAccess iblockaccess, int x, int y, int z, int side, int metadata) {
+    public Icon getIconAbsolute(IBlockAccess iblockaccess, int x, int y, int z, int side, int metadata) {
         TilePathMarker marker = (TilePathMarker) iblockaccess.getTileEntity(x, y, z);
 
         if (side == 1 || (marker != null && marker.tryingToConnect)) {
@@ -40,7 +40,7 @@ public class BlockPathMarker extends BlockMarker {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister par1IconRegister) {
+    public void registerBlockIcons(IconRegister par1IconRegister) {
         super.registerBlockIcons(par1IconRegister);
         activeMarker = par1IconRegister
                 .registerIcon(ResourceUtils.getObjectPrefix(Block.blockRegistry.getNameForObject(this)) + "/active");

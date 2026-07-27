@@ -10,7 +10,7 @@ import buildcraft.core.BCCreativeTab;
 import buildcraft.core.lib.items.ItemBlockBuildCraft;
 import net.minecraft.src.Block;
 import net.minecraft.src.ItemStack;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public class ItemEngine extends ItemBlockBuildCraft {
 
@@ -35,7 +35,7 @@ public class ItemEngine extends ItemBlockBuildCraft {
     }
 
     @Override
-    public IIcon getIconIndex(ItemStack stack) {
+    public Icon getIconIndex(ItemStack stack) {
         return null;
     }
 }

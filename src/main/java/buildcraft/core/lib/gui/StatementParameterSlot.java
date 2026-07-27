@@ -3,7 +3,7 @@ package buildcraft.core.lib.gui;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementParameterItemStack;
 import net.minecraft.src.ItemStack;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 /**
  * Created by asie on 1/24/15.
@@ -50,7 +50,7 @@ public abstract class StatementParameterSlot extends AdvancedSlot {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         IStatementParameter parameter = getParameter();
 
         if (parameter != null) {

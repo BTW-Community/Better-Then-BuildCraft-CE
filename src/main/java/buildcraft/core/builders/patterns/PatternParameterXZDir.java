@@ -5,17 +5,17 @@ import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementMouseClick;
 import buildcraft.core.lib.utils.StringUtils;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public class PatternParameterXZDir implements IStatementParameter {
 
     private static final String[] names = { "west", "east", "north", "south" };
     private static final int[] shiftLeft = { 3, 2, 0, 1 };
     private static final int[] shiftRight = { 2, 3, 1, 0 };
-    private static IIcon[] icons;
+    private static Icon[] icons;
     private int direction;
 
     public PatternParameterXZDir() {
@@ -33,7 +33,7 @@ public class PatternParameterXZDir implements IStatementParameter {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return icons[direction & 3];
     }
 
@@ -43,8 +43,8 @@ public class PatternParameterXZDir implements IStatementParameter {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
-        icons = new IIcon[] { iconRegister.registerIcon("buildcraftcore:fillerParameters/arrow_left"),
+    public void registerIcons(IconRegister iconRegister) {
+        icons = new Icon[] { iconRegister.registerIcon("buildcraftcore:fillerParameters/arrow_left"),
                 iconRegister.registerIcon("buildcraftcore:fillerParameters/arrow_right"),
                 iconRegister.registerIcon("buildcraftcore:fillerParameters/arrow_up"),
                 iconRegister.registerIcon("buildcraftcore:fillerParameters/arrow_down") };

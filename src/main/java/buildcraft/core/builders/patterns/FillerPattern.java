@@ -15,9 +15,9 @@ import buildcraft.core.blueprints.*;
 import buildcraft.core.lib.utils.StringUtils;
 import cpw.mods.fml.common.Loader;
 import net.minecraft.src.Block;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.TextureMap;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.World;
 
 import java.util.Map;
@@ -27,7 +27,7 @@ public abstract class FillerPattern implements IFillerPattern {
 
     public static final Map<String, FillerPattern> patterns = new TreeMap<>();
     private final String tag;
-    private IIcon icon, blockIcon;
+    private Icon icon, blockIcon;
 
     public FillerPattern(String tag) {
         this.tag = tag;
@@ -55,7 +55,7 @@ public abstract class FillerPattern implements IFillerPattern {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         if (!(iconRegister instanceof TextureMap) || ((TextureMap) iconRegister).getTextureType() == 1) {
             icon = iconRegister.registerIcon("buildcraftcore:fillerPatterns/" + tag);
         }
@@ -68,12 +68,12 @@ public abstract class FillerPattern implements IFillerPattern {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return icon;
     }
 
     @Override
-    public IIcon getBlockOverlay() {
+    public Icon getBlockOverlay() {
         return blockIcon;
     }
 

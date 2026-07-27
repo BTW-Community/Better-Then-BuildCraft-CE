@@ -10,7 +10,7 @@ import buildcraft.core.lib.block.BlockBuildCraft;
 import net.minecraft.src.Block;
 import net.minecraft.src.RenderBlocks;
 import net.minecraft.src.Tessellator;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import org.lwjgl.opengl.GL11;
 
 public final class RenderUtils {
@@ -27,7 +27,7 @@ public final class RenderUtils {
         GL11.glColor4f(red, green, blue, 1.0F);
     }
 
-    public static void drawBlockItem(RenderBlocks render, Tessellator tessellator, Block block, IIcon icon) {
+    public static void drawBlockItem(RenderBlocks render, Tessellator tessellator, Block block, Icon icon) {
         if (icon == null) {
             return;
         }
@@ -49,7 +49,7 @@ public final class RenderUtils {
 
     public static void drawBlockItem(RenderBlocks render, Tessellator tessellator, Block block, int decodedMeta) {
         tessellator.startDrawingQuads();
-        IIcon icon = tryGetBlockIcon(block, 0, decodedMeta);
+        Icon icon = tryGetBlockIcon(block, 0, decodedMeta);
         if (icon != null) {
             tessellator.setNormal(0.0F, -1F, 0.0F);
             render.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, icon);
@@ -85,7 +85,7 @@ public final class RenderUtils {
     public static void drawBlockItem(RenderBlocks render, Tessellator tessellator, BlockBuildCraft block,
             int decodedMeta, int pass) {
         tessellator.startDrawingQuads();
-        IIcon icon = block.getIconForPass(0, decodedMeta, pass);
+        Icon icon = block.getIconForPass(0, decodedMeta, pass);
         if (icon != null) {
             tessellator.setNormal(0.0F, -1F, 0.0F);
             render.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, icon);
@@ -118,8 +118,8 @@ public final class RenderUtils {
         tessellator.draw();
     }
 
-    public static IIcon tryGetBlockIcon(Block block, int side, int decodedMeta) {
-        IIcon icon = null;
+    public static Icon tryGetBlockIcon(Block block, int side, int decodedMeta) {
+        Icon icon = null;
 
         try {
             icon = block.getIcon(side, decodedMeta);

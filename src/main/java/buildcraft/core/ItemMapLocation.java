@@ -14,13 +14,13 @@ import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.robotics.ZonePlan;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
 import net.minecraft.src.NBTTagList;
 import net.minecraft.src.TileEntity;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.World;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -106,7 +106,7 @@ public class ItemMapLocation extends ItemBuildCraft implements IMapLocation {
     }
 
     @Override
-    public IIcon getIconIndex(ItemStack stack) {
+    public Icon getIconIndex(ItemStack stack) {
         NBTTagCompound cpt = NBTUtils.getItemData(stack);
 
         if (!cpt.hasKey("kind")) {
@@ -124,7 +124,7 @@ public class ItemMapLocation extends ItemBuildCraft implements IMapLocation {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
+    public void registerIcons(IconRegister par1IconRegister) {
         super.registerIcons(par1IconRegister);
     }
 

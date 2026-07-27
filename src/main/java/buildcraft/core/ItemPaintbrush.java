@@ -14,13 +14,13 @@ import buildcraft.core.lib.utils.NBTUtils;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.src.Block;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.Vec3;
 import net.minecraft.src.World;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -68,17 +68,17 @@ public class ItemPaintbrush extends ItemBuildCraft {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
+    public void registerIcons(IconRegister par1IconRegister) {
         super.registerIcons(par1IconRegister);
 
-        IIcon[] brushColors = new IIcon[16];
+        Icon[] brushColors = new Icon[16];
         System.arraycopy(icons, 1, brushColors, 0, 16);
         EnumColor.setIconArray(brushColors);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public IIcon getIconIndex(ItemStack stack) {
+    public Icon getIconIndex(ItemStack stack) {
         this.itemIcon = icons[(getColor(stack) + 1) % icons.length];
         return itemIcon;
     }

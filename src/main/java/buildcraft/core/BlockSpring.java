@@ -11,7 +11,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.src.Block;
 import net.minecraft.src.Material;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.Blocks;
 import net.minecraft.src.Item;
@@ -112,7 +112,7 @@ public class BlockSpring extends Block {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister par1IconRegister) {
+    public void registerBlockIcons(IconRegister par1IconRegister) {
         blockIcon = par1IconRegister.registerIcon("bedrock");
     }
 }

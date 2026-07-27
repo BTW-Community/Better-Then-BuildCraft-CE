@@ -9,7 +9,7 @@ package buildcraft.core.lib.gui;
 import net.minecraft.src.Minecraft;
 import net.minecraft.src.TextureMap;
 import net.minecraft.src.ItemStack;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.ResourceLocation;
 import net.minecraft.src.StatCollector;
 import org.lwjgl.opengl.GL11;
@@ -52,7 +52,7 @@ public abstract class AdvancedSlot {
         }
     }
 
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return null;
     }
 

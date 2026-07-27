@@ -15,10 +15,10 @@ import net.minecraft.src.Block;
 import net.minecraft.src.MapColor;
 import net.minecraft.src.Material;
 import net.minecraft.src.EntityFX;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.Entity;
 import net.minecraft.src.Blocks;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.Explosion;
 import net.minecraft.src.IBlockAccess;
 import net.minecraft.src.World;
@@ -35,7 +35,7 @@ public class BlockBuildCraftFluid extends BlockFluidClassic {
     protected float particleBlue;
 
     @SideOnly(Side.CLIENT)
-    protected IIcon[] theIcon;
+    protected Icon[] theIcon;
 
     protected boolean flammable;
     protected boolean dense = false;
@@ -49,16 +49,16 @@ public class BlockBuildCraftFluid extends BlockFluidClassic {
     }
 
     @Override
-    public IIcon getIcon(int side, int meta) {
+    public Icon getIcon(int side, int meta) {
         return side != 0 && side != 1 ? this.theIcon[1] : this.theIcon[0];
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister) {
+    public void registerBlockIcons(IconRegister iconRegister) {
         String prefix = ResourceUtils.getObjectPrefix(Block.blockRegistry.getNameForObject(this));
         prefix = prefix.substring(0, prefix.indexOf(":") + 1) + "fluids/";
-        this.theIcon = new IIcon[] { iconRegister.registerIcon(prefix + fluidName + "_still"),
+        this.theIcon = new Icon[] { iconRegister.registerIcon(prefix + fluidName + "_still"),
                 iconRegister.registerIcon(prefix + fluidName + "_flow") };
     }
 

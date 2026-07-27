@@ -23,7 +23,7 @@ import net.minecraft.src.InventoryPlayer;
 import net.minecraft.src.IInventory;
 import net.minecraft.src.Slot;
 import net.minecraft.src.TileEntity;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.ResourceLocation;
 import net.minecraftforge.fluids.FluidStack;
 import org.lwjgl.opengl.GL11;
@@ -117,7 +117,7 @@ public abstract class GuiBuildCraft extends GuiContainer {
         if (fluid == null || fluid.getFluid() == null) {
             return;
         }
-        IIcon icon = fluid.getFluid().getIcon(fluid);
+        Icon icon = fluid.getFluid().getIcon(fluid);
 
         if (icon == null) {
             icon = ((TextureMap) Minecraft.getMinecraft().getTextureManager()
@@ -152,7 +152,7 @@ public abstract class GuiBuildCraft extends GuiContainer {
     }
 
     // The magic is here
-    private void drawCutIcon(IIcon icon, int x, int y, int width, int height, int cut) {
+    private void drawCutIcon(Icon icon, int x, int y, int width, int height, int cut) {
         Tessellator tess = Tessellator.instance;
         tess.startDrawingQuads();
         tess.addVertexWithUV(x, y + height, zLevel, icon.getMinU(), icon.getInterpolatedV(height));
@@ -570,7 +570,7 @@ public abstract class GuiBuildCraft extends GuiContainer {
             GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0F);
         }
 
-        protected void drawIcon(IIcon icon, int x, int y) {
+        protected void drawIcon(Icon icon, int x, int y) {
             GL11.glDisable(GL11.GL_BLEND);
             GL11.glEnable(GL11.GL_ALPHA_TEST);
             GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0F);

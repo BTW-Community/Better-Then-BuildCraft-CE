@@ -4,10 +4,10 @@ import buildcraft.api.statements.IStatement;
 import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementMouseClick;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public class StatementParameterItemStackExact implements IStatementParameter {
 
@@ -23,7 +23,7 @@ public class StatementParameterItemStackExact implements IStatementParameter {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return null;
     }
 
@@ -124,7 +124,7 @@ public class StatementParameterItemStackExact implements IStatementParameter {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {}
+    public void registerIcons(IconRegister iconRegister) {}
 
     @Override
     public IStatementParameter rotateLeft() {

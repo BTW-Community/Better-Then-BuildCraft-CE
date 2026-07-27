@@ -11,7 +11,7 @@ import com.gtnewhorizons.angelica.api.ThreadSafeISBRH;
 import net.minecraft.src.Block;
 import net.minecraft.src.RenderBlocks;
 import net.minecraft.src.Tessellator;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.IBlockAccess;
 
 @ThreadSafeISBRH(perThread = false)
@@ -141,7 +141,7 @@ public class RenderingMarkers extends BCSimpleBlockRenderingHandler {
         int yCoord = (int) y;
         int zCoord = (int) z;
 
-        IIcon i = block.getIcon(iblockaccess, xCoord, yCoord, zCoord, 1);
+        Icon i = block.getIcon(iblockaccess, xCoord, yCoord, zCoord, 1);
 
         int m = metaToOld[metadata];
         x += 0.5D;

@@ -11,7 +11,7 @@ import buildcraft.core.lib.gui.GuiBuildCraft;
 import buildcraft.core.lib.gui.tooltips.ToolTip;
 import buildcraft.core.lib.render.FluidRenderer;
 import net.minecraft.src.TextureMap;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraftforge.fluids.FluidStack;
 
 public class FluidGaugeWidget extends Widget {
@@ -38,7 +38,7 @@ public class FluidGaugeWidget extends Widget {
             return;
         }
 
-        IIcon liquidIcon = FluidRenderer.getFluidTexture(fluidStack, false);
+        Icon liquidIcon = FluidRenderer.getFluidTexture(fluidStack, false);
 
         if (liquidIcon == null) {
             return;

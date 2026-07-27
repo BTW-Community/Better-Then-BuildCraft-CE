@@ -11,7 +11,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.src.Block;
 import net.minecraft.src.Material;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -59,7 +59,7 @@ public final class FakeBlock extends Block implements ITextureStates {
     }
 
     @Override
-    public IIcon getIcon(int side, int meta) {
+    public Icon getIcon(int side, int meta) {
         return textureState.isSided() ? textureState.getTextureArray()[side] : textureState.getTexture();
     }
 

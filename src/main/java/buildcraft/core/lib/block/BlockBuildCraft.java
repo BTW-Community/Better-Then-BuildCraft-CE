@@ -21,14 +21,14 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.src.Block;
 import net.minecraft.src.BlockContainer;
 import net.minecraft.src.Material;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.EntityLivingBase;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.IInventory;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.TileEntity;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.MathHelper;
 import net.minecraft.src.IBlockAccess;
 import net.minecraft.src.World;
@@ -41,7 +41,7 @@ public abstract class BlockBuildCraft extends BlockContainer {
             { 4, 5, 2, 3 }, { 5, 4, 3, 2 } };
 
     @SideOnly(Side.CLIENT)
-    public IIcon[][] icons;
+    public Icon[][] icons;
 
     protected final XorShift128Random rand = new XorShift128Random();
 
@@ -157,12 +157,12 @@ public abstract class BlockBuildCraft extends BlockContainer {
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon getIconAbsolute(IBlockAccess access, int x, int y, int z, int side, int metadata) {
+    public Icon getIconAbsolute(IBlockAccess access, int x, int y, int z, int side, int metadata) {
         return getIconAbsolute(side, metadata);
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon getIconAbsolute(int side, int metadata) {
+    public Icon getIconAbsolute(int side, int metadata) {
         if (metadata < 0 || metadata >= icons.length || icons[metadata] == null) {
             return icons[0][side];
         } else {
@@ -172,8 +172,8 @@ public abstract class BlockBuildCraft extends BlockContainer {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon(IBlockAccess access, int x, int y, int z, int side) {
-        IIcon icon;
+    public Icon getIcon(IBlockAccess access, int x, int y, int z, int side) {
+        Icon icon;
         int metadata = access.getBlockMetadata(x, y, z);
         if (isRotatable()) {
             if (side < 2) {
@@ -196,7 +196,7 @@ public abstract class BlockBuildCraft extends BlockContainer {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int metadata) {
+    public Icon getIcon(int side, int metadata) {
         if (isRotatable()) {
             if (side < 2) {
                 return getIconAbsolute(side, metadata & 8);
@@ -210,8 +210,8 @@ public abstract class BlockBuildCraft extends BlockContainer {
     }
 
     @SideOnly(Side.CLIENT)
-    protected void registerIconsForMeta(int meta, String blockName, IIconRegister register) {
-        icons[meta] = new IIcon[6];
+    protected void registerIconsForMeta(int meta, String blockName, IconRegister register) {
+        icons[meta] = new Icon[6];
         String name = ResourceUtils.getObjectPrefix(blockName);
         icons[meta][0] = ResourceUtils
                 .getIconPriority(register, name, new String[] { "bottom", "topbottom", "default" });
@@ -233,8 +233,8 @@ public abstract class BlockBuildCraft extends BlockContainer {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister register) {
-        icons = new IIcon[16][];
+    public void registerBlockIcons(IconRegister register) {
+        icons = new Icon[16][];
         String[] iconBlockNames = getIconBlockNames();
         for (int i = 0; i < iconBlockNames.length; i++) {
             registerIconsForMeta(i, iconBlockNames[i], register);
@@ -251,12 +251,12 @@ public abstract class BlockBuildCraft extends BlockContainer {
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon getIconForPass(IBlockAccess access, int x, int y, int z, int side, int pass) {
+    public Icon getIconForPass(IBlockAccess access, int x, int y, int z, int side, int pass) {
         return pass == 0 ? getIcon(access, x, y, z, side) : null;
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon getIconForPass(int side, int meta, int pass) {
+    public Icon getIconForPass(int side, int meta, int pass) {
         return pass == 0 ? getIcon(side, meta) : null;
     }
 

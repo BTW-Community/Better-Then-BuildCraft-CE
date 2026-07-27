@@ -11,14 +11,14 @@ import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementManager;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.src.IIconRegister;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.IconRegister;
+import net.minecraft.src.Icon;
 
 public abstract class BCStatement implements IStatement {
 
     protected final String uniqueTag;
 
-    protected IIcon icon;
+    protected Icon icon;
 
     /**
      * UniqueTag accepts multiple possible tags, use this feature to migrate to more standardized tags if needed,
@@ -40,13 +40,13 @@ public abstract class BCStatement implements IStatement {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return icon;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {}
+    public void registerIcons(IconRegister iconRegister) {}
 
     @Override
     public int maxParameters() {

@@ -11,7 +11,7 @@ import net.minecraft.src.Minecraft;
 import net.minecraft.src.GLAllocation;
 import net.minecraft.src.TextureMap;
 import net.minecraft.src.Blocks;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 import net.minecraft.src.World;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
@@ -48,18 +48,18 @@ public final class FluidRenderer {
         stillRenderCache.clear();
     }
 
-    public static IIcon getFluidTexture(FluidStack fluidStack, boolean flowing) {
+    public static Icon getFluidTexture(FluidStack fluidStack, boolean flowing) {
         if (fluidStack == null) {
             return null;
         }
         return getFluidTexture(fluidStack.getFluid(), flowing);
     }
 
-    public static IIcon getFluidTexture(Fluid fluid, boolean flowing) {
+    public static Icon getFluidTexture(Fluid fluid, boolean flowing) {
         if (fluid == null) {
             return null;
         }
-        IIcon icon = flowing ? fluid.getFlowingIcon() : fluid.getStillIcon();
+        Icon icon = flowing ? fluid.getFlowingIcon() : fluid.getStillIcon();
         if (icon == null) {
             icon = ((TextureMap) Minecraft.getMinecraft().getTextureManager()
                     .getTexture(TextureMap.locationBlocksTexture)).getAtlasSprite("missingno");

@@ -12,7 +12,7 @@ import buildcraft.api.statements.ITriggerInternal;
 import buildcraft.api.statements.containers.IRedstoneStatementContainer;
 import buildcraft.api.statements.containers.ISidedStatementContainer;
 import buildcraft.core.lib.utils.StringUtils;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraftforge.common.util.ForgeDirection;
 
 public class TriggerRedstoneInput extends BCStatement implements ITriggerInternal {
@@ -65,7 +65,7 @@ public class TriggerRedstoneInput extends BCStatement implements ITriggerInterna
     }
 
     @Override
-    public void registerIcons(IIconRegister register) {
+    public void registerIcons(IconRegister register) {
         icon = register
                 .registerIcon("buildcraftcore:triggers/trigger_redstoneinput_" + (active ? "active" : "inactive"));
     }

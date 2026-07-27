@@ -5,14 +5,14 @@ import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementMouseClick;
 import buildcraft.core.lib.utils.StringUtils;
-import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IconRegister;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.IIcon;
+import net.minecraft.src.Icon;
 
 public class PatternParameterYDir implements IStatementParameter {
 
-    private static IIcon iconUp, iconDown;
+    private static Icon iconUp, iconDown;
 
     public boolean up = false;
 
@@ -31,7 +31,7 @@ public class PatternParameterYDir implements IStatementParameter {
     }
 
     @Override
-    public IIcon getIcon() {
+    public Icon getIcon() {
         return up ? iconUp : iconDown;
     }
 
@@ -41,7 +41,7 @@ public class PatternParameterYDir implements IStatementParameter {
     }
 
     @Override
-    public void registerIcons(IIconRegister iconRegister) {
+    public void registerIcons(IconRegister iconRegister) {
         iconUp = iconRegister.registerIcon("buildcraftcore:fillerParameters/stairs_ascend");
         iconDown = iconRegister.registerIcon("buildcraftcore:fillerParameters/stairs_descend");
     }
