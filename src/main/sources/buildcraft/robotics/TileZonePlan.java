@@ -12,7 +12,7 @@ import net.minecraft.EntityPlayer;
 import net.minecraft.IInventory;
 import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
-import net.minecraft.MinecraftServer;
+import net.minecraft.server.MinecraftServer;
 
 import buildcraft.BuildCraftCore;
 import buildcraft.BuildCraftRobotics;

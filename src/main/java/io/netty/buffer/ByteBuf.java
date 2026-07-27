@@ -4,6 +4,7 @@ package io.netty.buffer;
 public interface ByteBuf {
     double readDouble();
     int readInt();
+    short readShort();
     long readLong();
     float readFloat();
     String readString();

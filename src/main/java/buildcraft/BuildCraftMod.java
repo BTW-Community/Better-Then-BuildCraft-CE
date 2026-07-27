@@ -11,15 +11,15 @@ import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import net.minecraft.Entity;
-import net.minecraft.EntityPlayer;
-import net.minecraft.EntityPlayerMP;
-import net.minecraft.NetHandlerPlayServer;
-import net.minecraft.NetworkManager;
-import net.minecraft.MinecraftServer;
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-import net.minecraft.WorldServer;
+import net.minecraft.src.Entity;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.EntityPlayerMP;
+import net.minecraft.src.NetHandlerPlayServer;
+import net.minecraft.src.NetworkManager;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
+import net.minecraft.src.WorldServer;
 
 import buildcraft.api.core.BCLog;
 import buildcraft.core.DefaultProps;
@@ -28,7 +28,6 @@ import buildcraft.core.lib.utils.ThreadSafeUtils;
 import cpw.mods.fml.common.network.FMLEmbeddedChannel;
 import cpw.mods.fml.common.network.FMLOutboundHandler;
 import cpw.mods.fml.common.network.FMLOutboundHandler.OutboundTarget;
-import net.fabricmc.api.EnvType;
 
 public class BuildCraftMod {
 
@@ -129,7 +128,7 @@ public class BuildCraftMod {
             while (true) {
                 try {
                     SendRequest r = packets.take();
-                    net.minecraft.Packet p = ThreadSafeUtils
+                    net.minecraft.src.Packet p = ThreadSafeUtils
                             .generatePacketFrom(r.packet, r.source.channels.get(Side.SERVER));
                     List<EntityPlayerMP> playerList = MinecraftServer.getServer()
                             .getConfigurationManager().playerEntityList;

@@ -29,7 +29,7 @@ import net.minecraft.ItemStack;
 import net.minecraft.NBTTagCompound;
 import net.minecraft.NBTTagList;
 import net.minecraft.NBTUtil;
-import net.minecraft.MinecraftServer;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.TileEntity;
 import net.minecraft.AxisAlignedBB;
 import net.minecraft.DamageSource;
