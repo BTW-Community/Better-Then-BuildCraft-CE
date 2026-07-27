@@ -6,20 +6,19 @@
  */
 package buildcraft.core;
 
-import net.minecraft.Block;
-import net.minecraft.IconRegister;
-import net.minecraft.TileEntity;
-import net.minecraft.Icon;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
-
 import buildcraft.core.lib.utils.ResourceUtils;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.Block;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
 
 public class BlockPathMarker extends BlockMarker {
 
-    private Icon activeMarker;
+    private IIcon activeMarker;
 
     public BlockPathMarker() {}
 
@@ -29,7 +28,7 @@ public class BlockPathMarker extends BlockMarker {
     }
 
     @Override
-    public Icon getIconAbsolute(IBlockAccess iblockaccess, int x, int y, int z, int side, int metadata) {
+    public IIcon getIconAbsolute(IBlockAccess iblockaccess, int x, int y, int z, int side, int metadata) {
         TilePathMarker marker = (TilePathMarker) iblockaccess.getTileEntity(x, y, z);
 
         if (side == 1 || (marker != null && marker.tryingToConnect)) {
@@ -40,8 +39,8 @@ public class BlockPathMarker extends BlockMarker {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public void registerBlockIcons(IconRegister par1IconRegister) {
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister par1IconRegister) {
         super.registerBlockIcons(par1IconRegister);
         activeMarker = par1IconRegister
                 .registerIcon(ResourceUtils.getObjectPrefix(Block.blockRegistry.getNameForObject(this)) + "/active");

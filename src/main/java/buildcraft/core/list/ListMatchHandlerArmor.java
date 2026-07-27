@@ -1,11 +1,10 @@
 package buildcraft.core.list;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraftforge.common.DimensionManager;
-
 import buildcraft.api.lists.ListMatchHandler;
 import buildcraft.core.proxy.CoreProxy;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.common.DimensionManager;
 
 public class ListMatchHandlerArmor extends ListMatchHandler {
 

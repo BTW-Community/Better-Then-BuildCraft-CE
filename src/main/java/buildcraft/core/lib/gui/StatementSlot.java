@@ -1,12 +1,11 @@
 package buildcraft.core.lib.gui;
 
-import java.util.ArrayList;
-
-import net.minecraft.Icon;
-
 import buildcraft.api.statements.IStatement;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.IIcon;
+
+import java.util.ArrayList;
 
 /**
  * Created by asie on 1/24/15.
@@ -33,9 +32,9 @@ public abstract class StatementSlot extends AdvancedSlot {
         }
     }
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     @Override
-    public Icon getIcon() {
+    public IIcon getIcon() {
         IStatement stmt = getStatement();
 
         if (stmt != null) {

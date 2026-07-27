@@ -1,8 +1,8 @@
 package buildcraft.core.lib.render;
 
-import net.minecraft.TileEntityRendererDispatcher;
-import net.minecraft.TileEntitySpecialRenderer;
-import net.minecraft.TileEntity;
+import net.minecraft.src.TileEntityRendererDispatcher;
+import net.minecraft.src.TileEntitySpecialRenderer;
+import net.minecraft.src.TileEntity;
 
 public class RenderMultiTESR extends TileEntitySpecialRenderer {
 

@@ -6,12 +6,11 @@
  */
 package buildcraft.core.lib.network;
 
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-
 import buildcraft.api.core.ISerializable;
 import buildcraft.core.network.PacketIds;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
 
 public class PacketTileUpdate extends PacketUpdate {
 

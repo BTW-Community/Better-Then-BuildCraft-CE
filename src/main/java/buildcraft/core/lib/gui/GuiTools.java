@@ -6,11 +6,10 @@
  */
 package buildcraft.core.lib.gui;
 
-import java.util.List;
-
-import net.minecraft.FontRenderer;
-
 import buildcraft.core.lib.gui.buttons.GuiBetterButton;
+import net.minecraft.src.FontRenderer;
+
+import java.util.List;
 
 public final class GuiTools {
 

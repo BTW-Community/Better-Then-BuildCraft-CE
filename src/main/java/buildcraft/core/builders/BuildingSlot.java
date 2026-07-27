@@ -6,17 +6,16 @@
  */
 package buildcraft.core.builders;
 
-import java.util.LinkedList;
-import java.util.List;
-
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-
 import buildcraft.api.blueprints.IBuilderContext;
 import buildcraft.api.blueprints.MappingNotFoundException;
 import buildcraft.api.blueprints.MappingRegistry;
 import buildcraft.api.blueprints.Schematic;
 import buildcraft.api.core.Position;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public abstract class BuildingSlot {
 

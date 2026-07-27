@@ -6,10 +6,6 @@
  */
 package buildcraft.core.statements;
 
-import net.minecraft.IconRegister;
-import net.minecraft.TileEntity;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.ITriggerInternal;
@@ -19,8 +15,11 @@ import cofh.api.energy.IEnergyConnection;
 import cofh.api.energy.IEnergyHandler;
 import cofh.api.energy.IEnergyProvider;
 import cofh.api.energy.IEnergyReceiver;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class TriggerEnergy extends BCStatement implements ITriggerInternal {
 
@@ -99,8 +98,8 @@ public class TriggerEnergy extends BCStatement implements ITriggerInternal {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public void registerIcons(IconRegister iconRegister) {
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcraftcore:triggers/trigger_energy_storage_" + (high ? "high" : "low"));
     }
 

@@ -6,23 +6,22 @@
  */
 package buildcraft.core;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import net.minecraft.Block;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-import net.minecraftforge.fluids.FluidStack;
-
 import buildcraft.api.core.BCLog;
 import buildcraft.core.crops.CropHandlerPlantable;
 import buildcraft.core.recipes.AssemblyRecipeManager;
 import buildcraft.core.recipes.RefineryRecipeManager;
 import cpw.mods.fml.common.event.FMLInterModComms.IMCEvent;
 import cpw.mods.fml.common.event.FMLInterModComms.IMCMessage;
+import net.minecraft.src.Block;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+import net.minecraftforge.fluids.FluidStack;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public final class InterModComms {
 

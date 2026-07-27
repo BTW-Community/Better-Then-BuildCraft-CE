@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.utils;
 
-import net.minecraft.Entity;
+import net.minecraft.src.Entity;
 
 public interface IEntityFilter {
 

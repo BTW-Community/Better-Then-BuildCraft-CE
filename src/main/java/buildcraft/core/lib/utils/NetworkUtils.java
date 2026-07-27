@@ -1,15 +1,14 @@
 package buildcraft.core.lib.utils;
 
+import io.netty.buffer.ByteBuf;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.CompressedStreamTools;
+import net.minecraft.src.NBTSizeTracker;
+import net.minecraft.src.NBTTagCompound;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.CompressedStreamTools;
-import net.minecraft.NBTSizeTracker;
-import net.minecraft.NBTTagCompound;
-
-import io.netty.buffer.ByteBuf;
 
 public final class NetworkUtils {
 

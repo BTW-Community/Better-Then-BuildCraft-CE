@@ -6,31 +6,30 @@
  */
 package buildcraft.core.lib.engines;
 
-import java.util.List;
-import java.util.Random;
-
-import net.minecraft.Block;
-import net.minecraft.Material;
-import net.minecraft.IconRegister;
-import net.minecraft.Entity;
-import net.minecraft.EntityPlayer;
-import net.minecraft.TileEntity;
-import net.minecraft.AxisAlignedBB;
-import net.minecraft.Icon;
-import net.minecraft.MovingObjectPosition;
-import net.minecraft.Vec3;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.events.BlockInteractionEvent;
 import buildcraft.api.transport.IItemPipe;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.lib.render.ICustomHighlight;
 import cpw.mods.fml.common.FMLCommonHandler;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.Block;
+import net.minecraft.src.Material;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.Entity;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.AxisAlignedBB;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.MovingObjectPosition;
+import net.minecraft.src.Vec3;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.List;
+import java.util.Random;
 
 public abstract class BlockEngineBase extends BlockBuildCraft implements ICustomHighlight {
 
@@ -56,19 +55,19 @@ public abstract class BlockEngineBase extends BlockBuildCraft implements ICustom
     public abstract String getTexturePrefix(int meta, boolean addPrefix);
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public Icon getIconAbsolute(int side, int metadata) {
+    @SideOnly(Side.CLIENT)
+    public IIcon getIconAbsolute(int side, int metadata) {
         return icons[metadata] == null ? icons[0][0] : icons[metadata][0];
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public void registerBlockIcons(IconRegister register) {
-        icons = new Icon[16][];
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister register) {
+        icons = new IIcon[16][];
         for (int meta = 0; meta < 16; meta++) {
             String prefix = getTexturePrefix(meta, false);
             if (prefix != null) {
-                icons[meta] = new Icon[1];
+                icons[meta] = new IIcon[1];
                 icons[meta][0] = register.registerIcon(prefix + "/icon");
             }
         }

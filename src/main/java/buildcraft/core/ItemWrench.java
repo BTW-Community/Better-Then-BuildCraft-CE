@@ -6,22 +6,17 @@
  */
 package buildcraft.core;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import net.minecraft.Block;
-import net.minecraft.BlockBed;
-import net.minecraft.BlockButton;
-import net.minecraft.BlockChest;
-import net.minecraft.BlockLever;
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraft.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.tools.IToolWrench;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.BlockUtils;
+import net.minecraft.block.*;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class ItemWrench extends ItemBuildCraft implements IToolWrench {
 

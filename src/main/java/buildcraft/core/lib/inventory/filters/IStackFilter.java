@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.inventory.filters;
 
-import net.minecraft.ItemStack;
+import net.minecraft.src.ItemStack;
 
 /**
  * This interface provides a convenient means of dealing with entire classes of items without having to specify each

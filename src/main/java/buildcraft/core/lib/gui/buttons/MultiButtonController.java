@@ -6,9 +6,9 @@
  */
 package buildcraft.core.lib.gui.buttons;
 
-import net.minecraft.NBTTagByte;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagString;
+import net.minecraft.src.NBTTagByte;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagString;
 
 /**
  * T should be an Enum of button states

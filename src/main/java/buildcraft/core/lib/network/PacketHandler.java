@@ -6,14 +6,6 @@
  */
 package buildcraft.core.lib.network;
 
-import java.io.IOException;
-
-import net.minecraft.Entity;
-import net.minecraft.EntityPlayer;
-import net.minecraft.INetHandler;
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-
 import buildcraft.api.core.ISerializable;
 import buildcraft.core.lib.network.command.PacketCommand;
 import buildcraft.core.network.PacketIds;
@@ -22,6 +14,13 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import net.minecraft.src.Entity;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.INetHandler;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
+
+import java.io.IOException;
 
 @Sharable
 public class PacketHandler extends SimpleChannelInboundHandler<Packet> {

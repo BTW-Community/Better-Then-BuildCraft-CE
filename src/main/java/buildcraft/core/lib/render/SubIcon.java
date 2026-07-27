@@ -1,10 +1,10 @@
 package buildcraft.core.lib.render;
 
-import net.minecraft.Icon;
+import net.minecraft.src.IIcon;
 
-public class SubIcon implements Icon {
+public class SubIcon implements IIcon {
 
-    private final Icon icon;
+    private final IIcon icon;
     private final float u;
     private final float v;
     private final int w, h;
@@ -13,11 +13,11 @@ public class SubIcon implements Icon {
     private final int iw;
     private final int ih;
 
-    public SubIcon(Icon icon, int u, int v, int size) {
+    public SubIcon(IIcon icon, int u, int v, int size) {
         this(icon, u, v, 16, 16, size);
     }
 
-    public SubIcon(Icon icon, int u, int v, int w, int h, int size) {
+    public SubIcon(IIcon icon, int u, int v, int w, int h, int size) {
         iw = size;
         ih = size;
         this.icon = icon;

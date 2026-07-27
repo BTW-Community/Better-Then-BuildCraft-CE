@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib;
 
-import net.minecraft.Block;
-import net.minecraft.TileEntity;
+import net.minecraft.src.Block;
+import net.minecraft.src.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
 public interface ITileBufferHolder {

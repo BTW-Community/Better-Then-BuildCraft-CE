@@ -1,14 +1,9 @@
 package buildcraft.core.lib.utils;
 
-import net.minecraft.Block;
-import net.minecraft.ItemBlock;
-import net.minecraft.ItemStack;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.IFluidBlock;
-import net.minecraftforge.fluids.IFluidContainerItem;
+import net.minecraft.src.Block;
+import net.minecraft.src.ItemBlock;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.fluids.*;
 
 public final class FluidUtils {
 

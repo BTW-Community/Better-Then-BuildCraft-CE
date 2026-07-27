@@ -6,10 +6,9 @@
  */
 package buildcraft.core.lib.network.command;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.World;
-
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.World;
 
 public abstract class CommandTarget {
 

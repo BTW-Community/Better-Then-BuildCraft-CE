@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.inventory.filters;
 
-import net.minecraft.ItemStack;
-import net.minecraft.TileEntityFurnace;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.TileEntityFurnace;
 
 /**
  * This interface is used with several of the functions in IItemTransfer to provide a convenient means of dealing with

@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.fluids;
 
-import net.minecraft.NBTTagCompound;
-import net.minecraft.TileEntity;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.TileEntity;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;

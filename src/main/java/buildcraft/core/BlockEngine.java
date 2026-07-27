@@ -1,15 +1,14 @@
 package buildcraft.core;
 
-import java.util.List;
-
-import net.minecraft.CreativeTabs;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-
 import buildcraft.core.lib.engines.BlockEngineBase;
 import buildcraft.core.lib.engines.TileEngineBase;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
+
+import java.util.List;
 
 public class BlockEngine extends BlockEngineBase {
 

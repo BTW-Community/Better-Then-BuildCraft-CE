@@ -1,9 +1,8 @@
 package buildcraft.core.render;
 
-import net.minecraft.Tessellator;
-
 import buildcraft.BuildCraftCore;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
+import net.minecraft.src.Tessellator;
 
 public abstract class BCSimpleBlockRenderingHandler implements ISimpleBlockRenderingHandler {
 

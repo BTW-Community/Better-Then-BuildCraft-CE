@@ -6,14 +6,13 @@
  */
 package buildcraft.core.recipes;
 
-import java.util.Collection;
-import java.util.Collections;
-
+import buildcraft.api.recipes.IFlexibleRecipe;
+import buildcraft.api.recipes.IRecipeManager;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
-import buildcraft.api.recipes.IFlexibleRecipe;
-import buildcraft.api.recipes.IRecipeManager;
+import java.util.Collection;
+import java.util.Collections;
 
 public class RecipeManager<T> implements IRecipeManager<T> {
 

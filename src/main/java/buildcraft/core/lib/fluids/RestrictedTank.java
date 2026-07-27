@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.fluids;
 
-import net.minecraft.TileEntity;
+import net.minecraft.src.TileEntity;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 

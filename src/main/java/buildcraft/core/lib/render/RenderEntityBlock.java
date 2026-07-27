@@ -6,24 +6,22 @@
  */
 package buildcraft.core.lib.render;
 
-import java.util.Arrays;
-
-import net.minecraft.Block;
-import net.minecraft.RenderBlocks;
-import net.minecraft.Tessellator;
-import net.minecraft.Render;
-import net.minecraft.TextureMap;
-import net.minecraft.Entity;
-import net.minecraft.Blocks;
-import net.minecraft.Icon;
-import net.minecraft.ResourceLocation;
-import net.minecraft.EnumSkyBlock;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
-
+import buildcraft.core.lib.EntityBlock;
+import net.minecraft.src.Block;
+import net.minecraft.src.RenderBlocks;
+import net.minecraft.src.Tessellator;
+import net.minecraft.src.Render;
+import net.minecraft.src.TextureMap;
+import net.minecraft.src.Entity;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.ResourceLocation;
+import net.minecraft.src.EnumSkyBlock;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
 import org.lwjgl.opengl.GL11;
 
-import buildcraft.core.lib.EntityBlock;
+import java.util.Arrays;
 
 public final class RenderEntityBlock extends Render {
 
@@ -48,15 +46,15 @@ public final class RenderEntityBlock extends Render {
         public double maxY = 1.0F;
         public double maxZ = 1.0F;
         public Block baseBlock = Blocks.sand;
-        public Icon texture = null;
-        public Icon[] textureArray = null;
+        public IIcon texture = null;
+        public IIcon[] textureArray = null;
         public boolean[] renderSide = new boolean[] { true, true, true, true, true, true };
         public int light = -1;
         public int brightness = -1;
 
         public RenderInfo() {}
 
-        public RenderInfo(Block template, Icon[] texture) {
+        public RenderInfo(Block template, IIcon[] texture) {
             this();
             this.baseBlock = template;
             this.textureArray = texture;
@@ -115,7 +113,7 @@ public final class RenderEntityBlock extends Render {
             maxZ = 1 - temp;
         }
 
-        public Icon getBlockTextureFromSide(int i) {
+        public IIcon getBlockTextureFromSide(int i) {
             if (texture != null) {
                 return texture;
             }

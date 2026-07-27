@@ -6,20 +6,19 @@
  */
 package buildcraft.core.statements;
 
-import net.minecraft.IconRegister;
-import net.minecraft.Icon;
-
 import buildcraft.api.statements.IStatement;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementManager;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IIcon;
 
 public abstract class BCStatement implements IStatement {
 
     protected final String uniqueTag;
 
-    protected Icon icon;
+    protected IIcon icon;
 
     /**
      * UniqueTag accepts multiple possible tags, use this feature to migrate to more standardized tags if needed,
@@ -40,14 +39,14 @@ public abstract class BCStatement implements IStatement {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public Icon getIcon() {
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon() {
         return icon;
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public void registerIcons(IconRegister iconRegister) {}
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister iconRegister) {}
 
     @Override
     public int maxParameters() {

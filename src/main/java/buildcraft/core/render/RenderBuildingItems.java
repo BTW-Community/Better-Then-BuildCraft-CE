@@ -6,19 +6,17 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.RenderItem;
-import net.minecraft.RenderManager;
-import net.minecraft.EntityItem;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.TileEntity;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.core.StackAtPosition;
 import buildcraft.core.builders.BuildingItem;
 import buildcraft.core.builders.IBuildingItemsProvider;
+import net.minecraft.src.RenderItem;
+import net.minecraft.src.RenderManager;
+import net.minecraft.src.EntityItem;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.TileEntity;
+import org.lwjgl.opengl.GL11;
 
 public class RenderBuildingItems {
 

@@ -1,11 +1,10 @@
 package buildcraft.core.recipes;
 
+import buildcraft.api.recipes.IIntegrationRecipe;
+import net.minecraft.src.ItemStack;
+
 import java.lang.ref.SoftReference;
 import java.util.List;
-
-import net.minecraft.ItemStack;
-
-import buildcraft.api.recipes.IIntegrationRecipe;
 
 public abstract class IntegrationRecipeBC implements IIntegrationRecipe {
 

@@ -1,19 +1,18 @@
 package buildcraft.core.crops;
 
-import java.util.List;
-
-import net.minecraft.Block;
-import net.minecraft.EntityPlayer;
-import net.minecraft.Blocks;
-import net.minecraft.Items;
-import net.minecraft.ItemStack;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
+import buildcraft.api.crops.CropManager;
+import buildcraft.api.crops.ICropHandler;
+import net.minecraft.src.Block;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.Items;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import buildcraft.api.crops.CropManager;
-import buildcraft.api.crops.ICropHandler;
+import java.util.List;
 
 public class CropHandlerReeds implements ICropHandler {
 

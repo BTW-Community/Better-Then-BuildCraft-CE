@@ -6,13 +6,12 @@
  */
 package buildcraft.core.properties;
 
-import java.util.HashMap;
-
-import net.minecraft.Block;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
-
 import buildcraft.api.core.IWorldProperty;
+import net.minecraft.src.Block;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
+
+import java.util.HashMap;
 
 public abstract class WorldProperty implements IWorldProperty {
 

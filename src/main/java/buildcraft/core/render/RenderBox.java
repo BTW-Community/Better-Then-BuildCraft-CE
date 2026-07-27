@@ -6,13 +6,11 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.TextureManager;
-import net.minecraft.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.core.Box;
 import buildcraft.core.LaserData;
+import net.minecraft.src.TextureManager;
+import net.minecraft.src.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 
 public final class RenderBox {
 

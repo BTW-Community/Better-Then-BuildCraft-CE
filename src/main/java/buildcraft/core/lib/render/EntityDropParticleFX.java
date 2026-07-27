@@ -6,17 +6,16 @@
  */
 package buildcraft.core.lib.render;
 
-import net.minecraft.Block;
-import net.minecraft.Material;
-import net.minecraft.EntityFX;
-import net.minecraft.MathHelper;
-import net.minecraft.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.Block;
+import net.minecraft.src.Material;
+import net.minecraft.src.EntityFX;
+import net.minecraft.src.MathHelper;
+import net.minecraft.src.World;
 import net.minecraftforge.fluids.IFluidBlock;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-
-@Environment(EnvType.CLIENT)
+@SideOnly(Side.CLIENT)
 public class EntityDropParticleFX extends EntityFX {
 
     /**

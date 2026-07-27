@@ -6,12 +6,11 @@
  */
 package buildcraft.core.lib.network;
 
-import net.minecraft.EntityPlayer;
-
 import buildcraft.core.lib.gui.BuildCraftContainer;
 import buildcraft.core.network.PacketIds;
 import cpw.mods.fml.client.FMLClientHandler;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.EntityPlayer;
 
 public class PacketGuiWidget extends Packet {
 

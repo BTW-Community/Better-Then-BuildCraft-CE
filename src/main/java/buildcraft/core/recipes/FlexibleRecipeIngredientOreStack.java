@@ -6,13 +6,12 @@
  */
 package buildcraft.core.recipes;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.ItemStack;
+import buildcraft.api.recipes.IFlexibleRecipeIngredient;
+import net.minecraft.src.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-import buildcraft.api.recipes.IFlexibleRecipeIngredient;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FlexibleRecipeIngredientOreStack implements IFlexibleRecipeIngredient {
 

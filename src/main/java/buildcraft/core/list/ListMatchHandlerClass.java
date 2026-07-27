@@ -1,9 +1,8 @@
 package buildcraft.core.list;
 
-import net.minecraft.ItemStack;
-
 import buildcraft.api.lists.ListMatchHandler;
 import buildcraft.api.lists.ListRegistry;
+import net.minecraft.src.ItemStack;
 
 public class ListMatchHandlerClass extends ListMatchHandler {
 

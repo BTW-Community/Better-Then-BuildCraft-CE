@@ -1,9 +1,8 @@
 package buildcraft.core.recipes;
 
-import net.minecraft.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import buildcraft.api.recipes.IFlexibleCrafter;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
 
 /**
  * Use this class for simulated crafts.

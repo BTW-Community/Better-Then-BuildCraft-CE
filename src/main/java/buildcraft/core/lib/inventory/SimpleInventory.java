@@ -6,17 +6,16 @@
  */
 package buildcraft.core.lib.inventory;
 
-import java.util.LinkedList;
-
-import net.minecraft.EntityPlayer;
-import net.minecraft.IInventory;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-import net.minecraft.TileEntity;
+import buildcraft.api.core.INBTStoreable;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+import net.minecraft.src.TileEntity;
 import net.minecraftforge.common.util.Constants;
 
-import buildcraft.api.core.INBTStoreable;
+import java.util.LinkedList;
 
 public class SimpleInventory implements IInventory, INBTStoreable {
 

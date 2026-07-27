@@ -1,22 +1,21 @@
 package buildcraft.core.list;
 
+import buildcraft.core.lib.inventory.StackHelper;
+import buildcraft.core.lib.utils.NBTUtils;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.relauncher.Side;
+import net.minecraft.src.Block;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemBlock;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraftforge.oredict.OreDictionary;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.WeakHashMap;
-
-import net.minecraft.Block;
-import net.minecraft.CreativeTabs;
-import net.minecraft.Item;
-import net.minecraft.ItemBlock;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraftforge.oredict.OreDictionary;
-
-import buildcraft.core.lib.inventory.StackHelper;
-import buildcraft.core.lib.utils.NBTUtils;
-import cpw.mods.fml.common.FMLCommonHandler;
-import net.fabricmc.api.EnvType;
 
 public final class ListHandlerOld {
 

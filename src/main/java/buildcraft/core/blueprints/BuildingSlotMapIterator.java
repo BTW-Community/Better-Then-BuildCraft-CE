@@ -6,19 +6,14 @@
  */
 package buildcraft.core.blueprints;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import net.minecraft.ItemStack;
-import net.minecraft.WorldSettings;
-
 import buildcraft.core.builders.BuilderItemMetaPair;
 import buildcraft.core.builders.BuildingSlotBlock;
 import buildcraft.core.builders.TileAbstractBuilder;
 import buildcraft.core.lib.fluids.Tank;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.WorldSettings;
+
+import java.util.*;
 
 public class BuildingSlotMapIterator {
 

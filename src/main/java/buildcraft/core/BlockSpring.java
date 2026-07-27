@@ -6,21 +6,20 @@
  */
 package buildcraft.core;
 
+import buildcraft.core.lib.utils.XorShift128Random;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.Block;
+import net.minecraft.src.Material;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.World;
+
 import java.util.List;
 import java.util.Random;
-
-import net.minecraft.Block;
-import net.minecraft.Material;
-import net.minecraft.IconRegister;
-import net.minecraft.CreativeTabs;
-import net.minecraft.Blocks;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.World;
-
-import buildcraft.core.lib.utils.XorShift128Random;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 
 public class BlockSpring extends Block {
 
@@ -112,8 +111,8 @@ public class BlockSpring extends Block {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public void registerBlockIcons(IconRegister par1IconRegister) {
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister par1IconRegister) {
         blockIcon = par1IconRegister.registerIcon("bedrock");
     }
 }

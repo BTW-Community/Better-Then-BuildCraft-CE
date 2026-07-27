@@ -6,11 +6,11 @@
  */
 package buildcraft.core.lib.gui.tooltips;
 
+import com.google.common.collect.ForwardingList;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import com.google.common.collect.ForwardingList;
 
 public class ToolTip extends ForwardingList<ToolTipLine> {
 

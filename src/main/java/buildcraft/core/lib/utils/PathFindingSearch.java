@@ -6,18 +6,12 @@
  */
 package buildcraft.core.lib.utils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-
-import net.minecraft.World;
-
 import buildcraft.api.core.BlockIndex;
 import buildcraft.api.core.BuildCraftAPI;
 import buildcraft.api.core.IZone;
+import net.minecraft.src.World;
+
+import java.util.*;
 
 public class PathFindingSearch implements IIterableAlgorithm {
 

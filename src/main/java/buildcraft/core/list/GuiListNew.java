@@ -6,18 +6,6 @@
  */
 package buildcraft.core.list;
 
-import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import net.minecraft.Minecraft;
-import net.minecraft.GuiTextField;
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraft.ResourceLocation;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.lists.ListMatchHandler;
 import buildcraft.core.ItemList;
@@ -27,6 +15,13 @@ import buildcraft.core.lib.gui.buttons.GuiImageButton;
 import buildcraft.core.lib.gui.buttons.IButtonClickEventListener;
 import buildcraft.core.lib.gui.buttons.IButtonClickEventTrigger;
 import buildcraft.core.lib.inventory.StackHelper;
+import net.minecraft.src.Minecraft;
+import net.minecraft.src.GuiTextField;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.ResourceLocation;
+
+import java.util.*;
 
 public class GuiListNew extends GuiAdvancedInterface implements IButtonClickEventListener {
 

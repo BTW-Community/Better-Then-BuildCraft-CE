@@ -6,12 +6,11 @@
  */
 package buildcraft.core;
 
-import net.minecraft.ItemStack;
-
 import buildcraft.api.core.ISerializable;
 import buildcraft.api.core.Position;
 import buildcraft.core.lib.utils.NetworkUtils;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.ItemStack;
 
 public class StackAtPosition implements ISerializable {
 

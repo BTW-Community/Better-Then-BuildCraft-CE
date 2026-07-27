@@ -6,11 +6,10 @@
  */
 package buildcraft.core.lib.network.command;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
 
 public class CommandTargetTile extends CommandTarget {
 

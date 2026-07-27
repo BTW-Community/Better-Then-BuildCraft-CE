@@ -6,15 +6,14 @@
  */
 package buildcraft.core.list;
 
-import net.minecraft.GuiTextField;
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraft.ResourceLocation;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.core.ItemList;
 import buildcraft.core.lib.gui.AdvancedSlot;
 import buildcraft.core.lib.gui.GuiAdvancedInterface;
+import net.minecraft.src.GuiTextField;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.ResourceLocation;
 
 public class GuiListOld extends GuiAdvancedInterface {
 

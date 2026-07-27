@@ -6,32 +6,27 @@
  */
 package buildcraft.core;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.IconRegister;
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-import net.minecraft.TileEntity;
-import net.minecraft.Icon;
-import net.minecraft.World;
-import net.minecraftforge.common.util.Constants;
-import net.minecraftforge.common.util.ForgeDirection;
-
-import buildcraft.api.core.BlockIndex;
-import buildcraft.api.core.IAreaProvider;
-import buildcraft.api.core.IBox;
-import buildcraft.api.core.IPathProvider;
-import buildcraft.api.core.IZone;
+import buildcraft.api.core.*;
 import buildcraft.api.items.IMapLocation;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;
 import buildcraft.core.lib.utils.StringUtils;
 import buildcraft.robotics.ZonePlan;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.Constants;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemMapLocation extends ItemBuildCraft implements IMapLocation {
 
@@ -111,7 +106,7 @@ public class ItemMapLocation extends ItemBuildCraft implements IMapLocation {
     }
 
     @Override
-    public Icon getIconIndex(ItemStack stack) {
+    public IIcon getIconIndex(ItemStack stack) {
         NBTTagCompound cpt = NBTUtils.getItemData(stack);
 
         if (!cpt.hasKey("kind")) {
@@ -128,8 +123,8 @@ public class ItemMapLocation extends ItemBuildCraft implements IMapLocation {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public void registerIcons(IconRegister par1IconRegister) {
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister par1IconRegister) {
         super.registerIcons(par1IconRegister);
     }
 

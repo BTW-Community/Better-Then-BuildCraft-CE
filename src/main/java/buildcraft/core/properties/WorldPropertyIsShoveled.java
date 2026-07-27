@@ -6,15 +6,8 @@
  */
 package buildcraft.core.properties;
 
-import net.minecraft.Block;
-import net.minecraft.BlockClay;
-import net.minecraft.BlockDirt;
-import net.minecraft.BlockFarmland;
-import net.minecraft.BlockGrass;
-import net.minecraft.BlockGravel;
-import net.minecraft.BlockSand;
-import net.minecraft.BlockSnow;
-import net.minecraft.IBlockAccess;
+import net.minecraft.block.*;
+import net.minecraft.src.IBlockAccess;
 
 public class WorldPropertyIsShoveled extends WorldProperty {
 

@@ -1,11 +1,10 @@
 package buildcraft.core;
 
-import net.minecraft.Item;
-import net.minecraft.Achievement;
-import net.minecraftforge.common.AchievementPage;
-
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
+import net.minecraft.src.Item;
+import net.minecraft.src.Achievement;
+import net.minecraftforge.common.AchievementPage;
 
 public class AchievementManager {
 

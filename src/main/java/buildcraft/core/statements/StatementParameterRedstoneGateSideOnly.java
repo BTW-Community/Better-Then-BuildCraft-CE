@@ -1,19 +1,18 @@
 package buildcraft.core.statements;
 
-import net.minecraft.IconRegister;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.Icon;
-
 import buildcraft.api.statements.IStatement;
 import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementMouseClick;
 import buildcraft.core.lib.utils.StringUtils;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.IIcon;
 
 public class StatementParameterRedstoneGateSideOnly implements IStatementParameter {
 
-    private static Icon icon;
+    private static IIcon icon;
 
     public boolean isOn = false;
 
@@ -25,7 +24,7 @@ public class StatementParameterRedstoneGateSideOnly implements IStatementParamet
     }
 
     @Override
-    public Icon getIcon() {
+    public IIcon getIcon() {
         if (!isOn) {
             return null;
         } else {
@@ -61,7 +60,7 @@ public class StatementParameterRedstoneGateSideOnly implements IStatementParamet
     }
 
     @Override
-    public void registerIcons(IconRegister iconRegister) {
+    public void registerIcons(IIconRegister iconRegister) {
         icon = iconRegister.registerIcon("buildcraftcore:triggers/redstone_gate_side_only");
     }
 

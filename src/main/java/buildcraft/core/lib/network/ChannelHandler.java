@@ -6,24 +6,13 @@
  */
 package buildcraft.core.lib.network;
 
-import java.lang.ref.WeakReference;
-import java.util.List;
-
-import net.minecraft.EntityPlayer;
-import net.minecraft.EntityPlayerMP;
-import net.minecraft.INetHandler;
-
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
-
 import buildcraft.api.core.BCLog;
 import buildcraft.core.lib.network.command.PacketCommand;
 import buildcraft.core.proxy.CoreProxy;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.internal.FMLProxyPacket;
-import net.fabricmc.api.EnvType;
+import cpw.mods.fml.relauncher.Side;
 import gnu.trove.map.TByteIntMap;
 import gnu.trove.map.hash.TByteIntHashMap;
 import gnu.trove.map.hash.TByteObjectHashMap;
@@ -33,6 +22,15 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToMessageCodec;
 import io.netty.util.AttributeKey;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.EntityPlayerMP;
+import net.minecraft.src.INetHandler;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.Marker;
+import org.apache.logging.log4j.MarkerManager;
+
+import java.lang.ref.WeakReference;
+import java.util.List;
 
 /**
  * Code based on FMLIndexedMessageToMessageCodec, but since some of its fields are private, I needed a custom version.

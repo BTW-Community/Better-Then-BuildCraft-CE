@@ -1,9 +1,8 @@
 package buildcraft.core.blueprints;
 
-import net.minecraft.ItemStack;
-
 import buildcraft.api.blueprints.ISchematicHelper;
 import buildcraft.core.lib.inventory.StackHelper;
+import net.minecraft.src.ItemStack;
 
 public final class SchematicHelper implements ISchematicHelper {
 

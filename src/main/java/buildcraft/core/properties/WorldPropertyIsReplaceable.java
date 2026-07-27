@@ -6,8 +6,8 @@
  */
 package buildcraft.core.properties;
 
-import net.minecraft.Block;
-import net.minecraft.IBlockAccess;
+import net.minecraft.src.Block;
+import net.minecraft.src.IBlockAccess;
 
 public class WorldPropertyIsReplaceable extends WorldProperty {
 

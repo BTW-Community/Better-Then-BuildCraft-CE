@@ -6,15 +6,14 @@
  */
 package buildcraft.core.statements;
 
-import net.minecraft.IconRegister;
-import net.minecraft.TileEntity;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.ITriggerExternal;
 import buildcraft.api.tiles.IHasWork;
 import buildcraft.core.lib.utils.StringUtils;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class TriggerMachine extends BCStatement implements ITriggerExternal {
 
@@ -50,7 +49,7 @@ public class TriggerMachine extends BCStatement implements ITriggerExternal {
     }
 
     @Override
-    public void registerIcons(IconRegister register) {
+    public void registerIcons(IIconRegister register) {
         icon = register.registerIcon("buildcraftcore:triggers/trigger_machine_" + (active ? "active" : "inactive"));
     }
 }

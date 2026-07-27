@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.inventory.filters;
 
-import net.minecraft.ItemStack;
+import net.minecraft.src.ItemStack;
 
 /**
  * Returns true if the stack matches all of the stack filters.

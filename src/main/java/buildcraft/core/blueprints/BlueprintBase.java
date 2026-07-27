@@ -6,26 +6,21 @@
  */
 package buildcraft.core.blueprints;
 
-import java.util.ArrayList;
-
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-import net.minecraft.GameType;
-import net.minecraftforge.common.util.Constants;
-import net.minecraftforge.common.util.ForgeDirection;
-
-import buildcraft.api.blueprints.BuildingPermission;
-import buildcraft.api.blueprints.IBuilderContext;
-import buildcraft.api.blueprints.MappingRegistry;
-import buildcraft.api.blueprints.SchematicBlockBase;
-import buildcraft.api.blueprints.Translation;
+import buildcraft.api.blueprints.*;
 import buildcraft.api.core.BCLog;
 import buildcraft.api.core.Position;
 import buildcraft.core.Box;
 import buildcraft.core.Version;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
+import net.minecraft.src.GameType;
+import net.minecraftforge.common.util.Constants;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.ArrayList;
 
 public abstract class BlueprintBase {
 

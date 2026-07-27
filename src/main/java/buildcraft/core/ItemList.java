@@ -6,26 +6,25 @@
  */
 package buildcraft.core;
 
-import java.util.List;
-
-import net.minecraft.CreativeTabs;
-import net.minecraft.EntityPlayer;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.EnumChatFormatting;
-import net.minecraft.Icon;
-import net.minecraft.StatCollector;
-import net.minecraft.World;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.items.IList;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;
 import buildcraft.core.list.ListHandlerNew;
 import buildcraft.core.list.ListHandlerOld;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.EnumChatFormatting;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.StatCollector;
+import net.minecraft.src.World;
+
+import java.util.List;
 
 public class ItemList extends ItemBuildCraft implements IList {
 
@@ -36,7 +35,7 @@ public class ItemList extends ItemBuildCraft implements IList {
     }
 
     @Override
-    public Icon getIconIndex(ItemStack stack) {
+    public IIcon getIconIndex(ItemStack stack) {
         itemIcon = icons[NBTUtils.getItemData(stack).hasKey("written") ? 1 : 0];
         return itemIcon;
     }
@@ -105,7 +104,7 @@ public class ItemList extends ItemBuildCraft implements IList {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List itemList) {
         itemList.add(new ItemStack(this, 1, 0)); // TODO: remove
         itemList.add(new ItemStack(this, 1, 1));

@@ -6,21 +6,19 @@
  */
 package buildcraft.core.lib.render;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import net.minecraft.Minecraft;
-import net.minecraft.GLAllocation;
-import net.minecraft.TextureMap;
-import net.minecraft.Blocks;
-import net.minecraft.Icon;
-import net.minecraft.World;
+import buildcraft.core.lib.render.RenderEntityBlock.RenderInfo;
+import net.minecraft.src.Minecraft;
+import net.minecraft.src.GLAllocation;
+import net.minecraft.src.TextureMap;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.World;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
-
 import org.lwjgl.opengl.GL11;
 
-import buildcraft.core.lib.render.RenderEntityBlock.RenderInfo;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class FluidRenderer {
 
@@ -50,18 +48,18 @@ public final class FluidRenderer {
         stillRenderCache.clear();
     }
 
-    public static Icon getFluidTexture(FluidStack fluidStack, boolean flowing) {
+    public static IIcon getFluidTexture(FluidStack fluidStack, boolean flowing) {
         if (fluidStack == null) {
             return null;
         }
         return getFluidTexture(fluidStack.getFluid(), flowing);
     }
 
-    public static Icon getFluidTexture(Fluid fluid, boolean flowing) {
+    public static IIcon getFluidTexture(Fluid fluid, boolean flowing) {
         if (fluid == null) {
             return null;
         }
-        Icon icon = flowing ? fluid.getFlowingIcon() : fluid.getStillIcon();
+        IIcon icon = flowing ? fluid.getFlowingIcon() : fluid.getStillIcon();
         if (icon == null) {
             icon = ((TextureMap) Minecraft.getMinecraft().getTextureManager()
                     .getTexture(TextureMap.locationBlocksTexture)).getAtlasSprite("missingno");

@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.gui;
 
-import net.minecraft.ItemStack;
+import net.minecraft.src.ItemStack;
 
 public class ItemSlot extends AdvancedSlot {
 

@@ -6,17 +6,16 @@
  */
 package buildcraft.core.lib.gui.widgets;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-
-import net.minecraft.ICrafting;
-
 import buildcraft.core.lib.gui.BuildCraftContainer;
 import buildcraft.core.lib.gui.GuiBuildCraft;
 import buildcraft.core.lib.gui.tooltips.IToolTipProvider;
 import buildcraft.core.lib.gui.tooltips.ToolTip;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.ICrafting;
+
+import java.io.DataInputStream;
+import java.io.IOException;
 
 public class Widget implements IToolTipProvider {
 
@@ -42,32 +41,32 @@ public class Widget implements IToolTipProvider {
         this.container = container;
     }
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     @Override
     public final boolean isMouseOver(int mouseX, int mouseY) {
         return mouseX >= x - 1 && mouseX < x + w + 1 && mouseY >= y - 1 && mouseY < y + h + 1;
     }
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public boolean handleMouseClick(int mouseX, int mouseY, int mouseButton) {
         return false;
     }
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public void handleMouseRelease(int mouseX, int mouseY, int eventType) {}
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public void handleMouseMove(int mouseX, int mouseY, int mouseButton, long time) {}
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public void handleClientPacketData(DataInputStream data) throws IOException {}
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public void draw(GuiBuildCraft gui, int guiX, int guiY, int mouseX, int mouseY) {
         gui.drawTexturedModalRect(guiX + x, guiY + y, u, v, w, h);
     }
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     @Override
     public ToolTip getToolTip() {
         return null;

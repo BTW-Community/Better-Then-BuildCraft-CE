@@ -6,13 +6,12 @@
  */
 package buildcraft.core.lib;
 
-import net.minecraft.Block;
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.core.SafeTimeTracker;
 import buildcraft.core.lib.utils.Utils;
+import net.minecraft.src.Block;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public final class TileBuffer {
 

@@ -1,20 +1,18 @@
 package buildcraft.core.tablet;
 
-import java.util.Date;
-
-import net.minecraft.Minecraft;
-import net.minecraft.GuiScreen;
-import net.minecraft.ScaledResolution;
-import net.minecraft.EntityPlayer;
-import net.minecraft.ResourceLocation;
-
-import org.lwjgl.input.Mouse;
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.api.tablet.TabletBitmap;
 import buildcraft.core.lib.render.DynamicTextureBC;
 import buildcraft.core.tablet.manager.TabletManagerClient;
 import buildcraft.core.tablet.manager.TabletThread;
+import net.minecraft.src.Minecraft;
+import net.minecraft.src.GuiScreen;
+import net.minecraft.src.ScaledResolution;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ResourceLocation;
+import org.lwjgl.input.Mouse;
+import org.lwjgl.opengl.GL11;
+
+import java.util.Date;
 
 public class GuiTablet extends GuiScreen {
 

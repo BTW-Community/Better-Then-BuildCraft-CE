@@ -1,17 +1,16 @@
 package buildcraft.core.config;
 
-import java.util.ArrayList;
-import java.util.Set;
-
-import net.minecraft.Minecraft;
-import net.minecraft.GuiScreen;
-import net.minecraft.I18n;
+import cpw.mods.fml.client.IModGuiFactory;
+import cpw.mods.fml.client.config.GuiConfig;
+import net.minecraft.src.Minecraft;
+import net.minecraft.src.GuiScreen;
+import net.minecraft.src.I18n;
 import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 
-import cpw.mods.fml.client.IModGuiFactory;
-import cpw.mods.fml.client.config.GuiConfig;
+import java.util.ArrayList;
+import java.util.Set;
 
 public class ConfigManager implements IModGuiFactory {
 

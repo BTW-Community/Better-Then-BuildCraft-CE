@@ -6,19 +6,17 @@
  */
 package buildcraft.core.lib.engines;
 
-import net.minecraft.ModelBase;
-import net.minecraft.ModelRenderer;
-import net.minecraft.TileEntityRendererDispatcher;
-import net.minecraft.TileEntitySpecialRenderer;
-import net.minecraft.TileEntity;
-import net.minecraft.ResourceLocation;
-import net.minecraftforge.common.util.ForgeDirection;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.BuildCraftCore.RenderMode;
 import buildcraft.core.lib.render.IInventoryRenderer;
+import net.minecraft.src.ModelBase;
+import net.minecraft.src.ModelRenderer;
+import net.minecraft.src.TileEntityRendererDispatcher;
+import net.minecraft.src.TileEntitySpecialRenderer;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.ResourceLocation;
+import net.minecraftforge.common.util.ForgeDirection;
+import org.lwjgl.opengl.GL11;
 
 public class RenderEngine extends TileEntitySpecialRenderer implements IInventoryRenderer {
 

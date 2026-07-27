@@ -1,19 +1,18 @@
 package buildcraft.core.list;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import net.minecraft.CreativeTabs;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-
 import buildcraft.api.lists.ListMatchHandler;
 import buildcraft.api.lists.ListRegistry;
 import buildcraft.core.lib.inventory.StackHelper;
 import buildcraft.core.lib.utils.NBTUtils;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public final class ListHandlerNew {
 

@@ -6,11 +6,10 @@
  */
 package buildcraft.core.lib.inventory;
 
-import net.minecraft.IInventory;
-import net.minecraft.ISidedInventory;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.core.IInvSlot;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ISidedInventory;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public final class InventoryIterator {
 

@@ -6,15 +6,14 @@
  */
 package buildcraft.core.lib.fluids;
 
-import java.util.Locale;
-
-import net.minecraft.NBTTagCompound;
-import net.minecraft.TileEntity;
+import buildcraft.core.lib.gui.tooltips.ToolTip;
+import buildcraft.core.lib.gui.tooltips.ToolTipLine;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.TileEntity;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidTank;
 
-import buildcraft.core.lib.gui.tooltips.ToolTip;
-import buildcraft.core.lib.gui.tooltips.ToolTipLine;
+import java.util.Locale;
 
 public class Tank extends FluidTank {
 

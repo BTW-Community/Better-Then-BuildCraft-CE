@@ -6,12 +6,11 @@
  */
 package buildcraft.core.lib.inventory.filters;
 
-import java.util.ArrayList;
-
-import net.minecraft.ItemStack;
-
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementParameterItemStack;
+import net.minecraft.src.ItemStack;
+
+import java.util.ArrayList;
 
 /**
  * Returns true if the stack matches any one one of the filter stacks.

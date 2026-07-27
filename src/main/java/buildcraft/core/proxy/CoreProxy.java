@@ -6,23 +6,22 @@
  */
 package buildcraft.core.proxy;
 
-import java.lang.ref.WeakReference;
-
-import net.minecraft.Entity;
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraft.INetHandler;
-import net.minecraft.NetHandlerPlayServer;
-import net.minecraft.World;
-import net.minecraft.WorldServer;
-import net.minecraftforge.common.util.FakePlayerFactory;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.core.ICoreProxy;
 import buildcraft.core.LaserKind;
 import buildcraft.core.lib.EntityBlock;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.SidedProxy;
+import net.minecraft.src.Entity;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.INetHandler;
+import net.minecraft.src.NetHandlerPlayServer;
+import net.minecraft.src.World;
+import net.minecraft.src.WorldServer;
+import net.minecraftforge.common.util.FakePlayerFactory;
+
+import java.lang.ref.WeakReference;
 
 public class CoreProxy implements ICoreProxy {
 

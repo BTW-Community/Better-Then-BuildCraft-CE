@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.gui.slots;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.IInventory;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.IInventory;
 
 public class SlotPhantom extends SlotBase implements IPhantomSlot {
 

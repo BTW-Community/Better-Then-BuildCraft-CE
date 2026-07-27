@@ -1,12 +1,11 @@
 package buildcraft.core.builders;
 
-import java.util.List;
-
-import net.minecraft.Blocks;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-
 import buildcraft.api.blueprints.IBuilderContext;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+
+import java.util.List;
 
 public class BuilderItemMetaPair {
 

@@ -1,8 +1,8 @@
 package buildcraft.core.tablet.utils;
 
-import java.io.InputStream;
-
 import buildcraft.api.tablet.TabletBitmap;
+
+import java.io.InputStream;
 
 public final class TabletBitmapLoader {
 

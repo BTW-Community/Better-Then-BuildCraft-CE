@@ -6,13 +6,12 @@
  */
 package buildcraft.core.builders.patterns;
 
-import net.minecraft.World;
-
 import buildcraft.api.blueprints.SchematicMask;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.core.Box;
 import buildcraft.core.blueprints.BptBuilderTemplate;
 import buildcraft.core.blueprints.Template;
+import net.minecraft.src.World;
 
 public class PatternHorizon extends FillerPattern {
 

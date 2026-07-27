@@ -6,14 +6,13 @@
  */
 package buildcraft.core.recipes;
 
+import buildcraft.api.recipes.IAssemblyRecipeManager;
+import buildcraft.api.recipes.IFlexibleRecipe;
+import net.minecraft.src.ItemStack;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-
-import net.minecraft.ItemStack;
-
-import buildcraft.api.recipes.IAssemblyRecipeManager;
-import buildcraft.api.recipes.IFlexibleRecipe;
 
 public class AssemblyRecipeManager implements IAssemblyRecipeManager {
 

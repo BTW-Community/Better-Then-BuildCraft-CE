@@ -1,28 +1,26 @@
 package buildcraft.core.render;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import net.minecraft.Block;
-import net.minecraft.IconRegister;
-import net.minecraft.TextureMap;
-import net.minecraft.TileEntitySpecialRenderer;
-import net.minecraft.TileEntity;
-import net.minecraft.Icon;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.core.internal.ICustomLEDBlock;
 import buildcraft.core.internal.ILEDProvider;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.lib.render.RenderEntityBlock;
 import buildcraft.core.lib.utils.ResourceUtils;
+import net.minecraft.src.Block;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.TextureMap;
+import net.minecraft.src.TileEntitySpecialRenderer;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.IIcon;
+import org.lwjgl.opengl.GL11;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class RenderLEDTile extends TileEntitySpecialRenderer {
 
-    private static final Map<Block, Icon[]> iconMap = new HashMap<>();
+    private static final Map<Block, IIcon[]> iconMap = new HashMap<>();
     private static final float Z_OFFSET = 2049 / 2048.0F;
     private final Block block;
 
@@ -31,11 +29,11 @@ public class RenderLEDTile extends TileEntitySpecialRenderer {
         this.block = block;
     }
 
-    public static void registerBlockIcons(IconRegister register) {
+    public static void registerBlockIcons(IIconRegister register) {
         for (Block b : iconMap.keySet().toArray(new Block[iconMap.keySet().size()])) {
             String base = ResourceUtils.getObjectPrefix(Block.blockRegistry.getNameForObject(b));
             if (base != null) {
-                List<Icon> icons = new ArrayList<>();
+                List<IIcon> icons = new ArrayList<>();
                 if (b instanceof ICustomLEDBlock) {
                     for (String s : ((ICustomLEDBlock) b).getLEDSuffixes()) {
                         icons.add(register.registerIcon(base + "/" + s));
@@ -45,7 +43,7 @@ public class RenderLEDTile extends TileEntitySpecialRenderer {
                     icons.add(register.registerIcon(base + "/led_green"));
                 }
 
-                iconMap.put(b, icons.toArray(new Icon[icons.size()]));
+                iconMap.put(b, icons.toArray(new IIcon[icons.size()]));
             }
         }
     }
@@ -70,7 +68,7 @@ public class RenderLEDTile extends TileEntitySpecialRenderer {
         GL11.glScalef(Z_OFFSET, Z_OFFSET, Z_OFFSET);
         GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
 
-        Icon[] icons = iconMap.get(block);
+        IIcon[] icons = iconMap.get(block);
 
         for (int i = 0; i < icons.length; i++) {
             renderBox.light = provider.getLEDLevel(i);

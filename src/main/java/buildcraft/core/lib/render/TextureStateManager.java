@@ -6,29 +6,28 @@
  */
 package buildcraft.core.lib.render;
 
-import net.minecraft.Icon;
-
 import buildcraft.api.core.render.ITextureStateManager;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.IIcon;
 
 /*
  * This class moves texture management from PipeRenderState to be filled while rendering as efficient as possible
  */
 
-@Environment(EnvType.CLIENT)
+@SideOnly(Side.CLIENT)
 public final class TextureStateManager implements ITextureStateManager {
 
-    private Icon currentTexture;
-    private Icon[] textureArray;
-    private final Icon[] textureArrayCache;
+    private IIcon currentTexture;
+    private IIcon[] textureArray;
+    private final IIcon[] textureArrayCache;
 
-    public TextureStateManager(Icon placeholder) {
+    public TextureStateManager(IIcon placeholder) {
         currentTexture = placeholder;
-        textureArrayCache = new Icon[6];
+        textureArrayCache = new IIcon[6];
     }
 
-    public Icon[] popArray() {
+    public IIcon[] popArray() {
         textureArray = textureArrayCache;
         return textureArrayCache; // Thread safety. Seriously.
     }
@@ -37,11 +36,11 @@ public final class TextureStateManager implements ITextureStateManager {
         textureArray = null;
     }
 
-    public Icon getTexture() {
+    public IIcon getTexture() {
         return currentTexture;
     }
 
-    public Icon[] getTextureArray() {
+    public IIcon[] getTextureArray() {
         return textureArray;
     }
 
@@ -49,7 +48,7 @@ public final class TextureStateManager implements ITextureStateManager {
         return textureArray != null;
     }
 
-    public void set(Icon icon) {
+    public void set(IIcon icon) {
         currentTexture = icon;
     }
 }

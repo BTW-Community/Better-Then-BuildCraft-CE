@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.utils;
 
-import net.minecraft.Items;
-import net.minecraft.ItemStack;
+import net.minecraft.src.Items;
+import net.minecraft.src.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 public final class ColorUtils {

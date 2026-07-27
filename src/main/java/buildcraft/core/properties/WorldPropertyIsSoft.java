@@ -6,10 +6,9 @@
  */
 package buildcraft.core.properties;
 
-import net.minecraft.Block;
-import net.minecraft.IBlockAccess;
-
 import buildcraft.api.core.BuildCraftAPI;
+import net.minecraft.src.Block;
+import net.minecraft.src.IBlockAccess;
 
 public class WorldPropertyIsSoft extends WorldProperty {
 

@@ -1,12 +1,11 @@
 package buildcraft.core.lib.utils;
 
-import net.minecraft.World;
-
 import buildcraft.api.core.Position;
 import buildcraft.core.LaserData;
 import buildcraft.core.LaserKind;
 import buildcraft.core.lib.EntityBlock;
 import buildcraft.core.proxy.CoreProxy;
+import net.minecraft.src.World;
 
 public final class LaserUtils {
 

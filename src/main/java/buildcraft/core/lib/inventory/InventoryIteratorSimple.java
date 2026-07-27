@@ -6,12 +6,11 @@
  */
 package buildcraft.core.lib.inventory;
 
-import java.util.Iterator;
-
-import net.minecraft.IInventory;
-import net.minecraft.ItemStack;
-
 import buildcraft.api.core.IInvSlot;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ItemStack;
+
+import java.util.Iterator;
 
 class InventoryIteratorSimple implements Iterable<IInvSlot> {
 

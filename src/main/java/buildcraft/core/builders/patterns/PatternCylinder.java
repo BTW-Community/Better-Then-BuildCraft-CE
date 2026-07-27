@@ -6,11 +6,10 @@
  */
 package buildcraft.core.builders.patterns;
 
-import net.minecraft.World;
-
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.core.Box;
 import buildcraft.core.blueprints.Template;
+import net.minecraft.src.World;
 
 public class PatternCylinder extends FillerPattern {
 

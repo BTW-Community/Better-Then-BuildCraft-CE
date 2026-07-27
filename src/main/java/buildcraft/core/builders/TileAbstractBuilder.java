@@ -6,16 +6,6 @@
  */
 package buildcraft.core.builders;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-
-import net.minecraft.EntityPlayer;
-import net.minecraft.IInventory;
-import net.minecraft.NBTTagCompound;
-import net.minecraftforge.fluids.FluidStack;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.blueprints.BuilderAPI;
 import buildcraft.api.blueprints.ITileBuilder;
@@ -28,8 +18,17 @@ import buildcraft.core.lib.network.Packet;
 import buildcraft.core.lib.network.command.CommandWriter;
 import buildcraft.core.lib.network.command.ICommandReceiver;
 import buildcraft.core.lib.network.command.PacketCommand;
-import net.fabricmc.api.EnvType;
+import cpw.mods.fml.relauncher.Side;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraftforge.fluids.FluidStack;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public abstract class TileAbstractBuilder extends TileBuildCraft
         implements ITileBuilder, IInventory, IBoxProvider, IBuildingItemsProvider, ICommandReceiver {
@@ -69,7 +68,7 @@ public abstract class TileAbstractBuilder extends TileBuildCraft
     }
 
     @Override
-    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
         if (side.isServer() && "uploadBuildersInAction".equals(command)) {
             for (BuildingItem i : buildersInAction) {
                 BuildCraftCore.instance.sendToPlayer((EntityPlayer) sender, createLaunchItemPacket(i));

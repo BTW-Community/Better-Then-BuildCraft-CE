@@ -6,26 +6,19 @@
  */
 package buildcraft.core.blueprints;
 
-import java.util.LinkedList;
-
-import net.minecraft.Block;
-import net.minecraft.Entity;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-import net.minecraft.TileEntity;
-import net.minecraftforge.common.util.Constants;
-
-import buildcraft.api.blueprints.BuildingPermission;
-import buildcraft.api.blueprints.IBuilderContext;
-import buildcraft.api.blueprints.MappingNotFoundException;
-import buildcraft.api.blueprints.SchematicBlock;
-import buildcraft.api.blueprints.SchematicBlockBase;
-import buildcraft.api.blueprints.SchematicEntity;
-import buildcraft.api.blueprints.Translation;
+import buildcraft.api.blueprints.*;
 import buildcraft.api.core.BCLog;
 import buildcraft.core.lib.utils.NBTUtils;
+import net.minecraft.src.Block;
+import net.minecraft.src.Entity;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+import net.minecraft.src.TileEntity;
+import net.minecraftforge.common.util.Constants;
+
+import java.util.LinkedList;
 
 public class Blueprint extends BlueprintBase {
 

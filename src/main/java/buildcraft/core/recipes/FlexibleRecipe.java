@@ -6,25 +6,20 @@
  */
 package buildcraft.core.recipes;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import net.minecraft.Block;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.oredict.OreDictionary;
-
-import buildcraft.api.recipes.CraftingResult;
-import buildcraft.api.recipes.IFlexibleCrafter;
-import buildcraft.api.recipes.IFlexibleRecipe;
-import buildcraft.api.recipes.IFlexibleRecipeIngredient;
-import buildcraft.api.recipes.IFlexibleRecipeViewable;
+import buildcraft.api.recipes.*;
 import buildcraft.core.lib.inventory.SimpleInventory;
 import buildcraft.core.lib.inventory.StackHelper;
 import buildcraft.core.lib.inventory.filters.ArrayStackFilter;
 import buildcraft.core.lib.inventory.filters.IStackFilter;
+import net.minecraft.src.Block;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.oredict.OreDictionary;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class FlexibleRecipe<T> implements IFlexibleRecipe<T>, IFlexibleRecipeViewable {
 

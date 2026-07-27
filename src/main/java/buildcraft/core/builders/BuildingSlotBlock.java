@@ -6,31 +6,23 @@
  */
 package buildcraft.core.builders;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
-import net.minecraft.Block;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-import net.minecraft.TileEntity;
-import net.minecraft.WorldServer;
-import net.minecraftforge.common.util.Constants;
-
 import buildcraft.BuildCraftBuilders;
-import buildcraft.api.blueprints.BuildingPermission;
-import buildcraft.api.blueprints.IBuilderContext;
-import buildcraft.api.blueprints.MappingNotFoundException;
-import buildcraft.api.blueprints.MappingRegistry;
-import buildcraft.api.blueprints.SchematicBlock;
-import buildcraft.api.blueprints.SchematicBlockBase;
-import buildcraft.api.blueprints.SchematicFactory;
-import buildcraft.api.blueprints.SchematicMask;
+import buildcraft.api.blueprints.*;
 import buildcraft.api.core.BCLog;
 import buildcraft.api.core.Position;
 import buildcraft.core.blueprints.IndexRequirementMap;
 import buildcraft.core.lib.utils.BlockUtils;
+import net.minecraft.src.Block;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.WorldServer;
+import net.minecraftforge.common.util.Constants;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class BuildingSlotBlock extends BuildingSlot {
 

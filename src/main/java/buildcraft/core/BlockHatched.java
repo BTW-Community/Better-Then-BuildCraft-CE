@@ -1,21 +1,20 @@
 package buildcraft.core;
 
-import net.minecraft.Block;
-import net.minecraft.Material;
-import net.minecraft.IconRegister;
-import net.minecraft.Icon;
-import net.minecraft.IBlockAccess;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.transport.IPipeTile;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.lib.utils.ResourceUtils;
 import buildcraft.core.lib.utils.Utils;
+import net.minecraft.src.Block;
+import net.minecraft.src.Material;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.IBlockAccess;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public abstract class BlockHatched extends BlockBuildCraft {
 
-    private Icon itemHatch;
+    private IIcon itemHatch;
 
     protected BlockHatched(Material material) {
         super(material);
@@ -30,14 +29,14 @@ public abstract class BlockHatched extends BlockBuildCraft {
     }
 
     @Override
-    public void registerBlockIcons(IconRegister register) {
+    public void registerBlockIcons(IIconRegister register) {
         super.registerBlockIcons(register);
         String base = ResourceUtils.getObjectPrefix(Block.blockRegistry.getNameForObject(this));
         itemHatch = register.registerIcon(base + "/item_hatch");
     }
 
     @Override
-    public Icon getIconForPass(IBlockAccess access, int x, int y, int z, int side, int pass) {
+    public IIcon getIconForPass(IBlockAccess access, int x, int y, int z, int side, int pass) {
         // The quarry's pipe connection method has no idea about "sides".
         if (pass == 1) {
             return Utils.isPipeConnected(access, x, y, z, ForgeDirection.getOrientation(side), IPipeTile.PipeType.ITEM)
@@ -48,7 +47,7 @@ public abstract class BlockHatched extends BlockBuildCraft {
     }
 
     @Override
-    public Icon getIconForPass(int side, int meta, int pass) {
+    public IIcon getIconForPass(int side, int meta, int pass) {
         if (pass == 1) {
             return side == 1 ? itemHatch : null;
         }

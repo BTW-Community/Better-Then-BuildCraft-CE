@@ -1,28 +1,21 @@
 package buildcraft.core.crops;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import net.minecraft.Block;
-import net.minecraft.BlockCrops;
-import net.minecraft.BlockDoublePlant;
-import net.minecraft.BlockMelon;
-import net.minecraft.BlockMushroom;
-import net.minecraft.BlockNetherWart;
-import net.minecraft.BlockTallGrass;
-import net.minecraft.EntityPlayer;
-import net.minecraft.Blocks;
-import net.minecraft.ItemBlock;
-import net.minecraft.ItemStack;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
-import net.minecraft.WorldServer;
+import buildcraft.api.crops.ICropHandler;
+import buildcraft.core.lib.utils.BlockUtils;
+import net.minecraft.block.*;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.ItemBlock;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
+import net.minecraft.src.WorldServer;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import buildcraft.api.crops.ICropHandler;
-import buildcraft.core.lib.utils.BlockUtils;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class CropHandlerPlantable implements ICropHandler {
 

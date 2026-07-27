@@ -6,23 +6,17 @@
  */
 package buildcraft.core.lib.fluids;
 
+import com.google.common.collect.ForwardingList;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import io.netty.buffer.ByteBuf;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fluids.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import net.minecraft.NBTTagCompound;
-import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidTankInfo;
-import net.minecraftforge.fluids.IFluidHandler;
-
-import com.google.common.collect.ForwardingList;
-
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import io.netty.buffer.ByteBuf;
 
 public class TankManager<T extends Tank> extends ForwardingList<T> implements IFluidHandler, List<T> {
 
@@ -122,7 +116,7 @@ public class TankManager<T extends Tank> extends ForwardingList<T> implements IF
         }
     }
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public void readData(ByteBuf data) {
         for (Tank tank : tanks) {
             int fluidId = data.readShort();

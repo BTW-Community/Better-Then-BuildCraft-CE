@@ -6,18 +6,17 @@
  */
 package buildcraft.core.lib.gui;
 
-import java.util.ArrayList;
-
-import net.minecraft.Minecraft;
-import net.minecraft.OpenGlHelper;
-import net.minecraft.RenderHelper;
-import net.minecraft.RenderItem;
-import net.minecraft.IInventory;
-import net.minecraft.ItemStack;
-import net.minecraft.ResourceLocation;
-
+import net.minecraft.src.Minecraft;
+import net.minecraft.src.OpenGlHelper;
+import net.minecraft.src.RenderHelper;
+import net.minecraft.src.RenderItem;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
+import java.util.ArrayList;
 
 public abstract class GuiAdvancedInterface extends GuiBuildCraft {
 

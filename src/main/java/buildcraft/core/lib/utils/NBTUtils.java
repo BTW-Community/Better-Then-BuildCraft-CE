@@ -6,13 +6,13 @@
  */
 package buildcraft.core.lib.utils;
 
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.CompressedStreamTools;
+import net.minecraft.src.NBTSizeTracker;
+import net.minecraft.src.NBTTagCompound;
+
 import java.io.IOException;
 import java.util.UUID;
-
-import net.minecraft.ItemStack;
-import net.minecraft.CompressedStreamTools;
-import net.minecraft.NBTSizeTracker;
-import net.minecraft.NBTTagCompound;
 
 public final class NBTUtils {
 

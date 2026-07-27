@@ -6,15 +6,6 @@
  */
 package buildcraft.core.statements;
 
-import java.util.LinkedList;
-
-import net.minecraft.IInventory;
-import net.minecraft.ISidedInventory;
-import net.minecraft.TileEntity;
-import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraftforge.fluids.FluidTankInfo;
-import net.minecraftforge.fluids.IFluidHandler;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.ITriggerExternal;
@@ -22,6 +13,14 @@ import buildcraft.api.statements.ITriggerInternal;
 import buildcraft.api.statements.ITriggerProvider;
 import buildcraft.api.statements.containers.IRedstoneStatementContainer;
 import buildcraft.api.tiles.IHasWork;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ISidedInventory;
+import net.minecraft.src.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fluids.FluidTankInfo;
+import net.minecraftforge.fluids.IFluidHandler;
+
+import java.util.LinkedList;
 
 public class DefaultTriggerProvider implements ITriggerProvider {
 

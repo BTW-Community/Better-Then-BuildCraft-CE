@@ -6,19 +6,6 @@
  */
 package buildcraft.core.lib.gui;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.EntityPlayer;
-import net.minecraft.InventoryPlayer;
-import net.minecraft.Container;
-import net.minecraft.ICrafting;
-import net.minecraft.Slot;
-import net.minecraft.ItemStack;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.core.lib.gui.slots.IPhantomSlot;
 import buildcraft.core.lib.gui.slots.SlotBase;
@@ -27,6 +14,18 @@ import buildcraft.core.lib.inventory.StackHelper;
 import buildcraft.core.lib.network.PacketGuiWidget;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufInputStream;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.InventoryPlayer;
+import net.minecraft.src.Container;
+import net.minecraft.src.ICrafting;
+import net.minecraft.src.Slot;
+import net.minecraft.src.ItemStack;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class BuildCraftContainer extends Container {
 

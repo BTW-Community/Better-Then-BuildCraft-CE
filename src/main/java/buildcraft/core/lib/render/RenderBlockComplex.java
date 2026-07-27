@@ -1,20 +1,17 @@
 package buildcraft.core.lib.render;
 
-import net.minecraft.Block;
-import net.minecraft.RenderBlocks;
-import net.minecraft.Tessellator;
-import net.minecraft.Icon;
-import net.minecraft.IBlockAccess;
-import net.minecraftforge.client.ForgeHooksClient;
-import net.minecraftforge.common.util.ForgeDirection;
-
-import org.lwjgl.opengl.GL11;
-
-import com.gtnewhorizons.angelica.api.ThreadSafeISBRH;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.core.lib.block.BlockBuildCraft;
 import buildcraft.core.render.BCSimpleBlockRenderingHandler;
+import com.gtnewhorizons.angelica.api.ThreadSafeISBRH;
+import net.minecraft.src.Block;
+import net.minecraft.src.RenderBlocks;
+import net.minecraft.src.Tessellator;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.IBlockAccess;
+import net.minecraftforge.client.ForgeHooksClient;
+import net.minecraftforge.common.util.ForgeDirection;
+import org.lwjgl.opengl.GL11;
 
 @ThreadSafeISBRH(perThread = true)
 public class RenderBlockComplex extends BCSimpleBlockRenderingHandler {
@@ -75,10 +72,10 @@ public class RenderBlockComplex extends BCSimpleBlockRenderingHandler {
 
     private void renderOverlayPass(int pass, BlockBuildCraft block, RenderBlocks renderer, IBlockAccess world, int x,
             int y, int z) {
-        Icon[] icons = fakeBlock.getTextureState().popArray();
+        IIcon[] icons = fakeBlock.getTextureState().popArray();
         int mask = 0;
         for (int side = 0; side < 6; side++) {
-            Icon icon = block.getIconForPass(world, x, y, z, side, pass);
+            IIcon icon = block.getIconForPass(world, x, y, z, side, pass);
             icons[side] = icon;
             ForgeDirection dir = ForgeDirection.getOrientation(side);
             if (icon != null

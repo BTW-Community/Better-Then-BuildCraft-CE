@@ -1,12 +1,11 @@
 package buildcraft.core;
 
-import net.minecraft.Items;
-import net.minecraft.ItemStack;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.recipes.BuildcraftRecipeRegistry;
 import buildcraft.core.lib.utils.Utils;
 import cpw.mods.fml.common.Optional;
+import net.minecraft.src.Items;
+import net.minecraft.src.ItemStack;
 
 public final class CoreSiliconRecipes {
 

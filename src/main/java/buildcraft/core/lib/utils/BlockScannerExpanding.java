@@ -1,8 +1,8 @@
 package buildcraft.core.lib.utils;
 
-import java.util.Iterator;
-
 import buildcraft.api.core.BlockIndex;
+
+import java.util.Iterator;
 
 public class BlockScannerExpanding implements Iterable<BlockIndex> {
 

@@ -6,16 +6,15 @@
  */
 package buildcraft.core;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import net.minecraft.CreativeTabs;
-import net.minecraft.Blocks;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.core.lib.utils.Utils;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class BCCreativeTab extends CreativeTabs {
 

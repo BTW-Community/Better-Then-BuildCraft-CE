@@ -6,18 +6,6 @@
  */
 package buildcraft.core.builders;
 
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
-
-import net.minecraft.Block;
-import net.minecraft.ItemBlock;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-import net.minecraft.MathHelper;
-import net.minecraftforge.common.util.Constants;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.blueprints.IBuilderContext;
 import buildcraft.api.blueprints.MappingNotFoundException;
@@ -28,6 +16,17 @@ import buildcraft.core.BlockBuildTool;
 import buildcraft.core.StackAtPosition;
 import buildcraft.core.lib.inventory.InvUtils;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.Block;
+import net.minecraft.src.ItemBlock;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+import net.minecraft.src.MathHelper;
+import net.minecraftforge.common.util.Constants;
+
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 public class BuildingItem implements IBuildingItem, ISerializable {
 

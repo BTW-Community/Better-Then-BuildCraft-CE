@@ -6,10 +6,10 @@
  */
 package buildcraft.core.lib.gui.buttons;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-@Environment(EnvType.CLIENT)
+@SideOnly(Side.CLIENT)
 public class GuiButtonSmall extends GuiBetterButton {
 
     public GuiButtonSmall(int i, int x, int y, String s) {

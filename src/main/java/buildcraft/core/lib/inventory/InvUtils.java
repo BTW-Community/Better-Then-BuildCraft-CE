@@ -6,23 +6,22 @@
  */
 package buildcraft.core.lib.inventory;
 
-import java.util.Iterator;
-
-import net.minecraft.EntityItem;
-import net.minecraft.IInventory;
-import net.minecraft.InventoryLargeChest;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-import net.minecraft.NBTTagString;
-import net.minecraft.TileEntityChest;
-import net.minecraft.World;
-import net.minecraftforge.common.util.Constants;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.core.IInvSlot;
 import buildcraft.core.lib.inventory.filters.IStackFilter;
 import buildcraft.core.lib.utils.BlockUtils;
+import net.minecraft.src.EntityItem;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.InventoryLargeChest;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+import net.minecraft.src.NBTTagString;
+import net.minecraft.src.TileEntityChest;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.Constants;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.Iterator;
 
 public final class InvUtils {
 

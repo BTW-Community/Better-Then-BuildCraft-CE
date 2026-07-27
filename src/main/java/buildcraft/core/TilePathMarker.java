@@ -6,20 +6,19 @@
  */
 package buildcraft.core;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-
-import net.minecraft.NBTTagCompound;
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.core.BlockIndex;
 import buildcraft.api.core.IPathProvider;
 import buildcraft.api.core.Position;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
 
 public class TilePathMarker extends TileMarker implements IPathProvider {
 

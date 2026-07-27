@@ -6,37 +6,32 @@
  */
 package buildcraft.core.lib.utils;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.Block;
-import net.minecraft.BlockStaticLiquid;
-import net.minecraft.EntityItem;
-import net.minecraft.EntityPlayer;
-import net.minecraft.EntityPlayerMP;
-import net.minecraft.Blocks;
-import net.minecraft.ItemStack;
-import net.minecraft.S27PacketExplosion;
-import net.minecraft.TileEntity;
-import net.minecraft.TileEntityChest;
-import net.minecraft.ChunkPosition;
-import net.minecraft.Explosion;
-import net.minecraft.World;
-import net.minecraft.WorldServer;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraftforge.event.ForgeEventFactory;
-import net.minecraftforge.event.world.BlockEvent.BreakEvent;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.IFluidBlock;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.blueprints.BuilderAPI;
 import buildcraft.core.proxy.CoreProxy;
 import cpw.mods.fml.common.FMLCommonHandler;
+import net.minecraft.src.Block;
+import net.minecraft.src.BlockStaticLiquid;
+import net.minecraft.src.EntityItem;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.EntityPlayerMP;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.S27PacketExplosion;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.TileEntityChest;
+import net.minecraft.src.ChunkPosition;
+import net.minecraft.src.Explosion;
+import net.minecraft.src.World;
+import net.minecraft.src.WorldServer;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.event.ForgeEventFactory;
+import net.minecraftforge.event.world.BlockEvent.BreakEvent;
+import net.minecraftforge.fluids.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class BlockUtils {
 

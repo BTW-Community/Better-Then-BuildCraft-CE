@@ -6,15 +6,13 @@
  */
 package buildcraft.core;
 
-import net.minecraft.ModelBase;
-import net.minecraft.ModelRenderer;
-import net.minecraft.TileEntityRendererDispatcher;
-import net.minecraft.TileEntitySpecialRenderer;
-import net.minecraft.TileEntity;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.core.render.RenderLaser;
+import net.minecraft.src.ModelBase;
+import net.minecraft.src.ModelRenderer;
+import net.minecraft.src.TileEntityRendererDispatcher;
+import net.minecraft.src.TileEntitySpecialRenderer;
+import net.minecraft.src.TileEntity;
+import org.lwjgl.opengl.GL11;
 
 public class RenderPathMarker extends TileEntitySpecialRenderer {
 

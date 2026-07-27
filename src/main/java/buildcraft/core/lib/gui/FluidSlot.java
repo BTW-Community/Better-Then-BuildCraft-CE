@@ -6,13 +6,12 @@
  */
 package buildcraft.core.lib.gui;
 
-import net.minecraft.TextureMap;
-import net.minecraft.Icon;
-import net.minecraft.ResourceLocation;
-import net.minecraftforge.fluids.Fluid;
-
 import buildcraft.core.lib.render.FluidRenderer;
 import buildcraft.core.lib.render.RenderUtils;
+import net.minecraft.src.TextureMap;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.ResourceLocation;
+import net.minecraftforge.fluids.Fluid;
 
 /**
  * For the refinery, a kind of phantom slot for fluid.
@@ -35,7 +34,7 @@ public class FluidSlot extends AdvancedSlot {
     }
 
     @Override
-    public Icon getIcon() {
+    public IIcon getIcon() {
         return FluidRenderer.getFluidTexture(fluid, false);
     }
 

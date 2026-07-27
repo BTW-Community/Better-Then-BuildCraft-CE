@@ -6,13 +6,13 @@
  */
 package buildcraft.core.builders.patterns;
 
+import buildcraft.api.filler.IFillerPattern;
+import buildcraft.api.filler.IFillerRegistry;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map.Entry;
 import java.util.TreeMap;
-
-import buildcraft.api.filler.IFillerPattern;
-import buildcraft.api.filler.IFillerRegistry;
 
 public class FillerRegistry implements IFillerRegistry {
 

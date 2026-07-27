@@ -1,19 +1,18 @@
 package buildcraft.core.builders.patterns;
 
-import net.minecraft.IconRegister;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.Icon;
-
 import buildcraft.api.statements.IStatement;
 import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementMouseClick;
 import buildcraft.core.lib.utils.StringUtils;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.IIcon;
 
 public class PatternParameterHollow implements IStatementParameter {
 
-    private static Icon iconHollow, iconFilled;
+    private static IIcon iconHollow, iconFilled;
 
     public boolean filled = false;
 
@@ -32,7 +31,7 @@ public class PatternParameterHollow implements IStatementParameter {
     }
 
     @Override
-    public Icon getIcon() {
+    public IIcon getIcon() {
         return filled ? iconFilled : iconHollow;
     }
 
@@ -42,7 +41,7 @@ public class PatternParameterHollow implements IStatementParameter {
     }
 
     @Override
-    public void registerIcons(IconRegister iconRegister) {
+    public void registerIcons(IIconRegister iconRegister) {
         iconFilled = iconRegister.registerIcon("buildcraftcore:fillerParameters/filled");
         iconHollow = iconRegister.registerIcon("buildcraftcore:fillerParameters/hollow");
     }

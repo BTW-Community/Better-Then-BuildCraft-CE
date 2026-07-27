@@ -1,11 +1,10 @@
 package buildcraft.core.command;
 
-import net.minecraft.ICommandSender;
-import net.minecraft.MinecraftServer;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.core.lib.commands.CommandHelpers;
 import buildcraft.core.lib.commands.SubCommand;
+import net.minecraft.src.ICommandSender;
+import net.minecraft.src.MinecraftServer;
 
 public class SubCommandDeop extends SubCommand {
 

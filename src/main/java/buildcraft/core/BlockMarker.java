@@ -6,18 +6,17 @@
  */
 package buildcraft.core;
 
-import net.minecraft.Block;
-import net.minecraft.Material;
-import net.minecraft.EntityPlayer;
-import net.minecraft.TileEntity;
-import net.minecraft.AxisAlignedBB;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.items.IMapLocation;
 import buildcraft.core.lib.block.BlockBuildCraft;
+import net.minecraft.src.Block;
+import net.minecraft.src.Material;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.AxisAlignedBB;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class BlockMarker extends BlockBuildCraft {
 

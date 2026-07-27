@@ -6,50 +6,32 @@
  */
 package buildcraft.core.blueprints;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Map.Entry;
-
-import net.minecraft.Blocks;
-import net.minecraft.IInventory;
-import net.minecraft.Item;
-import net.minecraft.ItemBlock;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.World;
-import net.minecraft.GameType;
+import buildcraft.api.blueprints.BuilderAPI;
+import buildcraft.api.blueprints.Schematic;
+import buildcraft.api.blueprints.SchematicBlock;
+import buildcraft.api.blueprints.SchematicEntity;
+import buildcraft.api.core.*;
+import buildcraft.core.builders.*;
+import buildcraft.core.builders.BuildingSlotBlock.Mode;
+import buildcraft.core.lib.inventory.InventoryCopy;
+import buildcraft.core.lib.inventory.InventoryIterator;
+import buildcraft.core.lib.utils.BlockUtils;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemBlock;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.World;
+import net.minecraft.src.GameType;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
-import buildcraft.api.blueprints.BuilderAPI;
-import buildcraft.api.blueprints.Schematic;
-import buildcraft.api.blueprints.SchematicBlock;
-import buildcraft.api.blueprints.SchematicEntity;
-import buildcraft.api.core.BCLog;
-import buildcraft.api.core.BlockIndex;
-import buildcraft.api.core.BuildCraftAPI;
-import buildcraft.api.core.IInvSlot;
-import buildcraft.api.core.StackKey;
-import buildcraft.core.builders.BuilderItemMetaPair;
-import buildcraft.core.builders.BuildingSlot;
-import buildcraft.core.builders.BuildingSlotBlock;
-import buildcraft.core.builders.BuildingSlotBlock.Mode;
-import buildcraft.core.builders.BuildingSlotEntity;
-import buildcraft.core.builders.IBuildingItemsProvider;
-import buildcraft.core.builders.TileAbstractBuilder;
-import buildcraft.core.lib.inventory.InventoryCopy;
-import buildcraft.core.lib.inventory.InventoryIterator;
-import buildcraft.core.lib.utils.BlockUtils;
+import java.util.*;
+import java.util.Map.Entry;
 
 public class BptBuilderBlueprint extends BptBuilderBase {
 

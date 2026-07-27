@@ -6,18 +6,18 @@
  */
 package buildcraft.core.properties;
 
+import net.minecraft.src.Block;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.Items;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
+import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.oredict.OreDictionary;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-
-import net.minecraft.Block;
-import net.minecraft.Blocks;
-import net.minecraft.Items;
-import net.minecraft.ItemStack;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class WorldPropertyIsOre extends WorldProperty {
 

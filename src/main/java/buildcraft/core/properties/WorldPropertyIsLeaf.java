@@ -6,9 +6,9 @@
  */
 package buildcraft.core.properties;
 
-import net.minecraft.Block;
-import net.minecraft.ItemStack;
-import net.minecraft.IBlockAccess;
+import net.minecraft.src.Block;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.IBlockAccess;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class WorldPropertyIsLeaf extends WorldProperty {

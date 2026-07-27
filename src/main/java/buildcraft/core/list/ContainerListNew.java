@@ -6,10 +6,6 @@
  */
 package buildcraft.core.list;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.Slot;
-import net.minecraft.ItemStack;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.core.ItemList;
 import buildcraft.core.lib.gui.BuildCraftContainer;
@@ -17,8 +13,11 @@ import buildcraft.core.lib.network.command.CommandWriter;
 import buildcraft.core.lib.network.command.ICommandReceiver;
 import buildcraft.core.lib.network.command.PacketCommand;
 import buildcraft.core.lib.utils.NetworkUtils;
-import net.fabricmc.api.EnvType;
+import cpw.mods.fml.relauncher.Side;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.Slot;
+import net.minecraft.src.ItemStack;
 
 public class ContainerListNew extends BuildCraftContainer implements ICommandReceiver {
 
@@ -93,7 +92,7 @@ public class ContainerListNew extends BuildCraftContainer implements ICommandRec
     }
 
     @Override
-    public void receiveCommand(String command, EnvType side, Object sender, ByteBuf stream) {
+    public void receiveCommand(String command, Side side, Object sender, ByteBuf stream) {
         if (side.isServer()) {
             if ("setLabel".equals(command)) {
                 setLabel(NetworkUtils.readUTF(stream));

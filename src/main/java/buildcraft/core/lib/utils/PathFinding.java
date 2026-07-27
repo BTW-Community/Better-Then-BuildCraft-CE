@@ -6,15 +6,14 @@
  */
 package buildcraft.core.lib.utils;
 
+import buildcraft.api.core.BlockIndex;
+import buildcraft.api.core.BuildCraftAPI;
+import net.minecraft.src.World;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
-
-import net.minecraft.World;
-
-import buildcraft.api.core.BlockIndex;
-import buildcraft.api.core.BuildCraftAPI;
 
 /**
  * This class implements a 3D path finding based on the A* algorithm, following guidelines documented on

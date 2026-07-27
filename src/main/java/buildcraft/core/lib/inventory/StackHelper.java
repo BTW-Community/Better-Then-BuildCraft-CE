@@ -6,10 +6,9 @@
  */
 package buildcraft.core.lib.inventory;
 
-import net.minecraft.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-
 import buildcraft.api.items.IList;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class StackHelper {
 

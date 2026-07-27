@@ -6,26 +6,6 @@
  */
 package buildcraft.core.lib.gui;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-
-import net.minecraft.Minecraft;
-import net.minecraft.FontRenderer;
-import net.minecraft.GuiContainer;
-import net.minecraft.RenderHelper;
-import net.minecraft.Tessellator;
-import net.minecraft.TextureMap;
-import net.minecraft.InventoryPlayer;
-import net.minecraft.IInventory;
-import net.minecraft.Slot;
-import net.minecraft.TileEntity;
-import net.minecraft.Icon;
-import net.minecraft.ResourceLocation;
-import net.minecraftforge.fluids.FluidStack;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.core.lib.gui.slots.IPhantomSlot;
 import buildcraft.core.lib.gui.tooltips.IToolTipProvider;
 import buildcraft.core.lib.gui.tooltips.ToolTip;
@@ -33,6 +13,24 @@ import buildcraft.core.lib.gui.tooltips.ToolTipLine;
 import buildcraft.core.lib.gui.widgets.Widget;
 import buildcraft.core.lib.render.RenderUtils;
 import buildcraft.core.lib.utils.SessionVars;
+import net.minecraft.src.Minecraft;
+import net.minecraft.src.FontRenderer;
+import net.minecraft.src.GuiContainer;
+import net.minecraft.src.RenderHelper;
+import net.minecraft.src.Tessellator;
+import net.minecraft.src.TextureMap;
+import net.minecraft.src.InventoryPlayer;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.Slot;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.ResourceLocation;
+import net.minecraftforge.fluids.FluidStack;
+import org.lwjgl.opengl.GL11;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
 
 public abstract class GuiBuildCraft extends GuiContainer {
 
@@ -119,7 +117,7 @@ public abstract class GuiBuildCraft extends GuiContainer {
         if (fluid == null || fluid.getFluid() == null) {
             return;
         }
-        Icon icon = fluid.getFluid().getIcon(fluid);
+        IIcon icon = fluid.getFluid().getIcon(fluid);
 
         if (icon == null) {
             icon = ((TextureMap) Minecraft.getMinecraft().getTextureManager()
@@ -154,7 +152,7 @@ public abstract class GuiBuildCraft extends GuiContainer {
     }
 
     // The magic is here
-    private void drawCutIcon(Icon icon, int x, int y, int width, int height, int cut) {
+    private void drawCutIcon(IIcon icon, int x, int y, int width, int height, int cut) {
         Tessellator tess = Tessellator.instance;
         tess.startDrawingQuads();
         tess.addVertexWithUV(x, y + height, zLevel, icon.getMinU(), icon.getInterpolatedV(height));
@@ -572,7 +570,7 @@ public abstract class GuiBuildCraft extends GuiContainer {
             GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0F);
         }
 
-        protected void drawIcon(Icon icon, int x, int y) {
+        protected void drawIcon(IIcon icon, int x, int y) {
             GL11.glDisable(GL11.GL_BLEND);
             GL11.glEnable(GL11.GL_ALPHA_TEST);
             GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0F);

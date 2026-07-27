@@ -1,18 +1,17 @@
 package buildcraft.core;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraft.TileEntity;
-import net.minecraft.ChatComponentText;
-import net.minecraft.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.tiles.IDebuggable;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.StringUtils;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.ChatComponentText;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemDebugger extends ItemBuildCraft {
 

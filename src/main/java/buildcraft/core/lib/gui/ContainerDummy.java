@@ -1,8 +1,8 @@
 package buildcraft.core.lib.gui;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.Container;
-import net.minecraft.IInventory;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.Container;
+import net.minecraft.src.IInventory;
 
 public class ContainerDummy extends Container {
 

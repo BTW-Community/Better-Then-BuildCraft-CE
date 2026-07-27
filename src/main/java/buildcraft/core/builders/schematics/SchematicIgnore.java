@@ -6,12 +6,11 @@
  */
 package buildcraft.core.builders.schematics;
 
-import java.util.LinkedList;
-
-import net.minecraft.ItemStack;
-
 import buildcraft.api.blueprints.IBuilderContext;
 import buildcraft.api.blueprints.SchematicBlock;
+import net.minecraft.src.ItemStack;
+
+import java.util.LinkedList;
 
 public class SchematicIgnore extends SchematicBlock {
 

@@ -6,11 +6,6 @@
  */
 package buildcraft.core;
 
-import net.minecraft.Block;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.core.ISerializable;
 import buildcraft.api.core.Position;
@@ -20,6 +15,10 @@ import buildcraft.core.lib.block.TileBuildCraft;
 import buildcraft.core.lib.utils.LaserUtils;
 import buildcraft.core.proxy.CoreProxy;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.Block;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
 
 public class TileMarker extends TileBuildCraft implements ITileAreaProvider {
 

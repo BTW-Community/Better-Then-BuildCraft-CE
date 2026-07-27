@@ -6,13 +6,12 @@
  */
 package buildcraft.core.blueprints;
 
-import net.minecraft.World;
-
 import buildcraft.api.blueprints.IBuilderContext;
 import buildcraft.api.blueprints.MappingRegistry;
 import buildcraft.api.core.IBox;
 import buildcraft.api.core.Position;
 import buildcraft.core.Box;
+import net.minecraft.src.World;
 
 public class BptContext implements IBuilderContext {
 

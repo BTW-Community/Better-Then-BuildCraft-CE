@@ -6,16 +6,16 @@
  */
 package buildcraft.core.lib.utils;
 
+import net.minecraft.src.InventoryCrafting;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.CraftingManager;
+import net.minecraft.src.IRecipe;
+import net.minecraft.src.ShapelessRecipes;
+import net.minecraft.src.World;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import net.minecraft.InventoryCrafting;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.CraftingManager;
-import net.minecraft.IRecipe;
-import net.minecraft.ShapelessRecipes;
-import net.minecraft.World;
 
 public final class CraftingUtils {
 

@@ -6,15 +6,14 @@
  */
 package buildcraft.core.lib.network.command;
 
-import java.util.ArrayList;
-
-import net.minecraft.EntityPlayer;
-
 import buildcraft.core.lib.network.Packet;
 import buildcraft.core.lib.utils.NetworkUtils;
 import buildcraft.core.network.PacketIds;
 import cpw.mods.fml.common.FMLCommonHandler;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.EntityPlayer;
+
+import java.util.ArrayList;
 
 public class PacketCommand extends Packet {
 

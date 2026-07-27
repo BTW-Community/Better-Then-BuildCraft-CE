@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.gui;
 
-import net.minecraft.IInventory;
-import net.minecraft.ItemStack;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ItemStack;
 
 /**
  * More dynamic slot displaying an inventory fluid at specified position in the passed IInventory

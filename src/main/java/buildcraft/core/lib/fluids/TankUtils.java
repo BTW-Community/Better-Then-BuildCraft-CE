@@ -6,21 +6,15 @@
  */
 package buildcraft.core.lib.fluids;
 
-import net.minecraft.Block;
-import net.minecraft.EntityPlayer;
-import net.minecraft.Blocks;
-import net.minecraft.ItemStack;
-import net.minecraft.TileEntity;
-import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.IFluidHandler;
-import net.minecraftforge.fluids.IFluidTank;
-
 import buildcraft.core.lib.TileBuffer;
 import buildcraft.core.lib.inventory.InvUtils;
+import net.minecraft.src.Block;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fluids.*;
 
 public final class TankUtils {
 

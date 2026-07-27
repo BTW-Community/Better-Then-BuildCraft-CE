@@ -6,12 +6,6 @@
  */
 package buildcraft.core.blueprints;
 
-import java.util.LinkedList;
-
-import net.minecraft.ItemStack;
-import net.minecraft.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.blueprints.BuilderAPI;
 import buildcraft.api.blueprints.SchematicBlockBase;
 import buildcraft.api.core.BuildCraftAPI;
@@ -23,6 +17,11 @@ import buildcraft.core.builders.BuildingSlotIterator;
 import buildcraft.core.builders.TileAbstractBuilder;
 import buildcraft.core.lib.inventory.InventoryIterator;
 import buildcraft.core.lib.utils.BlockUtils;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.LinkedList;
 
 public class BptBuilderTemplate extends BptBuilderBase {
 

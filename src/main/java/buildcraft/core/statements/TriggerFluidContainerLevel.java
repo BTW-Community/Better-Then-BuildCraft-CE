@@ -6,21 +6,20 @@
  */
 package buildcraft.core.statements;
 
-import java.util.Locale;
-
-import net.minecraft.IconRegister;
-import net.minecraft.TileEntity;
+import buildcraft.api.statements.IStatementContainer;
+import buildcraft.api.statements.IStatementParameter;
+import buildcraft.api.statements.ITriggerExternal;
+import buildcraft.api.statements.StatementParameterItemStack;
+import buildcraft.core.lib.utils.StringUtils;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
 
-import buildcraft.api.statements.IStatementContainer;
-import buildcraft.api.statements.IStatementParameter;
-import buildcraft.api.statements.ITriggerExternal;
-import buildcraft.api.statements.StatementParameterItemStack;
-import buildcraft.core.lib.utils.StringUtils;
+import java.util.Locale;
 
 public class TriggerFluidContainerLevel extends BCStatement implements ITriggerExternal {
 
@@ -101,7 +100,7 @@ public class TriggerFluidContainerLevel extends BCStatement implements ITriggerE
     }
 
     @Override
-    public void registerIcons(IconRegister register) {
+    public void registerIcons(IIconRegister register) {
         icon = register.registerIcon("buildcraftcore:triggers/trigger_liquidcontainer_" + type.name().toLowerCase());
     }
 

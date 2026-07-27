@@ -6,19 +6,14 @@
  */
 package buildcraft.core.builders;
 
+import buildcraft.api.blueprints.*;
+import buildcraft.api.core.Position;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.NBTTagList;
+
 import java.util.Collections;
 import java.util.LinkedList;
-
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.NBTTagList;
-
-import buildcraft.api.blueprints.IBuilderContext;
-import buildcraft.api.blueprints.MappingNotFoundException;
-import buildcraft.api.blueprints.MappingRegistry;
-import buildcraft.api.blueprints.SchematicEntity;
-import buildcraft.api.blueprints.SchematicFactory;
-import buildcraft.api.core.Position;
 
 public class BuildingSlotEntity extends BuildingSlot {
 

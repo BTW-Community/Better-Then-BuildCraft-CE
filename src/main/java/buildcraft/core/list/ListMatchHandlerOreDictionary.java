@@ -1,15 +1,14 @@
 package buildcraft.core.list;
 
+import buildcraft.api.lists.ListMatchHandler;
+import buildcraft.core.lib.inventory.StackHelper;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
-import net.minecraft.CreativeTabs;
-import net.minecraft.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-
-import buildcraft.api.lists.ListMatchHandler;
-import buildcraft.core.lib.inventory.StackHelper;
 
 public class ListMatchHandlerOreDictionary extends ListMatchHandler {
 

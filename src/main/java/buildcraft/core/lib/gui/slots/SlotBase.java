@@ -6,11 +6,10 @@
  */
 package buildcraft.core.lib.gui.slots;
 
-import net.minecraft.IInventory;
-import net.minecraft.Slot;
-
 import buildcraft.core.lib.gui.tooltips.IToolTipProvider;
 import buildcraft.core.lib.gui.tooltips.ToolTip;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.Slot;
 
 public class SlotBase extends Slot implements IToolTipProvider {
 

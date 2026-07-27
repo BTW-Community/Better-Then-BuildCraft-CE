@@ -1,13 +1,12 @@
 package buildcraft.core.command;
 
-import net.minecraft.ICommandSender;
-import net.minecraft.ChatComponentTranslation;
-import net.minecraft.ChatStyle;
-import net.minecraft.EnumChatFormatting;
-
 import buildcraft.core.Version;
 import buildcraft.core.lib.commands.SubCommand;
 import buildcraft.core.proxy.CoreProxy;
+import net.minecraft.src.ICommandSender;
+import net.minecraft.src.ChatComponentTranslation;
+import net.minecraft.src.ChatStyle;
+import net.minecraft.src.EnumChatFormatting;
 
 public class SubCommandVersion extends SubCommand {
 

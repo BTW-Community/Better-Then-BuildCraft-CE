@@ -1,18 +1,17 @@
 package buildcraft.core;
 
-import java.io.File;
-
-import net.minecraft.Block;
-import net.minecraft.Item;
-import net.minecraft.ItemBlock;
-import net.minecraft.ItemStack;
+import buildcraft.core.lib.items.ItemBlockBuildCraft;
+import buildcraft.core.lib.utils.Utils;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.src.Block;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemBlock;
+import net.minecraft.src.ItemStack;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
-import buildcraft.core.lib.items.ItemBlockBuildCraft;
-import buildcraft.core.lib.utils.Utils;
-import cpw.mods.fml.common.registry.GameRegistry;
+import java.io.File;
 
 public final class BCRegistry {
 

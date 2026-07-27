@@ -6,16 +6,14 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.TileEntityRendererDispatcher;
-import net.minecraft.TileEntitySpecialRenderer;
-import net.minecraft.TileEntity;
-import net.minecraft.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.core.Box;
 import buildcraft.core.internal.IBoxProvider;
 import buildcraft.core.internal.IBoxesProvider;
+import net.minecraft.src.TileEntityRendererDispatcher;
+import net.minecraft.src.TileEntitySpecialRenderer;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 
 public class RenderBoxProvider extends TileEntitySpecialRenderer {
 

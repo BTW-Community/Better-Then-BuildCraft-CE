@@ -6,21 +6,20 @@
  */
 package buildcraft.core.lib.render;
 
-import net.minecraft.Block;
-import net.minecraft.Material;
-import net.minecraft.Icon;
-import net.minecraft.IBlockAccess;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.core.render.ITextureStates;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.Block;
+import net.minecraft.src.Material;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.IBlockAccess;
+import net.minecraftforge.common.util.ForgeDirection;
 
 /*
  * This is fake block to render pluggables and pipes without altering host state May prove useful if we will make API
  * for roboports, pipes, plugs and facades
  */
-@Environment(EnvType.CLIENT)
+@SideOnly(Side.CLIENT)
 public final class FakeBlock extends Block implements ITextureStates {
 
     public static final FakeBlock INSTANCE = new FakeBlock();
@@ -60,7 +59,7 @@ public final class FakeBlock extends Block implements ITextureStates {
     }
 
     @Override
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         return textureState.isSided() ? textureState.getTextureArray()[side] : textureState.getTexture();
     }
 
@@ -89,7 +88,7 @@ public final class FakeBlock extends Block implements ITextureStates {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public boolean shouldSideBeRendered(IBlockAccess blockAccess, int x, int y, int z, int side) {
         return (renderMask & (1 << side)) != 0;
     }

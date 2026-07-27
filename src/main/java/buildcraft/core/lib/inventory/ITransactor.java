@@ -6,10 +6,9 @@
  */
 package buildcraft.core.lib.inventory;
 
-import net.minecraft.ItemStack;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.core.lib.inventory.filters.IStackFilter;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public interface ITransactor {
 

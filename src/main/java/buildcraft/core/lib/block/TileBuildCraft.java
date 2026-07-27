@@ -6,16 +6,6 @@
  */
 package buildcraft.core.lib.block;
 
-import java.util.HashSet;
-
-import net.minecraft.Block;
-import net.minecraft.EntityLivingBase;
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.TileEntity;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.core.ISerializable;
 import buildcraft.api.tiles.IControllable;
@@ -27,6 +17,15 @@ import buildcraft.core.lib.network.PacketTileUpdate;
 import buildcraft.core.lib.utils.Utils;
 import cofh.api.energy.IEnergyHandler;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.Block;
+import net.minecraft.src.EntityLivingBase;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.HashSet;
 
 /**
  * For future maintainers: This class intentionally does not implement just every interface out there. For some of them
@@ -120,7 +119,7 @@ public abstract class TileBuildCraft extends TileEntity implements IEnergyHandle
     }
 
     @Override
-    public net.minecraft.Packet getDescriptionPacket() {
+    public net.minecraft.src.Packet getDescriptionPacket() {
         return Utils.toPacket(getPacketUpdate(), 0);
     }
 

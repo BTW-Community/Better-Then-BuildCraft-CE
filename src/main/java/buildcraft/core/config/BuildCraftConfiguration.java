@@ -6,12 +6,11 @@
  */
 package buildcraft.core.config;
 
-import java.io.File;
-
+import buildcraft.core.Version;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 
-import buildcraft.core.Version;
+import java.io.File;
 
 public class BuildCraftConfiguration extends Configuration {
 

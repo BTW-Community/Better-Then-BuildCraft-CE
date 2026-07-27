@@ -6,17 +6,15 @@
  */
 package buildcraft.core.blueprints;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
-
-import net.minecraft.NBTTagCompound;
-
-import org.apache.commons.lang3.ArrayUtils;
-
 import buildcraft.api.core.ISerializable;
 import buildcraft.core.lib.utils.NetworkUtils;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.NBTTagCompound;
+import org.apache.commons.lang3.ArrayUtils;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 
 public final class LibraryId implements Comparable<LibraryId>, ISerializable {
 

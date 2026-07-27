@@ -6,25 +6,6 @@
  */
 package buildcraft.core.lib.utils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import net.minecraft.Block;
-import net.minecraft.EntityLivingBase;
-import net.minecraft.EntityPlayer;
-import net.minecraft.EntityPlayerMP;
-import net.minecraft.IInventory;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.TileEntity;
-import net.minecraft.MathHelper;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
-import net.minecraftforge.common.util.FakePlayer;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.core.IAreaProvider;
 import buildcraft.api.core.Position;
 import buildcraft.api.power.IEngine;
@@ -45,6 +26,24 @@ import buildcraft.core.lib.network.Packet;
 import cpw.mods.fml.common.network.internal.FMLProxyPacket;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import net.minecraft.src.Block;
+import net.minecraft.src.EntityLivingBase;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.EntityPlayerMP;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.MathHelper;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.FakePlayer;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public final class Utils {
 

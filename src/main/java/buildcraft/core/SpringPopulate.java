@@ -6,17 +6,16 @@
  */
 package buildcraft.core;
 
-import java.util.Random;
-
-import net.minecraft.Block;
-import net.minecraft.Blocks;
-import net.minecraft.World;
-import net.minecraftforge.event.terraingen.PopulateChunkEvent;
-import net.minecraftforge.event.terraingen.TerrainGen;
-
 import buildcraft.BuildCraftCore;
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraft.src.Block;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.World;
+import net.minecraftforge.event.terraingen.PopulateChunkEvent;
+import net.minecraftforge.event.terraingen.TerrainGen;
+
+import java.util.Random;
 
 public class SpringPopulate {
 

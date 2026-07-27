@@ -6,16 +6,14 @@
  */
 package buildcraft.core.render;
 
-import java.util.HashMap;
-
-import net.minecraft.Block;
-import net.minecraft.RenderBlocks;
-import net.minecraft.IBlockAccess;
-
-import com.gtnewhorizons.angelica.api.ThreadSafeISBRH;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.core.lib.render.IInventoryRenderer;
+import com.gtnewhorizons.angelica.api.ThreadSafeISBRH;
+import net.minecraft.src.Block;
+import net.minecraft.src.RenderBlocks;
+import net.minecraft.src.IBlockAccess;
+
+import java.util.HashMap;
 
 @ThreadSafeISBRH(perThread = false)
 public class RenderingEntityBlocks extends BCSimpleBlockRenderingHandler {

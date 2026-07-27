@@ -6,10 +6,9 @@
  */
 package buildcraft.core.lib.network;
 
-import net.minecraft.ItemStack;
-
 import buildcraft.core.lib.utils.NetworkUtils;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.src.ItemStack;
 
 public class PacketSlotChange extends PacketCoordinates {
 

@@ -1,14 +1,13 @@
 package buildcraft.core.tablet;
 
-import java.util.LinkedList;
-
-import net.minecraft.NBTTagCompound;
-
 import buildcraft.api.core.BCLog;
 import buildcraft.api.tablet.ITablet;
 import buildcraft.api.tablet.TabletAPI;
 import buildcraft.api.tablet.TabletProgram;
 import buildcraft.api.tablet.TabletProgramFactory;
+import net.minecraft.src.NBTTagCompound;
+
+import java.util.LinkedList;
 
 public abstract class TabletBase implements ITablet {
 

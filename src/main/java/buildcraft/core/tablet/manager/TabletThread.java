@@ -1,8 +1,8 @@
 package buildcraft.core.tablet.manager;
 
-import java.util.Date;
-
 import buildcraft.core.tablet.TabletBase;
+
+import java.util.Date;
 
 public class TabletThread implements Runnable {
 

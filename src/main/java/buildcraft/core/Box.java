@@ -6,22 +6,17 @@
  */
 package buildcraft.core;
 
+import buildcraft.api.core.*;
+import buildcraft.core.lib.utils.LaserUtils;
+import io.netty.buffer.ByteBuf;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.AxisAlignedBB;
+import net.minecraft.src.MathHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
-import net.minecraft.NBTTagCompound;
-import net.minecraft.TileEntity;
-import net.minecraft.AxisAlignedBB;
-import net.minecraft.MathHelper;
-
-import buildcraft.api.core.BlockIndex;
-import buildcraft.api.core.IAreaProvider;
-import buildcraft.api.core.IBox;
-import buildcraft.api.core.ISerializable;
-import buildcraft.api.core.Position;
-import buildcraft.core.lib.utils.LaserUtils;
-import io.netty.buffer.ByteBuf;
 
 public class Box implements IBox, ISerializable {
 

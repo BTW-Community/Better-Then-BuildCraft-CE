@@ -6,24 +6,22 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.Block;
-import net.minecraft.OpenGlHelper;
-import net.minecraft.RenderGlobal;
-import net.minecraft.AxisAlignedBB;
-import net.minecraft.MovingObjectPosition;
-import net.minecraft.Vec3;
-import net.minecraftforge.client.event.DrawBlockHighlightEvent;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.core.lib.render.ICustomHighlight;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.Block;
+import net.minecraft.src.OpenGlHelper;
+import net.minecraft.src.RenderGlobal;
+import net.minecraft.src.AxisAlignedBB;
+import net.minecraft.src.MovingObjectPosition;
+import net.minecraft.src.Vec3;
+import net.minecraftforge.client.event.DrawBlockHighlightEvent;
+import org.lwjgl.opengl.GL11;
 
 public class BlockHighlightHandler {
 
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public void handleBlockHighlight(DrawBlockHighlightEvent e) {
         if (e.target.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK) {

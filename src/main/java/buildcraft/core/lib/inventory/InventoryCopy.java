@@ -6,9 +6,9 @@
  */
 package buildcraft.core.lib.inventory;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.IInventory;
-import net.minecraft.ItemStack;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ItemStack;
 
 /**
  * Creates a deep copy of an existing IInventory.

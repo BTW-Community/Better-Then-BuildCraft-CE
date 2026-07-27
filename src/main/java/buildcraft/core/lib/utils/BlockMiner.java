@@ -1,19 +1,18 @@
 package buildcraft.core.lib.utils;
 
-import java.util.List;
-
-import net.minecraft.Block;
-import net.minecraft.EntityItem;
-import net.minecraft.ItemStack;
-import net.minecraft.TileEntity;
-import net.minecraft.World;
-import net.minecraft.WorldServer;
+import buildcraft.BuildCraftCore;
+import buildcraft.core.proxy.CoreProxy;
+import net.minecraft.src.Block;
+import net.minecraft.src.EntityItem;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.World;
+import net.minecraft.src.WorldServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.event.world.BlockEvent;
 
-import buildcraft.BuildCraftCore;
-import buildcraft.core.proxy.CoreProxy;
+import java.util.List;
 
 public class BlockMiner {
 

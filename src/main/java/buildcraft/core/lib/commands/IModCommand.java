@@ -6,11 +6,11 @@
  */
 package buildcraft.core.lib.commands;
 
+import net.minecraft.src.ICommand;
+import net.minecraft.src.ICommandSender;
+
 import java.util.List;
 import java.util.SortedSet;
-
-import net.minecraft.ICommand;
-import net.minecraft.ICommandSender;
 
 public interface IModCommand extends ICommand {
 

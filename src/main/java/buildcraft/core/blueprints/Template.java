@@ -6,15 +6,14 @@
  */
 package buildcraft.core.blueprints;
 
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.TileEntity;
-
 import buildcraft.api.blueprints.IBuilderContext;
 import buildcraft.api.blueprints.SchematicMask;
 import buildcraft.api.core.BuildCraftAPI;
 import buildcraft.core.lib.utils.NBTUtils;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.TileEntity;
 
 /**
  * Use the template system to describe fillers

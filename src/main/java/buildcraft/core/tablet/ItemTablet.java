@@ -1,12 +1,11 @@
 package buildcraft.core.tablet;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraft.World;
-
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.tablet.manager.TabletManagerServer;
 import cpw.mods.fml.common.FMLCommonHandler;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.World;
 
 public class ItemTablet extends ItemBuildCraft {
 

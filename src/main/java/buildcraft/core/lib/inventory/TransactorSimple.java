@@ -6,15 +6,14 @@
  */
 package buildcraft.core.lib.inventory;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.IInventory;
-import net.minecraft.ItemStack;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.core.IInvSlot;
 import buildcraft.core.lib.inventory.filters.IStackFilter;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TransactorSimple extends Transactor {
 

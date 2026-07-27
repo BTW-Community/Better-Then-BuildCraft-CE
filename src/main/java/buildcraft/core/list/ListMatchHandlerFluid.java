@@ -1,15 +1,14 @@
 package buildcraft.core.list;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.ItemStack;
-import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fluids.FluidStack;
-
 import buildcraft.api.lists.ListMatchHandler;
 import buildcraft.core.lib.inventory.StackHelper;
 import buildcraft.core.lib.utils.FluidUtils;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidStack;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListMatchHandlerFluid extends ListMatchHandler {
 

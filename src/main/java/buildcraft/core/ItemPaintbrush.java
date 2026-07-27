@@ -6,28 +6,27 @@
  */
 package buildcraft.core;
 
-import java.util.List;
-import java.util.Locale;
-
-import net.minecraft.Block;
-import net.minecraft.IconRegister;
-import net.minecraft.CreativeTabs;
-import net.minecraft.EntityPlayer;
-import net.minecraft.Item;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.Icon;
-import net.minecraft.Vec3;
-import net.minecraft.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.api.blocks.IColorRemovable;
 import buildcraft.api.core.EnumColor;
 import buildcraft.core.lib.items.ItemBuildCraft;
 import buildcraft.core.lib.utils.NBTUtils;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.Block;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.Vec3;
+import net.minecraft.src.World;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.List;
+import java.util.Locale;
 
 public class ItemPaintbrush extends ItemBuildCraft {
 
@@ -68,18 +67,18 @@ public class ItemPaintbrush extends ItemBuildCraft {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public void registerIcons(IconRegister par1IconRegister) {
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister par1IconRegister) {
         super.registerIcons(par1IconRegister);
 
-        Icon[] brushColors = new Icon[16];
+        IIcon[] brushColors = new IIcon[16];
         System.arraycopy(icons, 1, brushColors, 0, 16);
         EnumColor.setIconArray(brushColors);
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public Icon getIconIndex(ItemStack stack) {
+    @SideOnly(Side.CLIENT)
+    public IIcon getIconIndex(ItemStack stack) {
         this.itemIcon = icons[(getColor(stack) + 1) % icons.length];
         return itemIcon;
     }
@@ -178,7 +177,7 @@ public class ItemPaintbrush extends ItemBuildCraft {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List itemList) {
         itemList.add(new ItemStack(this));
         for (int i = 0; i < 16; i++) {

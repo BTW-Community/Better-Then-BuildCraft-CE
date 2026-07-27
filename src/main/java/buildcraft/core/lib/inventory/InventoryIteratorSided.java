@@ -6,13 +6,12 @@
  */
 package buildcraft.core.lib.inventory;
 
-import java.util.Iterator;
-
-import net.minecraft.ISidedInventory;
-import net.minecraft.ItemStack;
+import buildcraft.api.core.IInvSlot;
+import net.minecraft.src.ISidedInventory;
+import net.minecraft.src.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import buildcraft.api.core.IInvSlot;
+import java.util.Iterator;
 
 class InventoryIteratorSided implements Iterable<IInvSlot> {
 

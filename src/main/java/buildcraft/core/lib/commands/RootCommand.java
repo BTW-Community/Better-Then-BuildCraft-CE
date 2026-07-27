@@ -6,14 +6,10 @@
  */
 package buildcraft.core.lib.commands;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import net.minecraft.src.CommandBase;
+import net.minecraft.src.ICommandSender;
 
-import net.minecraft.CommandBase;
-import net.minecraft.ICommandSender;
+import java.util.*;
 
 public class RootCommand extends CommandBase implements IModCommand {
 

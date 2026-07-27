@@ -1,8 +1,5 @@
 package buildcraft.core.network;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.INetHandler;
-
 import buildcraft.core.lib.network.Packet;
 import buildcraft.core.lib.network.PacketHandler;
 import buildcraft.core.proxy.CoreProxy;
@@ -11,8 +8,10 @@ import buildcraft.core.tablet.TabletBase;
 import buildcraft.core.tablet.manager.TabletManagerClient;
 import buildcraft.core.tablet.manager.TabletManagerServer;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import net.fabricmc.api.EnvType;
+import cpw.mods.fml.relauncher.Side;
 import io.netty.channel.ChannelHandlerContext;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.INetHandler;
 
 public class PacketHandlerCore extends PacketHandler {
 

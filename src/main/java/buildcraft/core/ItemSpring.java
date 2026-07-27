@@ -6,12 +6,11 @@
  */
 package buildcraft.core;
 
-import java.util.Locale;
-
-import net.minecraft.Block;
-import net.minecraft.ItemStack;
-
 import buildcraft.core.lib.items.ItemBlockBuildCraft;
+import net.minecraft.src.Block;
+import net.minecraft.src.ItemStack;
+
+import java.util.Locale;
 
 public class ItemSpring extends ItemBlockBuildCraft {
 

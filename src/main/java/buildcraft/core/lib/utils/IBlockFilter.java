@@ -6,7 +6,7 @@
  */
 package buildcraft.core.lib.utils;
 
-import net.minecraft.World;
+import net.minecraft.src.World;
 
 public interface IBlockFilter {
 

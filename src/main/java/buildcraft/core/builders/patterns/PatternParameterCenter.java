@@ -1,20 +1,19 @@
 package buildcraft.core.builders.patterns;
 
-import net.minecraft.IconRegister;
-import net.minecraft.ItemStack;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.Icon;
-
 import buildcraft.api.statements.IStatement;
 import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.api.statements.StatementMouseClick;
 import buildcraft.core.lib.utils.StringUtils;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.IIcon;
 
 public class PatternParameterCenter implements IStatementParameter {
 
     private static final int[] shiftLeft = { 6, 3, 0, 7, 4, 1, 8, 5, 2 };
-    private static Icon[] icons;
+    private static IIcon[] icons;
     private int direction;
 
     public PatternParameterCenter() {
@@ -32,7 +31,7 @@ public class PatternParameterCenter implements IStatementParameter {
     }
 
     @Override
-    public Icon getIcon() {
+    public IIcon getIcon() {
         return icons[direction % 9];
     }
 
@@ -42,8 +41,8 @@ public class PatternParameterCenter implements IStatementParameter {
     }
 
     @Override
-    public void registerIcons(IconRegister iconRegister) {
-        icons = new Icon[9];
+    public void registerIcons(IIconRegister iconRegister) {
+        icons = new IIcon[9];
         for (int i = 0; i < 9; i++) {
             icons[i] = iconRegister.registerIcon("buildcraftcore:fillerParameters/center_" + i);
         }

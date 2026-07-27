@@ -6,28 +6,27 @@
  */
 package buildcraft.core.lib.block;
 
-import java.util.Random;
-
-import net.minecraft.Block;
-import net.minecraft.MapColor;
-import net.minecraft.Material;
-import net.minecraft.EntityFX;
-import net.minecraft.IconRegister;
-import net.minecraft.Entity;
-import net.minecraft.Blocks;
-import net.minecraft.Icon;
-import net.minecraft.Explosion;
-import net.minecraft.IBlockAccess;
-import net.minecraft.World;
+import buildcraft.core.lib.render.EntityDropParticleFX;
+import buildcraft.core.lib.utils.ResourceUtils;
+import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.Block;
+import net.minecraft.src.MapColor;
+import net.minecraft.src.Material;
+import net.minecraft.src.EntityFX;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.Entity;
+import net.minecraft.src.Blocks;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.Explosion;
+import net.minecraft.src.IBlockAccess;
+import net.minecraft.src.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
-import buildcraft.core.lib.render.EntityDropParticleFX;
-import buildcraft.core.lib.utils.ResourceUtils;
-import cpw.mods.fml.client.FMLClientHandler;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import java.util.Random;
 
 public class BlockBuildCraftFluid extends BlockFluidClassic {
 
@@ -35,8 +34,8 @@ public class BlockBuildCraftFluid extends BlockFluidClassic {
     protected float particleGreen;
     protected float particleBlue;
 
-    @Environment(EnvType.CLIENT)
-    protected Icon[] theIcon;
+    @SideOnly(Side.CLIENT)
+    protected IIcon[] theIcon;
 
     protected boolean flammable;
     protected boolean dense = false;
@@ -50,16 +49,16 @@ public class BlockBuildCraftFluid extends BlockFluidClassic {
     }
 
     @Override
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         return side != 0 && side != 1 ? this.theIcon[1] : this.theIcon[0];
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public void registerBlockIcons(IconRegister iconRegister) {
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister iconRegister) {
         String prefix = ResourceUtils.getObjectPrefix(Block.blockRegistry.getNameForObject(this));
         prefix = prefix.substring(0, prefix.indexOf(":") + 1) + "fluids/";
-        this.theIcon = new Icon[] { iconRegister.registerIcon(prefix + fluidName + "_still"),
+        this.theIcon = new IIcon[] { iconRegister.registerIcon(prefix + fluidName + "_still"),
                 iconRegister.registerIcon(prefix + fluidName + "_flow") };
     }
 
@@ -151,7 +150,7 @@ public class BlockBuildCraftFluid extends BlockFluidClassic {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
+    @SideOnly(Side.CLIENT)
     public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
         super.randomDisplayTick(world, x, y, z, rand);
 

@@ -6,14 +6,12 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.TileEntityRendererDispatcher;
-import net.minecraft.TileEntity;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.core.EntityLaser;
 import buildcraft.core.LaserData;
 import buildcraft.core.builders.TileAbstractBuilder;
+import net.minecraft.src.TileEntityRendererDispatcher;
+import net.minecraft.src.TileEntity;
+import org.lwjgl.opengl.GL11;
 
 public class RenderBuilder extends RenderBoxProvider {
 

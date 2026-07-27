@@ -6,14 +6,13 @@
  */
 package buildcraft.core;
 
-import java.util.LinkedList;
-
-import net.minecraft.ItemStack;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.blueprints.IBuilderContext;
 import buildcraft.api.blueprints.SchematicTile;
 import buildcraft.core.lib.engines.TileEngineBase;
+import net.minecraft.src.ItemStack;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.LinkedList;
 
 public class SchematicEngine extends SchematicTile {
 

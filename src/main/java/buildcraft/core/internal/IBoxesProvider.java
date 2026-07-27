@@ -6,9 +6,9 @@
  */
 package buildcraft.core.internal;
 
-import java.util.ArrayList;
-
 import buildcraft.core.Box;
+
+import java.util.ArrayList;
 
 public interface IBoxesProvider {
 

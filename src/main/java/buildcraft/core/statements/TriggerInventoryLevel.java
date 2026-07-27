@@ -6,14 +6,6 @@
  */
 package buildcraft.core.statements;
 
-import java.util.Locale;
-
-import net.minecraft.IconRegister;
-import net.minecraft.IInventory;
-import net.minecraft.ItemStack;
-import net.minecraft.TileEntity;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.core.IInvSlot;
 import buildcraft.api.statements.IStatementContainer;
 import buildcraft.api.statements.IStatementParameter;
@@ -22,6 +14,13 @@ import buildcraft.api.statements.StatementParameterItemStack;
 import buildcraft.core.lib.inventory.InventoryIterator;
 import buildcraft.core.lib.inventory.StackHelper;
 import buildcraft.core.lib.utils.StringUtils;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.Locale;
 
 public class TriggerInventoryLevel extends BCStatement implements ITriggerExternal {
 
@@ -102,7 +101,7 @@ public class TriggerInventoryLevel extends BCStatement implements ITriggerExtern
     }
 
     @Override
-    public void registerIcons(IconRegister register) {
+    public void registerIcons(IIconRegister register) {
         icon = register.registerIcon("buildcraftcore:triggers/trigger_inventory_" + type.name().toLowerCase());
     }
 

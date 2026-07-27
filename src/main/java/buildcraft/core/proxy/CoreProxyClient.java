@@ -6,15 +6,6 @@
  */
 package buildcraft.core.proxy;
 
-import net.minecraft.Minecraft;
-import net.minecraft.WorldClient;
-import net.minecraft.Entity;
-import net.minecraft.EntityPlayer;
-import net.minecraft.ItemStack;
-import net.minecraft.INetHandler;
-import net.minecraft.NetHandlerPlayServer;
-import net.minecraft.World;
-
 import buildcraft.BuildCraftCore;
 import buildcraft.core.LaserKind;
 import buildcraft.core.RenderPathMarker;
@@ -29,6 +20,14 @@ import buildcraft.core.render.RenderingMarkers;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
+import net.minecraft.src.Minecraft;
+import net.minecraft.src.WorldClient;
+import net.minecraft.src.Entity;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.INetHandler;
+import net.minecraft.src.NetHandlerPlayServer;
+import net.minecraft.src.World;
 
 public class CoreProxyClient extends CoreProxy {
 

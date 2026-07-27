@@ -6,33 +6,28 @@
  */
 package buildcraft.core.builders.patterns;
 
-import java.util.Map;
-import java.util.TreeMap;
-
-import net.minecraft.Block;
-import net.minecraft.IconRegister;
-import net.minecraft.TextureMap;
-import net.minecraft.Icon;
-import net.minecraft.World;
-
 import buildcraft.api.blueprints.SchematicMask;
 import buildcraft.api.filler.IFillerPattern;
 import buildcraft.api.statements.IStatement;
 import buildcraft.api.statements.IStatementParameter;
 import buildcraft.core.Box;
-import buildcraft.core.blueprints.Blueprint;
-import buildcraft.core.blueprints.BlueprintBase;
-import buildcraft.core.blueprints.BptBuilderTemplate;
-import buildcraft.core.blueprints.SchematicRegistry;
-import buildcraft.core.blueprints.Template;
+import buildcraft.core.blueprints.*;
 import buildcraft.core.lib.utils.StringUtils;
 import cpw.mods.fml.common.Loader;
+import net.minecraft.src.Block;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.TextureMap;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.World;
+
+import java.util.Map;
+import java.util.TreeMap;
 
 public abstract class FillerPattern implements IFillerPattern {
 
     public static final Map<String, FillerPattern> patterns = new TreeMap<>();
     private final String tag;
-    private Icon icon, blockIcon;
+    private IIcon icon, blockIcon;
 
     public FillerPattern(String tag) {
         this.tag = tag;
@@ -60,7 +55,7 @@ public abstract class FillerPattern implements IFillerPattern {
     }
 
     @Override
-    public void registerIcons(IconRegister iconRegister) {
+    public void registerIcons(IIconRegister iconRegister) {
         if (!(iconRegister instanceof TextureMap) || ((TextureMap) iconRegister).getTextureType() == 1) {
             icon = iconRegister.registerIcon("buildcraftcore:fillerPatterns/" + tag);
         }
@@ -73,12 +68,12 @@ public abstract class FillerPattern implements IFillerPattern {
     }
 
     @Override
-    public Icon getIcon() {
+    public IIcon getIcon() {
         return icon;
     }
 
     @Override
-    public Icon getBlockOverlay() {
+    public IIcon getBlockOverlay() {
         return blockIcon;
     }
 

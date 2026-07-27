@@ -6,23 +6,21 @@
  */
 package buildcraft.core.render;
 
-import net.minecraft.ModelBase;
-import net.minecraft.ModelRenderer;
-import net.minecraft.GLAllocation;
-import net.minecraft.OpenGlHelper;
-import net.minecraft.Render;
-import net.minecraft.TextureManager;
-import net.minecraft.Entity;
-import net.minecraft.MathHelper;
-import net.minecraft.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
 import buildcraft.api.core.Position;
 import buildcraft.core.EntityLaser;
 import buildcraft.core.LaserData;
 import buildcraft.core.lib.render.RenderEntityBlock;
 import buildcraft.core.lib.render.RenderEntityBlock.RenderInfo;
+import net.minecraft.src.ModelBase;
+import net.minecraft.src.ModelRenderer;
+import net.minecraft.src.GLAllocation;
+import net.minecraft.src.OpenGlHelper;
+import net.minecraft.src.Render;
+import net.minecraft.src.TextureManager;
+import net.minecraft.src.Entity;
+import net.minecraft.src.MathHelper;
+import net.minecraft.src.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 
 public class RenderLaser extends Render {
 

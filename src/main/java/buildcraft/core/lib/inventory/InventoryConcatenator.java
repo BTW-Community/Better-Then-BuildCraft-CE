@@ -6,12 +6,12 @@
  */
 package buildcraft.core.lib.inventory;
 
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.ItemStack;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import net.minecraft.EntityPlayer;
-import net.minecraft.IInventory;
-import net.minecraft.ItemStack;
 
 /**
  * Allows you to deal with multiple inventories through a single interface.

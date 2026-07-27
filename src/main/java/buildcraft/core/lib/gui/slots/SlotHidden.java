@@ -6,8 +6,8 @@
  */
 package buildcraft.core.lib.gui.slots;
 
-import net.minecraft.IInventory;
-import net.minecraft.Slot;
+import net.minecraft.src.IInventory;
+import net.minecraft.src.Slot;
 
 public class SlotHidden extends Slot {
 

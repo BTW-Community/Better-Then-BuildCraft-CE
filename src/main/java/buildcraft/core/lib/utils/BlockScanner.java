@@ -6,13 +6,12 @@
  */
 package buildcraft.core.lib.utils;
 
-import java.util.Iterator;
-
-import net.minecraft.NBTTagCompound;
-import net.minecraft.World;
-
 import buildcraft.api.core.BlockIndex;
 import buildcraft.core.Box;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.World;
+
+import java.util.Iterator;
 
 public class BlockScanner implements Iterable<BlockIndex> {
 

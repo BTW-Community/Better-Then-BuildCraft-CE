@@ -1,8 +1,8 @@
 package buildcraft.core.lib.render;
 
-import net.minecraft.Icon;
+import net.minecraft.src.IIcon;
 
-public class FakeIcon implements Icon {
+public class FakeIcon implements IIcon {
 
     private final int w, h;
     private final float minU, maxU, minV, maxV;

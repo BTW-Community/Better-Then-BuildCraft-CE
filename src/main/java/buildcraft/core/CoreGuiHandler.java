@@ -6,14 +6,13 @@
  */
 package buildcraft.core;
 
-import net.minecraft.EntityPlayer;
-import net.minecraft.World;
-
 import buildcraft.core.list.ContainerListNew;
 import buildcraft.core.list.ContainerListOld;
 import buildcraft.core.list.GuiListNew;
 import buildcraft.core.list.GuiListOld;
 import cpw.mods.fml.common.network.IGuiHandler;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.World;
 
 public class CoreGuiHandler implements IGuiHandler {
 

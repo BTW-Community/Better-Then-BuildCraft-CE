@@ -6,24 +6,23 @@
  */
 package buildcraft.core;
 
+import buildcraft.BuildCraftCore;
+import buildcraft.api.core.BCLog;
+import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.event.FMLInterModComms;
+import net.minecraft.src.ICommandSender;
+import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.ChatComponentText;
+import net.minecraft.src.ChatComponentTranslation;
+import net.minecraft.src.ChatStyle;
+import net.minecraft.src.EnumChatFormatting;
+import net.minecraftforge.common.config.Property;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-
-import net.minecraft.ICommandSender;
-import net.minecraft.NBTTagCompound;
-import net.minecraft.ChatComponentText;
-import net.minecraft.ChatComponentTranslation;
-import net.minecraft.ChatStyle;
-import net.minecraft.EnumChatFormatting;
-import net.minecraftforge.common.config.Property;
-
-import buildcraft.BuildCraftCore;
-import buildcraft.api.core.BCLog;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.event.FMLInterModComms;
 
 public class Version implements Runnable {
 

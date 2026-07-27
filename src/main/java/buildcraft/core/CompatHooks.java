@@ -6,13 +6,12 @@
  */
 package buildcraft.core;
 
-import net.minecraft.Block;
-import net.minecraft.TileEntity;
-import net.minecraft.IBlockAccess;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import buildcraft.api.transport.IInjectable;
 import cpw.mods.fml.common.Loader;
+import net.minecraft.src.Block;
+import net.minecraft.src.TileEntity;
+import net.minecraft.src.IBlockAccess;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class CompatHooks {
 

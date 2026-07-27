@@ -6,21 +6,20 @@
  */
 package buildcraft.core.lib.items;
 
-import net.minecraft.IconRegister;
-import net.minecraft.CreativeTabs;
-import net.minecraft.EntityPlayer;
-import net.minecraft.Item;
-import net.minecraft.Icon;
-import net.minecraft.World;
-
 import buildcraft.core.BCCreativeTab;
 import buildcraft.core.lib.utils.ResourceUtils;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.src.IIconRegister;
+import net.minecraft.src.CreativeTabs;
+import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.Item;
+import net.minecraft.src.IIcon;
+import net.minecraft.src.World;
 
 public class ItemBuildCraft extends Item {
 
-    public Icon[] icons;
+    public IIcon[] icons;
     private String iconName;
     private boolean passSneakClick = false;
 
@@ -41,8 +40,8 @@ public class ItemBuildCraft extends Item {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public Icon getIconFromDamage(int meta) {
+    @SideOnly(Side.CLIENT)
+    public IIcon getIconFromDamage(int meta) {
         if (itemIcon != null) { // NBT lookup workaround?
             return itemIcon;
         }
@@ -58,12 +57,12 @@ public class ItemBuildCraft extends Item {
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
-    public void registerIcons(IconRegister par1IconRegister) {
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister par1IconRegister) {
         String[] names = getIconNames();
         String prefix = ResourceUtils.getObjectPrefix(Item.itemRegistry.getNameForObject(this));
         prefix = prefix.substring(0, prefix.indexOf(":") + 1);
-        icons = new Icon[names.length];
+        icons = new IIcon[names.length];
 
         for (int i = 0; i < names.length; i++) {
             icons[i] = par1IconRegister.registerIcon(prefix + names[i]);

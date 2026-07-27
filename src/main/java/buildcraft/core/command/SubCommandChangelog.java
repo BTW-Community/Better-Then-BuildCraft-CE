@@ -1,9 +1,8 @@
 package buildcraft.core.command;
 
-import net.minecraft.ICommandSender;
-
 import buildcraft.core.Version;
 import buildcraft.core.lib.commands.SubCommand;
+import net.minecraft.src.ICommandSender;
 
 public class SubCommandChangelog extends SubCommand {
 
