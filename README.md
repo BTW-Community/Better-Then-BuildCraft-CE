@@ -14,6 +14,8 @@ BlockFalling => FallingBlock
 BlockLiquid => BlockFluid
 GameType => EnumGameType
 ChatComponentTranslation => ChatMessageComponent
+INetHandler => NetHandler
+NetHandlerPlayServer => NetServerHandler
 
 ### FML
 cpw.mods.fml.relauncher.EnvType => net.fabricmc.api.EnvType;

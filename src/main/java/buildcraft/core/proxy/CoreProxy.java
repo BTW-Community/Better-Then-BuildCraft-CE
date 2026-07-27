@@ -12,13 +12,7 @@ import buildcraft.core.LaserKind;
 import buildcraft.core.lib.EntityBlock;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.SidedProxy;
-import net.minecraft.src.Entity;
-import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.INetHandler;
-import net.minecraft.src.NetHandlerPlayServer;
-import net.minecraft.src.World;
-import net.minecraft.src.WorldServer;
+import net.minecraft.src.*;
 import net.minecraftforge.common.util.FakePlayerFactory;
 
 import java.lang.ref.WeakReference;
@@ -113,9 +107,9 @@ public class CoreProxy implements ICoreProxy {
      * This function returns either the player from the handler if it's on the server, or directly from the minecraft
      * instance if it's the client.
      */
-    public EntityPlayer getPlayerFromNetHandler(INetHandler handler) {
-        if (handler instanceof NetHandlerPlayServer) {
-            return ((NetHandlerPlayServer) handler).playerEntity;
+    public EntityPlayer getPlayerFromNetHandler(NetHandler handler) {
+        if (handler instanceof NetServerHandler nsh) {
+            return nsh.playerEntity;
         } else {
             return null;
         }

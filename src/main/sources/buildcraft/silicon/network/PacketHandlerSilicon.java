@@ -7,7 +7,7 @@
 package buildcraft.silicon.network;
 
 import net.minecraft.EntityPlayer;
-import net.minecraft.INetHandler;
+import net.minecraft.NetHandler;
 import net.minecraft.TileEntity;
 import net.minecraft.World;
 
@@ -28,7 +28,7 @@ public class PacketHandlerSilicon extends PacketHandler {
     protected void channelRead0(ChannelHandlerContext ctx, Packet packet) {
         super.channelRead0(ctx, packet);
         try {
-            INetHandler netHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
+            NetHandler netHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
             EntityPlayer player = CoreProxy.proxy.getPlayerFromNetHandler(netHandler);
 
             int packetID = packet.getID();

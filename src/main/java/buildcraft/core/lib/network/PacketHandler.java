@@ -16,7 +16,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.INetHandler;
+import net.minecraft.src.NetHandler;
 import net.minecraft.src.TileEntity;
 import net.minecraft.src.World;
 
@@ -62,7 +62,7 @@ public class PacketHandler extends SimpleChannelInboundHandler<Packet> {
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Packet packet) {
         try {
-            INetHandler netHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
+            NetHandler netHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
             EntityPlayer player = CoreProxy.proxy.getPlayerFromNetHandler(netHandler);
 
             int packetID = packet.getID();

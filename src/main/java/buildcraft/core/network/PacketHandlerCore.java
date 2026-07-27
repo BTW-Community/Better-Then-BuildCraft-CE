@@ -11,14 +11,14 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import net.fabricmc.api.EnvType;
 import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.INetHandler;
+import net.minecraft.src.NetHandler;
 
 public class PacketHandlerCore extends PacketHandler {
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Packet packet) {
         super.channelRead0(ctx, packet);
-        INetHandler netHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
+        NetHandler netHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
         EntityPlayer player = CoreProxy.proxy.getPlayerFromNetHandler(netHandler);
 
         switch (packet.getID()) {

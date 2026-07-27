@@ -24,7 +24,7 @@ import io.netty.handler.codec.MessageToMessageCodec;
 import io.netty.util.AttributeKey;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.EntityPlayerMP;
-import net.minecraft.src.INetHandler;
+import net.minecraft.src.NetHandler;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Marker;
 import org.apache.logging.log4j.MarkerManager;
@@ -124,7 +124,7 @@ public final class ChannelHandler extends MessageToMessageCodec<FMLProxyPacket, 
         int expectedSide = ctx.channel().attr(NetworkRegistry.CHANNEL_SOURCE).get() == Side.CLIENT ? CLIENT_ONLY
                 : SERVER_ONLY;
         if ((expectedSide & sides.get(discriminator)) != expectedSide) {
-            INetHandler handler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
+            NetHandler handler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
             EntityPlayer player = CoreProxy.proxy.getPlayerFromNetHandler(handler);
             logForgedPackets(player, clazz.getSimpleName(), payload.slice());
         } else {
