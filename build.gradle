@@ -140,13 +140,18 @@ tasks.register('copyBtwJar', Copy) {
 }
 
 publishing {
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
     repositories {
         maven {
             name = "GitHubPackages"
             url = "https://maven.pkg.github.com/BTW-Community/Better-Then-BuildCraft-CE"
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.key")  ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
