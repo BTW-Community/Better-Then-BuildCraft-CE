@@ -139,6 +139,19 @@ tasks.register('copyBtwJar', Copy) {
     }
 }
 
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackage"
+            url = uri("https://github.com${System.getenv("GITHUB_REPOSITORY")}")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
 class BTWJarReplacer implements MinecraftJarProcessor<Spec> {
 	String name
 	String path
